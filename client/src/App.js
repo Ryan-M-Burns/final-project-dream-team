@@ -13,7 +13,8 @@ import Landing from './Landing';
 import Navbar from './Navbar';
 import RegisterFarm from './farmers/RegisterFarm';
 import RegisterUser from './RegisterUser';
-import ProductList from './components/Productlist';
+import ProductList from './components/ProductList';
+import FarmerList from './components/FarmerList';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
             </Route>
             <Route path='/account' element={<Account />}>
             </Route>
-            <Route path='/meet-the-farmers' element={<AboutFarm />}>
+            <Route path='/meet-the-farmers' element={<FarmerList />}>
             </Route>
             <Route path='/contact' element={<ContactUs />}>
             </Route>
