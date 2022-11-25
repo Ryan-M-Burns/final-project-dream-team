@@ -15,6 +15,7 @@ import RegisterFarm from './farmers/RegisterFarm';
 import RegisterUser from './RegisterUser';
 import ProductList from './components/ProductList';
 import FarmerList from './components/FarmerList';
+import AboutUs from './components/aboutUs';
 
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
             <Route path='/contact' element={<ContactUs />}>
             </Route>
             <Route path='/products' element={<ProductList />}>
+            </Route>
+            <Route path='/about' element={<AboutUs />}>
             </Route>
           </Routes>
         </section>

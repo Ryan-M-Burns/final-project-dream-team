@@ -9,7 +9,7 @@ const FarmerList = (props) => {
         name="Nook's"
         about="growing killer plants since 1996"
         is_family_owned='true'
-        is_organic="true"
+        is_organic={false}
       />
     </ul>
   );
