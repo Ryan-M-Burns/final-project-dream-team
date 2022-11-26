@@ -2,26 +2,35 @@ const db = require('../connection');
 
 const getFarms = () => {
   return db
-  .query('SELECT * FROM farms;')
-  .then(data => {
-    return data.rows;
-  });
+    .query('SELECT * FROM farms;')
+    .then(data => {
+      return data.rows;
+    });
 };
 
 const getFarmById = (farmId) => {
   return db
-  .query(`
+    .query(`
   SELECT * FROM farms
   WHERE id = $1`,
-  [farmId])
+      [farmId])
 
-  .then(farm => {
-    return farm.rows
-  })
+    .then(farm => {
+      return farm.rows;
+    })
 
-  .catch(err => {
-    return err.mesage
-  });
+    .catch(err => {
+      return err.mesage;
+    });
+};
+
+const getProductsByFarmId = (farmId) => {
+  return db
+    .query(`SELECT * FROM products
+  WHERE farm_id = $1;`, [farmId])
+    .then(products => {
+      return products.rows;
+    });
 };
 
 const createFarm = (farmDetails) => {
@@ -55,30 +64,30 @@ const createFarm = (farmDetails) => {
 
   // Pass array to insertion query
   return db
-  .query(`
+    .query(`
   INSERT INTO farms ( name, logo_url, email, description, street_address, city, postal_code, phone, is_family_owned, is_organic)
   VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
   RETURNING *;`,
-  queryParams)
+      queryParams);
 };
 
 const activateFarm = (farmId) => {
   return db
-  .query(`
+    .query(`
   UPDATE listings
   SET active_status = true
   WHERE id = $1 RETURNING *;`,
-  [farmId]);
+      [farmId]);
 };
 
 const deactivateFarm = (farmId) => {
   return db
-  .query(`
+    .query(`
   UPDATE listings
   SET active_status = false
   WHERE id = $1 RETURNING *;`,
-  [farmId]);
-}
+      [farmId]);
+};
 
 
-module.exports = { getFarms, getFarmById, createFarm, activateFarm, deactivateFarm};
+module.exports = {getFarms, getFarmById, createFarm, activateFarm, deactivateFarm, getProductsByFarmId};

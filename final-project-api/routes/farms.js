@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {getFarms, getFarmById} = require('../db/queries/farms');
+const {getFarms, getFarmById, getProductsByFarmId} = require('../db/queries/farms');
 
 router.get('/', (req, res) => {
   getFarms()
@@ -14,6 +14,14 @@ router.get('/:id', (req, res) => {
   getFarmById(id)
     .then(farm => {
       res.json(farm);
+    });
+});
+
+router.get('/:id/products', (req, res) => {
+  const {id} = req.params;
+  getProductsByFarmId(id)
+    .then(products => {
+      res.json(products);
     });
 });
 

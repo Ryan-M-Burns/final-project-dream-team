@@ -8,15 +8,6 @@ const getProducts = () => {
   });
 };
 
-const getProductsByFarmId = (farmId) => {
-  return db
-  .query(`SELECT * FROM products
-  WHERE farm_id = $1;`, [farmId])
-  .then(products => {
-    return products.rows;
-  });
-};
-
 const addNewProduct = (productDetails) => {
   // Assign content of listingAttributes object to variables
   const {
@@ -86,7 +77,6 @@ return db
 
 module.exports = {
   getProducts,
-  getProductsByFarmId,
   addNewProduct,
   getProductById,
   deactivateProduct}
