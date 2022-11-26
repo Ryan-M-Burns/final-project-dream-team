@@ -13,5 +13,4 @@ Saanich Organics is a community of farmers from small, certified organic farms w
 
 Saanich Organics has been featured in numerous publications, including the National Post, Times Colonist, West Jets Up! Magazine, EAT Magazine, Douglas Magazine, BC Business, Boulevard Magazine, The Jewish Independent, and The Province. The business has also been featured in Island on the Edge (a documentary film), as well as on CBC Radio.', true, '1438 Mt Newton Cross Road', 'Saanichton', 'V8M-1S1', '250-652-9035', true, true, '2022-09-25T07:00:00.000Z'),
 (3, 'Plentiful Plate Farm', 'https://islandfarmfresh.com/app/uploads/2017/04/4C941857-71BC-4315-960B-F3604F55D201-600x600.jpeg', 'anouk@harvest.com', 'A local garden full of fresh vegetables, herbs and fruit for you to enjoy. All grown with only natural methods. We have strawberries, blueberries, fall gold raspberries, red raspberries, blackberries, fruit trees, many vegetable beds and even rental garden beds.', true, '7337 Wallace Drive', 'Saanichton', 'V8M-1S9', '250-514-3335', true, true, '2022-09-25T07:00:00.000Z')
-
-
+;
