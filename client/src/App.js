@@ -1,6 +1,8 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import logo from './logo.svg';
 import axios from 'axios';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
