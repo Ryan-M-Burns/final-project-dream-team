@@ -8,7 +8,21 @@ const getFarms = () => {
   });
 };
 
+const getFarmById = (farmId) => {
+  return db
+  .query(`
+  SELECT * FROM farms
+  WHERE id = $1`,
+  [farmId])
+
+  .then(farm => {
+    return farm.rows
+  })
+
+  .catch(err => {
+    return err.mesage
+  });
+};
 
 
-
-module.exports = { getFarms };
+module.exports = { getFarms, getFarmById };
