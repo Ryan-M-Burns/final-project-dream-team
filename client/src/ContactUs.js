@@ -3,7 +3,9 @@ import './ContactUs';
 
 const ContactUs = () => {
   return (
-    <div>ContactUs</div>
+    <section>
+      <img src="images/phone.png" alt="Help" />
+    </section>
   );
 };
 

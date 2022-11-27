@@ -1,3 +1,20 @@
-button {
-  background-color: blue;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  height: 150px;
+  width: 94%;
+  background-color: #3E2712;
+
+  h1 {
+    font-size: 100px;
+    color: #7d736a
+  }
+
+  button {
+    font-size: 20px;
+    color: rgba(55, 50, 45);
+    background-color: #7d736a;
+  }
 }

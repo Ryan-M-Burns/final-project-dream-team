@@ -18,17 +18,23 @@ function App() {
 
   return (
     <div className="App">
-      
+
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />}>
-          </Route>
-          <Route path='/mission' element={<About />}>
-          </Route>
-          <Route path='/meet-the-farmers' element={<AboutFarm />}>
-          </Route>
-        </Routes>
+        <nav>
+          <Navbar />
+        </nav>
+        <section>
+          <Routes>
+            <Route path='/' element={<Home />}>
+            </Route>
+            <Route path='/our-mission' element={<About />}>
+            </Route>
+            <Route path='/meet-the-farmers' element={<AboutFarm />}>
+            </Route>
+            <Route path='/contact' element={<ContactUs />}>
+            </Route>
+          </Routes>
+        </section>
       </Router>
     </div>
   );

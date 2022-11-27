@@ -1,5 +1,5 @@
 import React from 'react';
-import './Farm.scss';
+import './AboutFarm.scss';
 
 const Farm = () => {
   return (
