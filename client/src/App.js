@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import logo from './logo.svg';
 import axios from 'axios';
 import './App.scss';
 
 import About from './About';
-import Account from './Account'
+import Account from './Account';
 import ContactUs from './ContactUs';
 import AboutFarm from './AboutFarm';
 import Home from './Home';
@@ -13,6 +13,9 @@ import Landing from './Landing';
 import Navbar from './Navbar';
 import RegisterFarm from './farmers/RegisterFarm';
 import RegisterUser from './RegisterUser';
+import ProductList from './components/ProductList';
+import FarmerList from './components/FarmerList';
+import AboutUs from './components/aboutUs';
 
 
 function App() {
@@ -32,9 +35,13 @@ function App() {
             </Route>
             <Route path='/account' element={<Account />}>
             </Route>
-            <Route path='/meet-the-farmers' element={<AboutFarm />}>
+            <Route path='/meet-the-farmers' element={<FarmerList />}>
             </Route>
             <Route path='/contact' element={<ContactUs />}>
+            </Route>
+            <Route path='/products' element={<ProductList />}>
+            </Route>
+            <Route path='/about' element={<AboutUs />}>
             </Route>
           </Routes>
         </section>
