@@ -6,7 +6,7 @@ CREATE TABLE listings (
   farm_id INTEGER REFERENCES farms(id),
   title VARCHAR(255) NOT NULL,
   category categories,
-  description TEXT,
+  size VARCHAR(255) NOT NULL,
   image_url TEXT,
   price INTEGER NOT NULL,
   quantity INTEGER NOT NULL,
