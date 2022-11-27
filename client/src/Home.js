@@ -1,5 +1,6 @@
 import React from 'react';
 import NavButton from './components/home-page/NavButton';
+import BoxCarousel from './components/home-page/BoxCarousel';
 import './Home.scss';
 const Home = () => {
   return (
