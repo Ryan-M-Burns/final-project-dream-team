@@ -5,6 +5,7 @@ import axios from 'axios';
 import './App.scss';
 
 import About from './About';
+import Account from './Account'
 import ContactUs from './ContactUs';
 import AboutFarm from './AboutFarm';
 import Home from './Home';
@@ -28,6 +29,8 @@ function App() {
             <Route path='/' element={<Home />}>
             </Route>
             <Route path='/our-mission' element={<About />}>
+            </Route>
+            <Route path='/account' element={<Account />}>
             </Route>
             <Route path='/meet-the-farmers' element={<AboutFarm />}>
             </Route>
