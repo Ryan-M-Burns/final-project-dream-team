@@ -9,8 +9,10 @@
   padding: 25px;
   overflow-x: wrap;
   border-radius: 25px;
-  background-color: rgba(62, 39, 18, 0.45);
-  color: burlywood;
+  background-color: $dark-background;
+
+  
+  color: $body-text;
 }
 p {
   font-size: 30px;

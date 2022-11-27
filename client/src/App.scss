@@ -6,7 +6,7 @@ body {
   background-image: url('../public/images/background.jpg');
   background-size: 100%;
   height:100%;
-  color: rgba(62, 39, 18);
+  color: $body-text;
 }
 nav {
   height: 150px;
