@@ -3,10 +3,10 @@ import './About.scss';
 
 const About = () => {
   return (
-    <section>
+    <article class='about__article'>
       <h2>Our Mission</h2>
-      <p>we believe in connecting farmers and their
-        communities. We want to provide families with the
+      <p>We believe in connecting farmers and their
+        communities. We strive to provide families with the
         freshest produce straight from the soil with the
         convenience that our society has come to expect.
         We hope that you feel as passionate as we do about sourcing
@@ -15,7 +15,7 @@ const About = () => {
       </p>
       <p>Sincerely,</p>
       <p>The team at Harvest</p>
-    </section>
+    </article>
   );
 };
 
