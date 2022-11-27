@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.scss';
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>🏠 is where the 💖 is</div>
   );
 };
 

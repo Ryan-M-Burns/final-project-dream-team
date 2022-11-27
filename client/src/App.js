@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import logo from './logo.svg';
 import axios from 'axios';
 import './App.scss';
@@ -20,12 +20,12 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Switch>
-          <Route exact path='/'>
-            <Home />
+        <Routes>
+          <Route path='/' element={<Home />}>
           </Route>
-
-        </Switch>
+          <Route path='/mission' element={<About />}>
+          </Route>
+        </Routes>
       </Router>
     </div>
   );
