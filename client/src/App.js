@@ -18,7 +18,7 @@ import RegisterUser from './RegisterUser';
 function App() {
 
   return (
-    <div className="App">
+    <main className="App">
 
       <Router>
         <nav>
@@ -39,7 +39,7 @@ function App() {
           </Routes>
         </section>
       </Router>
-    </div>
+    </main>
   );
 }
 
