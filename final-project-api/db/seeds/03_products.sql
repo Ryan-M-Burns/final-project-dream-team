@@ -34,7 +34,7 @@ VALUES
 (2, 'Cherry Tomatoes', "Tomatoes", '1lbs', "test url", 5, 100, TRUE, FALSE),
 (2, 'Tomatoes on the Vine', "Tomatoes", '2lbs', "test url", 5, 100, TRUE, FALSE),
 (1, 'Broccoli', "Root Vegetables", '1 Head', "test url", 4, 100, TRUE, FALSE)
-
+(1, 'Garlic', "Root Vegetables", '3 Bulbs', "test url", 4, 100, TRUE, FALSE)
 
 
 
