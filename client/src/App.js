@@ -6,11 +6,11 @@ import './App.scss';
 
 import About from './About';
 import ContactUs from './ContactUs';
-import Farm from './Farm';
+import AboutFarm from './AboutFarm';
 import Home from './Home';
 import Landing from './Landing';
 import Navbar from './Navbar';
-import RegisterFarm from './RegisterFarm';
+import RegisterFarm from './farmers/RegisterFarm';
 import RegisterUser from './RegisterUser';
 
 
@@ -18,12 +18,15 @@ function App() {
 
   return (
     <div className="App">
+      
       <Router>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}>
           </Route>
           <Route path='/mission' element={<About />}>
+          </Route>
+          <Route path='/meet-the-farmers' element={<AboutFarm />}>
           </Route>
         </Routes>
       </Router>

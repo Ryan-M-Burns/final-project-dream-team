@@ -8,9 +8,8 @@ const Navbar = () => {
       <h1> HARVEST </h1>
       <button><Link to='/'>Back to Home</Link></button>
       <button><Link to='/account'>Account</Link></button>
-      <button><Link to='/account'>Search</Link></button>
       <button><Link to='/FarmerLogin'>Farmers</Link></button>
-      <button><Link to='/Login'>Hungry Humans</Link></button>
+      <button><Link to='/Account'>Hungry Humans</Link></button>
     </nav>
   );
 };
