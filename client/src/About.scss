@@ -1,6 +1,21 @@
+@import './styles/variables.scss';
+@import './styles/reset.scss';
+
+.about__article {
+  display:flex;
+  max-width: 50%;
+  align-self: flex-start;
+  flex-flow: column;
+  padding: 25px;
+  overflow-x: wrap;
+  border-radius: 25px;
+  background-color: rgba(62, 39, 18, 0.45);
+  color: burlywood;
+}
 p {
   font-size: 30px;
 }
 h2 {
+  margin:0;
   font-size: 75px;
 }

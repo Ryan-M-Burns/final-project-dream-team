@@ -1,8 +1,12 @@
+@import './styles/variables.scss';
+@import './styles/reset.scss';
+
 body {
   background-color: #7d736a;
   background-image: url('../public/images/background.jpg');
   background-size: 100%;
   height:100%;
+  color: rgba(62, 39, 18);
 }
 nav {
   height: 150px;
