@@ -12,11 +12,9 @@ const About = () => {
         We hope that you feel as passionate as we do about sourcing
         local and we look forward to developing a long lasting
         relationship with you!
-
-        Sincerely,
-
-        The team at Harvest
       </p>
+      <p>Sincerely,</p>
+      <p>The team at Harvest</p>
     </section>
   );
 };

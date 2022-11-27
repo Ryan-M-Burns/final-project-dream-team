@@ -3,7 +3,7 @@ import './AboutFarm.scss';
 
 const Farm = () => {
   return (
-    <div>Farm is where the 🍆 are grown 🚜</div>
+    <div className='farm'>Where the 🍆 are grown 🚜</div>
   );
 };
 
