@@ -1,0 +1,23 @@
+@import './styles/variables.scss';
+@import './styles/reset.scss';
+
+.about__article {
+  display:flex;
+  max-width: 50%;
+  align-self: flex-start;
+  flex-flow: column;
+  padding: 25px;
+  overflow-x: wrap;
+  border-radius: 25px;
+  background-color: $dark-background;
+
+  
+  color: $body-text;
+}
+p {
+  font-size: 30px;
+}
+h2 {
+  margin:0;
+  font-size: 75px;
+}
