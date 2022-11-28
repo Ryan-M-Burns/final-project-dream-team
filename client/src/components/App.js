@@ -1,19 +1,17 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import axios from 'axios';
 import './App.scss';
 
 import About from './About/About';
 import Account from './Account/Account';
 import ContactUs from './ContactUs/ContactUs';
-import AboutFarm from './AboutFarm/AboutFarm';
+import AboutFarms from './AboutFarms/AboutFarms';
 import Home from './HomePage/Home';
 import Landing from './Landing/Landing';
 import Navbar from './Navbar/Navbar';
 import RegisterFarm from '../farmers/RegisterFarm';
 import RegisterUser from './RegisterUser/RegisterUser';
 import ProductList from './ProductList';
-import FarmerList from './FarmerList';
 import AboutUs from './aboutUs';
 
 
@@ -34,7 +32,7 @@ function App() {
             </Route>
             <Route path='/account' element={<Account />}>
             </Route>
-            <Route path='/meet-the-farmers' element={<FarmerList />}>
+            <Route path='/meet-the-farmers' element={<AboutFarms />}>
             </Route>
             <Route path='/contact' element={<ContactUs />}>
             </Route>
