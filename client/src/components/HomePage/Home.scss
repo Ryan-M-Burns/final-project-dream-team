@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+@import '../../styles/reset.scss';
+
+.section__home {
+  font-size: 25px;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  .ul__home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .li__home {
+      display: flex;
+      min-width: 100%;
+      
+      justify-content: space-between;
+      align-content: space-between;
+      width: 100%;
+
+      .nav-button__home {
+        .nav__button {
+          color: blue;
+          min-width: 25%;
+          max-width: 25%;
+        }
+      }
+    }
+  }
+}

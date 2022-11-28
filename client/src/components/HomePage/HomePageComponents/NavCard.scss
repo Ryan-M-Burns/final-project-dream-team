@@ -1,0 +1,11 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.nav__card {
+  padding: 20px;
+  background-color: $dark-background;
+  min-width: 25%;
+  max-width: 25%;
+  min-height: 25%;
+  max-height: 25%;
+}

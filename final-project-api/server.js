@@ -30,10 +30,11 @@ app.use(express.static('public'));
 // Note: Feel free to replace the example routes below with your own
 
 const farmsRoutes = require('./routes/farms');
-const homebaseRoutes = require('./routes/homebase');
 const cartRoutes = require('./routes/cart');
-const myproductsRoutes = require('./routes/my-products');
-const myprofileRoutes = require('./routes/my-profile');
+const productsRoutes = require('./routes/products');
+const usersRoutes = require('./routes/users');
+const boxesRoutes = require('./routes/boxes');
+const orderRoutes = require('./routes/orders');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -41,9 +42,10 @@ const myprofileRoutes = require('./routes/my-profile');
 
 app.use('/farms', farmsRoutes);
 app.use('/cart', cartRoutes);
-app.use('/homebase', homebaseRoutes);
-app.use('/my-products', myproductsRoutes);
-app.use('/my-profile', myprofileRoutes);
+app.use('/boxes', boxesRoutes);
+app.use('/products', productsRoutes);
+app.use('/users', usersRoutes);
+app.use('/orders', orderRoutes);
 
 // Note: mount other resources here, using the same pattern above
 

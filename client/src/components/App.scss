@@ -1,0 +1,17 @@
+@import '../styles/variables.scss';
+@import '../styles/reset.scss';
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background-color: #7d736a;
+  background-image: url('../../public/images/background.jpg');
+  background-size: 100%;
+  height:100%;
+  color: $body-text;
+}
+nav {
+  height: 150px;
+}
+section {
+  padding: 1% 3%;
+}
