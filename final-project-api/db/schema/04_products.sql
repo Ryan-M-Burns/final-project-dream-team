@@ -10,6 +10,6 @@ CREATE TABLE products (
   image_url TEXT,
   price INTEGER NOT NULL,
   quantity INTEGER NOT NULL,
-  active_status VARCHAR(10) DEFAULT 'active',
+  active_status BOOLEAN DEFAULT true,
   seasonal BOOLEAN DEFAULT false
 );

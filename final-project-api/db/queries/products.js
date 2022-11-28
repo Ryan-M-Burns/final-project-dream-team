@@ -43,8 +43,8 @@ const addNewProduct = (productDetails) => {
   // Pass array to insertion query
   return db
   .query(`
-  INSERT INTO listings (owner_id, title, description, price, category, photo_url)
-  VALUES ($1, $2, $3, $4, $5, $6)
+  INSERT INTO products (farm_id, title, category, size, image_url, price, quantity)
+  VALUES ($1, $2, $3, $4, $5, $6, $7)
   RETURNING *;`,
   queryParams)
 
@@ -56,4 +56,37 @@ const addNewProduct = (productDetails) => {
   });
 };
 
-module.exports = {getProducts, getProductsByFarmId, addNewProduct}
+const getProductById = (id) => {
+return db
+  .query(`
+  SELECT * FROM products
+  WHERE id = $1;`, [id])
+  .then(data => {
+    return data.rows
+  })
+  .catch(err => {
+    return err.message;
+  });
+}
+
+const deactivateProduct =(id) => {
+return db
+  .query(`
+  UPDATE products SET active_status = false WHERE id = $1`, [id])
+  .then(data => {
+    return data.rows[0]
+  })
+  .catch(err => {
+    return err.message;
+  });
+}
+
+
+
+
+module.exports = {
+  getProducts,
+  getProductsByFarmId,
+  addNewProduct,
+  getProductById,
+  deactivateProduct}
