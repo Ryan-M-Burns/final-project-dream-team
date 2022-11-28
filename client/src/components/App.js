@@ -1,21 +1,20 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import logo from './logo.svg';
 import axios from 'axios';
 import './App.scss';
 
-import About from './About';
-import Account from './Account';
-import ContactUs from './ContactUs';
-import AboutFarm from './AboutFarm';
-import Home from './Home';
-import Landing from './Landing';
-import Navbar from './Navbar';
-import RegisterFarm from './farmers/RegisterFarm';
-import RegisterUser from './RegisterUser';
-import ProductList from './components/ProductList';
-import FarmerList from './components/FarmerList';
-import AboutUs from './components/aboutUs';
+import About from './About/About';
+import Account from './Account/Account';
+import ContactUs from './ContactUs/ContactUs';
+import AboutFarm from './AboutFarm/AboutFarm';
+import Home from './HomePage/Home';
+import Landing from './Landing/Landing';
+import Navbar from './Navbar/Navbar';
+import RegisterFarm from '../farmers/RegisterFarm';
+import RegisterUser from './RegisterUser/RegisterUser';
+import ProductList from './ProductList';
+import FarmerList from './FarmerList';
+import AboutUs from './aboutUs';
 
 
 function App() {
