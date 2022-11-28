@@ -2,7 +2,7 @@
 @import '../../styles/reset.scss';
 
 .about__article {
-  display:flex;
+  display: flex;
   max-width: 50%;
   align-self: flex-start;
   flex-flow: column;
@@ -11,13 +11,15 @@
   border-radius: 25px;
   background-color: $dark-background;
 
-  
+
   color: $body-text;
 }
+
 p {
   font-size: 30px;
 }
+
 h2 {
-  margin:0;
+  margin: 0;
   font-size: 75px;
 }

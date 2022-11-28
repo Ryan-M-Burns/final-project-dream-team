@@ -3,17 +3,15 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.scss';
 
 import About from './pages/About/About';
-import Account from './components/Account/Account';
-import ContactUs from './components/ContactUs/ContactUs';
-import AboutFarms from './components/AboutFarms/AboutFarms';
-import Home from './components/HomePage/Home';
-import Landing from './components/Landing/Landing';
-import Navbar from './components/Navbar/Navbar';
+import AboutFarms from './pages/AboutFarms/AboutFarms';
+import Account from './pages/Account/Account';
+import ContactUs from './pages/ContactUs/ContactUs';
+import FarmProducts from './pages/FarmProducts/FarmProducts'
+import Home from './pages/HomePage/Home';
+import Landing from './pages/Landing/Landing';
+import Navbar from './pages/Navbar/Navbar';
 import RegisterFarm from './farmers/RegisterFarm';
-import RegisterUser from './components/RegisterUser/RegisterUser';
-import ProductList from './components/ProductList';
-import AboutUs from './components/aboutUs';
-
+import RegisterUser from './pages/RegisterUser/RegisterUser';
 
 function App() {
 
@@ -36,9 +34,7 @@ function App() {
             </Route>
             <Route path='/contact' element={<ContactUs />}>
             </Route>
-            <Route path='/products' element={<ProductList />}>
-            </Route>
-            <Route path='/about' element={<AboutUs />}>
+            <Route path='/products' element={<FarmProducts />}>
             </Route>
           </Routes>
         </section>

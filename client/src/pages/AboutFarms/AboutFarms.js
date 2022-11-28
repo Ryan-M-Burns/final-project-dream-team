@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutFarms.scss';
-import FarmerList from '../FarmerList';
+import FarmerList from '../../components/FarmerList';
 
 const Farm = () => {
   return (
