@@ -1,0 +1,13 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.div__carousel{
+  width: 100%;
+  height: 300px;
+  background-color: $dark-background;
+}
+
+.test_pic {
+  width: auto;
+  height: 300px;
+}
