@@ -56,4 +56,4 @@ const addNewProduct = (productDetails) => {
   });
 };
 
-module.exports = (getProducts, getProductsByFarmId, addNewProduct)
+module.exports = {getProducts, getProductsByFarmId, addNewProduct}

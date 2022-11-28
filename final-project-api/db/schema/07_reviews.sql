@@ -5,5 +5,5 @@ CREATE TABLE reviews (
   farm_id INTEGER REFERENCES farms(id),
   rating INTEGER NOT NULL,
   content TEXT,
-  submitted_on DATE, 
+  submitted_on DATE
 );

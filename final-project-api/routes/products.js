@@ -1,8 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const { getProducts } = require('../db/queries/products.js');
 
 router.get('/', (req, res) => {
-  res.send('products go here');
+  getProducts()
+  .then(products => {
+    res.json(products)
+  })
+
 });
 
 router.get('/:id', (req, res) => {
