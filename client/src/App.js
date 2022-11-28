@@ -2,17 +2,17 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.scss';
 
-import About from './About/About';
-import Account from './Account/Account';
-import ContactUs from './ContactUs/ContactUs';
-import AboutFarms from './AboutFarms/AboutFarms';
-import Home from './HomePage/Home';
-import Landing from './Landing/Landing';
-import Navbar from './Navbar/Navbar';
-import RegisterFarm from '../farmers/RegisterFarm';
-import RegisterUser from './RegisterUser/RegisterUser';
-import ProductList from './ProductList';
-import AboutUs from './aboutUs';
+import About from './pages/About/About';
+import Account from './components/Account/Account';
+import ContactUs from './components/ContactUs/ContactUs';
+import AboutFarms from './components/AboutFarms/AboutFarms';
+import Home from './components/HomePage/Home';
+import Landing from './components/Landing/Landing';
+import Navbar from './components/Navbar/Navbar';
+import RegisterFarm from './farmers/RegisterFarm';
+import RegisterUser from './components/RegisterUser/RegisterUser';
+import ProductList from './components/ProductList';
+import AboutUs from './components/aboutUs';
 
 
 function App() {
