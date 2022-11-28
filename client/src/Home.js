@@ -8,14 +8,14 @@ const Home = () => {
       <BoxCarousel />
       <ul>
         <li>
-          <NavButton link={"/produce"} name={"PRODUCE"} />
-          <NavButton link={"/boxes"} name={"MADE FOR YOU"} />
-          <NavButton link={"/meet-the-farmers"} name={"MEET OUR FARMERS"} />
+          <NavButton link={"/produce"} pageName={"PRODUCE"} />
+          <NavButton link={"/boxes"} pageName={"MADE FOR YOU"} />
+          <NavButton link={"/meet-the-farmers"} pageName={"MEET OUR FARMERS"} />
         </li>
         <li>
-          <NavButton link={"/our-mission"} name={"OUR MISSION"} />
-          <NavButton link={"/produce"} name={"PRODUCE"} />
-          <NavButton link={"/contact"} name={"REACH OUT"} />
+          <NavButton link={"/our-mission"} pageName={"OUR MISSION"} />
+          <NavButton link={"/produce"} pageName={"PRODUCE"} />
+          <NavButton link={"/contact"} pageName={"REACH OUT"} />
         </li>
       </ul>
     </section>

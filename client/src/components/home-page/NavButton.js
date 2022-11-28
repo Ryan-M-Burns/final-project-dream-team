@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NavButton = ({ link, name }) => {
+const NavButton = ({ link, pageName }) => {
   return (
     <Link to={link}>
       <button
         className='nav__button'>
-        {name}
+        {pageName}
       </button>
     </Link>
   );
