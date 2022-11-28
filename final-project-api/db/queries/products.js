@@ -17,19 +17,43 @@ const getProductsByFarmId = (farmId) => {
   });
 };
 
-const addNewProduct = () => {
+const addNewProduct = (productDetails) => {
+  // Assign content of listingAttributes object to variables
+  const {
+    farm_id,
+    title,
+    category,
+    size,
+    image_url,
+    price,
+    quantity,
+  } = productDetails;
+
+  // Place variables into array in correct order
+  const queryParams = [
+    farm_id,
+    title,
+    category,
+    size,
+    image_url,
+    price,
+    quantity,
+  ];
+
+  // Pass array to insertion query
   return db
   .query(`
-  INSERT INTO comments (user_id, listing_id, content)
-  VALUES ($1, $2, $3) RETURNING *`,
-  [userID, listingID, comment])
+  INSERT INTO listings (owner_id, title, description, price, category, photo_url)
+  VALUES ($1, $2, $3, $4, $5, $6)
+  RETURNING *;`,
+  queryParams)
 
   .then(data => {
-    return data.rows;
+    return data.rows[0];
   })
-
   .catch(err => {
     return err.message;
   });
 };
 
+module.exports = (getProducts, getProductsByFarmId, addNewProduct)
