@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS farms CASCADE;
 CREATE TABLE farms (
   id SERIAL PRIMARY KEY NOT NULL,
-  user_id INTEGER REFERENCES users(id)
+  user_id INTEGER REFERENCES users(id),
   name VARCHAR(255) NOT NULL,
   logo_url TEXT,
   email VARCHAR(255) NOT NULL,
