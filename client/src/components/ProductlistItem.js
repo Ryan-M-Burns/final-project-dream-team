@@ -1,13 +1,26 @@
 import React from 'react';
-
+import './ProductListItem.scss';
 const ProductListItem = ({ product }) => {
 
   return (
-    <li>
-      <h2>{product.title}</h2>
-      <h2>{product.price}</h2>
-      <h2>{product.size}</h2>
-      <h2>{product.category}</h2>
+    <li className="li__product-item">
+      <h5 className="product-name">{product.title}</h5>
+      <div>
+        <div className="div__product-info">
+          <div className="div__product-item">
+            <p>Price:</p>
+            <p className="product-price">{product.price}</p>
+          </div>
+          <div className="div__product-item">
+            <p>Pack Size:</p>
+            <p className="product-size">{product.size}</p>
+          </div>
+          <div className="div__product-item">
+            <p>Price:</p>
+            <p className="product-category">{product.category}</p>
+          </div>
+        </div>
+      </div>
     </li>
   );
 };

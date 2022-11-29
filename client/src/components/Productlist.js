@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductListItem from './ProductListItem';
+import './ProductList.scss'
 
 const ProductList = ({ products }) => {
   const parsedProductList = products.map(product => {
@@ -12,7 +13,7 @@ const ProductList = ({ products }) => {
   });
 
   return (
-    <ul>
+    <ul className="products_page">
       {parsedProductList}
     </ul>
   );
