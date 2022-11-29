@@ -11,8 +11,8 @@ const FarmerListItem = ({farm}) => {
       {farm.is_family_owned && <h2>family owned</h2>}
       {farm.is_organic && <h2>organic farm</h2>}
       <div>
-        <Link to='/about'>
-          <button>More</button>
+        <Link to={`/our-farm/${farm.id}`}>
+          <button props={farm.id}>More</button>
         </Link>
       </div>
     </li>
