@@ -12,7 +12,7 @@ const FarmerListItem = ({farm}) => {
       {farm.is_organic && <h2>organic farm</h2>}
       <div>
         <Link to={`/our-farm/${farm.id}`}>
-          <button props={farm.id}>More</button>
+          <button>More</button>
         </Link>
       </div>
     </li>
