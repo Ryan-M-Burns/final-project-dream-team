@@ -4,10 +4,11 @@ import './AboutFarms.scss';
 import axios from 'axios';
 
 const OurFarm = () => {
+  const [farm, setFarm] = useState([]);
+
   const params = useParams();
   const farmId = Number(params.id);
 
-  const [farm, setFarm] = useState([]);
 
   const getFarm = () => {
     axios.get(`/farms/${farmId}`)

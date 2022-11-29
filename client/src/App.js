@@ -8,6 +8,7 @@ import OurFarm from './pages/AboutFarms/OurFarm';
 import Account from './pages/Account/Account';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Products from './pages/Products/Products.js';
+import Product from './pages/Products/Product';
 import Home from './pages/HomePage/Home';
 import Landing from './pages/Landing/Landing';
 import Navbar from './pages/Navbar/Navbar';
@@ -37,6 +38,8 @@ function App() {
             <Route path='/products' element={<Products />}>
             </Route>
             <Route path='/our-farm/:id' element={<OurFarm />}>
+            </Route>
+            <Route path='/product/:id' element={<Product />}>
             </Route>
           </Routes>
         </section>
