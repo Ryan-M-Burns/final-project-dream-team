@@ -4,6 +4,7 @@ const ProductListItem = ({ product }) => {
 
   return (
     <li className="li__product-item">
+
       <h5 className="product-name">{product.title}</h5>
       <div>
         <div className="div__product-info">
@@ -20,7 +21,9 @@ const ProductListItem = ({ product }) => {
             <p className="product-category">{product.category}</p>
           </div>
         </div>
+        <img src={product.image_url} alt="food" />
       </div>
+
     </li>
   );
 };
