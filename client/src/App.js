@@ -21,7 +21,7 @@ function App() {
         <nav>
           <Navbar />
         </nav>
-        <section>
+        <section className="section__app">
           <Routes>
             <Route path='/' element={<Home />}>
             </Route>
