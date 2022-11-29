@@ -3,15 +3,14 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.scss';
 
 import About from './pages/About/About';
-import AboutFarms from './pages/AboutFarms/AboutFarms';
-import OurFarm from './pages/AboutFarms/OurFarm';
-import Account from './pages/Account/Account';
-import ContactUs from './pages/ContactUs/ContactUs';
-import Products from './pages/Products/Products.js';
-import Product from './pages/Products/Product';
+import AboutFarms from './pages/HomePage/AboutFarms';
+import OurFarm from './Archive/OurFarm';
+import Account from './components/Account/Account';
+import Products from './pages/HomePage/Products.js';
+import Product from './Archive/Product';
 import Home from './pages/HomePage/Home';
 import Landing from './pages/Landing/Landing';
-import Navbar from './pages/Navbar/Navbar';
+import Navbar from './Navbar';
 import RegisterFarm from './farmers/RegisterFarm';
 import RegisterUser from './pages/RegisterUser/RegisterUser';
 
@@ -32,8 +31,6 @@ function App() {
             <Route path='/account' element={<Account />}>
             </Route>
             <Route path='/meet-the-farmers' element={<AboutFarms />}>
-            </Route>
-            <Route path='/contact' element={<ContactUs />}>
             </Route>
             <Route path='/products' element={<Products />}>
             </Route>

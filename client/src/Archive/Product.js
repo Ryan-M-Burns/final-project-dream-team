@@ -1,7 +1,8 @@
+// future state: will become a .map of ProductList instead of making an axios call
+
 import {useState, useEffect, React} from 'react';
 import {useParams} from 'react-router-dom';
 
-import './Products.scss';
 import axios from 'axios';
 import {dividerClasses} from '@mui/material';
 
@@ -17,7 +18,6 @@ const Products = () => {
       .then(product => {
         setProduct(product.data[0]);
       });
-
   };
   useEffect(() => {
     getProduct();

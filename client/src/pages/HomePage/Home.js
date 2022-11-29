@@ -5,6 +5,10 @@ import Container from '@mui/material/Container';
 import './Home.scss';
 
 const Home = () => {
+  // Nav Bar - Logo, Account drop down, About
+  // Farm List
+  // Boxes
+  // Products all generated - filter form that expands
   return (
     <Container className='section__home'>
       <BoxCarousel />

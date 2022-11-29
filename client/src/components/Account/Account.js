@@ -1,5 +1,7 @@
 import React from 'react';
 import './Account.scss';
+
+// turn into component (drop down when icon is clicked)
 const Account = () => {
   return (
     <section>
