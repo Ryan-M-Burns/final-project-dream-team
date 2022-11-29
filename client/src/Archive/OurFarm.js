@@ -1,7 +1,9 @@
 import {useState, useEffect, React} from 'react';
 import {useParams} from 'react-router-dom';
-import './AboutFarms.scss';
 import axios from 'axios';
+
+// will become part of the hook
+
 const OurFarm = () => {
   const [state, setState] = useState({
     farm: {},
