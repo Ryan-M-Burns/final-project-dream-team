@@ -1,14 +1,27 @@
-import React from 'react';
+import {useState, useEffect, React} from 'react';
 import './AboutFarms.scss';
 import FarmerList from '../../components/FarmerList';
+import axios from 'axios';
 
-const Farm = () => {
+const Farms = () => {
+  const [farms, setFarms] = useState([]);
+
+  const getFarms = () => {
+    axios.get("/farms")
+      .then(farms => {
+        setFarms(farms.data);
+      });
+  };
+
+  useEffect(() => {
+    getFarms();
+  }, []);
+
+  console.log('testy2', farms);
+
   return (
-    <>
-      <div className='farm'>Where the 🍆 are grown 🚜</div>
-      <FarmerList />
-    </>
+    <FarmerList farms={farms} />
   );
 };
 
-export default Farm;
+export default Farms;
