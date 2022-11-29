@@ -15,7 +15,7 @@ const Products = () => {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log("DbProducts", products);
+
   return (
     <ProductList products={products} />
   );
