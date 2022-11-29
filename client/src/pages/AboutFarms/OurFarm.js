@@ -2,27 +2,46 @@ import {useState, useEffect, React} from 'react';
 import {useParams} from 'react-router-dom';
 import './AboutFarms.scss';
 import axios from 'axios';
-
 const OurFarm = () => {
-  const [farm, setFarm] = useState([]);
+ const [state, setState] = useState({
+    farm: {},
+    products: []
+  });
+
+
 
   const params = useParams();
   const farmId = Number(params.id);
 
 
-  const getFarm = () => {
-    axios.get(`/farms/${farmId}`)
-      .then(farm => {
-        setFarm(farm.data[0]);
-      });
-  };
 
   useEffect(() => {
-    getFarm();
+    Promise.all([
+      (axios.get(`/farms/${farmId}`)),
+      (axios.get(`/farms/${farmId}/products`))
+    ]).then((all) => {
+      console.log('test2', all);
+      setState({
+        farm: all[0].data[0],
+        products: all[1].data
+      });
+    });
   }, []);
 
+  //generating the information per product
+  const farmProducts = state.products.map(product => {
+    return (
+      <p>{product.title}</p>
+    );
+  });
+
   return (
-    <p>{farm.description}</p>
+    <div>
+      <p>hello {state.farm.description}</p>
+      <ul>
+        {farmProducts}
+      </ul>
+    </div>
   );
 
 };
