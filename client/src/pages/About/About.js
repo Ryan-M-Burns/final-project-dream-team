@@ -3,7 +3,7 @@ import './About.scss';
 
 const About = () => {
   return (
-    <article class='about__article'>
+    <article className='about__article'>
       <h2>Our Mission</h2>
       <p>We believe in connecting farmers and their
         communities. We strive to provide families with the
