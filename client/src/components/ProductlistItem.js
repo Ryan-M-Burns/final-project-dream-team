@@ -17,7 +17,7 @@ const ProductListItem = ({ product }) => {
             <p className="product-size">{product.size}</p>
           </div>
           <div className="div__product-item">
-            <p>Price:</p>
+            <p>Farm:</p>
             <p className="product-category">{product.category}</p>
           </div>
         </div>
