@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import './ProductListItem.scss';
 const ProductListItem = ({ product }) => {
 
@@ -19,7 +20,11 @@ const ProductListItem = ({ product }) => {
             <p>Price:</p>
             <p className="product-category">{product.category}</p>
           </div>
-        </div>
+          <div>
+            <Link to={`/product/${product.id}`}>
+            <button>More</button>
+            </Link>
+          </div>
       </div>
     </li>
   );
