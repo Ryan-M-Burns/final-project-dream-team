@@ -1,6 +1,6 @@
 import {useState, useEffect, React} from 'react';
 import './AboutFarms.scss';
-import FarmerList from '../../components/FarmerList';
+import FarmerList from '../../components/FarmList';
 import axios from 'axios';
 
 const Farms = () => {
