@@ -1,4 +1,4 @@
-import { useState, useEffect, React } from 'react';
+import {useState, useEffect, React} from 'react';
 import './Products.scss';
 import ProductList from '../../components/ProductList';
 import axios from 'axios';
@@ -15,7 +15,6 @@ const Products = () => {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log("DbProducts", products);
   return (
     <ProductList products={products} />
   );

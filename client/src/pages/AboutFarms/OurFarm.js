@@ -6,7 +6,6 @@ import axios from 'axios';
 const OurFarm = () => {
   const params = useParams();
   const farmId = Number(params.id);
-  console.log('bijna', farmId);
 
   const [farm, setFarm] = useState([]);
 
@@ -14,7 +13,6 @@ const OurFarm = () => {
     axios.get(`/farms/${farmId}`)
       .then(farm => {
         setFarm(farm.data[0]);
-        console.log('arghhhh', farm.data[0]);
       });
   };
 
