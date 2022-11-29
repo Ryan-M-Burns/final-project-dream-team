@@ -1,12 +1,20 @@
 const express = require('express');
 const router = express.Router();
+const {getFarms, getFarmById} = require('../db/queries/farms');
 
 router.get('/', (req, res) => {
-  res.send('farm profile goes here');
+  getFarms()
+    .then(farms => {
+      res.json(farms);
+    });
 });
 
 router.get('/:id', (req, res) => {
-  res.send('farm profile goes here');
+  const {id} = req.params;
+  getFarmById(id)
+    .then(farm => {
+      res.json(farm);
+    });
 });
 
 router.get('/new', (req, res) => {
@@ -26,4 +34,3 @@ router.delete('/:id', (req, res) => {
 });
 
 module.exports = router;
-
