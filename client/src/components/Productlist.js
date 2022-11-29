@@ -1,16 +1,19 @@
 import React from 'react';
 import ProductListItem from './ProductListItem';
 
-const ProductList = (props) => {
+const ProductList = ({ products }) => {
+  const parsedProductList = products.map(product => {
+    return (
+      <ProductListItem
+        key={product.id}
+        product={product}
+      />
+    );
+  });
 
   return (
     <ul>
-      <ProductListItem
-        name="henry"
-        price="5"
-        size="1lb"
-        category="veggies"
-      />
+      {parsedProductList}
     </ul>
   );
 };

@@ -1,14 +1,13 @@
 import React from 'react';
 
-const ProductListItem = (props) => {
-
+const ProductListItem = ({ product }) => {
 
   return (
     <li>
-      <h2>{props.name}</h2>
-      <h2>{props.price}</h2>
-      <h2>{props.size}</h2>
-      <h2>{props.category}</h2>
+      <h2>{product.title}</h2>
+      <h2>{product.price}</h2>
+      <h2>{product.size}</h2>
+      <h2>{product.category}</h2>
     </li>
   );
 };

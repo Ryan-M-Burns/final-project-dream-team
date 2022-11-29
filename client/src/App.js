@@ -6,7 +6,7 @@ import About from './pages/About/About';
 import AboutFarms from './pages/AboutFarms/AboutFarms';
 import Account from './pages/Account/Account';
 import ContactUs from './pages/ContactUs/ContactUs';
-import FarmProducts from './pages/FarmProducts/FarmProducts'
+import Products from './pages/Products/Products.js'
 import Home from './pages/HomePage/Home';
 import Landing from './pages/Landing/Landing';
 import Navbar from './pages/Navbar/Navbar';
@@ -17,7 +17,6 @@ function App() {
 
   return (
     <main className="App">
-
       <Router>
         <nav>
           <Navbar />
@@ -34,7 +33,7 @@ function App() {
             </Route>
             <Route path='/contact' element={<ContactUs />}>
             </Route>
-            <Route path='/products' element={<FarmProducts />}>
+            <Route path='/products' element={<Products />}>
             </Route>
           </Routes>
         </section>
