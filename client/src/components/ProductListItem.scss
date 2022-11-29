@@ -1,0 +1,33 @@
+@import "../styles/variables.scss";
+@import "../styles/reset.scss";
+
+.li__product-item {
+  display: flex;
+  flex-flow: column;
+  border: 2px solid;
+  border-color: aqua;
+  border-radius: 25px;
+  background-color: $dark-background;
+  padding: 10px;
+  margin: 10px;
+  max-width: 30%;
+  min-width: 30%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+
+  .div__product-info {
+
+  }
+
+  .product-name {
+    font-size: 30px;
+    width: 50%;
+  }
+
+  .product-price {}
+
+  .product-size {}
+
+  .product-category {}
+}

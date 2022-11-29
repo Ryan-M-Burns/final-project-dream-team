@@ -15,6 +15,7 @@ const Products = () => {
   useEffect(() => {
     getProducts();
   }, []);
+
   return (
     <ProductList products={products} />
   );
