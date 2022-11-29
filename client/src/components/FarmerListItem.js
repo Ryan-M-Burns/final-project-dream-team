@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 const FarmerListItem = ({farm}) => {
-  console.log('taylor rules', farm);
 
   return (
     <li>
@@ -11,7 +10,7 @@ const FarmerListItem = ({farm}) => {
       {farm.is_family_owned && <h2>family owned</h2>}
       {farm.is_organic && <h2>organic farm</h2>}
       <div>
-        <Link to='/about'>
+        <Link to={`/our-farm/${farm.id}`}>
           <button>More</button>
         </Link>
       </div>
