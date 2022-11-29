@@ -3,17 +3,13 @@ import {useParams} from 'react-router-dom';
 import './AboutFarms.scss';
 import axios from 'axios';
 const OurFarm = () => {
- const [state, setState] = useState({
+  const [state, setState] = useState({
     farm: {},
     products: []
   });
 
-
-
   const params = useParams();
   const farmId = Number(params.id);
-
-
 
   useEffect(() => {
     Promise.all([
@@ -43,7 +39,6 @@ const OurFarm = () => {
       </ul>
     </div>
   );
-
 };
 
 export default OurFarm;
