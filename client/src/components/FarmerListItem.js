@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 const FarmerListItem = ({farm}) => {
-  console.log('taylor rules', farm);
 
   return (
     <li>

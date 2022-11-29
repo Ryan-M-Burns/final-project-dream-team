@@ -2,18 +2,18 @@ import {useState, useEffect, React} from 'react';
 import {useParams} from 'react-router-dom';
 import './AboutFarms.scss';
 import axios from 'axios';
-
 const OurFarm = () => {
-  const params = useParams();
-  const farmId = Number(params.id);
-  console.log('bijna', farmId);
-
-  const [state, setState] = useState({
+ const [state, setState] = useState({
     farm: {},
     products: []
   });
 
-  console.log('test1', state.products);
+
+
+  const params = useParams();
+  const farmId = Number(params.id);
+
+
 
   useEffect(() => {
     Promise.all([
