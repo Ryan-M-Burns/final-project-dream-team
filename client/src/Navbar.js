@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav>
       <Link to='/'>
-        <h1>HARVEST</h1>
+        <button className="title">HARVEST</button>
       </Link>
 
       <div className="nav_buttons">

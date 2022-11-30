@@ -22,6 +22,10 @@ function App() {
         <nav>
           <Navbar />
         </nav>
+        <div className="nav__line">
+          <img src="../images/navbackground.jpg" alt="veggieline"></img>
+          <img src="../images/navbackground.jpg" alt="veggieline"></img>
+        </div>
         <section className="section__app">
           <Routes>
             <Route path='/' element={<Home />}>

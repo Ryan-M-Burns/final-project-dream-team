@@ -1,6 +1,6 @@
 @import './styles/variables.scss';
 @import './styles/reset.scss';
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
 
 nav {
   display: flex;
@@ -8,34 +8,44 @@ nav {
   align-items: center;
   height: 200px;
   width: 100%;
-  background-image: url('../public/images/navbackground.jpg');
-
-
-  h1 {
-    font-size: 100px;
-    font-family: 'Covered By Your Grace', cursive;
-    color: #63452a;
-    background-color: rgba(252, 242, 233, 0.75);
-    padding: 20px 20px;
-    margin-left: 20px;
-    border-radius: 20px;
-  }
-
-  .nav_buttons {
-    display: flex;
-    align-items: flex-end;
-  }
-
-  button {
-    font-size: 20px;
-    font-weight: bold;
-    color: #63452a;
-    background-color: #fcf2e9;
-    border-radius: 2em;
-    padding: 10px 20px;
-    margin: 10px;
-  }
+  background-color: white;
 }
+
+
+.title {
+  font-size: 120px;
+  font-family: 'Titan One', cursive;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url('../public/images/navbackground.jpg');
+  color: transparent;
+  background-color: rgba(252, 242, 233, 0.75);
+  padding: 5px 20px;
+  margin-left: 20px;
+  border-radius: 20px;
+  border: none;
+}
+
+.title:hover {
+  border: 5px solid;
+  background-clip: padding-box;
+}
+
+.nav_buttons {
+  display: flex;
+  align-items: flex-end;
+}
+
+button {
+  font-size: 20px;
+  font-weight: bold;
+  color: #63452a;
+  background-color: #fcf2e9;
+  border-radius: 2em;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
 
 button:hover {
   color: #fcf2e9;
@@ -62,3 +72,11 @@ button:hover {
   font: inherit;
   cursor: pointer;
 }
+
+img {
+  width: 50%;
+  height: 50px;
+  object-fit: cover;
+}
+
+.nav_buttons {}
