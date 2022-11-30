@@ -18,13 +18,24 @@ function App() {
           {/* Landing Page Route */}
           <Route path='/' element={<Landing />} />
           {/* Main Page Routes */}
-          <Route path='/home' element={
-            <>
-              <Navbar />
-              <Home />
-            </>}
+          <Route
+            path='/home'
+            element={
+              <>
+                <Navbar />
+                <Home />
+              </>
+            }
           />
-          <Route path='/account' element={<><Navbar /> <Account /> </>} />
+          <Route
+            path='/account'
+            element={
+              <>
+                <Navbar />
+                <Account />
+              </>
+            }
+          />
 
           {/* Farmer Portal Routes */}
           {/* <Route path='/farmer-portal' element={<FarmerLogin />} />
