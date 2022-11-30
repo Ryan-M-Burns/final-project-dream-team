@@ -25,7 +25,7 @@ const useApplicationData = () => {
       .then(all => {
         const products = all[0].data;
         const boxes = all[1].data;
-        const farms = all[1].data;
+        const farms = all[2].data;
         console.log(products, farms);
         setState(prev => ({ ...prev, products, farms }));
       });

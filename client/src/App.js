@@ -25,14 +25,14 @@ function App() {
         </div>
         <section className="section__app">
           <Routes>
-            <Route path='/home' element={<Home />} />
-            
+            <Route path='/home' element={<Home appData={appData} />} />
+
             <Route path='/our-mission' element={<About />} />
-            
+
             <Route path='/account' element={<Account />} />
-            
+
             <Route path='/our-farm/:id' element={<OurFarm />} />
-            
+
           </Routes>
         </section>
       </Router>
