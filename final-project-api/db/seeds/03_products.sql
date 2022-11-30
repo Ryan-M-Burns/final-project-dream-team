@@ -15,7 +15,7 @@ VALUES
 (4, 'Lavender', 'Herbs', '1 Bunch', 'https://t3.ftcdn.net/jpg/00/97/49/48/360_F_97494846_WYgmj5vazgOdaKgfZ9ZNouEt2dL8rseD.jpg', 2, 100, TRUE, FALSE),
 (6, 'Chives', 'Herbs', '1 Bunch', 'https://media.istockphoto.com/id/845638780/photo/fresh-chives-siniklav-or-frenk-sogani-on-wooden-surface.jpg?s=612x612&w=0&k=20&c=yRtiUrz7UsweNumcbB5cuiyUi3JnK2-JE_NAc0gWBHA=', 2, 100, TRUE, FALSE),
 (2, 'Bell Peppers', 'Peppers', '4lbs', 'https://media.istockphoto.com/id/480931380/photo/bell-pepper.jpg?s=612x612&w=0&k=20&c=gzxuvBrlcGd9shtDT2rMyPoCQj9VzLv1SksaRSuNDCk=', 5, 100, TRUE, FALSE),
-(2, 'Chili Peppers', 'Peppers', 'https://thumbs.dreamstime.com/b/red-hot-chilli-pepper-wooden-bowl-spicy-food-concept-79076183.jpg', 'test url', 4, 100, TRUE, FALSE),
+(2, 'Chili Peppers', 'Peppers', '1lb', 'https://thumbs.dreamstime.com/b/red-hot-chilli-pepper-wooden-bowl-spicy-food-concept-79076183.jpg', 4, 100, TRUE, FALSE),
 (3, 'Turnips', 'Root Vegetables', '2lbs', 'https://thumbs.dreamstime.com/b/closeup-rustic-organic-turnips-sustainable-vegetarian-farming-fresh-green-tops-roots-old-wood-background-81732815.jpg', 4, 100, TRUE, FALSE),
 (3, 'Beets', 'Root Vegetables', '3lbs', 'https://media.istockphoto.com/id/599695694/photo/red-beetroot-with-green-leaves.jpg?s=612x612&w=0&k=20&c=bVS2GBQ7r1jDi4N0Ryxy86w-GcF748lgdS_xwofxL1k=', 3, 100, TRUE, FALSE),
 (3, 'Carrots', 'Root Vegetables', '5lbs', 'https://www.wideopeneats.com/wp-content/uploads/2021/02/AdobeStock_221818930-1024x683.jpeg', 4, 100, TRUE, FALSE),
