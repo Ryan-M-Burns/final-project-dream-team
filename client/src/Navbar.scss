@@ -1,23 +1,97 @@
 @import './styles/variables.scss';
 @import './styles/reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 200px;
   width: 100%;
-  background-color: rgba(62, 39, 18, 0.45);
+  background-color: black;
+}
 
 
-  h1 {
-    font-size: 100px;
-    color: #7d736a
-  }
+.title {
+  font-size: 120px;
+  font-family: 'Titan One', cursive;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url('../public/images/navbackground.jpg');
+  color: transparent;
+  background-color: rgba(252, 242, 233, 0.75);
+  padding: 5px 20px;
+  margin-left: 20px;
+  border-radius: 20px;
+  border: none;
+}
 
-  button {
-    font-size: 20px;
-    color: rgba(55, 50, 45);
-    background-color: #7d736a;
-  }
+.title:hover {
+  border: 5px solid;
+  background-clip: padding-box;
+}
+
+.nav_buttons {
+  display: flex;
+  align-items: flex-end;
+}
+
+button {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007435;
+  background-color: #fcf2e9;
+  border-radius: 2em;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+
+button:hover {
+  color: #fcf2e9;
+  background-color: #007435;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.account {
+  position: absolute;
+  width: 150px
+}
+
+.account>li>button {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.account>li>button:hover {
+  color: #fcf2e9;
+  background-color: #007435;
+}
+
+img {
+  width: 50%;
+  height: 50px;
+  object-fit: cover;
+}
+
+.nav__buttons {
+  padding: 20px;
+  border-radius: 20px;
+  margin-right: 10px
+}
+
+.nav_buttons:hover {
+  background-image: url('../public/images/navbackground.jpg');
+  border-radius: 20px;
+  padding: 20px 0px 20px 20px
 }
