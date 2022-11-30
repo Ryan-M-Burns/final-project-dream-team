@@ -5,7 +5,7 @@ const FarmListItem = ({farm}) => {
   return (
     <li>
       <h2>{farm.name}</h2>
-      <img>{farm.logo_url}</img>
+      <img src={farm.logo_url} alt="farm_logo" />
     </li>
   );
 };
