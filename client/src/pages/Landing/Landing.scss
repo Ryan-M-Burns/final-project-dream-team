@@ -1,2 +1,47 @@
 @import '../../styles/variables.scss';
 @import '../../styles/reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Fjalla+One&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
+
+.column {
+  overflow: y;
+  height: 75vw
+}
+
+.landing__page {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  position: absolute;
+  // background-image: url('../../../public/images/navbackground.jpg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: pink;
+  height: 50vw;
+  width: 100vw;
+}
+
+#title {
+  display: flex;
+  font-family: 'Fjalla One';
+  font-size: 500px;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+
+}
+
+.arrow {
+  background-color: blue;
+}
+
+.row__login {
+  // background-image: url('../../../public/images/planksbackground.jpg')
+  background-color: yellow;
+}
+
+.login {
+  height: 300px;
+  width: 200px;
+  background-color: white
+}
