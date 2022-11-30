@@ -11,31 +11,32 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div>
-        <Link to='/'>
-          <h1>HARVEST</h1>
-        </Link>
-      </div>
-      <div className="dropdown">
-        <button onClick={handleDropdown}>Account</button>
-        {open ? (
-          <ul className="account">
-            <li className="account-item">
-              <button>View your profile</button>
-            </li>
-            <li className="account-item">
-              <button>My orders</button>
-            </li>
-            <li className="account-item">
-              <button>Sign out</button>
-            </li>
-          </ul>
-        ) : null}
-      </div>
-      <div>
-        <Link to='/our-mission'>
-          <button>About Us</button>
-        </Link>
+      <Link to='/'>
+        <h1>HARVEST</h1>
+      </Link>
+
+      <div className="nav_buttons">
+        <div className="dropdown">
+          <button onClick={handleDropdown}>Account</button>
+          {open ? (
+            <ul className="account">
+              <li className="account-item">
+                <button>View your profile</button>
+              </li>
+              <li className="account-item">
+                <button>My orders</button>
+              </li>
+              <li className="account-item">
+                <button>Sign out</button>
+              </li>
+            </ul>
+          ) : null}
+        </div>
+        <div>
+          <Link to='/our-mission'>
+            <button>About Us</button>
+          </Link>
+        </div>
       </div>
     </nav>
   );
