@@ -21,7 +21,7 @@ const Navbar = () => {
           {open ? (
             <ul className="account">
               <li className="account-item">
-                <button>View your profile</button>
+                <button><img src="../images/user.png" alt="user"></img>View your profile</button>
               </li>
               <li className="account-item">
                 <button>My orders</button>
