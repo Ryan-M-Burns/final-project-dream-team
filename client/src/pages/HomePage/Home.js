@@ -23,7 +23,7 @@ const Home = ({ appData }) => {
   } = appData;
   console.log("pleasework!", appData);
   const showProducts = getFilteredProducts(state, state.category, state.price, state.farm);
-
+  console.log("Right hurrrrr", showProducts)
   return (
     <Container className='section__home'>
       <BoxCarousel />
