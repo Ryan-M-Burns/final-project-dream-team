@@ -13,7 +13,7 @@ import Landing from './pages/Landing/Landing';
 import Navbar from './Navbar';
 import RegisterFarm from './farmers/RegisterFarm';
 import RegisterUser from './pages/RegisterUser/RegisterUser';
-import useApplicationData from "hooks/useApplicationData.js";
+import useApplicationData from "./hooks/useApplicationData.js";
 
 function App() {
   const {
@@ -24,20 +24,24 @@ function App() {
   return (
     <main className="App">
       <Router>
-        <nav>
-          <Navbar />
-        </nav>
-        <div className="nav__line">
-          <img src="../images/navbackground.jpg" alt="veggieline"></img>
-          <img src="../images/navbackground.jpg" alt="veggieline"></img>
+        <div className="navbar-hide">
+          <nav>
+            <Navbar />
+          </nav>
+          <div className="footer__line">
+            <img src="../images/navbackground.jpg" alt="veggieline"></img>
+            <img src="../images/navbackground.jpg" alt="veggieline"></img>
+          </div>
         </div>
         <section className="section__app">
           <Routes>
             <Route path='/' element=
-            {<Home 
-            state={state}
-            setFarm={setFarm}
-            />}>
+              {<Home
+                state={state}
+                setFarm={setFarm}
+              />}>
+            </Route>
+            <Route className="landing" path='/landing' element={<Landing />}>
             </Route>
             <Route path='/our-mission' element={<About />}>
             </Route>

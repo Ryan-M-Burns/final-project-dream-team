@@ -1,6 +1,6 @@
 @import './styles/variables.scss';
 @import './styles/reset.scss';
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Fjalla+One&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
 
 nav {
   display: flex;
@@ -8,16 +8,17 @@ nav {
   align-items: center;
   height: 200px;
   width: 100%;
-  background-color: black;
+  background-image: url('../public/images/planksbackground.jpg')
 }
 
 
 .title {
-  font-size: 120px;
-  font-family: 'Titan One', cursive;
+  font-size: 150px;
+  font-family: 'Fjalla One', cursive;
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: url('../public/images/navbackground.jpg');
+  background-image: url('../public/images/colourfulveg.jpg');
+  background-position: bottom 50% right 50%;
   color: transparent;
   background-color: rgba(252, 242, 233, 0.75);
   padding: 5px 20px;
@@ -80,7 +81,7 @@ button:hover {
 
 img {
   width: 50%;
-  height: 50px;
+  height: 30px;
   object-fit: cover;
 }
 
