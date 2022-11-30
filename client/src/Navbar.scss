@@ -85,13 +85,13 @@ img {
 }
 
 .nav__buttons {
-  padding: 50px;
-  border-radius: 20px
+  padding: 20px;
+  border-radius: 20px;
+  margin-right: 10px
 }
 
 .nav_buttons:hover {
-  padding: 50px;
   background-image: url('../public/images/navbackground.jpg');
   border-radius: 20px;
-  margin-right: 10px
+  padding: 20px 0px 20px 20px
 }
