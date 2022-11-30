@@ -35,6 +35,7 @@ const productsRoutes = require('./routes/products');
 const usersRoutes = require('./routes/users');
 const boxesRoutes = require('./routes/boxes');
 const orderRoutes = require('./routes/orders');
+const categoryRoutes = require('./routes/categories')
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -46,6 +47,7 @@ app.use('/boxes', boxesRoutes);
 app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
 app.use('/orders', orderRoutes);
+app.use('/categories', categoryRoutes);
 
 // Note: mount other resources here, using the same pattern above
 
