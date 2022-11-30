@@ -5,9 +5,10 @@ import Container from '@mui/material/Container';
 import { getFilteredProducts } from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
+import useApplicationData from "../../hooks/useApplicationData";
 import './Home.scss';
 
-const Home = ({ appData }) => {
+const Home = () => {
 
   // Nav Bar - Logo, Account drop down, About
   // Farm List
@@ -20,10 +21,10 @@ const Home = ({ appData }) => {
     setCategory,
     setPrice,
     setProduct
-  } = appData;
-  console.log("pleasework!", appData);
+  } = useApplicationData();
+
   const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
-  console.log("Right hurrrrr", showProducts);
+
   return (
     <Container className='section__home'>
       <BoxCarousel />

@@ -3,38 +3,33 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
 import About from './pages/About/About';
-import OurFarm from './Archive/OurFarm';
 import Account from './components/Account/Account';
 import Product from './Archive/Product';
 import Home from './pages/HomePage/Home';
 import Navbar from './Navbar';
-import useApplicationData from "./hooks/useApplicationData";
+import Landing from './pages/Landing/Landing';
 
 function App() {
 
-  const appData = useApplicationData();
   return (
     <main className="App">
       <Router>
-        <nav>
-          <Navbar />
-        </nav>
-        <div className="nav__line">
-          <img src="../images/navbackground.jpg" alt="veggieline"></img>
-          <img src="../images/navbackground.jpg" alt="veggieline"></img>
-        </div>
-        <section className="section__app">
-          <Routes>
-            <Route path='/home' element={<Home appData={appData} />} />
+        <Routes>
+          {/* Landing Page Route */}
+          <Route path='/' element={<Landing />} />
+          {/* Main Page Routes */}
+          <Route path='/home' element={
+            <>
+              <Navbar />
+              <Home />
+            </>}
+          />
+          <Route path='/account' element={<><Navbar /> <Account /> </>} />
 
-            <Route path='/our-mission' element={<About />} />
-
-            <Route path='/account' element={<Account />} />
-
-            <Route path='/our-farm/:id' element={<OurFarm />} />
-
-          </Routes>
-        </section>
+          {/* Farmer Portal Routes */}
+          {/* <Route path='/farmer-portal' element={<FarmerLogin />} />
+          <Route path='/farmer-portal' element={<><FarmerNav /><FarmerHome /></>} /> */}
+        </Routes>
       </Router>
     </main>
   );
