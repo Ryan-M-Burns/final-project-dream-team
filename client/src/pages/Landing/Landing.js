@@ -1,5 +1,8 @@
 import React from 'react';
 import './Landing.scss';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCoffee} from '@fortawesome/free-solid-svg-icons';
+
 
 const Landing = () => {
   return (
@@ -10,7 +13,7 @@ const Landing = () => {
           <h1 id="title"> HARVEST </h1>
           <button id="visit">Visit our page</button>
           <div classnName="arrow">
-            hello
+            <FontAwesomeIcon icon="coffee" />
           </div>
         </div>
         {/* page 2 */}
