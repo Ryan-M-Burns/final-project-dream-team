@@ -24,6 +24,8 @@ function App() {
           <Route path='/home' element={
             <>
               <Navbar />
+              <img src="../images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
+              <img src="../images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
               <Home />
             </>
           } />
