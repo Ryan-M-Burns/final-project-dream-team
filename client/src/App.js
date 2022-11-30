@@ -4,10 +4,13 @@ import './App.scss';
 
 import About from './pages/About/About';
 import Account from './components/Account/Account';
-import Product from './Archive/Product';
 import Home from './pages/HomePage/Home';
 import Navbar from './Navbar';
 import Landing from './pages/Landing/Landing';
+import PastOrders from './pages/PastOrders/PastOrders';
+
+import FarmerLogin from './farmers/FarmerLogin';
+
 
 function App() {
 
@@ -18,28 +21,33 @@ function App() {
           {/* Landing Page Route */}
           <Route path='/' element={<Landing />} />
           {/* Main Page Routes */}
-          <Route
-            path='/home'
-            element={
-              <>
-                <Navbar />
-                <Home />
-              </>
-            }
-          />
-          <Route
-            path='/account'
-            element={
-              <>
-                <Navbar />
-                <Account />
-              </>
-            }
-          />
-
+          <Route path='/home' element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          } />
+          <Route path='/about' element={
+            <>
+              <Navbar />
+              <About />
+            </>
+          } />
+          <Route path='/account' element={
+            <>
+              <Navbar />
+              <Account />
+            </>
+          } />
+          <Route path='/orders' element={
+            <>
+              <Navbar />
+              <PastOrders />
+            </>
+          } />
           {/* Farmer Portal Routes */}
-          {/* <Route path='/farmer-portal' element={<FarmerLogin />} />
-          <Route path='/farmer-portal' element={<><FarmerNav /><FarmerHome /></>} /> */}
+          <Route path='/farmer-login' element={<FarmerLogin />} />
+          {/* <Route path='/farmer-portal' element={<><FarmerNav /><FarmerHome /></>} /> */}
         </Routes>
       </Router>
     </main>
