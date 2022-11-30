@@ -2,10 +2,12 @@ import React from 'react';
 import NavCard from './HomePageComponents/NavCard';
 import BoxCarousel from './HomePageComponents/BoxCarousel';
 import Container from '@mui/material/Container';
-import './Home.scss';
 import useApplicationData from '../../hooks/useApplicationData';
-import FarmerList from '../../components/FarmerList';
-const Home = () => {
+import FarmerList from '../../components/FarmList';
+import './Home.scss';
+
+const Home = (props) => {
+
   // Nav Bar - Logo, Account drop down, About
   // Farm List
   // Boxes
@@ -44,6 +46,11 @@ const Home = () => {
           <NavCard className='nav-card__home' link={"/contact"} pageName={"REACH OUT"} />
         </li>
       </ul>
+      <div className='home_farms'>
+        <FarmerList 
+        farms={props.farms}
+        />
+      </div>
     </Container>
 
   );

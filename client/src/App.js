@@ -13,8 +13,13 @@ import Landing from './pages/Landing/Landing';
 import Navbar from './Navbar';
 import RegisterFarm from './farmers/RegisterFarm';
 import RegisterUser from './pages/RegisterUser/RegisterUser';
+import useApplicationData from "hooks/useApplicationData.js";
 
 function App() {
+  const {
+    state,
+    setFarm,
+  } = useApplicationData();
 
   return (
     <main className="App">
@@ -24,7 +29,11 @@ function App() {
         </nav>
         <section className="section__app">
           <Routes>
-            <Route path='/' element={<Home />}>
+            <Route path='/' element=
+            {<Home 
+            state={state}
+            setFarm={setFarm}
+            />}>
             </Route>
             <Route path='/our-mission' element={<About />}>
             </Route>
