@@ -16,6 +16,7 @@ const Landing = () => {
         {/* page 2 */}
         <div className="row__login">
           <div className="login">
+            <p>Log in as a user</p>
             <form>
               <label>username</label>
               <input type="text"></input>
@@ -24,6 +25,7 @@ const Landing = () => {
             </form>
           </div>
           <div className="login">
+            <p>Log in as a farmer</p>
             <form>
               <label>username</label>
               <input type="text"></input>

@@ -37,7 +37,7 @@
 
 #visit {
   display: flex;
-  margin: 100px 100px;
+  margin: 50px 50px;
 }
 
 .arrow {
@@ -61,4 +61,21 @@
   margin: 50px;
   padding: 20px;
   border-radius: 25px
+}
+
+label {
+  font-family: 'Fjalla One';
+  font-size: 20px;
+}
+
+input {
+  width: 100%;
+  margin: 8px 0;
+}
+
+.login p {
+  display: flex;
+  justify-content: center;
+  font-family: 'Fjalla One';
+  font-size: 30px;
 }
