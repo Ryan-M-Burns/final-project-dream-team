@@ -10,3 +10,5 @@ router.get('/', (req, res) => {
     res.json(categories)
   })
 });
+
+module.exports = router;

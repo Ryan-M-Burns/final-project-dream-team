@@ -1,9 +1,9 @@
 const db = require('../connection');
 
 
-export const getCategories = () => {
+const getCategories = () => {
   return db
-  .query(`SELECT DISTINCT category FROM products;`)
+  .query(`SELECT DISTINCT category FROM products ORDER BY category;`)
   .then(categories => {
     console.log('categories', categories.rows)
     return categories.rows;
@@ -12,3 +12,5 @@ export const getCategories = () => {
     return err.mesage;
   });
 }
+
+module.exports = {getCategories}
