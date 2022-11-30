@@ -13,7 +13,6 @@ import useApplicationData from "./hooks/useApplicationData";
 function App() {
 
   const appData = useApplicationData();
-  console.log("hi", appData);
   return (
     <main className="App">
       <Router>
