@@ -16,6 +16,9 @@ const Navbar = () => {
       </Link>
 
       <div className="nav_buttons">
+        <div>
+          <button>Login</button>
+        </div>
         <div className="dropdown">
           <button onClick={handleDropdown}>Account</button>
           {open ? (

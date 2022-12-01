@@ -19,6 +19,10 @@ const FarmerLogin = () => {
           <input type="text"></input>
         </form>
       </div>
+      <div className="login__button">
+        <button>
+          <p>Login</p></button>
+      </div>
     </div>
   );
 };
