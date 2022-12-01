@@ -18,6 +18,8 @@ const FarmerLogin = () => {
   //   getUser();
   // }, []);
 
+  //handleSubmit needs work
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -27,7 +29,6 @@ const FarmerLogin = () => {
 
     if (userInfo && user.password === password) {
       setUser(userInfo);
-      window.location.href = "about";
     }
   };
 
