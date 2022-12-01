@@ -6,6 +6,10 @@ import About from './pages/About/About';
 import Account from './components/Account/Account';
 import Home from './pages/HomePage/Home';
 import Navbar from './Navbar';
+import RegisterFarm from './farmers/RegisterFarm';
+import RegisterUser from './pages/RegisterUser/RegisterUser';
+import useApplicationData from "./hooks/useApplicationData.js";
+import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
 

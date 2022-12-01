@@ -1,0 +1,74 @@
+@import '../../styles/variables.scss';
+@import '../../styles/reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Fjalla+One&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
+
+.row__login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.images img {
+  height: 300px;
+  width: 300px;
+}
+
+.farmer__login {
+  display: flex;
+  flex-direction: column;
+}
+
+.farmer__label {
+  font-family: 'Fjalla One';
+  font-size: 30px;
+}
+
+.farmer__input {
+  width: 100%;
+  height: 40px;
+  margin: 8px 0;
+  background-color: #fcf2e9;
+  border-radius: 10px;
+}
+
+.login p {
+  display: flex;
+  justify-content: center;
+  font-family: 'Fjalla One';
+  font-size: 50px;
+}
+
+.login {
+  height: 700px;
+  min-width: 500px;
+  background-color: #fcf2e9;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 25px
+}
+
+.submit__button {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #50350e;
+  background-color: #fcf2e9;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.submit__button:hover {
+  color: #fcf2e9;
+  background-color: #50350e;
+}

@@ -1,6 +1,6 @@
 @import './styles/variables.scss';
 @import './styles/reset.scss';
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Fjalla+One&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
 
 nav {
   display: flex;
@@ -8,18 +8,18 @@ nav {
   align-items: center;
   height: 200px;
   width: 100%;
-  background-color: $dark-background;
-  //background-image: url('../public/images/navbackground.jpg');
+  // background-image: url('../public/images/planksbackground.jpg')
+  background-color: black;
 }
 
 
 .title {
-  font-size: 120px;
-  font-family: 'Titan One', cursive;
+  font-size: 150px;
+  font-family: 'Fjalla One', cursive;
   -webkit-background-clip: text;
   background-clip: text;
-  background-color: $body-text;
-  // background-image: url('../public/images/navbackground.jpg');
+  background-image: url('../public/images/colourfulveg.jpg');
+  background-position: bottom 50% right 50%;
   color: transparent;
   padding: 5px 20px;
   margin-left: 20px;
@@ -35,20 +35,40 @@ nav {
 .nav_buttons {
   display: flex;
   align-items: flex-end;
+  font-family: 'Fjalla One';
 }
 
-button {
-  font-size: 20px;
+.nav_buttons button {
+  font-size: 30px;
   font-weight: bold;
-  color: #007435;
+  color: black;
   background-color: #fcf2e9;
   border-radius: 2em;
   padding: 10px 20px;
   margin: 10px;
 }
 
+.login__nav {
+  display: flex;
+  align-items: center;
+  font-size: 20px
+}
 
-button:hover {
+.login__component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lime;
+  margin: 0 25px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.login__input {
+  border-radius: 20px;
+}
+
+.nav_buttons button:hover {
   color: #fcf2e9;
   background-color: #007435;
 }
@@ -79,9 +99,9 @@ button:hover {
   background-color: #007435;
 }
 
-.sub_nav {
+.footer__line img {
   width: 50%;
-  height: 50px;
+  height: 30px;
   object-fit: cover;
 }
 
