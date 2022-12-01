@@ -1,6 +1,4 @@
 import React from 'react';
-import NavCard from './HomePageComponents/NavCard';
-import BoxCarousel from './HomePageComponents/BoxCarousel';
 import Container from '@mui/material/Container';
 import { getFilteredProducts } from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
