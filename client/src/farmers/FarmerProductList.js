@@ -1,12 +1,14 @@
 import React from 'react';
-import FarmerProductList from './FarmerProductList.scss';
+import './FarmerProductList.scss';
+import FarmerProductListItem from './FarmerProductListItem';
 
-const FarmerProductList = ({products}) => {
+const FarmerProductList = ({products, setProduct}) => {
   const parsedProductList = products.map(product => {
     return (
       <FarmerProductListItem
         key={product.id}
         product={product}
+        setProduct={setProduct}
       />
     );
   });

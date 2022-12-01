@@ -8,6 +8,7 @@ import Product from './Archive/Product';
 import Home from './pages/HomePage/Home';
 import Navbar from './Navbar';
 import Landing from './pages/Landing/Landing';
+import FarmerHome from './farmers/FarmerHome';
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
             </>}
           />
           <Route path='/account' element={<><Navbar /> <Account /> </>} />
-
+          <Route path='/farmer-home-test' element={<FarmerHome />} />
           {/* Farmer Portal Routes */}
           {/* <Route path='/farmer-portal' element={<FarmerLogin />} />
           <Route path='/farmer-portal' element={<><FarmerNav /><FarmerHome /></>} /> */}

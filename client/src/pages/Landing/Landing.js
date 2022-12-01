@@ -10,6 +10,7 @@ const Landing = () => {
       <h2> Slogan </h2>
       <Link to="/home">Enter Main Site</Link>
       <Link to="/farmer-portal">Farmer Portal</Link>
+      <Link to="/farmer-home-test">Farmer Portal</Link>
     </>
   );
 };

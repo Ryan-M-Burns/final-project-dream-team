@@ -30,8 +30,6 @@ const Home = () => {
       <BoxCarousel />
       <div className='home_farms'>
         <FarmList
-          farms={farms}
-          setFarms={setFarms}
         />
       </div>
       <ul className='ul__home'>
