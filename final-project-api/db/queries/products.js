@@ -47,6 +47,46 @@ const addNewProduct = (productDetails) => {
   });
 };
 
+const updateProduct = (productId, productDetails) => {
+  const {
+    title,
+    category,
+    size,
+    image_url,
+    price,
+    quantity,
+  } = productDetails;
+
+  const queryParams = [
+    productId,
+    title,
+    category,
+    size,
+    image_url,
+    price,
+    quantity,
+  ];
+
+  return db
+  .query(`
+  UPDATE products
+  SET
+  title = $2,
+  category = $3,
+  size = $4,
+  image_url = $5,
+  price = $6,
+  quantity = $7,
+  WHERE id = $1 RETURNING *;`,
+  [queryParams])
+  .then(newProd => {
+    return newProd.rows;
+  })
+  .catch(err => {
+    return err.message;
+  });
+}
+
 const getProductById = (id) => {
 return db
   .query(`
@@ -79,4 +119,5 @@ module.exports = {
   getProducts,
   addNewProduct,
   getProductById,
-  deactivateProduct}
+  deactivateProduct,
+  updateProduct}

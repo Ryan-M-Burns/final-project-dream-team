@@ -2,11 +2,11 @@ import React from 'react'
 
 const productObj = {
   title,
-  price,
-  size,
   category,
-  quantity,
-  image_url
+  size,
+  image_url,
+  price,
+  quantity
 }
 
 function validate() {
