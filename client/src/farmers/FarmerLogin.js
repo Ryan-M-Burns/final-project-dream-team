@@ -1,5 +1,5 @@
 import React from 'react';
-import FarmerLogin from 'FarmerLogin.scss';
+import './FarmerLogin.scss';
 
 const FarmerLogin = () => {
   return (

@@ -1,8 +1,7 @@
 import React from 'react';
 import FarmListItem from './FarmListItem';
-
+import './FarmList.scss';
 const FarmList = ({ farms }) => {
-  console.log("Farmlist", farms);
   const parsedFarmList = farms.map(farm => {
     return (
       <FarmListItem
@@ -14,7 +13,7 @@ const FarmList = ({ farms }) => {
 
 
   return (
-    <ul>
+    <ul className="farm-list">
       {parsedFarmList}
     </ul>
   );

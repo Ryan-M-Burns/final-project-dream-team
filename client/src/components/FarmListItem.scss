@@ -1,0 +1,9 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.farm-logo {
+  width: auto;
+  height: 100px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
