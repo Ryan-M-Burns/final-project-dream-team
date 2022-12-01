@@ -7,6 +7,10 @@ import Account from './components/Account/Account';
 import Product from './Archive/Product';
 import Home from './pages/HomePage/Home';
 import Navbar from './Navbar';
+import RegisterFarm from './farmers/RegisterFarm';
+import RegisterUser from './pages/RegisterUser/RegisterUser';
+import useApplicationData from "./hooks/useApplicationData.js";
+import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
 
 function App() {
@@ -28,6 +32,7 @@ function App() {
 
           {/* Farmer Portal Routes */}
           {/* <Route path='/farmer-portal' element={<FarmerLogin />} />
+          <Route path='login' element={<><FarmerNav /><FarmerLogin /></>} />
           <Route path='/farmer-portal' element={<><FarmerNav /><FarmerHome /></>} /> */}
         </Routes>
       </Router>
