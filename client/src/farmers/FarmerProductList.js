@@ -2,13 +2,14 @@ import React from 'react';
 import './FarmerProductList.scss';
 import FarmerProductListItem from './FarmerProductListItem';
 
-const FarmerProductList = ({products, setProduct}) => {
+const FarmerProductList = ({products, setProducts, state}) => {
   const parsedProductList = products.map(product => {
     return (
       <FarmerProductListItem
         key={product.id}
         product={product}
-        setProduct={setProduct}
+        setProducts={setProducts}
+        state={state}
       />
     );
   });

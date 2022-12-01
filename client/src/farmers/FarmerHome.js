@@ -11,11 +11,11 @@ const FarmerHome = () => {
     setBoxes,
     setCategory,
     setPrice,
-    setProduct,
+    setProducts,
   } = useApplicationData();
 
   return (
-    <FarmerProductList state={state} products={state.products} setProduct={setProduct}/>
+    <FarmerProductList state={state} products={state.products} setProducts={setProducts}/>
   )
 }
 
