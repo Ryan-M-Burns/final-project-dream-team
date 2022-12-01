@@ -18,7 +18,10 @@ const {id} = req.params;
 })
 
 router.get('/new', (req, res) => {
-  res.send('The farmers new product goes here');
+  addNewProduct()
+  .then(product => {
+    res.json(product)
+  })
 });
 
 router.get('/:id/edit', (req, res) => {
