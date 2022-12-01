@@ -2,7 +2,7 @@ import {React, useState} from 'react';
 import './Navbar.scss';
 import {Link} from 'react-router-dom';
 // Drop down menu for account
-const Navbar = () => {
+const Navbar = (props) => {
   const [open, setOpen] = useState(false);
 
   const handleDropdown = () => {
@@ -52,6 +52,9 @@ const Navbar = () => {
           <Link to='/our-mission'>
             <button>About Us</button>
           </Link>
+        </div>
+        <div>
+          <button className="nav__cart" onClick={props.click}><img src="../images/cart.png" alt="cart"></img></button>
         </div>
       </div>
     </nav>

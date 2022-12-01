@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.scss';
 
@@ -11,9 +11,14 @@ import useApplicationData from "./hooks/useApplicationData.js";
 import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
+import CartDrawer from './CartDrawer';
 
 function App() {
+  const [cartDrawer, setCartDrawer] = useState(false);
 
+  const cartClickHandler = () => {
+    setCartDrawer(current => !current);
+  };
   return (
     <main className="App">
       <Router>
@@ -23,9 +28,11 @@ function App() {
           {/* Main Page Routes */}
           <Route path='/home' element={
             <>
-              <Navbar />
+              <Navbar click={cartClickHandler} />
               <img src="../images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
               <img src="../images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
+              {cartDrawer ?
+                <CartDrawer /> : ""}
               <Home />
             </>
           } />

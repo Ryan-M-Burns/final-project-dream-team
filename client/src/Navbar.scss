@@ -46,6 +46,12 @@ nav {
   border-radius: 2em;
   padding: 10px 20px;
   margin: 10px;
+  max-height: 80px;
+}
+
+.nav__cart img {
+  max-height: 45px;
+  font-size: 100px
 }
 
 .login__nav {
