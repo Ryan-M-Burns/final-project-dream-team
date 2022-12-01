@@ -1,0 +1,34 @@
+.row__login {
+  // background-image: url('../../../public/images/planksbackground.jpg')
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+label {
+  font-family: 'Fjalla One';
+  font-size: 20px;
+}
+
+input {
+  width: 100%;
+  margin: 8px 0;
+}
+
+.login p {
+  display: flex;
+  justify-content: center;
+  font-family: 'Fjalla One';
+  font-size: 30px;
+}
+
+.login {
+  height: 500px;
+  width: 500px;
+  background-color: white;
+  margin: 50px;
+  padding: 20px;
+  border-radius: 25px
+}

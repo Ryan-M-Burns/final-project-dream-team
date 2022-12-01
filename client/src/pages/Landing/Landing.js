@@ -10,36 +10,17 @@ const Landing = () => {
       {/* page 1 */}
       <div className="landing__page">
         <div className="title__andbuttons">
-          <h1 id="title"> HARVEST </h1>
-          <button id="visit">Visit our page</button>
-          <div classnName="arrow">
-            <FontAwesomeIcon icon="coffee" />
+          <p id="main"> HARVEST </p>
+          <p id="sub">Where farmers and high-quality produce lovers meet</p>
+          <div className="title__andsub">
+          </div>
+          <div className="landing__buttons">
+            <button id="visit">Visit as customer</button>
+            <button id="visit">Visit as farmer</button>
           </div>
         </div>
-        {/* page 2 */}
-        <div className="row__login">
-          <div className="login">
-            <p>Log in as a user</p>
-            <form>
-              <label>username</label>
-              <input type="text"></input>
-              <label>email</label>
-              <input type="text"></input>
-            </form>
-          </div>
-          <div className="login">
-            <p>Log in as a farmer</p>
-            <form>
-              <label>username</label>
-              <input type="text"></input>
-              <label>email</label>
-              <input type="text"></input>
-            </form>
-          </div>
-        </div>
+
       </div>
-
-
     </div>
   );
 };

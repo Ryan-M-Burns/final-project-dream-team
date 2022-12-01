@@ -8,11 +8,12 @@
 
 .landing__page {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   margin: 0;
-  padding: 50;
-  flex-direction: column;
+  // padding: 50;
   position: absolute;
-  background-image: url('../../../public/images/navbackground.jpg');
+  background-image: url('../../../public/images/landing.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: pink;
@@ -24,58 +25,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 150px;
+  margin-bottom: 600px;
   justify-content: center;
 }
 
-#title {
-  font-family: 'Fjalla One';
-  font-size: 600px;
+.title__andbuttons p {
   font-weight: bold;
-  padding-top: 150px;
+  color: rgb(252, 236, 216)
+}
+
+#main {
+  font-family: 'Fjalla One';
+  font-size: 300px;
+  font-weight: bold;
+  // padding: 50px 150px -100px 50px;
+  // margin-right: 150px;
   color: rgb(252, 236, 216);
+  line-height: 0.9;
 }
 
-#visit {
-  display: flex;
-  margin: 50px 50px;
-}
+.landing__buttons {
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: flex-end;
+  // padding-right: 400px;
+  margin-top: 75px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #007435;
+  background-color: #fcf2e9;
+  border-radius: 2em;
+  // padding: 10px 20px;
+  // margin: 10px;
 
-.arrow {
-  background-color: blue;
-  margin: 200px;
-}
-
-.row__login {
-  // background-image: url('../../../public/images/planksbackground.jpg')
-  background-color: yellow;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.login {
-  height: 500px;
-  width: 500px;
-  background-color: white;
-  margin: 50px;
-  padding: 20px;
-  border-radius: 25px
-}
-
-label {
-  font-family: 'Fjalla One';
-  font-size: 20px;
-}
-
-input {
-  width: 100%;
-  margin: 8px 0;
-}
-
-.login p {
-  display: flex;
-  justify-content: center;
-  font-family: 'Fjalla One';
-  font-size: 30px;
 }
