@@ -4,5 +4,6 @@
 .farm-logo {
   width: auto;
   height: 100px;
-  background-color: transparent;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
