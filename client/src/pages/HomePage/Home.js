@@ -19,7 +19,7 @@ const Home = () => {
     setBoxes,
     setCategory,
     setPrice,
-    setProduct
+    setProduct,
   } = useApplicationData();
 
   const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
@@ -29,7 +29,8 @@ const Home = () => {
       <BoxCarousel />
       <div className='home_farms'>
         <FarmList
-          farms={state.farms}
+          farms={farms}
+          setFarms={setFarms}
         />
       </div>
       <div className='products__home'>
