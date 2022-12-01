@@ -31,8 +31,8 @@ function App() {
               <Navbar click={cartClickHandler} />
               <img src="../images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
               <img src="../images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
-              {cartDrawer ?
-                <CartDrawer /> : ""}
+
+              <CartDrawer show={cartDrawer} />
               <Home />
             </>
           } />
