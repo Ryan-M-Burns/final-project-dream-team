@@ -14,6 +14,7 @@ import Navbar from './Navbar';
 import RegisterFarm from './farmers/RegisterFarm';
 import RegisterUser from './pages/RegisterUser/RegisterUser';
 import useApplicationData from "./hooks/useApplicationData.js";
+import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 
 function App() {
   const {
@@ -54,6 +55,8 @@ function App() {
             <Route path='/our-farm/:id' element={<OurFarm />}>
             </Route>
             <Route path='/product/:id' element={<Product />}>
+            </Route>
+            <Route path='login' element={<FarmerLogin />}>
             </Route>
           </Routes>
         </section>

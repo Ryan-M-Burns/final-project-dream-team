@@ -1,5 +1,5 @@
 import React from 'react';
-import './Landing.scss';
+import './FarmerLogin.scss';
 
 
 const FarmerLogin = () => {
@@ -7,16 +7,11 @@ const FarmerLogin = () => {
 
     <div className="row__login">
       <div className="login">
-        <p>Log in as a user</p>
-        <form>
-          <label>username</label>
-          <input type="text"></input>
-          <label>email</label>
-          <input type="text"></input>
-        </form>
-      </div>
-      <div className="login">
-        <p>Log in as a farmer</p>
+        <p>Howdy! please log in</p>
+        <div className="images">
+          <img src="../images/farmer.png" alt="farmer"></img>
+          <img src="../images/farmeress.png" alt="farmeress"></img>
+        </div>
         <form>
           <label>username</label>
           <input type="text"></input>
