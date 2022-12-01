@@ -26,11 +26,9 @@ const Home = () => {
 
   return (
     <Container className='section__home'>
-      <BoxCarousel />
       <div className='home_farms'>
         <FarmList
-          farms={farms}
-          setFarms={setFarms}
+          farms={state.farms}
         />
       </div>
       <div className='products__home'>

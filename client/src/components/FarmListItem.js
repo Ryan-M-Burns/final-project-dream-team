@@ -1,11 +1,10 @@
 import React from 'react';
-
+import './FarmListItem.scss'
 const FarmListItem = ({farm}) => {
 
   return (
     <li>
-      <h2>{farm.name}</h2>
-      <img src={farm.logo_url} alt="farm_logo" />
+      <img src={farm.logo_url} alt="farm_logo" className="farm-logo" />
     </li>
   );
 };
