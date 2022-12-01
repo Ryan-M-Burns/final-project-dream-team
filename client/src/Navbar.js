@@ -15,10 +15,9 @@ const Navbar = () => {
 
   return (
     <nav>
-      <Link to='/'>
+      <Link to='/home'>
         <button className="title">HARVEST</button>
       </Link>
-
       <div className="nav_buttons">
         <div className="login__nav">
           <form className="login__nav">

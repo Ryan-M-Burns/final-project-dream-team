@@ -2,38 +2,38 @@ import React from 'react';
 import NavCard from './HomePageComponents/NavCard';
 import BoxCarousel from './HomePageComponents/BoxCarousel';
 import Container from '@mui/material/Container';
-import useApplicationData from '../../hooks/useApplicationData';
-import FarmerList from '../../components/FarmList';
+import { getFilteredProducts } from '../../helpers/selectors';
+import FarmList from '../../components/FarmList';
+import ProductList from '../../components/ProductList';
+import useApplicationData from "../../hooks/useApplicationData";
 import './Home.scss';
 
-const Home = (props) => {
+const Home = () => {
 
   // Nav Bar - Logo, Account drop down, About
   // Farm List
   // Boxes
   // Products all generated - filter form that expands
-
   const {
     state,
     setFarm,
     setBoxes,
     setCategory,
     setPrice,
-    setProduct
-  } = useApplicationData;
+    setProduct,
+  } = useApplicationData();
 
-  const Farms = () => {
-
-    return (
-      <FarmerList farms={state.farms} />
-    );
-  };
-
+  const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
 
   return (
     <Container className='section__home'>
       <BoxCarousel />
-      {Farms}
+      <div className='home_farms'>
+        <FarmList
+          farms={farms}
+          setFarms={setFarms}
+        />
+      </div>
       <ul className='ul__home'>
         <li className='li__home'>
           <NavCard className='nav-card__home' link={"/products"} pageName={"PRODUCTS"} />
@@ -46,9 +46,9 @@ const Home = (props) => {
           <NavCard className='nav-card__home' link={"/contact"} pageName={"REACH OUT"} />
         </li>
       </ul>
-      <div className='home_farms'>
-        <FarmerList 
-        farms={props.farms}
+      <div className='products__home'>
+        <ProductList
+          products={showProducts}
         />
       </div>
     </Container>

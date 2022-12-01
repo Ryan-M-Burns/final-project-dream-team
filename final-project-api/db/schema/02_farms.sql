@@ -5,6 +5,7 @@ CREATE TABLE farms (
   name VARCHAR(255) NOT NULL,
   logo_url TEXT,
   email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
   description TEXT NOT NULL,
   active_status BOOLEAN DEFAULT FALSE,
   street_address TEXT NOT NULL,

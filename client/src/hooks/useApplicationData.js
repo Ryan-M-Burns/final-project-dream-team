@@ -11,27 +11,31 @@ const useApplicationData = () => {
     products: [],
     boxes: [],
     cart: [],
-    categories: null,
+    category: null,
+    categories: [],
     price: null
   });
   // call data from scheduler-api database
   useEffect(() => {
+    console.log("I'm in the use effect");
     Promise.all([
       axios.get("/products"),
       axios.get("/boxes"),
-      axios.get("/farms")
+      axios.get("/farms"),
+      axios.get("/categories")
     ])
       .then(all => {
         const products = all[0].data;
         const boxes = all[1].data;
         const farms = all[2].data;
-
-        setState(prev => ({ ...prev, products, boxes, farms }));
+        const categories = all[3].data;
+        console.log(products, farms);
+        setState(prev => ({ ...prev, products, boxes, farms, categories}));
       });
   }, []);
 
-  const setProduct = product => setState(prev => ({ ...prev, product}))
-  
+  const setProduct = product => setState(prev => ({ ...prev, product }));
+
   const setFarm = farm => setState(prev => ({ ...prev, farm }));
 
   const setBoxes = box => setState(prev => ({ ...prev, box }));
