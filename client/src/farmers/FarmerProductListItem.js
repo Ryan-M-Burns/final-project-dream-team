@@ -4,7 +4,6 @@ const FarmerProductListItem = ({ product, setProducts, state }) => {
 
   const [edit, setEdit] = useState(false)
   const handleChange = (event, value) => {
-    console.log('event', event.target.value)
     const newProducts = [...state.products]
     newProducts[product.id - 1] = {
       ...product,
