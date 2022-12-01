@@ -9,6 +9,10 @@ const Navbar = () => {
     setOpen(!open);
   };
 
+  const LoginFunction = () => {
+
+  };
+
   return (
     <nav>
       <Link to='/'>
@@ -16,8 +20,18 @@ const Navbar = () => {
       </Link>
 
       <div className="nav_buttons">
-        <div>
-          <button>Login</button>
+        <div className="login__nav">
+          <form className="login__nav">
+            <div className="login__component">
+              <label className="login__label">username</label>
+              <input className="login__input" type="text" placeholder="username"></input>
+            </div>
+            <div className="login__component">
+              <label className="login__label">password</label>
+              <input className="login__input" type="text"></input>
+            </div>
+          </form>
+          <button onClick={LoginFunction}>Login</button>
         </div>
         <div className="dropdown">
           <button onClick={handleDropdown}>Account</button>
