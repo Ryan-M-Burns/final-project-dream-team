@@ -11,7 +11,6 @@ import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
 
 function App() {
-
   return (
     <main className="App">
       <Router>

@@ -1,19 +1,22 @@
 import React from 'react';
-import FarmerProductList from './FarmerProductList.scss';
+import './FarmerProductList.scss';
+import FarmerProductListItem from './FarmerProductListItem';
 
-const FarmerProductList = ({products}) => {
+const FarmerProductList = ({products, setProducts, state}) => {
   const parsedProductList = products.map(product => {
     return (
       <FarmerProductListItem
         key={product.id}
         product={product}
+        setProducts={setProducts}
+        state={state}
       />
     );
   });
   return (
-    <ul className="products_page">
+    <>
       {parsedProductList}
-    </ul>
+    </>
   );
 };
 

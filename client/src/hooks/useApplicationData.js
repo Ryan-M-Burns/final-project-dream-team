@@ -45,6 +45,7 @@ const useApplicationData = () => {
   const setPrice = price => setState(prev => ({ ...prev, price }));
 
   // return current state, and functions for managing state
+
   return { state, setFarm, setBox, setCategory, setPrice, setProduct };
 };
 
