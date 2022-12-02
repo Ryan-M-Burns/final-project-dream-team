@@ -24,7 +24,7 @@ const ProductListItem = ({product, addToCart}) => {
         </div>
         <img src={product.image_url} alt="food" />
         <div>
-          <button onClick={() => addToCart(product)}>More</button>
+          <button onClick={() => addToCart(product)}>Add To Cart</button>
         </div>
       </div>
     </li>

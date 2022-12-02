@@ -20,6 +20,18 @@ function App() {
     setCartDrawer(current => !current);
   };
 
+  const {
+    state,
+    setFarm,
+    setBoxes,
+    setCategory,
+    setPrice,
+    setProduct,
+    addToCart,
+    setUser,
+  } = useApplicationData();
+
+
   return (
     <main className="App">
       <Router>
@@ -33,8 +45,8 @@ function App() {
               <img src="../images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
               <img src="../images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
 
-              <CartDrawer show={cartDrawer} />
-              <Home />
+              <CartDrawer show={cartDrawer} state={state} />
+              <Home state={state} addToCart={addToCart} />
             </>
           } />
           <Route path='/about' element={
@@ -55,9 +67,10 @@ function App() {
               <PastOrders />
             </>
           } />
-          {/* Farmer Portal Routes */}
-          <Route path='/farmer-login' element={<FarmerLogin />} />
-          {/* <Route path='/farmer-portal' element={<><FarmerNav /><FarmerHome /></>} /> */}
+
+          <Route path='/farmer-login' element={<FarmerLogin users={state.users} user={state.user} setUser={setUser} />} />
+          {/* <Route path='/farmer-home' element={<FarmerHome />} /> */}
+
         </Routes>
       </Router>
     </main>

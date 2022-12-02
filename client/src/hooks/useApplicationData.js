@@ -13,7 +13,9 @@ const useApplicationData = () => {
     cart: [],
     category: null,
     categories: [],
-    price: null
+    price: null,
+    users: [],
+    user: null
   });
   // call data from scheduler-api database
   useEffect(() => {
@@ -22,15 +24,17 @@ const useApplicationData = () => {
       axios.get("/products"),
       axios.get("/boxes"),
       axios.get("/farms"),
-      axios.get("/categories")
+      axios.get("/categories"),
+      axios.get("/users")
     ])
       .then(all => {
         const products = all[0].data;
         const boxes = all[1].data;
         const farms = all[2].data;
         const categories = all[3].data;
-        console.log(products, farms);
-        setState(prev => ({...prev, products, boxes, farms, categories}));
+        const users = all[4].data;
+
+        setState(prev => ({...prev, products, boxes, farms, categories, users}));
       });
   }, []);
 
@@ -50,10 +54,31 @@ const useApplicationData = () => {
     setState({...state, cart: [...state.cart, product]});
   };
 
+  const setUser = user => setState(prev => ({...prev, user}));
+
+  // const submitLoginFarmer = async (username, password) => {
+
+  //   let users = [];
+  //   axios.get('/users').then(data => {
+  //     users = data.data;
+
+
+  //     const userInfo = users.find(user => user.name === username);
+
+  //     if (userInfo && userInfo.password === password) {
+  //       setUser(userInfo);
+
+  //       navigate("/home");
+
+  //     }
+  //   });
+
+  // };
+
 
 
   // return current state, and functions for managing state
-  return {state, setFarm, setBox, setCategory, setPrice, setProduct, setCart, addToCart};
+  return {state, setFarm, setBox, setCategory, setPrice, setProduct, setCart, addToCart, setUser};
 };
 
 export default useApplicationData;

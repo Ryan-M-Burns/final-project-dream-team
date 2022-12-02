@@ -8,22 +8,14 @@ import ProductList from '../../components/ProductList';
 import useApplicationData from "../../hooks/useApplicationData";
 import './Home.scss';
 
-const Home = () => {
+const Home = (props) => {
   // Nav Bar - Logo, Account drop down, About
   // Farm List
   // Boxes
   // Products all generated - filter form that expands
-  const {
-    state,
-    setFarm,
-    setBoxes,
-    setCategory,
-    setPrice,
-    setProduct,
-    addToCart,
-  } = useApplicationData();
 
-  console.log('state.cart', state.cart);
+  const state = props.state;
+  const addToCart = props.addToCart;
 
   const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
 

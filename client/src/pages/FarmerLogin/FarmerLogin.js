@@ -3,32 +3,26 @@ import axios from 'axios';
 import {useState, useEffect, React} from 'react';
 import './FarmerLogin.scss';
 import {Link} from 'react-router-dom';
+import {useNavigate} from "react-router-dom";
 
 
-const FarmerLogin = () => {
-  const [user, setUser] = useState("");
+const FarmerLogin = ({users, user, setUser}) => {
+  const navigate = useNavigate();
+
+
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-
-  const getUsers = () => {
-    axios.get('/users');
-  };
-
-  // useEffect(() => {
-  //   getUser();
-  // }, []);
-
-  //handleSubmit needs work
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const users = await getUsers();
-
     const userInfo = users.find(user => user.name === username);
 
-    if (userInfo && user.password === password) {
-      setUser(userInfo);
+    if (userInfo && userInfo.password === password) {
+      setUser(userInfo.name);
+
+      navigate("/home");
+
     }
   };
 
@@ -47,9 +41,7 @@ const FarmerLogin = () => {
           <label className="farmer__label">password</label>
           <input className="farmer__input" type="password" onChange={e => setPassword(e.target.value)}></input>
           <div>
-            <Link to='/home'>
-              <input className="submit__button" type="submit" value="Submit" onSubmit={handleSubmit}></input>
-            </Link>
+            <button className="submit__button" type="submit" value="Submit" onClick={handleSubmit}>Submit</button>
           </div>
         </form >
       </div>
