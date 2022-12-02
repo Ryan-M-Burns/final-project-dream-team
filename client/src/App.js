@@ -23,7 +23,6 @@ function App() {
             <>
               <Navbar />
               <img src="/images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
-              <img src="/images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
               <Home />
             </>
           } />
