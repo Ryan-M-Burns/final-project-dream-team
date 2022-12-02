@@ -16,7 +16,6 @@ const useApplicationData = () => {
   });
   // call data from scheduler-api database
   useEffect(() => {
-    console.log("I'm in the use effect");
     Promise.all([
       axios.get("/products"),
       axios.get("/boxes"),
@@ -29,7 +28,7 @@ const useApplicationData = () => {
         const farms = all[2].data;
         const categories = all[3].data;
         console.log(products, farms);
-        setState(prev => ({ ...prev, products, boxes, farms, categories}));
+        setState(prev => ({ ...prev, products, boxes, farms, categories }));
       });
   }, []);
 
