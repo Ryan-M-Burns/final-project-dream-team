@@ -1,5 +1,5 @@
-import { React, useEffect } from 'react';
-import { getFilteredProducts, getFarms } from '../../helpers/selectors';
+import {React, useEffect} from 'react';
+import {getFilteredProducts, getFarms} from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
 import CategoryList from './HomePageComponents/CategoryList';
