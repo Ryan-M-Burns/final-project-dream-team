@@ -25,7 +25,7 @@ const Home = () => {
   const showFarms = getFarms(state, state.farm)
 
   return (
-    <Container className='section__home'>
+    <section className='section__home'>
       <div className='home_farms'>
         <FarmList
           farms={showFarms}
@@ -36,9 +36,10 @@ const Home = () => {
       <div className='products__home'>
         <ProductList
           products={state.products}
+          farms={state.farms}
         />
       </div>
-    </Container>
+    </section>
 
   );
 };
