@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getProducts, getProductById, addNewProduct, deleteProduct } = require('../db/queries/products.js');
+const { getProducts, getProductById, addNewProduct, deleteProduct, updateProduct } = require('../db/queries/products.js');
 
 router.get('/', (req, res) => {
   getProducts()
@@ -18,11 +18,17 @@ const {id} = req.params;
 })
 
 router.get('/new', (req, res) => {
-  res.send('The farmers new product goes here');
+  addNewProduct()
+  .then(product => {
+    res.json(product)
+  })
 });
 
 router.get('/:id/edit', (req, res) => {
-  res.send('Product edit goes here');
+  updateProduct()
+  .then(newProd => {
+    res.json(newProd)
+  })
 });
 
 router.put('/:id', (req, res) => {

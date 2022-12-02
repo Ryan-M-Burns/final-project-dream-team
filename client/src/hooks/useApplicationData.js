@@ -57,6 +57,7 @@ const useApplicationData = () => {
   const setUser = user => setState(prev => ({...prev, user}));
 
   // return current state, and functions for managing state
+
   return {state, setFarm, setBox, setCategory, setPrice, setProduct, setCart, addToCart, setUser};
 };
 
