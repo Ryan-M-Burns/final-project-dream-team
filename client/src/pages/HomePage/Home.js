@@ -1,10 +1,11 @@
-import { React, useEffect } from 'react';
+import {React, useEffect} from 'react';
 import Container from '@mui/material/Container';
-import { getFilteredProducts, getFarms } from '../../helpers/selectors';
+import {getFilteredProducts, getFarms} from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
 import CategoryList from './HomePageComponents/CategoryList';
 import useApplicationData from "../../hooks/useApplicationData";
+import CartDrawer from '../../CartDrawer';
 import './Home.scss';
 
 const Home = () => {
@@ -18,7 +19,9 @@ const Home = () => {
     setBoxes,
     setCategory,
     setPrice,
+    setCart,
     setProduct,
+    addToCart
   } = useApplicationData();
 
   useEffect(() => {
@@ -30,6 +33,9 @@ const Home = () => {
 
   return (
     <section className='section__home'>
+      <div>
+        {/* <CartDrawer show={cartDrawer} /> */}
+      </div>
       <div className="home-categories">
         <CategoryList
           category={state.category}
@@ -47,6 +53,7 @@ const Home = () => {
       </div>
       <div className='products__home'>
         <ProductList
+          addToCart={addToCart}
           products={state.product}
           farms={state.farms}
         />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.scss';
 
@@ -9,8 +9,15 @@ import Navbar from './Navbar';
 import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
+import CartDrawer from './CartDrawer';
 
 function App() {
+
+  // const cartClickHandler = () => {
+  //   setCartDrawer(current => !current);
+  // <Navbar onClick={cartClickHandler} />
+  // };
+
   return (
     <main className="App">
       <Router>
@@ -43,9 +50,10 @@ function App() {
               <PastOrders />
             </>
           } />
-          {/* Farmer Portal Routes */}
+
           <Route path='/farmer-login' element={<FarmerLogin />} />
-          {/* <Route path='/farmer-portal' element={<><FarmerNav /><FarmerHome /></>} /> */}
+          {/* <Route path='/farmer-home' element={<FarmerHome />} /> */}
+
         </Routes>
       </Router>
     </main>
@@ -53,3 +61,4 @@ function App() {
 }
 
 export default App;
+

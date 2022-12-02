@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import './ProductListItem.scss';
 
-const ProductListItem = ({ product, farm }) => {
+const ProductListItem = ({product, farm, addToCart}) => {
   return (
     <li className="li__product-item">
       <div className="title__logo">
@@ -22,9 +22,7 @@ const ProductListItem = ({ product, farm }) => {
         </div>
         <img src={product.image_url} alt="food" className="product__img" />
         <div>
-          <Link to={`/product/${product.id}`}>
-            <button>More</button>
-          </Link>
+          <button onClick={() => addToCart(product)}>Add To Cart</button>
         </div>
       </div>
     </li>

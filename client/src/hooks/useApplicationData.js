@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import axios from "axios";
 
 // manage state for application data
@@ -13,7 +13,9 @@ const useApplicationData = () => {
     cart: [],
     category: null,
     categories: [],
-    price: null
+    price: null,
+    users: [],
+    user: null
   });
   // call data from scheduler-api database
   useEffect(() => {
@@ -21,7 +23,8 @@ const useApplicationData = () => {
       axios.get("/products"),
       axios.get("/boxes"),
       axios.get("/farms"),
-      axios.get("/categories")
+      axios.get("/categories"),
+      axios.get("/users")
     ])
       .then(all => {
         const product = all[0].data;
@@ -29,24 +32,33 @@ const useApplicationData = () => {
         const boxes = all[1].data;
         const farms = all[2].data;
         const categories = all[3].data;
+        const users = all[4].data;
 
-        setState(prev => ({ ...prev, product, products, boxes, farms, categories }));
+        setState(prev => ({...prev, product, products, boxes, farms, categories, users}));
       });
   }, []);
 
-  const setProduct = product => setState(prev => ({ ...prev, product }));
+  const setProduct = product => setState(prev => ({...prev, product}));
 
-  const setFarm = farm => setState(prev => ({ ...prev, farm }));
+  const setFarm = farm => setState(prev => ({...prev, farm}));
 
-  const setBox = box => setState(prev => ({ ...prev, box }));
+  const setBox = box => setState(prev => ({...prev, box}));
 
-  const setCategory = category => setState(prev => ({ ...prev, category }));
+  const setCategory = category => setState(prev => ({...prev, category}));
 
-  const setPrice = price => setState(prev => ({ ...prev, price }));
+  const setPrice = price => setState(prev => ({...prev, price}));
+
+  const setCart = cart => setState(prev => ({...prev, cart}));
+
+  const addToCart = (product) => {
+    setState({...state, cart: [...state.cart, product]});
+  };
+
+  const setUser = user => setState(prev => ({...prev, user}));
 
   // return current state, and functions for managing state
 
-  return { state, setFarm, setBox, setCategory, setPrice, setProduct };
+  return {state, setFarm, setBox, setCategory, setPrice, setProduct, setCart, addToCart, setUser};
 };
 
 export default useApplicationData;
