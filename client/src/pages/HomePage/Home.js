@@ -19,21 +19,23 @@ const Home = () => {
     setPrice,
     setProducts,
   } = useApplicationData();
-  console.log("le State", state)
+  
   const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
-  // const showFarms = getFarms(state, state.farm);
+
+  const showFarms = getFarms(state, state.farm)
+
   return (
     <Container className='section__home'>
       <div className='home_farms'>
         <FarmList
-          farms={state.farms}
+          farms={showFarms}
           value={state.farm}
           setFarm={setFarm}
         />
       </div>
       <div className='products__home'>
         <ProductList
-          products={showProducts}
+          products={state.products}
         />
       </div>
     </Container>
