@@ -1,8 +1,13 @@
 import React from 'react';
-
+import useApplicationData from "./hooks/useApplicationData";
 import './CartDrawer.scss';
 
-function cartDrawer(props) {
+const CartDrawer = (props) => {
+
+  const {
+    state,
+  } = useApplicationData();
+  console.log("joehoeee", state.cart);
 
   let cartClasses = 'cart__container';
 
@@ -12,9 +17,16 @@ function cartDrawer(props) {
 
   return (
     <div className={cartClasses}>
-      <h2>My Cart</h2>
+      <div>
+        <h2>My Box</h2>
+      </div>
+      {state.cart.title}
+      <div>
+
+      </div>
     </div>
+
   );
 };
 
-export default cartDrawer;
+export default CartDrawer;

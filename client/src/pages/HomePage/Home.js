@@ -23,9 +23,10 @@ const Home = () => {
     addToCart,
   } = useApplicationData();
 
+  console.log('state.cart', state.cart);
+
   const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
 
-  console.log('HERE', state.cart);
 
   return (
     <Container className='section__home'>

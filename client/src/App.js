@@ -19,6 +19,7 @@ function App() {
   const cartClickHandler = () => {
     setCartDrawer(current => !current);
   };
+
   return (
     <main className="App">
       <Router>
