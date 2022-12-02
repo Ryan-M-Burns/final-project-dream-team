@@ -15,7 +15,7 @@ const FarmerHome = () => {
   return (
     <div>
       <div>
-        <button type='button' onClick={() => {setShowProduct(!showProduct)}}> Add Product </button>
+        <button type='button' onClick={() => {setShowProductForm(!showProductForm)}}> Add Product </button>
       </div>
       <ul>
         {showProductForm && <li> <ProductForm/> </li> }

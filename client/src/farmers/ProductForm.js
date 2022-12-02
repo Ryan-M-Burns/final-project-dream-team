@@ -39,7 +39,7 @@ const ProductForm = (props) => {
             </div>
             <div className="div__product-size">
               <p>Size:</p>
-              <input type='text' value={size} onChange={(event) => {setSize(event.target.value)}} className="product-size"/>
+              <input type='text' value={size} onChange={(event) => {setSize(event.target.value)}} className="div__product-size"/>
             </div>
             <div className="div__product-category">
               <p>Category:</p>
@@ -50,7 +50,7 @@ const ProductForm = (props) => {
               <input type='text' value={quantity} onChange={(event) => {setQuantity(event.target.value)}} className="product-quantity"/>
             </div>
           </div>
-          <input type='text' value={image_url} onChange={(event) => {setImage_url(event.target.value)}} className="product-image"/>
+          <input type='text' value={image_url} onChange={(event) => {setImage_url(event.target.value)}} className="div__product-image"/>
         </div>
         <button type='submit'> Save </button>
       </li>

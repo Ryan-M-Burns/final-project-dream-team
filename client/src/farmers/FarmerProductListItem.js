@@ -48,7 +48,10 @@ const FarmerProductListItem = ({ product, setProducts, state }) => {
        <button onClick={() => (setEdit(!edit))}> Edit </button>
     </li>
     :
-    <ProductForm onSubmit={handleSave} defaultValues={product}/>
+    
+    <li>
+      <ProductForm onSubmit={handleSave} defaultValues={product}/>
+    </li>
   )
 
 };
