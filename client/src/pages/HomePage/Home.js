@@ -2,7 +2,7 @@ import React from 'react';
 import NavCard from './HomePageComponents/NavCard';
 import BoxCarousel from './HomePageComponents/BoxCarousel';
 import Container from '@mui/material/Container';
-import { getFilteredProducts } from '../../helpers/selectors';
+import {getFilteredProducts} from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
 import useApplicationData from "../../hooks/useApplicationData";
@@ -20,9 +20,12 @@ const Home = () => {
     setCategory,
     setPrice,
     setProduct,
+    addToCart,
   } = useApplicationData();
 
   const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
+
+  console.log('HERE', state.cart);
 
   return (
     <Container className='section__home'>
@@ -34,6 +37,7 @@ const Home = () => {
       <div className='products__home'>
         <ProductList
           products={showProducts}
+          setCart={addToCart}
         />
       </div>
     </Container>

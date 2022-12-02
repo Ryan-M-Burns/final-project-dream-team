@@ -1,13 +1,14 @@
 import React from 'react';
 import ProductListItem from './ProductListItem';
-import './ProductList.scss'
+import './ProductList.scss';
 
-const ProductList = ({ products }) => {
+const ProductList = ({products, setCart}) => {
   const parsedProductList = products.map(product => {
     return (
       <ProductListItem
         key={product.id}
         product={product}
+        setCart={setCart}
       />
     );
   });

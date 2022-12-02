@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './ProductListItem.scss';
-const ProductListItem = ({ product }) => {
+const ProductListItem = ({product, setCart}) => {
 
   return (
     <li className="li__product-item">
@@ -22,13 +22,13 @@ const ProductListItem = ({ product }) => {
             <p className="product-category">{product.category}</p>
           </div>
         </div>
-          <img src={product.image_url} alt="food" />
-          <div>
-            <Link to={`/product/${product.id}`}>
-            <button>More</button>
-            </Link>
-          </div>
-       </div>
+        <img src={product.image_url} alt="food" />
+        <div>
+          {/* <Link to={`/product/${product.id}`}> */}
+          <button onClick={() => setCart(product)}>More</button>
+          {/* </Link> */}
+        </div>
+      </div>
     </li>
   );
 };
