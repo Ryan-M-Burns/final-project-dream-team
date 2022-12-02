@@ -1,0 +1,9 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+@import "../../../styles/reset.scss";
+
+.category-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

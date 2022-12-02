@@ -1,9 +1,39 @@
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
 
-.farm-logo {
-  width: auto;
-  height: 100px;
-  aspect-ratio: 3/2;
-  object-fit: contain;
+.farm-list {
+  &__item {
+    &--normal {
+      .farm-list__img {
+        @include fade;
+        width: auto;
+        height: 100px;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+      }
+
+      &:hover {
+        background-color: $dark-background;
+        cursor: pointer;
+        color: $dark-background;
+      }
+    }
+
+    &--selected {
+      .farm-list__img {
+        @include fade;
+        width: auto;
+        height: 120px;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+      }
+
+
+      &:hover {
+        background-color: $dark-background;
+        cursor: pointer;
+        color: $dark-background;
+      }
+    }
+  }
 }

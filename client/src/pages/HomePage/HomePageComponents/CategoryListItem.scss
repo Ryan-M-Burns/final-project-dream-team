@@ -1,0 +1,11 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+@import "../../../styles/reset.scss";
+
+.category-list-item {
+  
+  .category-icon {
+    width: 100px;
+    height: auto;
+  }
+}

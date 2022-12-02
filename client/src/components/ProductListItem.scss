@@ -5,22 +5,38 @@
   display: flex;
   flex-flow: column;
   border: 2px solid;
-  border-color: aqua;
+  border-color: $body-text;
   border-radius: 25px;
   background-color: $dark-background;
-  padding: 10px;
-  margin: auto;
-  max-width: 30%;
-  min-width: 30%;
-  min-height: 500px;
-  max-height: 500px;
+  margin: 10px;
+  max-width: 350px;
+  min-width: 350px;
+  min-height: 450px;
+  max-height: 450px;
   align-items: center;
-  justify-content: space-between;
+  align-content: space-between;
+  justify-content: space-evenly;
   font-size: 25px;
+  color: rgb(33, 20, 4);
+  font-family: $font-family-fancy;
 
-  img {
-    width: 400px;
-    border-radius: 20px;
+  .title__logo {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    .product-farm-icon {
+      width: auto;
+      height: 50px;
+    }
+  }
+
+  .product__img {
+    object-fit: cover;
+    padding: auto;
+    height: 200px;
+    width: 300px;
+    border-radius: 50%;
   }
 
   .div__product-info {

@@ -1,10 +1,9 @@
-import React from 'react';
-import NavCard from './HomePageComponents/NavCard';
-import BoxCarousel from './HomePageComponents/BoxCarousel';
+import { React, useEffect } from 'react';
 import Container from '@mui/material/Container';
-import { getFilteredProducts } from '../../helpers/selectors';
+import { getFilteredProducts, getFarms } from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
+import CategoryList from './HomePageComponents/CategoryList';
 import useApplicationData from "../../hooks/useApplicationData";
 import './Home.scss';
 
@@ -22,21 +21,37 @@ const Home = () => {
     setProduct,
   } = useApplicationData();
 
-  const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
+  useEffect(() => {
+    setProduct(getFilteredProducts(state, state.category, state.price, state.farm));
+  }, [state.farm]);
+  // const showProducts = getFilteredProducts(state, state.category, state.price, state.farm);
+
+  const showFarms = getFarms(state, state.farm);
 
   return (
-    <Container className='section__home'>
+    <section className='section__home'>
+      <div className="home-categories">
+        <CategoryList
+          category={state.category}
+          setCategory={setCategory}
+          categories={state.categories}
+        />
+
+      </div>
       <div className='home_farms'>
         <FarmList
-          farms={state.farms}
+          farms={showFarms}
+          value={state.farm}
+          setFarm={setFarm}
         />
       </div>
       <div className='products__home'>
         <ProductList
-          products={showProducts}
+          products={state.product}
+          farms={state.farms}
         />
       </div>
-    </Container>
+    </section>
 
   );
 };
