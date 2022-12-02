@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Fjalla+One&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
+
 $font-family: "Source Sans Pro", sans-serif;
+$font-family-fancy: 'Fjalla One', sans-serif;
 
 $active-opacity: 1;
 $inactive-opacity: 0.15;
@@ -6,7 +9,7 @@ $inactive-opacity: 0.15;
 $white: #fff;
 $black: #000;
 
-$dark-background: rgba(124, 114, 106, 0.6);
+$dark-background: rgba(124, 114, 106, 0.75);
 $body-text: rgba(62, 39, 18);
 
 $weeks-colors: #54a0ff, #48dbfb, #1dd1a1, #5f27cd;
