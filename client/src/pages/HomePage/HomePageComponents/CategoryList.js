@@ -1,6 +1,6 @@
 import React from 'react';
 import CategoryListItem from './CategoryListItem';
-import './CategoryListItem.scss';
+import './CategoryList.scss';
 
 const CategoryList = ({ category, setCategory, categories }) => {
   
@@ -16,7 +16,7 @@ const CategoryList = ({ category, setCategory, categories }) => {
     );
   });
   return (
-    <ul>
+    <ul className="category-list">
       {parsedCategoryList}
     </ul>
   );
