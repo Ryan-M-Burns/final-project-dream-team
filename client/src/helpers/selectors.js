@@ -16,7 +16,15 @@ const getFilteredProducts = (state, filterArr) => {
     products = products.filter(obj => Object.values(obj).includes(farmFilter));
   }
 
-  return products
+  return products;
 };
 
-export { getFilteredProducts };
+
+const getFarms = (state, farm) => {
+  let farms = state.farms;
+  if (farm) {
+    farms = farm;
+  }
+  return farms;
+};
+export { getFilteredProducts, getFarms };
