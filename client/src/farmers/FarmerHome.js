@@ -2,6 +2,7 @@ import { Link } from '@mui/material';
 import React, { useState } from 'react'
 import useApplicationData from '../hooks/useApplicationData';
 import FarmerProductList from './FarmerProductList';
+import MyFarm from './MyFarm';
 import ProductForm from './ProductForm';
 
 const FarmerHome = () => {
@@ -14,8 +15,9 @@ const FarmerHome = () => {
 
   return (
     <div>
+      <MyFarm farm={state.farm}/>
       <div>
-        <button type='button' onClick={() => {setShowProduct(!showProduct)}}> Add Product </button>
+        <button type='button' onClick={() => {setShowProductForm(!showProductForm)}}> Add Product </button>
       </div>
       <ul>
         {showProductForm && <li> <ProductForm/> </li> }
