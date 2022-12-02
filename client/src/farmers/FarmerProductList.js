@@ -14,9 +14,9 @@ const FarmerProductList = ({products, setProducts, state}) => {
     );
   });
   return (
-    <ul className="products_page">
+    <>
       {parsedProductList}
-    </ul>
+    </>
   );
 };
 

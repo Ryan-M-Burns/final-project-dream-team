@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const FarmerProductListItem = ({ product, setProducts, state }) => {
 
   const [edit, setEdit] = useState(false)
+
   const handleChange = (event, value) => {
     const newProducts = [...state.products]
     newProducts[product.id - 1] = {
@@ -17,7 +18,7 @@ const FarmerProductListItem = ({ product, setProducts, state }) => {
     setEdit(!edit)
   }
 
-  console.log('after change', product)
+  
   return (
     !edit ?
     <li className="li__product-item">
