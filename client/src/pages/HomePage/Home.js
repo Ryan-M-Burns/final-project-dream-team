@@ -3,6 +3,7 @@ import Container from '@mui/material/Container';
 import { getFilteredProducts, getFarms } from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
+import CategoryList from './HomePageComponents/CategoryList';
 import useApplicationData from "../../hooks/useApplicationData";
 import './Home.scss';
 
@@ -29,6 +30,14 @@ const Home = () => {
 
   return (
     <section className='section__home'>
+      <div className="home-categories">
+        <CategoryList
+          category={state.category}
+          setCategory={setCategory}
+          categories={state.categories}
+        />
+
+      </div>
       <div className='home_farms'>
         <FarmList
           farms={showFarms}

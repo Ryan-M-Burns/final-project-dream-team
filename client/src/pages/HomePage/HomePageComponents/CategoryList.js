@@ -1,26 +1,25 @@
-import React from 'react'
-import CategoryListItem from './CategoryListItem'
+import React from 'react';
+import CategoryListItem from './CategoryListItem';
 import './CategoryListItem.scss';
 
-const CategoryList = ({category, setCategory, categoryList }) => {
+const CategoryList = ({ category, setCategory, categories }) => {
+  console.log(category, categories, "category, categories");
+  const parsedCategoryList = categories.map((categoryOption, index) => {
 
-  parsedCategoryList = categoryList.map(categoryOption => {
     return (
       <CategoryListItem
-      key={categoryOption}
-      category={categoryOption}
-      onClick={() => {setCategory(categoryOption)}}
-      selected={category === categoryOption}
+        key={index}
+        category={categoryOption.category}
+        onClick={() => { setCategory(categoryOption.category); }}
+        selected={category === categoryOption.category}
       />
-    )
-  })
+    );
+  });
   return (
-    <div>
-      <ul>
-        {parsedCategoryList}
-      </ul>
-    </div>
-  )
-}
+    <ul>
+      {parsedCategoryList}
+    </ul>
+  );
+};
 
-export default CategoryList
+export default CategoryList;
