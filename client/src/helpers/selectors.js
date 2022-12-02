@@ -1,22 +1,21 @@
-const getFilteredProducts = (state, filterArr) => {
-  let products = state.products;
-  const categoryFilter = filterArr[0];
-  const priceFilter = filterArr[1];
-  const farmFilter = filterArr[2];
+const getFilteredProducts = (state, category, price, farm) => {
+  let result = state.products;
 
-  if (categoryFilter) {
-    products = products.filter(obj => Object.values(obj).includes(categoryFilter));
+  // if (categoryFilter) {
+  //   products = products.filter(obj => Object.values(obj).includes(categoryFilter));
+  // }
+
+  // if (priceFilter) {
+  //   products = products.filter(obj => Object.values(obj).includes(priceFilter));
+  // }
+
+  if (farm) {
+    const farmObj = state.farms.find(farmObj => farmObj.name === farm);
+    const farmFilter = farmObj.id;
+    result = result.filter(obj => obj.farm_id === farmFilter);
   }
 
-  if (priceFilter) {
-    products = products.filter(obj => Object.values(obj).includes(priceFilter));
-  }
-
-  if (farmFilter) {
-    products = products.filter(obj => Object.values(obj).includes(farmFilter));
-  }
-
-  return products;
+  return result;
 };
 
 

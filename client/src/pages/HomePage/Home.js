@@ -20,7 +20,7 @@ const Home = () => {
     setProducts,
   } = useApplicationData();
   
-  const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
+  const showProducts = getFilteredProducts(state, state.category, state.price, state.farm);
 
   const showFarms = getFarms(state, state.farm)
 
@@ -35,7 +35,7 @@ const Home = () => {
       </div>
       <div className='products__home'>
         <ProductList
-          products={state.products}
+          products={showProducts}
           farms={state.farms}
         />
       </div>
