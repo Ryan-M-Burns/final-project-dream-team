@@ -38,7 +38,7 @@ const Home = () => {
       <div className='products__home'>
         <ProductList
           products={showProducts}
-          setCart={addToCart}
+          addToCart={addToCart}
         />
       </div>
     </Container>

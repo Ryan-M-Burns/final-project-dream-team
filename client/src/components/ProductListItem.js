@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './ProductListItem.scss';
-const ProductListItem = ({product, setCart}) => {
+const ProductListItem = ({product, addToCart}) => {
 
   return (
     <li className="li__product-item">
@@ -24,7 +24,7 @@ const ProductListItem = ({product, setCart}) => {
         </div>
         <img src={product.image_url} alt="food" />
         <div>
-          <button onClick={() => setCart(product)}>More</button>
+          <button onClick={() => addToCart(product)}>More</button>
         </div>
       </div>
     </li>

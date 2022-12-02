@@ -7,7 +7,7 @@ const CartDrawer = (props) => {
   const {
     state,
   } = useApplicationData();
-  console.log("joehoeee", state.cart);
+  console.log("joehoeee", state);
 
   let cartClasses = 'cart__container';
 
@@ -20,7 +20,7 @@ const CartDrawer = (props) => {
       <div>
         <h2>My Box</h2>
       </div>
-      {state.cart.title}
+      {state.cart}
       <div>
 
       </div>
