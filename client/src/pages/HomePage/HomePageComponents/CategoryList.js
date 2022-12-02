@@ -3,15 +3,15 @@ import CategoryListItem from './CategoryListItem';
 import './CategoryListItem.scss';
 
 const CategoryList = ({ category, setCategory, categories }) => {
-  console.log(category, categories, "category, categories");
-  const parsedCategoryList = categories.map((categoryOption, index) => {
-
+  
+  const parsedCategoryList = categories.map((oneCategory, index) => {
+    const name = oneCategory.category
     return (
       <CategoryListItem
         key={index}
-        category={categoryOption.category}
-        onClick={() => { setCategory(categoryOption.category); }}
-        selected={category === categoryOption.category}
+        category={name}
+        onClick={() => { setCategory(name); }}
+        selected={category === name}
       />
     );
   });
