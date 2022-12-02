@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '@mui/material/Container';
-import { getFilteredProducts } from '../../helpers/selectors';
+import { getFilteredProducts, getFarms } from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
 import useApplicationData from "../../hooks/useApplicationData";
@@ -17,16 +17,18 @@ const Home = () => {
     setBoxes,
     setCategory,
     setPrice,
-    setProduct,
+    setProducts,
   } = useApplicationData();
-
+  console.log("le State", state)
   const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
-
+  // const showFarms = getFarms(state, state.farm);
   return (
     <Container className='section__home'>
       <div className='home_farms'>
         <FarmList
           farms={state.farms}
+          value={state.farm}
+          setFarm={setFarm}
         />
       </div>
       <div className='products__home'>
