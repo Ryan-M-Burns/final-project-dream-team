@@ -14,12 +14,6 @@ const Home = ({
   setFarm,
   addToCart
 }) => {
-  console.log(state, "home state");
-  // Nav Bar - Logo, Account drop down, About
-  // Farm List
-  // Boxes
-  // Products all generated - filter form that expands
-
 
   useEffect(() => {
     setProduct(getFilteredProducts(state, state.category, state.price, state.farm));
