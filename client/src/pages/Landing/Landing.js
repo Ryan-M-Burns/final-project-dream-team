@@ -6,7 +6,6 @@ import './Landing.scss';
 
 const Landing = () => {
   return (
-
     <div className="column">
       {/* page 1 */}
       <div className="landing__page">
