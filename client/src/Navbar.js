@@ -1,8 +1,16 @@
-import {React, useState} from 'react';
+import { React, useState } from 'react';
 import './Navbar.scss';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 // Drop down menu for account
-const Navbar = (props) => {
+const Navbar = (
+  {
+    setUser,
+    users,
+    user,
+    showCart,
+    setCartDrawer
+  }) => {
   const [open, setOpen] = useState(false);
 
   const handleDropdown = () => {
@@ -30,7 +38,7 @@ const Navbar = (props) => {
               <input className="login__input" type="text"></input>
             </div>
           </form>
-          <button onClick={LoginFunction}>Login</button>
+          <button onClick={setUser}>Login</button>
         </div>
         <div className="dropdown">
           <button onClick={handleDropdown}>Account</button>
@@ -54,7 +62,7 @@ const Navbar = (props) => {
           </Link>
         </div>
         <div>
-          <button className="nav__cart" onClick={props.click}><img src="../images/cart.png" alt="cart"></img></button>
+          <button className="nav__cart" onClick={() => setCartDrawer(!showCart)}><img src="../images/cart.png" alt="cart"></img></button>
         </div>
       </div>
     </nav>

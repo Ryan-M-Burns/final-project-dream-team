@@ -1,40 +1,36 @@
-import {React, useEffect} from 'react';
-import Container from '@mui/material/Container';
-import {getFilteredProducts, getFarms} from '../../helpers/selectors';
+import { React, useEffect } from 'react';
+import { getFilteredProducts, getFarms } from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
 import CategoryList from './HomePageComponents/CategoryList';
-import useApplicationData from "../../hooks/useApplicationData";
 import CartDrawer from '../../CartDrawer';
 import './Home.scss';
 
-const Home = () => {
+const Home = ({
+  state,
+  setCartDrawer,
+  setProduct,
+  setCategory,
+  setFarm,
+  addToCart
+}) => {
+  console.log(state, "home state")
   // Nav Bar - Logo, Account drop down, About
   // Farm List
   // Boxes
   // Products all generated - filter form that expands
-  const {
-    state,
-    setFarm,
-    setBoxes,
-    setCategory,
-    setPrice,
-    setCart,
-    setProduct,
-    addToCart
-  } = useApplicationData();
+
 
   useEffect(() => {
     setProduct(getFilteredProducts(state, state.category, state.price, state.farm));
   }, [state.farm]);
-  // const showProducts = getFilteredProducts(state, state.category, state.price, state.farm);
 
   const showFarms = getFarms(state, state.farm);
 
   return (
     <section className='section__home'>
       <div>
-        {/* <CartDrawer show={cartDrawer} /> */}
+        <CartDrawer show={state.cartDrawer} cart={state.cart} />
       </div>
       <div className="home-categories">
         <CategoryList

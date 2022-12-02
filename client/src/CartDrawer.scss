@@ -11,14 +11,18 @@
   -webkit-overflow-scrolling: touch;
   z-index: 200;
   right: 0;
-  transform: translateX(0);
   transition: transform 0.3s ease-in;
+
+  &--open {
+    transform: translateX(100%);
+  }
+
+  &--close {
+    transform: translateX(0%);
+  }
+
 }
 
-.cart__container.open {
-  transform: translateX(100%);
-
-}
 
 .cart__products img {
   max-width: 300px;

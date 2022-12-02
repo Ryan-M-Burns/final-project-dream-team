@@ -15,7 +15,8 @@ const useApplicationData = () => {
     categories: [],
     price: null,
     users: [],
-    user: null
+    user: null,
+    cartDrawer: false
   });
   // call data from scheduler-api database
   useEffect(() => {
@@ -56,9 +57,11 @@ const useApplicationData = () => {
 
   const setUser = user => setState(prev => ({...prev, user}));
 
+  const setCartDrawer = cartDrawer => setState(prev => ({...prev, cartDrawer}));
+
   // return current state, and functions for managing state
 
-  return {state, setFarm, setBox, setCategory, setPrice, setProduct, setCart, addToCart, setUser};
+  return {state, setFarm, setBox, setCategory, setPrice, setProduct, setCart, addToCart, setUser, setCartDrawer};
 };
 
 export default useApplicationData;
