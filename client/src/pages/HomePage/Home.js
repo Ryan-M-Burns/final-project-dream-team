@@ -43,7 +43,6 @@ const Home = () => {
           farms={showFarms}
           value={state.farm}
           setFarm={setFarm}
-
         />
       </div>
       <div className='products__home'>
