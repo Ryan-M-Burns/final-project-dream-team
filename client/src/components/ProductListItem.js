@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './ProductListItem.scss';
+
 const ProductListItem = ({ product, farm }) => {
-  console.log(farm, "dis farm bro");
   return (
     <li className="li__product-item">
       <div className="title__logo">

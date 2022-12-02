@@ -27,7 +27,7 @@ const useApplicationData = () => {
         const boxes = all[1].data;
         const farms = all[2].data;
         const categories = all[3].data;
-        console.log(products, farms);
+
         setState(prev => ({ ...prev, products, boxes, farms, categories }));
       });
   }, []);
