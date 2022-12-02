@@ -34,7 +34,7 @@ const useApplicationData = () => {
       });
   }, []);
 
-  const setProducts = products => setState(prev => ({ ...prev, products }));
+  const setProduct = product => setState(prev => ({ ...prev, product }));
 
   const setFarm = farm => setState(prev => ({ ...prev, farm }));
 
