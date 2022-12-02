@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import Container from '@mui/material/Container';
 import { getFilteredProducts, getFarms } from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
@@ -17,12 +17,15 @@ const Home = () => {
     setBoxes,
     setCategory,
     setPrice,
-    setProducts,
+    setProduct,
   } = useApplicationData();
-  
-  const showProducts = getFilteredProducts(state, state.category, state.price, state.farm);
 
-  const showFarms = getFarms(state, state.farm)
+  useEffect(() => {
+    setProduct(getFilteredProducts(state, state.category, state.price, state.farm));
+  }, [state.farm]);
+  // const showProducts = getFilteredProducts(state, state.category, state.price, state.farm);
+
+  const showFarms = getFarms(state, state.farm);
 
   return (
     <section className='section__home'>
@@ -35,7 +38,7 @@ const Home = () => {
       </div>
       <div className='products__home'>
         <ProductList
-          products={showProducts}
+          products={state.product}
           farms={state.farms}
         />
       </div>
