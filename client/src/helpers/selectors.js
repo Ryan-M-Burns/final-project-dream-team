@@ -21,10 +21,13 @@ const getFilteredProducts = (state, filterArr) => {
 
 
 const getFarms = (state, farm) => {
-  let farms = state.farms;
+  let result = state.farms;
+
   if (farm) {
-    farms = farm;
+     result = [state.farms.find(farmObj => farmObj.name === farm)];
   }
-  return farms;
+
+  return result;
 };
+
 export { getFilteredProducts, getFarms };
