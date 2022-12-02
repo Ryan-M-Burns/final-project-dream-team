@@ -14,29 +14,10 @@ const FarmList = ({ farms, value, setFarm }) => {
     );
   });
 
-  // const singleFarm = farms.map(farm => {
-  //   if (farm.name === value) {
-  //     return (
-  //       <FarmListItem
-  //         key={farm.id}
-  //         logo={farm.logo_url}
-  //         selected={value === farm.name}
-  //         setFarm={() => setFarm(null)}
-  //       />
-  //     );
-  //   }
-  // });
-
   return (
-    // !value ? (
       <ul className="farms-list">
         {parsedFarmList}
       </ul>
-    // ) : (
-    //   <ul className="farms-list">
-    //     {singleFarm}
-    //   </ul>
-    // )
   );
 };
 
