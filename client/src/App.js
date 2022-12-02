@@ -8,7 +8,6 @@ import Home from './pages/HomePage/Home';
 import Navbar from './Navbar';
 import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
-
 import PastOrders from './pages/PastOrders/PastOrders';
 
 
@@ -26,7 +25,6 @@ function App() {
               <Navbar />
               <img src="/images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
               <Home />
-
             </>
           } />
           <Route path='/about' element={
@@ -47,7 +45,6 @@ function App() {
               <PastOrders />
             </>
           } />
-
           {/* Farmer Portal Routes */}
           <Route path='/farmer-login' element={<FarmerLogin />} />
           {/* <Route path='/farmer-portal' element={<><FarmerNav /><FarmerHome /></>} /> */}
