@@ -8,7 +8,6 @@ Longview Farms is highly committed to a healthy local food system.  Our goal is 
 (2, 'Flow Organics', '/images/farm_icons/flow_organics.png', 'ryan2@harvest.com', '1234', 'We are committed to farming organically and sustainably for a healthier, happier community. Our food is safe and nutritious; grown without harmful synthetic pesticides or synthetic fertilisers. We sustain the soil using techniques such as composting, cover cropping and crop rotation. Pest control is achieved through preventative measures such as screening and covering crops against pests, as well as introducing beneficial insects and micro-organisms that either attack pests or colonize plant and soil to keep pests out.
 
 We are certified organic by Islands Organic Producers Association (IOPA), member number 1960.', true, '2200 Bear Hill Road', 'Victoria', 'V8M-1X7', '250-652-9722', false, true, '2022-09-25T07:00:00.000Z'),
-
 (3, 'Underfoot Farms', '/images/farm_icons/underfoot_farms.png', 'anouk@harvest.com', '1234', '
 Saanich Organics is a community of farmers from small, certified organic farms who work together to supply fresh local produce and top-quality organic seeds to Greater Victoria BC. Heather Stretch of Northbrook Farm, Robin Tunnicliffe of Sea Bluff Farm, and Rachel Fisher of Three Oaks Farm have co-owned the business since 2002, and we work with several other farmers in and around greater Victoria.
 
