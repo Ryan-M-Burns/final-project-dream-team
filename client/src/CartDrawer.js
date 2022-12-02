@@ -6,9 +6,7 @@ import './CartDrawer.scss';
 const CartDrawer = (props) => {
 
   const state = props.state;
-
-  console.log('YAY', state);
-  console.log('YAYYYY', state.cart.title);
+  const cart = state.cart;
 
   let cartClasses = 'cart__container';
 
@@ -16,7 +14,15 @@ const CartDrawer = (props) => {
     cartClasses = "cart__container open";
   }
 
-  const parsedCartList = state.cart.map(item => {
+  const total = (cart) => {
+    let price = 0;
+    for (let item of cart) {
+      price += item.price;
+    }
+    return price;
+  };
+
+  const parsedCartList = cart.map(item => {
 
     return (
       <CartDrawerItem
@@ -32,6 +38,9 @@ const CartDrawer = (props) => {
     <div className={cartClasses}>
       <div>
         <h2>My Box</h2>
+      </div>
+      <div>
+        <p>Box total: $ {total(cart)}</p>
       </div>
       <div className="cart__products">
         {state.cart.length && parsedCartList}

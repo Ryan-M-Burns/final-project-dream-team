@@ -56,27 +56,6 @@ const useApplicationData = () => {
 
   const setUser = user => setState(prev => ({...prev, user}));
 
-  // const submitLoginFarmer = async (username, password) => {
-
-  //   let users = [];
-  //   axios.get('/users').then(data => {
-  //     users = data.data;
-
-
-  //     const userInfo = users.find(user => user.name === username);
-
-  //     if (userInfo && userInfo.password === password) {
-  //       setUser(userInfo);
-
-  //       navigate("/home");
-
-  //     }
-  //   });
-
-  // };
-
-
-
   // return current state, and functions for managing state
   return {state, setFarm, setBox, setCategory, setPrice, setProduct, setCart, addToCart, setUser};
 };
