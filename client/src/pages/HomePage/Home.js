@@ -1,39 +1,64 @@
-import React from 'react';
-import NavCard from './HomePageComponents/NavCard';
-import BoxCarousel from './HomePageComponents/BoxCarousel';
+import {React, useEffect} from 'react';
 import Container from '@mui/material/Container';
-import {getFilteredProducts} from '../../helpers/selectors';
+import {getFilteredProducts, getFarms} from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
+import CategoryList from './HomePageComponents/CategoryList';
 import useApplicationData from "../../hooks/useApplicationData";
+import CartDrawer from '../../CartDrawer';
 import './Home.scss';
 
-const Home = (props) => {
+const Home = () => {
   // Nav Bar - Logo, Account drop down, About
   // Farm List
   // Boxes
   // Products all generated - filter form that expands
+  const {
+    state,
+    setFarm,
+    setBoxes,
+    setCategory,
+    setPrice,
+    setCart,
+    setProduct,
+    addToCart
+  } = useApplicationData();
 
-  const state = props.state;
-  const addToCart = props.addToCart;
+  useEffect(() => {
+    setProduct(getFilteredProducts(state, state.category, state.price, state.farm));
+  }, [state.farm]);
+  // const showProducts = getFilteredProducts(state, state.category, state.price, state.farm);
 
-  const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
-
+  const showFarms = getFarms(state, state.farm);
 
   return (
-    <Container className='section__home'>
+    <section className='section__home'>
+      <div>
+        {/* <CartDrawer show={cartDrawer} /> */}
+      </div>
+      <div className="home-categories">
+        <CategoryList
+          category={state.category}
+          setCategory={setCategory}
+          categories={state.categories}
+        />
+
+      </div>
       <div className='home_farms'>
         <FarmList
-          farms={state.farms}
+          farms={showFarms}
+          value={state.farm}
+          setFarm={setFarm}
         />
       </div>
       <div className='products__home'>
         <ProductList
-          products={showProducts}
           addToCart={addToCart}
+          products={state.product}
+          farms={state.farms}
         />
       </div>
-    </Container>
+    </section>
 
   );
 };

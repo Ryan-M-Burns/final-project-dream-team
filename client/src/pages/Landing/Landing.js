@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Home from '../HomePage/Home';
 import './Landing.scss';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCoffee} from '@fortawesome/free-solid-svg-icons';
 
 
 const Landing = () => {

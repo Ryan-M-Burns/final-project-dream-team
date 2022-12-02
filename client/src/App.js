@@ -6,31 +6,17 @@ import About from './pages/About/About';
 import Account from './components/Account/Account';
 import Home from './pages/HomePage/Home';
 import Navbar from './Navbar';
-import RegisterUser from './pages/RegisterUser/RegisterUser';
-import useApplicationData from "./hooks/useApplicationData.js";
 import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
 import CartDrawer from './CartDrawer';
 
 function App() {
-  const [cartDrawer, setCartDrawer] = useState(false);
 
-  const cartClickHandler = () => {
-    setCartDrawer(current => !current);
-  };
-
-  const {
-    state,
-    setFarm,
-    setBoxes,
-    setCategory,
-    setPrice,
-    setProduct,
-    addToCart,
-    setUser,
-  } = useApplicationData();
-
+  // const cartClickHandler = () => {
+  //   setCartDrawer(current => !current);
+  // <Navbar onClick={cartClickHandler} />
+  // };
 
   return (
     <main className="App">
@@ -41,12 +27,9 @@ function App() {
           {/* Main Page Routes */}
           <Route path='/home' element={
             <>
-              <Navbar click={cartClickHandler} />
-              <img src="../images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
-              <img src="../images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
-
-              <CartDrawer show={cartDrawer} state={state} />
-              <Home state={state} addToCart={addToCart} />
+              <Navbar />
+              <img src="/images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
+              <Home />
             </>
           } />
           <Route path='/about' element={
@@ -68,7 +51,7 @@ function App() {
             </>
           } />
 
-          <Route path='/farmer-login' element={<FarmerLogin users={state.users} user={state.user} setUser={setUser} />} />
+          <Route path='/farmer-login' element={<FarmerLogin />} />
           {/* <Route path='/farmer-home' element={<FarmerHome />} /> */}
 
         </Routes>
@@ -78,3 +61,4 @@ function App() {
 }
 
 export default App;
+

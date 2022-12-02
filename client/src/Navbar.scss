@@ -8,20 +8,20 @@ nav {
   align-items: center;
   height: 200px;
   width: 100%;
-  // background-image: url('../public/images/planksbackground.jpg')
-  background-color: black;
+  background-image: url('../public/images/planksbackground.jpg');
+  padding: 0 20px; 
+  // background-color: black;
 }
 
 
 .title {
   font-size: 150px;
-  font-family: 'Fjalla One', cursive;
+  font-family: 'Fjalla One', sans-serif;
   -webkit-background-clip: text;
   background-clip: text;
   background-image: url('../public/images/colourfulveg.jpg');
   background-position: bottom 50% right 50%;
   color: transparent;
-  padding: 5px 20px;
   margin-left: 20px;
   border-radius: 20px;
   border: none;
@@ -106,7 +106,7 @@ nav {
 }
 
 .sub_nav {
-  width: 50%;
+  width: 100%;
   height: 30px;
   object-fit: cover;
 }
