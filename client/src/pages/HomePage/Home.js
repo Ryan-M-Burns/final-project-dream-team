@@ -14,7 +14,7 @@ const Home = ({
   setFarm,
   addToCart
 }) => {
-  console.log(state, "home state")
+  console.log(state, "home state");
   // Nav Bar - Logo, Account drop down, About
   // Farm List
   // Boxes
@@ -26,11 +26,10 @@ const Home = ({
   }, [state.farm]);
 
   const showFarms = getFarms(state, state.farm);
-
   return (
     <section className='section__home'>
       <div>
-        <CartDrawer show={state.cartDrawer} cart={state.cart} />
+        <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} />
       </div>
       <div className="home-categories">
         <CategoryList

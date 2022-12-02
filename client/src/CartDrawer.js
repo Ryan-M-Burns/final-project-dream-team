@@ -3,21 +3,18 @@ import CartDrawerItem from './CartDrawerItem';
 import classNames from 'classnames';
 import './CartDrawer.scss';
 
-const CartDrawer = (show, cart) => {
+const CartDrawer = ({ cart, cartDrawer }) => {
   let parsedCartList = [];
   const cartClass = classNames("cart__container", {
-    "cart__container--open": show,
-    "cart__container--close": !show
+    "cart__container--open": cartDrawer,
+    "cart__container--close": !cartDrawer
   });
 
-  const total = (cart) => {
+  const total = (currentCart) => {
     let price = 0;
-    if (cart.length) {
-
-      for (let item of cart) {
-        price += item.price;
-      }
-    };
+    for (let item of currentCart) {
+      price += item.price;
+    }
     return price;
   };
 
@@ -32,7 +29,7 @@ const CartDrawer = (show, cart) => {
       );
     });
   }
-  
+
   console.log("BIJNA", cart);
 
   return (
