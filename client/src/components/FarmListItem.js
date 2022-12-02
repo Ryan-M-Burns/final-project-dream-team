@@ -1,11 +1,18 @@
 import React from 'react';
+import './FarmListItem.scss';
+import classNames from 'classnames';
 
-const FarmListItem = ({farm}) => {
+
+
+const FarmListItem = ({ logo, selected, setFarm }) => {
+  const farmClass = classNames("farm-list__item", {
+    "farm-list__item--selected": selected,
+    "farm-list__item--normal": !selected
+  });
 
   return (
-    <li>
-      <h2>{farm.name}</h2>
-      <img src={farm.logo_url} alt="farm_logo" />
+    <li className={farmClass} onClick={setFarm}>
+      <img src={logo} alt="farm_logo" className="farm-list__img" />
     </li>
   );
 };

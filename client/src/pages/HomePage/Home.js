@@ -1,15 +1,13 @@
-import React from 'react';
-import NavCard from './HomePageComponents/NavCard';
-import BoxCarousel from './HomePageComponents/BoxCarousel';
+import { React, useEffect } from 'react';
 import Container from '@mui/material/Container';
-import { getFilteredProducts } from '../../helpers/selectors';
+import { getFilteredProducts, getFarms } from '../../helpers/selectors';
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
+import CategoryList from './HomePageComponents/CategoryList';
 import useApplicationData from "../../hooks/useApplicationData";
 import './Home.scss';
 
 const Home = () => {
-
   // Nav Bar - Logo, Account drop down, About
   // Farm List
   // Boxes
@@ -23,33 +21,38 @@ const Home = () => {
     setProduct,
   } = useApplicationData();
 
-  const showProducts = getFilteredProducts(state, [state.category, state.price, state.farm]);
+  useEffect(() => {
+    setProduct(getFilteredProducts(state, state.category, state.price, state.farm));
+  }, [state.farm]);
+  // const showProducts = getFilteredProducts(state, state.category, state.price, state.farm);
+
+  const showFarms = getFarms(state, state.farm);
 
   return (
-    <Container className='section__home'>
-      <BoxCarousel />
+    <section className='section__home'>
+      <div className="home-categories">
+        <CategoryList
+          category={state.category}
+          setCategory={setCategory}
+          categories={state.categories}
+        />
+
+      </div>
       <div className='home_farms'>
         <FarmList
+          farms={showFarms}
+          value={state.farm}
+          setFarm={setFarm}
+
         />
       </div>
-      <ul className='ul__home'>
-        <li className='li__home'>
-          <NavCard className='nav-card__home' link={"/products"} pageName={"PRODUCTS"} />
-          <NavCard className='nav-card__home' link={"/boxes"} pageName={"MADE FOR YOU"} />
-          <NavCard className='nav-card__home' link={"/meet-the-farmers"} pageName={"MEET OUR FARMERS"} />
-        </li>
-        <li className='li__home'>
-          <NavCard className='nav-card__home' link={"/our-mission"} pageName={"OUR MISSION"} />
-          <NavCard className='nav-card__home' link={"/produce"} pageName={"PRODUCE"} />
-          <NavCard className='nav-card__home' link={"/contact"} pageName={"REACH OUT"} />
-        </li>
-      </ul>
       <div className='products__home'>
         <ProductList
-          products={showProducts}
+          products={state.product}
+          farms={state.farms}
         />
       </div>
-    </Container>
+    </section>
 
   );
 };

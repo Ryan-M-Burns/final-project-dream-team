@@ -1,22 +1,23 @@
 import React from 'react';
 import FarmListItem from './FarmListItem';
+import './FarmList.scss';
+const FarmList = ({ farms, value, setFarm }) => {
 
-const FarmList = ({ farms }) => {
-  console.log("Farmlist", farms);
   const parsedFarmList = farms.map(farm => {
     return (
       <FarmListItem
         key={farm.id}
-        farm={farm}
+        logo={farm.logo_url}
+        selected={value === farm.name}
+        setFarm={() => value ? setFarm(null) : setFarm(farm.name)}
       />
     );
   });
 
-
   return (
-    <ul>
-      {parsedFarmList}
-    </ul>
+      <ul className="farms-list">
+        {parsedFarmList}
+      </ul>
   );
 };
 
