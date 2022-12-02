@@ -5,7 +5,6 @@ import classNames from 'classnames';
 
 
 const FarmListItem = ({ logo, selected, setFarm }) => {
-  console.log(selected);
   const farmClass = classNames("farm-list__item", {
     "farm-list__item--selected": selected,
     "farm-list__item--normal": !selected
