@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 // manage state for application data
@@ -35,25 +35,26 @@ const useApplicationData = () => {
         const categories = all[3].data;
         const users = all[4].data;
 
-        setState(prev => ({...prev, product, products, boxes, farms, categories, users}));
+        setState(prev => ({ ...prev, product, products, boxes, farms, categories, users }));
       });
   }, []);
 
-  const setProduct = product => setState(prev => ({...prev, product}));
+  const setProduct = product => setState(prev => ({ ...prev, product }));
 
-  const setFarm = farm => setState(prev => ({...prev, farm}));
+  const setFarm = farm => setState(prev => ({ ...prev, farm }));
 
-  const setBox = box => setState(prev => ({...prev, box}));
+  const setBox = box => setState(prev => ({ ...prev, box }));
 
-  const setCategory = category => setState(prev => ({...prev, category}));
+  const setCategory = category => setState(prev => ({ ...prev, category }));
 
-  const setPrice = price => setState(prev => ({...prev, price}));
+  const setPrice = price => setState(prev => ({ ...prev, price }));
 
-  const setCart = cart => setState(prev => ({...prev, cart}));
+  const setCart = cart => setState(prev => ({ ...prev, cart }));
 
   const addToCart = (product) => {
-    setState({...state, cart: [...state.cart, product]});
+    setState({ ...state, cart: [...state.cart, product] });
   };
+
 
   const removeFromCart = (toberemoved) => {
     console.log('before', state.cart);
@@ -68,11 +69,27 @@ const useApplicationData = () => {
 
   const setUser = user => setState(prev => ({...prev, user}));
 
-  const setCartDrawer = cartDrawer => setState(prev => ({...prev, cartDrawer}));
 
+  const setCartDrawer = cartDrawer => setState(prev => ({ ...prev, cartDrawer }));
+
+  const addProduct = (product) => {
+    setState(prev => ({ ...prev, products: [...state.products, product] }));
+  };
   // return current state, and functions for managing state
 
-  return {state, setFarm, setBox, setCategory, setPrice, setProduct, setCart, addToCart, removeFromCart, setUser, setCartDrawer};
+  return {
+    state,
+    setFarm,
+    setBox,
+    setCategory,
+    setPrice,
+    setProduct,
+    addProduct,
+    setCart,
+    addToCart,
+    setUser,
+    setCartDrawer
+  };
 };
 
 export default useApplicationData;
