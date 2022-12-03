@@ -25,20 +25,17 @@ router.get('/:id/products', (req, res) => {
     });
 });
 
-router.get('/new', (req, res) => {
-  res.send('new farm form goes here');
-});
+// router.get('/new', (req, res) => {
+//   res.send('new farm form goes here');
+// });
 
-router.get('/:id/edit', (req, res) => {
-  res.send('farm profile EDIT form goes here');
-});
 
 router.put('/:id', (req, res) => {
   res.send('farm profile UPDATE goes here');
 });
 
-router.delete('/:id', (req, res) => {
-  res.send('farm profile DELETE goes here');
-});
+// router.delete('/:id', (req, res) => {
+//   res.send('farm profile DELETE goes here');
+// });
 
 module.exports = router;
