@@ -6,8 +6,8 @@ import ProductForm from './ProductForm';
 
 const FarmerHome = ({ state, setProduct, addProduct }) => {
   const [showProductForm, setShowProductForm] = useState(false);
-
-  const showProducts = setProduct(getFilteredProducts(state, null, state.farm));
+  console.log(state.farm);
+  getFilteredProducts(state, null, state.farm.name);
 
   return (
     <div>
@@ -20,16 +20,16 @@ const FarmerHome = ({ state, setProduct, addProduct }) => {
           showProductForm
           &&
           <li>
-            <ProductForm 
-            state={state}
-            product={state.product}
-            addProduct={addProduct}
+            <ProductForm
+              state={state}
+              product={state.product}
+              addProduct={addProduct}
             />
           </li>
         }
         <FarmerProductList
           state={state}
-          products={showProducts}
+          products={state.product}
           setProduct={setProduct}
         />
       </ul>
