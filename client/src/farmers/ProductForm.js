@@ -10,10 +10,6 @@ const ProductForm = ({state, setProduct, addProduct}) => {
   const image_urlRef = useRef();
   
   useEffect(() => {
-    const newProduct = {
-      id: state.products.length,
-      
-    }
     if (state.product) {
       setProduct(state.product.title)
     }

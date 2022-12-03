@@ -65,10 +65,7 @@ const useApplicationData = () => {
 
   };
 
-
-
   const setUser = user => setState(prev => ({...prev, user}));
-
 
   const setCartDrawer = cartDrawer => setState(prev => ({ ...prev, cartDrawer }));
 
@@ -87,6 +84,7 @@ const useApplicationData = () => {
     addProduct,
     setCart,
     addToCart,
+    removeFromCart,
     setUser,
     setCartDrawer
   };
