@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
 import useApplicationData from './hooks/useApplicationData';
@@ -10,7 +10,7 @@ import Navbar from './Navbar';
 import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
-import CartDrawer from './CartDrawer';
+import FarmerHome from './farmers/FarmerHome';
 
 function App() {
 
@@ -22,6 +22,7 @@ function App() {
     setPrice,
     setCart,
     setProduct,
+    setProducts,
     addToCart,
     removeFromCart,
     setUser,
@@ -92,10 +93,16 @@ function App() {
               <PastOrders />
             </>
           } />
-
-          <Route path='/farmer-login' element={<FarmerLogin />} />
-          {/* <Route path='/farmer-home' element={<FarmerHome />} /> */}
-
+          <Route path='/farmer-login' element={
+            <FarmerLogin
+              users={state.users}
+              user={state.user}
+              setUser={setUser}
+              farms={state.farms}
+              setFarm={setFarm}
+            />
+          } />
+          <Route path='/farmer-home' element={<FarmerHome />} />
         </Routes>
       </Router>
     </main>

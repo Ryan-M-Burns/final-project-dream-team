@@ -1,7 +1,9 @@
 import React from 'react';
 import './CartDrawerItem.scss';
 
+
 const CartDrawerItem = ({product, addToCart, removeFromCart}) => {
+
 
   return (
     <div>
