@@ -19,12 +19,35 @@ const getOrdersByFarmId = (farmId) => {
   WHERE p.farm_id = $1
   GROUP BY p.id
   `,[farmId])
-  .then()
+  .then(orders => {
+    return orders.rows;
+  })
 }
 
 const createNewOrder = (userId) => {
   return db
   .query(`
-  
-  `)
+  INSERT INTO orders (user_id)
+  VALUES ($1)
+  RETURNING id;
+  `,[userId])
+  .then(id => {
+    return id.rows[0]
+  })
 }
+
+const addItemsToOrder = (orderId, products) => {
+  for (let product of products) {
+    return db
+    .query(`
+    INSERT INTO order_items (product_id, quantity)
+    VALUES ($1, $2)
+    `, [product.id, product.quantity])
+    .then(order_items => {
+      return order_items.rows;
+    })
+  }
+
+}
+
+module.exports = { getOrdersByUserId, getOrdersByFarmId, createNewOrder, addItemsToOrder}
