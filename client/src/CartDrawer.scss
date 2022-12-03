@@ -23,8 +23,18 @@
 
 }
 
-
 .cart__products img {
   max-width: 300px;
   height: auto;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  // transform: translate(-50%, -50%)
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: red;
+  z-index: 10
 }
