@@ -1,24 +1,31 @@
 import { unstable_isMuiElement } from '@mui/utils';
 import axios from 'axios';
 import { useRef, React } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './FarmerLogin.scss';
 
 
 const FarmerLogin = ({ users, user, setUser }) => {
   const emailRef = useRef();
   const passwordRef = useRef();
+  const navigate = useNavigate();
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log({
-      email: emailRef.current.value,
-      password: passwordRef.current.value
-    });
+  console.log(users, user, setUser, "farmer login props")
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const userInfo = users.find(user => user.email === emailRef.current.value);
+
+    if (userInfo && userInfo.password === passwordRef.current.value) {
+      setUser(userInfo.name);
+
+      navigate("/home");
+
+    }
   };
 
-
   return (
-
     <div className="row__login">
       <div className="login">
         <p>Howdy! please log in</p>
@@ -26,7 +33,7 @@ const FarmerLogin = ({ users, user, setUser }) => {
           <img src="../images/farmer.png" alt="farmer"></img>
           <img src="../images/farmeress.png" alt="farmeress"></img>
         </div>
-        <form onSubmit={onSubmit} className="farmer__login">
+        <form onSubmit={handleSubmit} className="farmer__login">
           <label htmlFor="email" className="farmer__label">Email</label>
           <input ref={emailRef} className="farmer__input" type="email"></input>
           <label htmlFor="password" className="farmer__label">password</label>
@@ -41,4 +48,3 @@ const FarmerLogin = ({ users, user, setUser }) => {
 };
 
 export default FarmerLogin;
-
