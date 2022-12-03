@@ -3,13 +3,14 @@ import CartDrawerItem from './CartDrawerItem';
 import classNames from 'classnames';
 import './CartDrawer.scss';
 
-const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart}) => {
+const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart, setCheckout, checkout}) => {
   let parsedCartList = [];
   const cartClass = classNames("cart__container", {
     "cart__container--open": cartDrawer,
     "cart__container--close": !cartDrawer
   });
 
+  console.log('checkout', checkout);
   const total = (currentCart) => {
     let price = 0;
     for (let item of currentCart) {
@@ -66,22 +67,10 @@ const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart}) => {
           {cart.length && parsedCartList}
         </div>
         <div>
-          <button>
+          <button onClick={() => setCheckout(!checkout)}>
             <p>Checkout: $ {total(cart)}</p>
           </button>
         </div>
-        <div className="modal">
-          <div className="modal__header">
-            <div className="modal__title">CHECK OUT</div>
-            <button className="modal__close">&times;</button>
-
-          </div>
-          <div className="modal__body">
-            <p>test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test </p>
-
-          </div>
-        </div>
-        <div className="modal__overlay"></div>
       </div>
 
     );

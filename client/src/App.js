@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, {useState} from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.scss';
 
 import useApplicationData from './hooks/useApplicationData';
@@ -11,6 +11,7 @@ import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
 import FarmerHome from './farmers/FarmerHome';
+import Checkout from './components/Checkout';
 
 function App() {
 
@@ -27,7 +28,8 @@ function App() {
     addToCart,
     removeFromCart,
     setUser,
-    setCartDrawer
+    setCartDrawer,
+    setCheckout
   } = useApplicationData();
 
   return (
@@ -55,6 +57,7 @@ function App() {
                 setFarm={setFarm}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
+                setCheckout={setCheckout}
               />
             </>
           } />
