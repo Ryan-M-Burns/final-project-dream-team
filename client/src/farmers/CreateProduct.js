@@ -1,15 +1,15 @@
-import React from 'react'
-
+import React from 'react';
+import ProductForm from './ProductForm';
 const CreateProduct = () => {
-  function handleSubmit (formData) {
-    axios.post('/products', formData).then(() => alert('you did it!'))
+  function handleSubmit(formData) {
+    axios.post('/products', formData).then(() => alert('you did it!'));
   }
   return (
     <div>
-    <h1>Hi! Let's make a product</h1>
-    <ProductForm onSubmit={handleSubmit} />
-   </div>
-  )
-}
+      <h1>Hi! Let's make a product</h1>
+      <ProductForm onSubmit={handleSubmit} />
+    </div>
+  );
+};
 
-export default CreateProduct
+export default CreateProduct;

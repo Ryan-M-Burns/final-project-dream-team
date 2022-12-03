@@ -2,13 +2,13 @@ import React, { useEffect, useState, useRef } from 'react'
 
 
 const ProductForm = (props) => {
-  const [price, setPrice] = useState(props.defaultValues?.price || "")
-  const [title, setTitle] = useState(props.defaultValues?.title || "")
-  const [size, setSize] = useState(props.defaultValues?.size || "")
-  const [category, setCategory] = useState(props.defaultValues?.category || "")
-  const [quantity, setQuantity] = useState(props.defaultValues?.quantity || "")
-  const [image_url, setImage_url] = useState(props.defaultValues?.image_url || "")
-
+  const price = useRef();
+  const title = useRef();
+  const size = useRef();
+  const category = useRef();
+  const quantity = useRef();
+  const image_url = useRef();
+  
   useEffect(() => {
     if (props.product) {
       setTitle(props.product.title)
