@@ -36,6 +36,7 @@ const Home = ({
           category={state.category}
           setCategory={setCategory}
           categories={state.categories}
+          value={state.category}
         />
 
       </div>

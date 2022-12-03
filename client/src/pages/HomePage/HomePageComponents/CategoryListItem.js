@@ -4,7 +4,6 @@ const CategoryListItem = ({ category, onClick, selected }) => {
   return (
     <li 
       onClick={onClick}
-      style={{color: selected ? 'white' : 'red'}}
       className="category-list-item"
       >
       {/* {category} */}
