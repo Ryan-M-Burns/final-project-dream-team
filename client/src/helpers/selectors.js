@@ -1,13 +1,9 @@
-const getFilteredProducts = (state, category, price, farm) => {
+const getFilteredProducts = (state, category, farm) => {
   let result = state.products;
 
-  // if (categoryFilter) {
-  //   products = products.filter(obj => Object.values(obj).includes(categoryFilter));
-  // }
-
-  // if (priceFilter) {
-  //   products = products.filter(obj => Object.values(obj).includes(priceFilter));
-  // }
+  if (category) {
+    result = result.filter(obj => obj.category === category);
+  }
 
   if (farm) {
     const farmObj = state.farms.find(farmObj => farmObj.name === farm);
@@ -18,15 +14,24 @@ const getFilteredProducts = (state, category, price, farm) => {
   return result;
 };
 
+const getCategories = (state, category) => {
+  let result = state.categories;
 
-const getFarms = (state, farm) => {
-  let result = state.farms;
-
-  if (farm) {
-     result = [state.farms.find(farmObj => farmObj.name === farm)];
+  if (category) {
+    result = [state.categories.find(eachCategory => eachCategory.category === category)];
   }
 
   return result;
 };
 
-export { getFilteredProducts, getFarms };
+const getFarms = (state, farm) => {
+  let result = state.farms;
+
+  if (farm) {
+    result = [state.farms.find(farmObj => farmObj.name === farm)];
+  }
+
+  return result;
+};
+
+export { getFilteredProducts, getCategories, getFarms };

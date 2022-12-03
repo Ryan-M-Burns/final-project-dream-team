@@ -1,9 +1,8 @@
-import {unstable_isMuiElement} from '@mui/utils';
+import { unstable_isMuiElement } from '@mui/utils';
 import axios from 'axios';
-import {useState, useEffect, React} from 'react';
+import { useRef, React } from 'react';
 import './FarmerLogin.scss';
-import {Link} from 'react-router-dom';
-import {useNavigate} from "react-router-dom";
+
 
 
 const FarmerLogin = ({farms, users, setUser, setFarm}) => {
@@ -26,6 +25,7 @@ const FarmerLogin = ({farms, users, setUser, setFarm}) => {
     }
   };
 
+
   return (
 
     <div className="row__login">
@@ -41,7 +41,7 @@ const FarmerLogin = ({farms, users, setUser, setFarm}) => {
           <label className="farmer__label">password</label>
           <input className="farmer__input" type="password" onChange={e => setPassword(e.target.value)}></input>
           <div>
-            <button className="submit__button" type="submit" value="Submit" onClick={handleSubmit}>Submit</button>
+            <button className="submit__button" type="submit" value="Submit">Submit</button>
           </div>
         </form >
       </div>
@@ -50,3 +50,4 @@ const FarmerLogin = ({farms, users, setUser, setFarm}) => {
 };
 
 export default FarmerLogin;
+

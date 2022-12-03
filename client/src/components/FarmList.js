@@ -9,15 +9,19 @@ const FarmList = ({ farms, value, setFarm }) => {
         key={farm.id}
         logo={farm.logo_url}
         selected={value === farm.name}
-        setFarm={() => value ? setFarm(null) : setFarm(farm.name)}
+        setFarm={() => value ?
+          setFarm(null)
+          :
+          setFarm(farm.name)
+        }
       />
     );
   });
 
   return (
-      <ul className="farms-list">
-        {parsedFarmList}
-      </ul>
+    <ul className="farms-list">
+      {parsedFarmList}
+    </ul>
   );
 };
 

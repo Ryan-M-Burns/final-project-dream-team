@@ -23,6 +23,7 @@ function App() {
     setPrice,
     setCart,
     setProduct,
+    setProducts,
     addToCart,
     setUser,
     setCartDrawer

@@ -6,7 +6,6 @@ const CategoryListItem = ({ category, onClick, selected }) => {
       onClick={onClick}
       className="category-list-item"
       >
-      {/* {category} */}
       <img 
       src={`/images/category_icons/${category.toLowerCase().split(' ').join('_')}.png`} 
       alt="category-icon"
