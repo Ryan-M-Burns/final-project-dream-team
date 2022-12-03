@@ -1,6 +1,7 @@
-import { React, useState } from 'react';
+import {React, useState} from 'react';
+import classNames from 'classnames';
 import './Navbar.scss';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 // Drop down menu for account
 const Navbar = (
@@ -11,14 +12,42 @@ const Navbar = (
     showCart,
     setCartDrawer
   }) => {
+
+  //About dropdown
   const [open, setOpen] = useState(false);
 
   const handleDropdown = () => {
     setOpen(!open);
   };
 
-  const LoginFunction = () => {
+  const [username, setUserName] = useState();
+  const [password, setPassword] = useState();
 
+  const [showLoginForm, setShowLoginForm] = useState(false);
+
+  //login logic
+  const loginClass = classNames("login__component", {
+    "login__component--open": showLoginForm,
+    "login__component--close": !showLoginForm
+  });
+
+  const handleLogin = async (event) => {
+    event.preventDefault();
+
+    setShowLoginForm(true);
+
+    const userInfo = users.find(user => user.name === username);
+
+    if (userInfo && userInfo.password === password) {
+      setUser(userInfo.name);
+      setShowLoginForm(false);
+
+    }
+  };
+
+  const handleLogout = async (event) => {
+    event.preventDefault();
+    setUser(null);
   };
 
   return (
@@ -29,19 +58,19 @@ const Navbar = (
       <div className="nav_buttons">
         <div className="login__nav">
           <form className="login__nav">
-            <div className="login__component">
+            <div className={loginClass}>
               <label className="login__label">username</label>
-              <input className="login__input" type="text" placeholder="username"></input>
+              <input className="login__input" type="text" placeholder="username" onChange={e => setUserName(e.target.value)}></input>
             </div>
-            <div className="login__component">
+            <div className={loginClass}>
               <label className="login__label">password</label>
-              <input className="login__input" type="text"></input>
+              <input className="login__input" type="password" placeholder="password" onChange={e => setPassword(e.target.value)}></input>
             </div>
           </form>
-          <button onClick={setUser}>Login</button>
         </div>
+        {!user && <button onClick={handleLogin}>Login</button>}
         <div className="dropdown">
-          <button onClick={handleDropdown}>Account</button>
+          {user && <button onClick={handleDropdown}>Account</button>}
           {open ? (
             <ul className="account">
               <li className="account-item">
@@ -51,7 +80,7 @@ const Navbar = (
                 <button>My orders</button>
               </li>
               <li className="account-item">
-                <button>Sign out</button>
+                <button onClick={handleLogout}>Sign out</button>
               </li>
             </ul>
           ) : null}

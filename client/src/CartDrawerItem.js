@@ -1,7 +1,9 @@
 import React from 'react';
 import './CartDrawerItem.scss';
 
-const CartDrawerItem = ({product}) => {
+
+const CartDrawerItem = ({product, addToCart, removeFromCart}) => {
+
 
   return (
     <div>
@@ -11,10 +13,12 @@ const CartDrawerItem = ({product}) => {
       <div className="cart__image">
         <img src={product.image_url} alt="food" />
       </div>
+      <div>
+        <p>quantity: {product.quantity}</p>
+      </div>
       <div className="cartitem__buttons">
-        <button>Add</button>
-        <button>Remove</button>
-
+        <button onClick={() => addToCart(product)}>Add</button>
+        <button onClick={() => removeFromCart(product)}>Remove</button>
       </div>
     </div>
   );
