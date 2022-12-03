@@ -1,7 +1,7 @@
 import React from 'react';
 import './CartDrawerItem.scss';
 
-const CartDrawerItem = ({product, addToCart}) => {
+const CartDrawerItem = ({product, addToCart, removeFromCart}) => {
 
   return (
     <div>
@@ -16,7 +16,7 @@ const CartDrawerItem = ({product, addToCart}) => {
       </div>
       <div className="cartitem__buttons">
         <button onClick={() => addToCart(product)}>Add</button>
-        <button >Remove</button>
+        <button onClick={() => removeFromCart(product)}>Remove</button>
       </div>
     </div>
   );

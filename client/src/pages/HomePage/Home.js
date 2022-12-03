@@ -12,7 +12,8 @@ const Home = ({
   setProduct,
   setCategory,
   setFarm,
-  addToCart
+  addToCart,
+  removeFromCart
 }) => {
 
   useEffect(() => {
@@ -23,7 +24,7 @@ const Home = ({
   return (
     <section className='section__home'>
       <div>
-        <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} addToCart={addToCart} />
+        <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} addToCart={addToCart} removeFromCart={removeFromCart} />
       </div>
       <div className="home-categories">
         <CategoryList

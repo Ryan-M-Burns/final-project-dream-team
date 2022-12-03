@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, {useState} from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.scss';
 
 import useApplicationData from './hooks/useApplicationData';
@@ -23,6 +23,7 @@ function App() {
     setCart,
     setProduct,
     addToCart,
+    removeFromCart,
     setUser,
     setCartDrawer
   } = useApplicationData();
@@ -51,6 +52,7 @@ function App() {
                 setCategory={setCategory}
                 setFarm={setFarm}
                 addToCart={addToCart}
+                removeFromCart={removeFromCart}
               />
             </>
           } />

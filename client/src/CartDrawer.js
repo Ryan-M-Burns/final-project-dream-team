@@ -3,7 +3,7 @@ import CartDrawerItem from './CartDrawerItem';
 import classNames from 'classnames';
 import './CartDrawer.scss';
 
-const CartDrawer = ({cart, cartDrawer, addToCart}) => {
+const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart}) => {
   let parsedCartList = [];
   const cartClass = classNames("cart__container", {
     "cart__container--open": cartDrawer,
@@ -31,7 +31,7 @@ const CartDrawer = ({cart, cartDrawer, addToCart}) => {
 
       if (!cartResultIds.includes(id)) {
 
-        cartResult.push({id: cart[i].id, quantity: 1, title: cart[i].title, category: cart[i].category, size: cart[i].size, image_url: cart[i].image_url});
+        cartResult.push({id: cart[i].id, quantity: 1, title: cart[i].title, category: cart[i].category, size: cart[i].size, image_url: cart[i].image_url, price: cart[i].price});
 
         cartResultIds.push(cart[i].id);
 
@@ -50,7 +50,7 @@ const CartDrawer = ({cart, cartDrawer, addToCart}) => {
             key={item.id}
             product={item}
             addToCart={addToCart}
-          // onDelete={onDelete}
+            removeFromCart={removeFromCart}
           />
         );
       });
