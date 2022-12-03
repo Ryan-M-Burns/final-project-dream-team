@@ -49,7 +49,7 @@ VALUES
 (3, 'Carrots', 'Root Vegetables', '5lbs', 'https://www.superhealthykids.com/wp-content/uploads/2019/11/AdobeStock_272728688-745x497.jpeg', 599, 100, TRUE, FALSE),
 (1, 'Beets', 'Root Vegetables', '2lbs', 'https://st2.depositphotos.com/1001944/5552/i/950/depositphotos_55521083-stock-photo-fresh-beetroot-on-wooden-background.jpg', 299, 100, TRUE, FALSE),
 (2, 'Mixed Heirloom Tomatoes', 'Tomatoes', '5lbs', 'https://www.tasteofhome.com/wp-content/uploads/2018/05/shutterstock_473515060.jpg?fit=700,700', 1299, 100, TRUE, FALSE),
-(2, 'Yellow Onion Rope', 'Root Vegetables', '5lbs', 'https://gardenplannerwebsites.azureedge.net/blog/braided-onion-string-2x.jpg', 699, 100, TRUE, FALSE),
+(2, 'Yellow Onion Rope', 'Root Vegetables', '5lbs', 'https://gardenplannerwebsites.azureedge.net/blog/braided-onion-string-2x.jpg', 699, 100, TRUE, FALSE)
 
 
 
