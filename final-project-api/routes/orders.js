@@ -1,5 +1,5 @@
 const express = require('express');
-const { getOrdersByUserId } = require('../db/queries/orders');
+const { getOrdersByUserId, createNewOrder, addItemsToOrder } = require('../db/queries/orders');
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -12,6 +12,23 @@ router.get('/', (req, res) => {
   })
 });
 
+router.put('/', (req, res) => {
+  const {
+    userId,
+    products
+  } = req.body
+
+  createNewOrder(userId)
+  .then(orderId => {
+    addItemsToOrder(orderId, products)
+    .then(order_items => {
+      res.json(order_items)
+    })
+    .catch(e => {
+      res.send(e);
+    })
+  })
+})
 
 
 module.exports = router;

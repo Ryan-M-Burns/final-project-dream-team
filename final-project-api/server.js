@@ -33,7 +33,6 @@ const farmsRoutes = require('./routes/farms');
 const cartRoutes = require('./routes/cart');
 const productsRoutes = require('./routes/products');
 const usersRoutes = require('./routes/users');
-const boxesRoutes = require('./routes/boxes');
 const orderRoutes = require('./routes/orders');
 const categoryRoutes = require('./routes/categories')
 
@@ -43,7 +42,6 @@ const categoryRoutes = require('./routes/categories')
 
 app.use('/farms', farmsRoutes);
 app.use('/cart', cartRoutes);
-app.use('/boxes', boxesRoutes);
 app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
 app.use('/orders', orderRoutes);
