@@ -55,6 +55,7 @@ const useApplicationData = () => {
     setState({ ...state, cart: [...state.cart, product] });
   };
 
+
   const removeFromCart = (toberemoved) => {
     console.log('before', state.cart);
     const filterIndex = state.cart.findIndex((product) => product.id === toberemoved.id);
