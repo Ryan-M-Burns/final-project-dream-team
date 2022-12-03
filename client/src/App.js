@@ -64,6 +64,7 @@ function App() {
                 showCart={state.cartDrawer}
                 setCartDrawer={setCartDrawer}
               />
+              
               <About />
             </>
           } />

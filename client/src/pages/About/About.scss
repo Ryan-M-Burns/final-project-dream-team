@@ -1,10 +1,16 @@
 @import '../../styles/variables.scss';
 @import '../../styles/reset.scss';
 
+.about_body {
+  background-image: url("../../../public/images/background.jpg");
+  display: flex;
+  align-content:flex-start;
+  
+
+}
 .about__article {
   display: flex;
   max-width: 50%;
-  align-self: center;
   flex-flow: column;
   padding: 25px;
   overflow-x: wrap;
@@ -23,9 +29,4 @@ h2 {
   margin: 0;
   font-size: 5.5vw;
 }
-.about_body {
-  display: flex;
-  align-content: center;
-  justify-content: center;
 
-}
