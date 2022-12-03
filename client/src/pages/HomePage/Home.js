@@ -1,5 +1,6 @@
 import { React, useEffect } from 'react';
 import { getFilteredProducts, getFarms, getCategories } from '../../helpers/selectors';
+
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
 import CategoryList from './HomePageComponents/CategoryList';
@@ -12,14 +13,9 @@ const Home = ({
   setProduct,
   setCategory,
   setFarm,
-  addToCart
+  addToCart,
+  removeFromCart
 }) => {
-  console.log(state, "home state");
-  // Nav Bar - Logo, Account drop down, About
-  // Farm List
-  // Boxes
-  // Products all generated - filter form that expands
-
 
   useEffect(() => {
     setProduct(getFilteredProducts(state, state.category, state.farm));
@@ -31,7 +27,7 @@ const Home = ({
   return (
     <section className='section__home'>
       <div>
-        <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} />
+        <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} addToCart={addToCart} removeFromCart={removeFromCart} />
       </div>
       <div className="home-categories">
         <CategoryList

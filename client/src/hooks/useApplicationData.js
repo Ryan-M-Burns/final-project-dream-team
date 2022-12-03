@@ -55,7 +55,20 @@ const useApplicationData = () => {
     setState({ ...state, cart: [...state.cart, product] });
   };
 
-  const setUser = user => setState(prev => ({ ...prev, user }));
+
+  const removeFromCart = (toberemoved) => {
+    console.log('before', state.cart);
+    const filterIndex = state.cart.findIndex((product) => product.id === toberemoved.id);
+
+    const newCart = state.cart.splice(filterIndex, 1);
+    setState({...state, cart: state.cart});
+
+  };
+
+
+
+  const setUser = user => setState(prev => ({...prev, user}));
+
 
   const setCartDrawer = cartDrawer => setState(prev => ({ ...prev, cartDrawer }));
 
