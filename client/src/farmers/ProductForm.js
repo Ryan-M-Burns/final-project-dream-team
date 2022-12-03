@@ -1,57 +1,54 @@
 import React, { useEffect, useState, useRef } from 'react'
 
 
-const ProductForm = (props) => {
-  const price = useRef();
-  const title = useRef();
-  const size = useRef();
-  const category = useRef();
-  const quantity = useRef();
-  const image_url = useRef();
+const ProductForm = ({state, setProduct, addProduct}) => {
+  const priceRef = useRef();
+  const titleRef = useRef();
+  const sizeRef = useRef();
+  const categoryRef = useRef();
+  const quantityRef = useRef();
+  const image_urlRef = useRef();
   
   useEffect(() => {
-    if (props.product) {
-      setTitle(props.product.title)
+    const newProduct = {
+      id: state.products.length,
+      
     }
-  }, [props.product])
+    if (state.product) {
+      setProduct(state.product.title)
+    }
+  }, [state.product])
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    props.onSubmit({
-      title,
-      price,
-      size,
-      category,
-      quantity,
-      image_url
-    })
+    setProduct()
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <li className="li__product-item">
         <h5 className="product-name">Name:</h5>
-        <input type='text' value={title} onChange={(event) => {setTitle(event.target.value)}} className="product-name"/>
+        <input type='text' ref={titleRef} className="product-name"/>
         <div>
           <div className="div__product-info">
             <div className="div__product-item">
               <p>Price:</p>
-              <input type='text' value={price} onChange={(event) => {setPrice(event.target.value)}} className="product-price"/>
+              <input type='text' ref={priceRef} className="product-price"/>
             </div>
             <div className="div__product-size">
               <p>Size:</p>
-              <input type='text' value={size} onChange={(event) => {setSize(event.target.value)}} className="div__product-size"/>
+              <input type='text' value={sizeRef} className="div__product-size"/>
             </div>
             <div className="div__product-category">
               <p>Category:</p>
-              <input type='text' value={category} onChange={(event) => {setCategory(event.target.value)}} className="product-category"/>
+              <input type='text' value={categoryRef} className="product-category"/>
             </div>
             <div className="div__product-quantity">
               <p>Quantity:</p>
-              <input type='text' value={quantity} onChange={(event) => {setQuantity(event.target.value)}} className="product-quantity"/>
+              <input type='text' value={quantityRef} className="product-quantity"/>
             </div>
           </div>
-          <input type='text' value={image_url} onChange={(event) => {setImage_url(event.target.value)}} className="div__product-image"/>
+          <input type='text' value={image_urlRef} className="div__product-image"/>
         </div>
         <button type='submit'> Save </button>
       </li>

@@ -22,6 +22,7 @@ function App() {
     setPrice,
     setCart,
     setProduct,
+    addProduct,
     setProducts,
     addToCart,
     setUser,
@@ -91,16 +92,26 @@ function App() {
               <PastOrders />
             </>
           } />
-          <Route path='/farmer-login' element={
-            <FarmerLogin
-              users={state.users}
-              user={state.user}
-              setUser={setUser}
-              farms={state.farms}
-              setFarm={setFarm}
-            />
-          } />
-          <Route path='/farmer-home' element={<FarmerHome />} />
+          <Route
+            path='/farmer-login'
+            element={
+              <FarmerLogin
+                users={state.users}
+                user={state.user}
+                setUser={setUser}
+                farms={state.farms}
+                setFarm={setFarm}
+              />
+            } />
+          <Route
+            path='/farmer-home'
+            element={
+              <FarmerHome
+                state={state}
+                setProduct={setProduct}
+                addProduct={addProduct}
+              />}
+          />
         </Routes>
       </Router>
     </main>
