@@ -3,10 +3,13 @@ const db = require('../connection');
 
 const getOrdersByUserId = (userId) => {
   return db
-  .query(`SELECT * FROM orders
-  WHERE user_id = $1`,[userId])
+  .query(`SELECT * FROM orders WHERE user_id = $1
+  `, [userId])
   .then(orders => {
     return orders.rows;
+  })
+  .catch(e => {
+    return e.message
   })
 }
 
