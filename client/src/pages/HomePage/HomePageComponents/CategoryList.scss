@@ -3,7 +3,11 @@
 @import "../../../styles/reset.scss";
 
 .category-list {
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
+  flex-direction: column;
   justify-content: space-evenly;
+  position: absolute;
+  padding-top:120px;
+  margin: 25px;
+  
 }
