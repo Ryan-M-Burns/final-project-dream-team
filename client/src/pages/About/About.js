@@ -17,11 +17,15 @@ const About = () => {
           </p>
           <p>Sincerely,</p>
           <p>The Havest Team</p>
-          <h1>WhRE IS THIS TEXT</h1>
         </article>
-       
       </div>
-      
+      <div className='user-photos'>
+         <img 
+      src='/images/team_photos/taylor.jpeg' 
+      alt="admin-icon"
+        />
+      </div>
+     
     </body>
   );
 };
