@@ -6,17 +6,17 @@ import {Link} from 'react-router-dom';
 import {useNavigate} from "react-router-dom";
 
 
-const FarmerLogin = ({users, user, setUser}) => {
+const FarmerLogin = ({farms, users, user, setUser}) => {
   const navigate = useNavigate();
 
 
-  const [username, setUserName] = useState();
+  const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const userInfo = users.find(user => user.name === username);
+    const userInfo = users.find(user => user.email === email);
 
     if (userInfo && userInfo.password === password) {
       setUser(userInfo.name);
@@ -36,8 +36,8 @@ const FarmerLogin = ({users, user, setUser}) => {
           <img src="../images/farmeress.png" alt="farmeress"></img>
         </div>
         <form className="farmer__login">
-          <label className="farmer__label">username</label>
-          <input className="farmer__input" type="text" onChange={e => setUserName(e.target.value)}></input>
+          <label className="farmer__label">email</label>
+          <input className="farmer__input" type="text" onChange={e => setEmail(e.target.value)}></input>
           <label className="farmer__label">password</label>
           <input className="farmer__input" type="password" onChange={e => setPassword(e.target.value)}></input>
           <div>
