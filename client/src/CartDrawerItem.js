@@ -11,10 +11,12 @@ const CartDrawerItem = ({product}) => {
       <div className="cart__image">
         <img src={product.image_url} alt="food" />
       </div>
+      <div>
+        <p>{product.quantity}</p>
+      </div>
       <div className="cartitem__buttons">
         <button>Add</button>
         <button>Remove</button>
-
       </div>
     </div>
   );

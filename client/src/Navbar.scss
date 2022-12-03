@@ -70,15 +70,15 @@ nav {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   z-index: 200;
-  right: 0;
+  // top: 0;
   transition: transform 0.3s ease-in;
 
   &--open {
-    transform: translateY(100%);
+    transform: translateY(0%);
   }
 
   &--close {
-    transform: translateY(0%);
+    transform: translateY(-180%);
   }
 }
 

@@ -67,8 +67,8 @@ const Navbar = (
               <input className="login__input" type="password" placeholder="password" onChange={e => setPassword(e.target.value)}></input>
             </div>
           </form>
-          {!user && <button onClick={handleLogin}>Login</button>}
         </div>
+        {!user && <button onClick={handleLogin}>Login</button>}
         <div className="dropdown">
           {user && <button onClick={handleDropdown}>Account</button>}
           {open ? (
