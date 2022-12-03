@@ -1,6 +1,6 @@
 INSERT INTO products (farm_id, title, category, size, image_url, price, quantity, active_status, seasonal)
 VALUES
-(6, 'Blueberries', 'Fruits', '1lbs', 'https://images.pexels.com/photos/70862/pexels-photo-70862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 499, 100, TRUE, FALSE),
+(6, 'Blueberries', 'Fruits', '2lbs', 'https://images.pexels.com/photos/70862/pexels-photo-70862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 799, 100, TRUE, FALSE),
 (6, 'Raspberries', 'Fruits', '1lbs', 'https://images.ctfassets.net/3s5io6mnxfqz/wfiv5XQMgJamorP9Pe1jB/d4e1f67f2d93110a592a068db2d60cbd/AdobeStock_139584039.jpeg', 499, 100, TRUE, FALSE),
 (5, 'Cherries', 'Fruits', '2lbs', 'https://iafbc.ca/wp-content/uploads/2019/11/AdobeStock_114294727-1024x683-1.jpeg', 499, 100, TRUE, FALSE),
 (5, 'Apples', 'Fruits', '5lbs', 'https://media.istockphoto.com/id/1047577568/photo/cortland-apples.jpg?s=612x612&w=0&k=20&c=SmDWEnaj6eAKgBimi4-y1Uzt6PmbR6SwbmA7XlLVI4Y=', 499, 100, TRUE, FALSE),
@@ -17,10 +17,10 @@ VALUES
 (2, 'Mixed Bell Peppers', 'Peppers', '4lbs', 'https://media.istockphoto.com/id/480931380/photo/bell-pepper.jpg?s=612x612&w=0&k=20&c=gzxuvBrlcGd9shtDT2rMyPoCQj9VzLv1SksaRSuNDCk=', 499, 100, TRUE, FALSE),
 (2, 'Chili Peppers', 'Peppers', '1lbs', 'https://thumbs.dreamstime.com/b/red-hot-chilli-pepper-wooden-bowl-spicy-food-concept-79076183.jpg', 399, 100, TRUE, FALSE),
 (3, 'Turnips', 'Root Vegetables', '2lbs', 'https://thumbs.dreamstime.com/b/closeup-rustic-organic-turnips-sustainable-vegetarian-farming-fresh-green-tops-roots-old-wood-background-81732815.jpg', 399, 100, TRUE, FALSE),
-(3, 'Beets', 'Root Vegetables', '3lbs', 'https://media.istockphoto.com/id/599695694/photo/red-beetroot-with-green-leaves.jpg?s=612x612&w=0&k=20&c=bVS2GBQ7r1jDi4N0Ryxy86w-GcF748lgdS_xwofxL1k=', 299, 100, TRUE, FALSE),
-(3, 'Carrots', 'Root Vegetables', '5lbs', 'https://images.pexels.com/photos/1306559/pexels-photo-1306559.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', 4, 100, TRUE, FALSE),
+(3, 'Beets', 'Root Vegetables', '3lbs', 'https://media.istockphoto.com/id/599695694/photo/red-beetroot-with-green-leaves.jpg?s=612x612&w=0&k=20&c=bVS2GBQ7r1jDi4N0Ryxy86w-GcF748lgdS_xwofxL1k=', 399, 100, TRUE, FALSE),
+(3, 'Carrots', 'Root Vegetables', '3lbs', 'https://images.pexels.com/photos/1306559/pexels-photo-1306559.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', 399, 100, TRUE, FALSE),
 (5, 'White Onion', 'Root Vegetables', '5lbs', 'http://calorganicfarms.com/wp-content/uploads/2018/05/Onions-2-sm.jpg', 499, 100, TRUE, FALSE),
-(5, 'Yellow Onion', 'Root Vegetables', '5lbs', 'https://www.wideopeneats.com/wp-content/uploads/2021/02/AdobeStock_221818930-1024x683.jpeg', 499, 100, TRUE, FALSE),
+(5, 'Yellow Onion', 'Root Vegetables', '3lbs', 'https://www.wideopeneats.com/wp-content/uploads/2021/02/AdobeStock_221818930-1024x683.jpeg', 399, 100, TRUE, FALSE),
 (5, 'Red Onion', 'Root Vegetables', '5lbs', 'https://t3.ftcdn.net/jpg/03/94/49/66/360_F_394496609_1LkmDb7VMF29W3TO5t9Y7bbxHhIfQ7vI.jpg', 499, 100, TRUE, FALSE),
 (5, 'Shallots', 'Root Vegetables', '1lbs', 'https://static.vecteezy.com/system/resources/previews/010/204/956/non_2x/red-onion-or-shallots-shallots-on-wooden-plate-with-selected-focus-concept-of-spices-in-healthy-cooking-free-photo.jpeg', 599, 100, TRUE, FALSE),
 (1, 'Radish', 'Root Vegetables', '1lbs', 'https://as2.ftcdn.net/v2/jpg/02/06/45/55/1000_F_206455561_7gfVS6x7Ien8whP7Umjiw5vqjeWZH1vE.jpg', 299, 100, TRUE, FALSE),
@@ -43,9 +43,13 @@ VALUES
 (2, 'Green Bell Peppers', 'Peppers', '1lbs', 'https://st4.depositphotos.com/10614052/40408/i/450/depositphotos_404087458-stock-photo-green-bell-pepper-table.jpg', 499, 20, TRUE, FALSE),
 (6, 'Kale', 'Greens', '1 Bunch', 'https://st4.depositphotos.com/1027198/22394/i/1600/depositphotos_223946308-stock-photo-raw-kale-leaves-wooden-table.jpg', 199, 50, TRUE, FALSE),
 (4, 'Pumpkin', 'Squash', '1 Pumpkin', 'https://preparedfoodphotos.com/samples/MzA0M2Q1YmU2MDViNQ==/MDIzZDViZTYwNWI1/Mini-Pumpkins-on-Table.jpg', 1299, 10, TRUE, FALSE),
-(4, 'Mint', 'Herbs', '1 Bunch', 'https://thumbs.dreamstime.com/b/mint-leaves-table-wooden-close-up-40823020.jpg', 399, 20, TRUE, FALSE)
-;
-
+(4, 'Mint', 'Herbs', '1 Bunch', 'https://thumbs.dreamstime.com/b/mint-leaves-table-wooden-close-up-40823020.jpg', 399, 20, TRUE, FALSE),
+(5, 'Blueberries', 'Fruits', '1lbs', 'https://media.istockphoto.com/id/529677122/photo/blueberry-antioxidant-organic-superfood.jpg?s=612x612&w=0&k=20&c=R_67lzgkLLkUmktNspX9TMQn0j2LPkQTKb7cG8qMgf0=', 599, 50, TRUE, FALSE),
+(1, 'Blueberries', 'Fruits', '1lbs', 'https://st.depositphotos.com/1020804/1448/i/950/depositphotos_14480571-stock-photo-blueberries-have-dropped-from-the.jpg', 499, 50, TRUE, FALSE),
+(3, 'Carrots', 'Root Vegetables', '5lbs', 'https://www.superhealthykids.com/wp-content/uploads/2019/11/AdobeStock_272728688-745x497.jpeg', 599, 100, TRUE, FALSE),
+(1, 'Beets', 'Root Vegetables', '2lbs', 'https://st2.depositphotos.com/1001944/5552/i/950/depositphotos_55521083-stock-photo-fresh-beetroot-on-wooden-background.jpg', 299, 100, TRUE, FALSE),
+(2, 'Mixed Heirloom Tomatoes', 'Tomatoes', '5lbs', 'https://www.tasteofhome.com/wp-content/uploads/2018/05/shutterstock_473515060.jpg?fit=700,700', 1299, 100, TRUE, FALSE),
+(2, 'Yellow Onion Rope', 'Root Vegetables', '5lbs', 'https://gardenplannerwebsites.azureedge.net/blog/braided-onion-string-2x.jpg', 699, 100, TRUE, FALSE),
 
 
 
