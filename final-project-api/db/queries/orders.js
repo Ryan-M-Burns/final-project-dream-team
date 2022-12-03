@@ -21,3 +21,10 @@ const getOrdersByFarmId = (farmId) => {
   `,[farmId])
   .then()
 }
+
+const createNewOrder = (userId) => {
+  return db
+  .query(`
+  
+  `)
+}
