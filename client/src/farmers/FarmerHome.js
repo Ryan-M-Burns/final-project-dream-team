@@ -1,17 +1,13 @@
-import { Link } from '@mui/material';
 import React, { useState } from 'react'
-import useApplicationData from '../hooks/useApplicationData';
+import { getFilteredProducts } from '../helpers/selectors';
 import FarmerProductList from './FarmerProductList';
 import MyFarm from './MyFarm';
 import ProductForm from './ProductForm';
 
-const FarmerHome = () => {
+const FarmerHome = ({state, setProduct}) => {
   const [showProductForm, setShowProductForm] = useState(false)
-  const {
-    state,
-    setFarm,
-    setProducts,
-  } = useApplicationData();
+
+  setProduct(getFilteredProducts(state, null, null, state.farm))
 
   return (
     <div>
@@ -21,7 +17,7 @@ const FarmerHome = () => {
       </div>
       <ul>
         {showProductForm && <li> <ProductForm/> </li> }
-        <FarmerProductList state={state} products={state.products} setProducts={setProducts}/>
+        <FarmerProductList state={state} products={state.product} setProduct={setProduct}/>
       </ul>
       
     </div>
