@@ -14,8 +14,7 @@ const getOrdersByFarmId = (farmId) => {
   return db
   .query(`
   SELECT p.*, COUNT(DISTINCT p.id) FROM products AS p
-  INNER JOIN box_items AS bi ON p.id = bi.product_id
-  INNER JOIN orders AS o ON o.box_id = box_items.box_id
+  INNER JOIN order_items AS oi ON p.id = oi.product_id
   WHERE p.farm_id = $1
   GROUP BY p.id
   `,[farmId])
@@ -42,7 +41,8 @@ const addItemsToOrder = (orderId, products) => {
     .query(`
     INSERT INTO order_items (product_id, quantity)
     VALUES ($1, $2)
-    `, [product.id, product.quantity])
+    WHERE id = $3
+    `, [product.id, product.quantity, orderId])
     .then(order_items => {
       return order_items.rows;
     })
