@@ -66,7 +66,9 @@ const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart}) => {
           {cart.length && parsedCartList}
         </div>
         <div>
-          <button>Checkout: $ {total(cart)}</button>
+          <button>
+            <p>Checkout: $ {total(cart)}</p>
+          </button>
         </div>
         <div className="modal">
           <div className="modal__header">
