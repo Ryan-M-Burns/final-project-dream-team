@@ -12,7 +12,6 @@ import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
 import CartDrawer from './CartDrawer';
 import FarmerHome from './farmers/FarmerHome';
-import { UserContext } from './hooks/userContex';
 
 function App() {
 
@@ -92,13 +91,13 @@ function App() {
               <PastOrders />
             </>
           } />
-         
-            <Route path='/farmer-login' element={<FarmerLogin state={state} setFarm={setFarm}/>} />
-            <Route path='/farmer-home' element={<FarmerHome
-              state={state}
-              setProduct={setProduct}
-            />} />
-         
+
+          <Route path='/farmer-login' element={<FarmerLogin farms={state.farms} setUser={setUser} setFarm={setFarm} users={state.users}/>} />
+          <Route path='/farmer-home' element={<FarmerHome
+            state={state}
+            setProduct={setProduct}
+          />} />
+
         </Routes>
       </Router>
     </main>

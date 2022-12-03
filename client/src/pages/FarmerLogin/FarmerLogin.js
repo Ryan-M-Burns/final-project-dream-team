@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 import {useNavigate} from "react-router-dom";
 
 
-const FarmerLogin = ({farms, users, user, setUser}) => {
+const FarmerLogin = ({farms, users, setUser, setFarm}) => {
   const navigate = useNavigate();
 
 
@@ -17,10 +17,10 @@ const FarmerLogin = ({farms, users, user, setUser}) => {
     event.preventDefault();
 
     const userInfo = users.find(user => user.email === email);
-
+    const farmInfo = farms.find(farm => farm.user_id === userInfo.id)
     if (userInfo && userInfo.password === password) {
       setUser(userInfo.name);
-
+      setFarm(farmInfo)
       navigate("/home");
 
     }
