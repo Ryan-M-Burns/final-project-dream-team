@@ -15,6 +15,7 @@ const About = () => {
             local and we look forward to developing a long lasting
             relationship with you!
           </p>
+          <br/>
           <p>Sincerely,</p>
           <p>The Havest Team</p>
         </article>
