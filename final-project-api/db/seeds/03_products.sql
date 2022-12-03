@@ -26,7 +26,7 @@ VALUES
 (1, 'Radish', 'Root Vegetables', '1lbs', 'https://as2.ftcdn.net/v2/jpg/02/06/45/55/1000_F_206455561_7gfVS6x7Ien8whP7Umjiw5vqjeWZH1vE.jpg', 299, 100, TRUE, FALSE),
 (6, 'Russet Potatoes', 'Root Vegetables', '5lbs', 'https://assets.epicurious.com/photos/5bcf416aab2c1825ca89c5b9/6:4/w_1600,c_limit/russet-potatoes-102318.jpg', 699, 100, TRUE, FALSE),
 (1, 'Chestnut Squash', 'Squash', '1 Squash', 'https://www.dimitrasdishes.com/wp-content/uploads/2020/11/AdobeStock_71370618-1-683x1024.jpeg', 699, 100, TRUE, FALSE),
-(1, 'Butternut Squash', 'Squash', '1 Pumpkin', 'https://media.istockphoto.com/id/1062480668/photo/butternut-squash-on-wooden-board-over-rustic-background-healthy-fall-cooking-concept.jpg?s=612x612&w=0&k=20&c=JdYtgVxN2d9tjXfnTLdzOnuuLuP6zVcpXLwaCLrU-3Q=', 999, 100, TRUE, FALSE),
+(1, 'Butternut Squash', 'Squash', '1 Squash', 'https://media.istockphoto.com/id/1062480668/photo/butternut-squash-on-wooden-board-over-rustic-background-healthy-fall-cooking-concept.jpg?s=612x612&w=0&k=20&c=JdYtgVxN2d9tjXfnTLdzOnuuLuP6zVcpXLwaCLrU-3Q=', 999, 100, TRUE, FALSE),
 (6, 'Acorn Squash', 'Squash', '1 Squash', 'https://thumbs.dreamstime.com/b/ripe-harvested-acorn-squash-martket-place-ripe-harvested-acorn-squash-108187519.jpg', 499, 100, TRUE, FALSE),
 (3, 'Beefsteak Tomatoes', 'Tomatoes', '2lbs', 'https://thumbs.dreamstime.com/b/beefsteak-tomatoes-18023288.jpg', 399, 100, TRUE, FALSE),
 (4, 'Roma Tomatoes', 'Tomatoes', '1lbs', 'https://t4.ftcdn.net/jpg/03/07/23/77/360_F_307237798_H5o8kUCaZTyd1BEavhlOzKZc77Qwe9Sm.jpg', 499, 100, TRUE, FALSE),
@@ -42,6 +42,10 @@ VALUES
 (2, 'Red Bell Peppers', 'Peppers', '1lbs', 'https://tonysmarket.com/wp-content/uploads/2021/05/AdobeStock_299058909-scaled.jpeg', 499, 20, TRUE, FALSE),
 (2, 'Green Bell Peppers', 'Peppers', '1lbs', 'https://st4.depositphotos.com/10614052/40408/i/450/depositphotos_404087458-stock-photo-green-bell-pepper-table.jpg', 499, 20, TRUE, FALSE),
 (6, 'Kale', 'Greens', '1 Bunch', 'https://st4.depositphotos.com/1027198/22394/i/1600/depositphotos_223946308-stock-photo-raw-kale-leaves-wooden-table.jpg', 199, 50, TRUE, FALSE),
+(4, 'Pumpkin', 'Squash', '1 Pumpkin', 'https://preparedfoodphotos.com/samples/MzA0M2Q1YmU2MDViNQ==/MDIzZDViZTYwNWI1/Mini-Pumpkins-on-Table.jpg', 1299, 10, TRUE, FALSE),
+(4, 'Mint', 'Herbs', '1 Bunch', 'https://thumbs.dreamstime.com/b/mint-leaves-table-wooden-close-up-40823020.jpg', 399, 20, TRUE, FALSE)
+;
+
 
 
 
