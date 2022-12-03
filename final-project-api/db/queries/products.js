@@ -2,7 +2,7 @@ const db = require('../connection');
 
 const getProducts = () => {
   return db
-  .query('SELECT * FROM products;')
+  .query('SELECT * FROM products ORDER BY title;')
   .then(products => {
     return products.rows;
   });

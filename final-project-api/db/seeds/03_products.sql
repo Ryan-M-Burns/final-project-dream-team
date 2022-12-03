@@ -5,7 +5,7 @@ VALUES
 (5, 'Cherries', 'Fruits', '2lbs', 'https://iafbc.ca/wp-content/uploads/2019/11/AdobeStock_114294727-1024x683-1.jpeg', 499, 100, TRUE, FALSE),
 (5, 'Apples', 'Fruits', '5lbs', 'https://media.istockphoto.com/id/1047577568/photo/cortland-apples.jpg?s=612x612&w=0&k=20&c=SmDWEnaj6eAKgBimi4-y1Uzt6PmbR6SwbmA7XlLVI4Y=', 499, 100, TRUE, FALSE),
 (1, 'Strawberries', 'Fruits', '1lbs', 'https://hgic.clemson.edu/wp-content/uploads/1999/06/freshly-picked-ripe-strawberries-barbara-h-smi-scaled.jpeg', 499, 100, TRUE, FALSE),
-(1, 'Button Mushrooms', 'Fungi', '8oz', 'https://thumbs.dreamstime.com/b/fresh-white-button-mushrooms-wooden-background-68227307.jpg', 299, 100, TRUE, FALSE),
+(1, 'Button Mushrooms', 'Mushrooms', '8oz', 'https://thumbs.dreamstime.com/b/fresh-white-button-mushrooms-wooden-background-68227307.jpg', 299, 100, TRUE, FALSE),
 (2, 'Cabbage', 'Greens', '1 Head', 'https://media.istockphoto.com/id/1314962474/photo/fresh-red-cabbage-of-new-harvest.jpg?s=612x612&w=0&k=20&c=_JzPX3U5zHwIkwSjxI8cg8KOP9k_zmEJvpSLILL-rXI=', 299, 100, TRUE, FALSE),
 (2, 'Romaine Lettuce', 'Greens', '3 Heads', 'http://www.rainbowseeds.ca/uploads/2/4/8/5/24855006/s610936812164837057_p54_i7_w500.jpeg', 299, 100, TRUE, FALSE),
 (2, 'Butter Lettuce', 'Greens', '1 Head', 'https://images.ctfassets.net/3s5io6mnxfqz/3BVnZZitRitOLdNi6WPZ4j/d5def53be0c209dbb48728884b3dcf28/AdobeStock_140124592.jpeg', 299, 100, TRUE, FALSE),
@@ -49,7 +49,8 @@ VALUES
 (3, 'Carrots', 'Root Vegetables', '5lbs', 'https://www.superhealthykids.com/wp-content/uploads/2019/11/AdobeStock_272728688-745x497.jpeg', 599, 100, TRUE, FALSE),
 (1, 'Beets', 'Root Vegetables', '2lbs', 'https://st2.depositphotos.com/1001944/5552/i/950/depositphotos_55521083-stock-photo-fresh-beetroot-on-wooden-background.jpg', 299, 100, TRUE, FALSE),
 (2, 'Mixed Heirloom Tomatoes', 'Tomatoes', '5lbs', 'https://www.tasteofhome.com/wp-content/uploads/2018/05/shutterstock_473515060.jpg?fit=700,700', 1299, 100, TRUE, FALSE),
-(2, 'Yellow Onion Rope', 'Root Vegetables', '5lbs', 'https://gardenplannerwebsites.azureedge.net/blog/braided-onion-string-2x.jpg', 699, 100, TRUE, FALSE),
+(2, 'Yellow Onion Rope', 'Root Vegetables', '5lbs', 'https://gardenplannerwebsites.azureedge.net/blog/braided-onion-string-2x.jpg', 699, 100, TRUE, FALSE)
+;
 
 
 
