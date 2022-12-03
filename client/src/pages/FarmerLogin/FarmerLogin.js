@@ -5,12 +5,11 @@ import { useNavigate } from 'react-router-dom';
 import './FarmerLogin.scss';
 
 
+
 const FarmerLogin = ({ users, user, setUser }) => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
-
-  console.log(users, user, setUser, "farmer login props")
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,7 +18,7 @@ const FarmerLogin = ({ users, user, setUser }) => {
 
     if (userInfo && userInfo.password === passwordRef.current.value) {
       setUser(userInfo.name);
-
+      setFarm(farmInfo)
       navigate("/home");
 
     }
