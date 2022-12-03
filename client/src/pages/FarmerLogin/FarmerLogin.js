@@ -1,23 +1,22 @@
 import { unstable_isMuiElement } from '@mui/utils';
 import axios from 'axios';
 import { useRef, React } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './FarmerLogin.scss';
 
 
 
-const FarmerLogin = ({farms, users, setUser, setFarm}) => {
+const FarmerLogin = ({ users, user, setUser }) => {
+  const emailRef = useRef();
+  const passwordRef = useRef();
   const navigate = useNavigate();
-
-
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const userInfo = users.find(user => user.email === email);
-    const farmInfo = farms.find(farm => farm.user_id === userInfo.id)
-    if (userInfo && userInfo.password === password) {
+    const userInfo = users.find(user => user.email === emailRef.current.value);
+
+    if (userInfo && userInfo.password === passwordRef.current.value) {
       setUser(userInfo.name);
       setFarm(farmInfo)
       navigate("/home");
@@ -25,9 +24,7 @@ const FarmerLogin = ({farms, users, setUser, setFarm}) => {
     }
   };
 
-
   return (
-
     <div className="row__login">
       <div className="login">
         <p>Howdy! please log in</p>
@@ -35,11 +32,11 @@ const FarmerLogin = ({farms, users, setUser, setFarm}) => {
           <img src="../images/farmer.png" alt="farmer"></img>
           <img src="../images/farmeress.png" alt="farmeress"></img>
         </div>
-        <form className="farmer__login">
-          <label className="farmer__label">email</label>
-          <input className="farmer__input" type="text" onChange={e => setEmail(e.target.value)}></input>
-          <label className="farmer__label">password</label>
-          <input className="farmer__input" type="password" onChange={e => setPassword(e.target.value)}></input>
+        <form onSubmit={handleSubmit} className="farmer__login">
+          <label htmlFor="email" className="farmer__label">Email</label>
+          <input ref={emailRef} className="farmer__input" type="email"></input>
+          <label htmlFor="password" className="farmer__label">password</label>
+          <input ref={passwordRef} className="farmer__input" type="password"></input>
           <div>
             <button className="submit__button" type="submit" value="Submit">Submit</button>
           </div>
@@ -50,4 +47,3 @@ const FarmerLogin = ({farms, users, setUser, setFarm}) => {
 };
 
 export default FarmerLogin;
-

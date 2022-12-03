@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
+
 
 const ProductForm = (props) => {
   const [price, setPrice] = useState(props.defaultValues?.price || "")
@@ -10,7 +11,7 @@ const ProductForm = (props) => {
 
   useEffect(() => {
     if (props.product) {
-      setName(props.product.title)
+      setTitle(props.product.title)
     }
   }, [props.product])
 
