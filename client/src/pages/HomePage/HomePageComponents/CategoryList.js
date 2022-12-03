@@ -2,16 +2,20 @@ import React from 'react';
 import CategoryListItem from './CategoryListItem';
 import './CategoryList.scss';
 
-const CategoryList = ({ category, setCategory, categories }) => {
-  
+const CategoryList = ({ categories, value, setCategory }) => {
+console.log(categories, "categories")
   const parsedCategoryList = categories.map((oneCategory, index) => {
-    const name = oneCategory.category
+    const name = oneCategory.category;
     return (
       <CategoryListItem
         key={index}
         category={name}
-        onClick={() => { setCategory(name); }}
-        selected={category === name}
+        selected={value === name}
+        onClick={() => value ?
+          setCategory(null)
+          :
+          setCategory(name)
+        }
       />
     );
   });
