@@ -14,7 +14,7 @@ VALUES
 (4, 'Thyme', 'Herbs', '1 Bunch', 'https://thumbs.dreamstime.com/b/thyme-herb-22376225.jpg', 199, 100, TRUE, FALSE),
 (4, 'Lavender', 'Herbs', '1 Bunch', 'https://t3.ftcdn.net/jpg/00/97/49/48/360_F_97494846_WYgmj5vazgOdaKgfZ9ZNouEt2dL8rseD.jpg', 199, 100, TRUE, FALSE),
 (6, 'Chives', 'Herbs', '1 Bunch', 'https://media.istockphoto.com/id/845638780/photo/fresh-chives-siniklav-or-frenk-sogani-on-wooden-surface.jpg?s=612x612&w=0&k=20&c=yRtiUrz7UsweNumcbB5cuiyUi3JnK2-JE_NAc0gWBHA=', 199, 100, TRUE, FALSE),
-(2, 'Bell Peppers', 'Peppers', '4lbs', 'https://media.istockphoto.com/id/480931380/photo/bell-pepper.jpg?s=612x612&w=0&k=20&c=gzxuvBrlcGd9shtDT2rMyPoCQj9VzLv1SksaRSuNDCk=', 499, 100, TRUE, FALSE),
+(2, 'Mixed Bell Peppers', 'Peppers', '4lbs', 'https://media.istockphoto.com/id/480931380/photo/bell-pepper.jpg?s=612x612&w=0&k=20&c=gzxuvBrlcGd9shtDT2rMyPoCQj9VzLv1SksaRSuNDCk=', 499, 100, TRUE, FALSE),
 (2, 'Chili Peppers', 'Peppers', '1lbs', 'https://thumbs.dreamstime.com/b/red-hot-chilli-pepper-wooden-bowl-spicy-food-concept-79076183.jpg', 399, 100, TRUE, FALSE),
 (3, 'Turnips', 'Root Vegetables', '2lbs', 'https://thumbs.dreamstime.com/b/closeup-rustic-organic-turnips-sustainable-vegetarian-farming-fresh-green-tops-roots-old-wood-background-81732815.jpg', 399, 100, TRUE, FALSE),
 (3, 'Beets', 'Root Vegetables', '3lbs', 'https://media.istockphoto.com/id/599695694/photo/red-beetroot-with-green-leaves.jpg?s=612x612&w=0&k=20&c=bVS2GBQ7r1jDi4N0Ryxy86w-GcF748lgdS_xwofxL1k=', 299, 100, TRUE, FALSE),
@@ -34,7 +34,15 @@ VALUES
 (2, 'Cherry Tomatoes', 'Tomatoes', '1lbs', 'https://s3.envato.com/files/272822536/Pomodorini%20LP.jpg', 499, 100, TRUE, FALSE),
 (2, 'Tomatoes on the Vine', 'Tomatoes', '2lbs', 'https://cdn.create.vista.com/api/media/small/379409918/stock-photo-fresh-tomatoes-board-wooden-table', 499, 100, TRUE, FALSE),
 (1, 'Broccoli', 'Root Vegetables', '1 Head', 'https://www.lacademie.com/wp-content/uploads/2021/08/how-to-store-broccoli.jpg', 399, 100, TRUE, FALSE),
-(1, 'Garlic', 'Root Vegetables', '3 Bulbs', 'https://thumbs.dreamstime.com/b/lot-garlic-wooden-box-board-old-109506195.jpg', 399, 100, TRUE, FALSE)
+(1, 'Garlic', 'Root Vegetables', '3 Bulbs', 'https://thumbs.dreamstime.com/b/lot-garlic-wooden-box-board-old-109506195.jpg', 399, 100, TRUE, FALSE),
+(2, 'Chanterelle Mushrooms', 'Mushrooms', '1lbs', 'https://media.istockphoto.com/id/585071836/photo/punch-of-chanterelles-on-wooden-plank.jpg?s=612x612&w=0&k=20&c=rMOw9kRvRhOVyTj7_kKUX4JCCa9waco2rzdmMhpTpuM=', 1999, 20, TRUE, FALSE),
+(3, 'Oyster Mushrooms', 'Mushrooms', '1lbs', 'https://static.vecteezy.com/system/resources/previews/007/463/021/non_2x/edible-mushroom-oyster-mushroom-on-old-rustic-wooden-table-top-view-photo.jpg', 1299, 20, TRUE, FALSE),
+(3, 'Shitake Mushrooms', 'Mushrooms', '1lbs', 'https://www.thespruceeats.com/thmb/85jyrFpPR3QlZFUCL9CPKFGXDb0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-872352256-5a5ca41c494ec900372f0872.jpg', 1499, 15, TRUE, FALSE),
+(4, 'Jalapeno Peppers', 'Peppers', '1lbs', 'https://www.pepperscale.com/wp-content/uploads/2018/08/what-to-do-with-a-lot-of-jalapenos.jpg', 799, 50, TRUE, FALSE),
+(2, 'Red Bell Peppers', 'Peppers', '1lbs', 'https://tonysmarket.com/wp-content/uploads/2021/05/AdobeStock_299058909-scaled.jpeg', 499, 20, TRUE, FALSE),
+(2, 'Green Bell Peppers', 'Peppers', '1lbs', 'https://st4.depositphotos.com/10614052/40408/i/450/depositphotos_404087458-stock-photo-green-bell-pepper-table.jpg', 499, 20, TRUE, FALSE),
+(6, 'Kale', 'Greens', '1 Bunch', 'https://st4.depositphotos.com/1027198/22394/i/1600/depositphotos_223946308-stock-photo-raw-kale-leaves-wooden-table.jpg', 199, 50, TRUE, FALSE),
+
 
 
 

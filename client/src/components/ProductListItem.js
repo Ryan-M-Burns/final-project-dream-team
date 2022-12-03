@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 import './ProductListItem.scss';
 
 const ProductListItem = ({product, farm, addToCart}) => {
+
+
   return (
     <li className="li__product-item">
       <div className="title__logo">
@@ -13,7 +15,7 @@ const ProductListItem = ({product, farm, addToCart}) => {
         <div className="div__product-info">
           <div className="div__product-item">
             <p>Price:</p>
-            <p className="product-price">{product.price}</p>
+            <p className="product-price">${product.price / 100}</p>
           </div>
           <div className="div__product-item">
             <p>Pack Size:</p>
