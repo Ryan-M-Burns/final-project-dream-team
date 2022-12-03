@@ -6,7 +6,7 @@ import './FarmerLogin.scss';
 
 
 
-const FarmerLogin = ({ users, user, setUser }) => {
+const FarmerLogin = ({ users, user, setUser, farms, setFarm }) => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
@@ -15,10 +15,10 @@ const FarmerLogin = ({ users, user, setUser }) => {
     event.preventDefault();
 
     const userInfo = users.find(user => user.email === emailRef.current.value);
-
+    const farmInfo = farms.find(farm => farm.user_id === userInfo.id);
     if (userInfo && userInfo.password === passwordRef.current.value) {
       setUser(userInfo.name);
-      setFarm(farmInfo)
+      setFarm(farmInfo);
       navigate("/home");
 
     }

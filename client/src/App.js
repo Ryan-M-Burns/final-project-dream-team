@@ -96,6 +96,8 @@ function App() {
               users={state.users}
               user={state.user}
               setUser={setUser}
+              farms={state.farms}
+              setFarm={setFarm}
             />
           } />
           <Route path='/farmer-home' element={<FarmerHome />} />
