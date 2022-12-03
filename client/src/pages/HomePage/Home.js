@@ -23,7 +23,7 @@ const Home = ({
   return (
     <section className='section__home'>
       <div>
-        <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} />
+        <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} addToCart={addToCart} />
       </div>
       <div className="home-categories">
         <CategoryList
