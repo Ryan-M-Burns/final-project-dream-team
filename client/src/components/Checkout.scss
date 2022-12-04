@@ -1,0 +1,32 @@
+.checkout__background {
+  width: 100vw;
+  height: 100vh;
+  // background-color: rgba(200, 200, 200);
+  background-color: rgba(160, 153, 153, 0.2);
+  backdrop-filter: blur(15px);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.checkout__container {
+  margin-top: 100px;
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px
+}
+
+.checkout__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout__body {
+  display: flex;
+
+}

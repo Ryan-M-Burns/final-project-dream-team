@@ -1,0 +1,9 @@
+.checkout__item__container {
+  display: flex;
+}
+
+.checkout__item__left img {
+  width: auto;
+  height: 80px;
+  object-fit: contain;
+}

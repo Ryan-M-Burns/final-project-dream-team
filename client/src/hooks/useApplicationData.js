@@ -65,6 +65,7 @@ const useApplicationData = () => {
 
     const newCart = state.cart.splice(filterIndex, 1);
     setState({...state, cart: state.cart});
+    console.log('after', state.cart);
 
   };
 

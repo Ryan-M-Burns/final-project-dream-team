@@ -10,7 +10,6 @@ const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart, setCheckout, c
     "cart__container--close": !cartDrawer
   });
 
-  console.log('checkout', checkout);
   const total = (currentCart) => {
     let price = 0;
     for (let item of currentCart) {
@@ -67,8 +66,8 @@ const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart, setCheckout, c
           {cart.length && parsedCartList}
         </div>
         <div>
-          <button onClick={() => setCheckout(!checkout)}>
-            <p>Checkout: $ {total(cart)}</p>
+          <button onClick={() => setCheckout(true)}>
+            <p>Checkout: $ {total(cart) / 10}</p>
           </button>
         </div>
       </div>
