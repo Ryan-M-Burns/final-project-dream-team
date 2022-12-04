@@ -27,13 +27,20 @@ const FarmerOrders = () => {
         image={order.image_url} />
     ));
 
-  return (
-    <div>
-      <div className='total-orders--left'>
-        {parsedOrders}
-      </div>
-    </div>
-  )
+    return (
+      <table className="farmer-orders">
+        <thead>
+          <th>Product</th>
+          <th>Total Sales</th>
+          <th>Quantity Sold</th>
+          <th>Stock Remaining</th>
+          <th>Image</th>
+        </thead>
+        <tbody>
+          {parsedOrders}
+        </tbody>
+      </table>
+    )
 }
 
 export default FarmerOrders
