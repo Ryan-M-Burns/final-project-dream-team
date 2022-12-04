@@ -2,8 +2,8 @@ import axios from 'axios';
 import React from 'react'
 
 
-const FarmerOrderSummary = (props) => {
-
+const FarmerOrderSummary = ({product, price, count, remaining, image}) => {
+  
 
 
   return (
