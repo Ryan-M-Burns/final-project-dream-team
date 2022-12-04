@@ -24,15 +24,12 @@ router.get('/new', (req, res) => {
   })
 });
 
-router.get('/:id/edit', (req, res) => {
+
+router.put('/:id', (req, res) => {
   updateProduct()
   .then(newProd => {
     res.json(newProd)
   })
-});
-
-router.put('/:id', (req, res) => {
-  res.send('Updated products go here');
 });
 
 router.put('/:id', (req, res) => {
