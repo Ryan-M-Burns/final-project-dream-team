@@ -61,6 +61,7 @@ function App() {
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
                 setCheckout={setCheckout}
+                setUserlogin={setUserlogin}
               />
             </>
           } />
