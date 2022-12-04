@@ -6,7 +6,8 @@ import ProductForm from './ProductForm';
 import './FarmerHome.scss'
 const FarmerHome = ({ state, setProduct, addProduct }) => {
   const [showProductForm, setShowProductForm] = useState(false);
-  getFilteredProducts(state, null, state.farm.name);
+  console.log("state", state);
+  const showProducts = getFilteredProducts(state, null, state.farm);
 
   return (
     <div className="farmer__home">
@@ -28,7 +29,7 @@ const FarmerHome = ({ state, setProduct, addProduct }) => {
         }
         <FarmerProductList
           state={state}
-          products={state.product}
+          products={showProducts}
           setProduct={setProduct}
         />
       </ul>
