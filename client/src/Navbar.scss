@@ -9,7 +9,7 @@ nav {
   height: 200px;
   width: 100%;
   background-image: url('../public/images/planksbackground.jpg');
-  padding: 0 20px; 
+  padding: 0 20px;
   // background-color: black;
 }
 
@@ -51,7 +51,6 @@ nav {
 
 .nav__cart img {
   max-height: 45px;
-  font-size: 100px
 }
 
 .login__nav {
@@ -68,7 +67,21 @@ nav {
   margin: 0 25px;
   padding: 10px;
   border-radius: 30px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 200;
+  // top: 0;
+  transition: transform 0.3s ease-in;
+
+  &--open {
+    transform: translateY(0%);
+  }
+
+  &--close {
+    transform: translateY(-180%);
+  }
 }
+
 
 .login__input {
   border-radius: 20px;
@@ -81,6 +94,10 @@ nav {
 
 .dropdown {
   position: relative;
+}
+
+.dropdown img {
+  max-height: 30px;
 }
 
 .account {

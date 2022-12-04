@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
@@ -22,8 +22,10 @@ function App() {
     setPrice,
     setCart,
     setProduct,
+    addProduct,
     setProducts,
     addToCart,
+    removeFromCart,
     setUser,
     setCartDrawer
   } = useApplicationData();
@@ -52,6 +54,7 @@ function App() {
                 setCategory={setCategory}
                 setFarm={setFarm}
                 addToCart={addToCart}
+                removeFromCart={removeFromCart}
               />
             </>
           } />
@@ -92,16 +95,26 @@ function App() {
               <PastOrders />
             </>
           } />
-          <Route path='/farmer-login' element={
-            <FarmerLogin
-              users={state.users}
-              user={state.user}
-              setUser={setUser}
-              farms={state.farms}
-              setFarm={setFarm}
-            />
-          } />
-          <Route path='/farmer-home' element={<FarmerHome />} />
+          <Route
+            path='/farmer-login'
+            element={
+              <FarmerLogin
+                users={state.users}
+                user={state.user}
+                setUser={setUser}
+                farms={state.farms}
+                setFarm={setFarm}
+              />
+            } />
+          <Route
+            path='/farmer-home'
+            element={
+              <FarmerHome
+                state={state}
+                setProduct={setProduct}
+                addProduct={addProduct}
+              />}
+          />
         </Routes>
       </Router>
     </main>

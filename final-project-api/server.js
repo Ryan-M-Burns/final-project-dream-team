@@ -30,10 +30,8 @@ app.use(express.static('public'));
 // Note: Feel free to replace the example routes below with your own
 
 const farmsRoutes = require('./routes/farms');
-const cartRoutes = require('./routes/cart');
 const productsRoutes = require('./routes/products');
 const usersRoutes = require('./routes/users');
-const boxesRoutes = require('./routes/boxes');
 const orderRoutes = require('./routes/orders');
 const categoryRoutes = require('./routes/categories')
 
@@ -42,8 +40,6 @@ const categoryRoutes = require('./routes/categories')
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 
 app.use('/farms', farmsRoutes);
-app.use('/cart', cartRoutes);
-app.use('/boxes', boxesRoutes);
 app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
 app.use('/orders', orderRoutes);
