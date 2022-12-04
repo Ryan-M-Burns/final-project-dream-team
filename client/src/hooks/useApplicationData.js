@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import axios from "axios";
 
 // manage state for application data
@@ -15,7 +15,9 @@ const useApplicationData = () => {
     price: null,
     users: [],
     user: null,
-    cartDrawer: false
+    cartDrawer: false,
+    checkout: false,
+    userlogin: false
   });
   // call data from scheduler-api database
   useEffect(() => {
@@ -36,18 +38,22 @@ const useApplicationData = () => {
       });
   }, []);
 
-  const setProduct = product => setState(prev => ({ ...prev, product }));
+  const setProduct = product => setState(prev => ({...prev, product}));
 
-  const setFarm = farm => setState(prev => ({ ...prev, farm }));
+  const setFarm = farm => setState(prev => ({...prev, farm}));
 
   const setCategory = category => setState(prev => ({ ...prev, category }));
 
-  const setPrice = price => setState(prev => ({ ...prev, price }));
 
-  const setCart = cart => setState(prev => ({ ...prev, cart }));
-  
+  const setPrice = price => setState(prev => ({...prev, price}));
+
+  const setCart = cart => setState(prev => ({...prev, cart}));
+
+  const setCheckout = checkout => setState(prev => ({...prev, checkout}));
+
+
   const addToCart = (product) => {
-    setState({ ...state, cart: [...state.cart, product] });
+    setState({...state, cart: [...state.cart, product]});
   };
 
 
@@ -57,15 +63,18 @@ const useApplicationData = () => {
 
     const newCart = state.cart.splice(filterIndex, 1);
     setState({...state, cart: state.cart});
+    console.log('after', state.cart);
 
   };
 
   const setUser = user => setState(prev => ({...prev, user}));
 
-  const setCartDrawer = cartDrawer => setState(prev => ({ ...prev, cartDrawer }));
+  const setCartDrawer = cartDrawer => setState(prev => ({...prev, cartDrawer}));
+
+  const setUserlogin = userlogin => setState(prev => ({...prev, userlogin}));
 
   const addProduct = (product) => {
-    setState(prev => ({ ...prev, products: [...state.products, product] }));
+    setState(prev => ({...prev, products: [...state.products, product]}));
   };
   // return current state, and functions for managing state
 
@@ -80,7 +89,9 @@ const useApplicationData = () => {
     addToCart,
     removeFromCart,
     setUser,
-    setCartDrawer
+    setCartDrawer,
+    setCheckout,
+    setUserlogin,
   };
 };
 

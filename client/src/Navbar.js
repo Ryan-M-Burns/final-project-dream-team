@@ -10,7 +10,9 @@ const Navbar = (
     users,
     user,
     showCart,
-    setCartDrawer
+    setCartDrawer,
+    setUserlogin,
+    userlogin
   }) => {
 
   //About dropdown
@@ -23,24 +25,23 @@ const Navbar = (
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
 
-  const [showLoginForm, setShowLoginForm] = useState(false);
 
   //login logic
   const loginClass = classNames("login__component", {
-    "login__component--open": showLoginForm,
-    "login__component--close": !showLoginForm
+    "login__component--open": userlogin,
+    "login__component--close": !userlogin
   });
 
   const handleLogin = async (event) => {
     event.preventDefault();
 
-    setShowLoginForm(true);
+    setUserlogin(true);
 
     const userInfo = users.find(user => user.name === username);
 
     if (userInfo && userInfo.password === password) {
       setUser(userInfo.name);
-      setShowLoginForm(false);
+      setUserlogin(false);
 
     }
   };
