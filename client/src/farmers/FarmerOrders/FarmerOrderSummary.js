@@ -1,21 +1,19 @@
-import axios from 'axios';
+import './FarmerOrderSummary.scss';
 import React from 'react'
 
 
-const FarmerOrderSummary = ({product, price, count, remaining, image}) => {
-  console.log('count', count)
-  const totalSales = Number(price / 100) * Number(count);
-  console.log('sales', totalSales)
-
+const FarmerOrderSummary = (props) => {
+  const totalSales = Number(props.price / 100) * Number(props.count);
+  
   return (
     <tr className="li__farmer-order-item">
-      <td className="farmer-order-name">{product}</td>
+      <td className="farmer-order-name">{props.product}</td>
 
       <td className="farmer-order-price">{totalSales}</td>
-      <td className="farmer-order-size">{count}</td>
-      <td className="farmer-order-category">{remaining}</td>
+      <td className="farmer-order-size">{props.count}</td>
+      <td className="farmer-order-category">{props.remaining}</td>
       <td><img
-        src={image} alt="food"
+        src={props.image} alt="food"
         className="farmer-order-image"
       /></td>
     </tr>
