@@ -17,7 +17,8 @@ const useApplicationData = () => {
     users: [],
     user: null,
     cartDrawer: false,
-    checkout: false
+    checkout: false,
+    userlogin: false
   });
   // call data from scheduler-api database
   useEffect(() => {
@@ -73,6 +74,8 @@ const useApplicationData = () => {
 
   const setCartDrawer = cartDrawer => setState(prev => ({...prev, cartDrawer}));
 
+  const setUserlogin = userlogin => setState(prev => ({...prev, userlogin}));
+
   const addProduct = (product) => {
     setState(prev => ({...prev, products: [...state.products, product]}));
   };
@@ -91,7 +94,8 @@ const useApplicationData = () => {
     removeFromCart,
     setUser,
     setCartDrawer,
-    setCheckout
+    setCheckout,
+    setUserlogin,
   };
 };
 

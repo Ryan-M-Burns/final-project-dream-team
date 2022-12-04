@@ -29,7 +29,8 @@ function App() {
     removeFromCart,
     setUser,
     setCartDrawer,
-    setCheckout
+    setCheckout,
+    setUserlogin
   } = useApplicationData();
 
   return (
@@ -47,6 +48,8 @@ function App() {
                 user={state.user}
                 showCart={state.cartDrawer}
                 setCartDrawer={setCartDrawer}
+                setUserlogin={setUserlogin}
+                userlogin={state.userlogin}
               />
               <img src="/images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
               <Home
