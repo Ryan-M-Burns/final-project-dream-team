@@ -3,7 +3,6 @@ const { getOrdersByUserId, createNewOrder, addItemsToOrder, getOrdersByFarmId } 
 const router = express.Router();
 
 router.get('/users/:id', (req, res) => {
-  console.log('params', req.params)
   const {id} = req.params
   getOrdersByUserId(id)
   .then(orders => {

@@ -3,7 +3,12 @@ const db = require('../connection');
 
 const getOrdersByUserId = (userId) => {
   return db
-  .query(`SELECT * FROM orders WHERE user_id = $1
+  .query(`
+  SELECT o.*, p.title, p.price FROM orders AS o
+  INNER JOIN order_items AS oi ON o.id = oi.order_id
+  INNER JOIN products AS p ON oi.product_id = p.id
+  WHERE user_id = $1
+  GROUP BY o.id, p.title, p.price
   `, [userId])
   .then(orders => {
     return orders.rows;
