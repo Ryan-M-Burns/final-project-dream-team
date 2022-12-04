@@ -1,23 +1,25 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import FarmerOrderSummary from './FarmerOrderSummary';
-import FarmerOrderUpcoming from './FarmerOrderUpcoming';
 
 
 const FarmerOrders = () => {
-  const [orders, setOrders] = useState()
-
+  const [orders, setOrders] = useState([])
+  const id = 4;
+  useEffect(() => {
   Promise.all([
-    axios.get("/orders/farms/4"),
-  ])
-    .then(all => {
-      const orders = all[0].data;
-      setOrders(orders)
-    });
-    
-    const parsedOrders = orders.map((order) => (
+      axios.get(`/orders/farms/${id}`),
+    ])
+      .then(all => {
+        const orders = all[0].data
+        console.log('orders', orders)
+        setOrders([orders])
+      });
+  },[])
+
+    const parsedOrders = orders.map((order, index) => (
       <FarmerOrderSummary
-        key={order.id}
+        key={index}
         product={order.title}
         price={order.price}
         count={order.count}
@@ -25,14 +27,20 @@ const FarmerOrders = () => {
         image={order.image_url} />
     ));
 
-
-  return (
-    <div>
-      <div className='total-orders--left'>
-        {parsedOrders}
-      </div>
-    </div>
-  )
+    return (
+      <table className="farmer-orders">
+        <thead>
+          <th>Product</th>
+          <th>Total Sales</th>
+          <th>Quantity Sold</th>
+          <th>Stock Remaining</th>
+          <th>Image</th>
+        </thead>
+        <tbody>
+          {parsedOrders}
+        </tbody>
+      </table>
+    )
 }
 
 export default FarmerOrders

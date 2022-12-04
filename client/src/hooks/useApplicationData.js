@@ -34,7 +34,6 @@ const useApplicationData = () => {
         const categories = all[2].data;
         const users = all[3].data;
 
-
         setState(prev => ({ ...prev, product, products, farms, categories, users }));
       });
   }, []);
@@ -42,7 +41,6 @@ const useApplicationData = () => {
   const setProduct = product => setState(prev => ({...prev, product}));
 
   const setFarm = farm => setState(prev => ({...prev, farm}));
-
 
   const setCategory = category => setState(prev => ({ ...prev, category }));
 
