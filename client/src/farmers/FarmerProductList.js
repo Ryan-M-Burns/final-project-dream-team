@@ -4,7 +4,7 @@ import FarmerProductListItem from './FarmerProductListItem';
 import './FarmerProductList.scss';
 
 const FarmerProductList = ({ products, setProducts, state }) => {
-  
+
   const parsedProductList = products.map(product => {
     return (
       <FarmerProductListItem
@@ -18,14 +18,16 @@ const FarmerProductList = ({ products, setProducts, state }) => {
   return (
     <table className="farmer-products">
       <thead>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Pack Size</th>
-        <th>Category</th>
-        <th>Available</th>
-        <th>Image</th>
-        <th>Edit</th>
-        <th>Active</th>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Pack Size</th>
+          <th>Category</th>
+          <th>Available</th>
+          <th>Image</th>
+          <th>Edit</th>
+          <th>Active</th>
+        </tr>
       </thead>
       <tbody>
         {parsedProductList}
