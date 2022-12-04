@@ -110,7 +110,7 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
                   </tr>
                   <tr>
                     <th>GST:</th>
-                    <td>{total(cart) / 100 * 0.12}</td>
+                    <td>{(total(cart) / 100 * 0.12).toFixed(2)}</td>
                   </tr>
                   <tr>
                     <th>Shipping:</th>
