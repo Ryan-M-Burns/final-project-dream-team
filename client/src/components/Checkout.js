@@ -3,8 +3,12 @@ import './Checkout.scss';
 import CheckoutItem from './CheckoutItem';
 
 
-function Checkout({setCheckout, cart, user}) {
-  console.log('user', user);
+function Checkout({setCheckout, cart, user, }) {
+
+  const onHandleLogIn = () => {
+
+  };
+
 
   const total = (currentCart) => {
     let price = 0;
@@ -58,7 +62,7 @@ function Checkout({setCheckout, cart, user}) {
           <div className="checkout__body">
 
             <div className="checkout__orderinfo__left">
-              <div classname="checkout_userinfo">
+              <div classname="checkout__userinfo">
                 {!user ? (
                   <div className="checkout__guest">
                     <button>Checkout as guest</button>
@@ -76,10 +80,6 @@ function Checkout({setCheckout, cart, user}) {
 
               </div>
 
-              <div className="checkout__footer">
-                <button className="checkout__continue">Continue</button>
-              </div>
-
             </div>
             <div className="checkout__iteminfo__right">
               <div className="checkout__items">
@@ -87,11 +87,25 @@ function Checkout({setCheckout, cart, user}) {
                 <ul>
                   {cartItems}
                 </ul>
-                <p>Subtotal: {total(cart) / 10}</p>
-                <p>GST: ({total(cart) / 10 * 0.12}</p>
-                <p>Shipping: Free</p>
+                <table className="checkout__totals">
+                  <tr>
+                    <th>Subtotal:</th>
+                    <td>$ {total(cart) / 10}</td>
+                  </tr>
+                  <tr>
+                    <th>GST:</th>
+                    <td>{total(cart) / 10 * 0.12}</td>
+                  </tr>
+                  <tr>
+                    <th>Shipping:</th>
+                    <td>FREE</td>
+                  </tr>
+                </table>
               </div>
             </div>
+          </div>
+          <div className="checkout__footer">
+            <button className="checkout__continue">Continue</button>
           </div>
         </div>
       </div>
