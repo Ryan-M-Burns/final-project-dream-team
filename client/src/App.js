@@ -11,7 +11,11 @@ import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
 import FarmerHome from './farmers/FarmerHome';
+
 import Checkout from './components/Checkout';
+
+import FarmerOrders from './farmers/FarmerOrders/FarmerOrders';
+import FarmerNav from './farmers/FarmerNav';
 
 function App() {
 
@@ -74,6 +78,7 @@ function App() {
                 showCart={state.cartDrawer}
                 setCartDrawer={setCartDrawer}
               />
+              
               <About />
             </>
           } />
@@ -115,12 +120,23 @@ function App() {
           <Route
             path='/farmer-home'
             element={
-              <FarmerHome
-                state={state}
-                setProduct={setProduct}
-                addProduct={addProduct}
-              />}
+              <>
+                <FarmerNav/>
+                <FarmerHome
+                  state={state}
+                  setProduct={setProduct}
+                  addProduct={addProduct}
+                />
+              </>}
+
           />
+           <Route path='/farmer-orders' element={
+            <>
+              <FarmerOrders
+                
+              />
+            </>
+          } />
         </Routes>
       </Router>
     </main>

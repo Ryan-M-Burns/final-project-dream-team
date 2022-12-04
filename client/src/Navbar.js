@@ -87,7 +87,7 @@ const Navbar = (
           ) : null}
         </div>
         <div>
-          <Link to='/our-mission'>
+          <Link to='/about'>
             <button>About Us</button>
           </Link>
         </div>

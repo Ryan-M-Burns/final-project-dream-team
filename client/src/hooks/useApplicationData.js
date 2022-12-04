@@ -9,7 +9,6 @@ const useApplicationData = () => {
     farms: [],
     product: [],
     products: [],
-    boxes: [],
     cart: [],
     category: null,
     categories: [],
@@ -24,7 +23,6 @@ const useApplicationData = () => {
   useEffect(() => {
     Promise.all([
       axios.get("/products"),
-      axios.get("/boxes"),
       axios.get("/farms"),
       axios.get("/categories"),
       axios.get("/users")
@@ -32,12 +30,12 @@ const useApplicationData = () => {
       .then(all => {
         const product = all[0].data;
         const products = all[0].data;
-        const boxes = all[1].data;
-        const farms = all[2].data;
-        const categories = all[3].data;
-        const users = all[4].data;
+        const farms = all[1].data;
+        const categories = all[2].data;
+        const users = all[3].data;
 
-        setState(prev => ({...prev, product, products, boxes, farms, categories, users}));
+
+        setState(prev => ({ ...prev, product, products, farms, categories, users }));
       });
   }, []);
 
@@ -45,15 +43,16 @@ const useApplicationData = () => {
 
   const setFarm = farm => setState(prev => ({...prev, farm}));
 
-  const setBox = box => setState(prev => ({...prev, box}));
 
-  const setCategory = category => setState(prev => ({...prev, category}));
+  const setCategory = category => setState(prev => ({ ...prev, category }));
+
 
   const setPrice = price => setState(prev => ({...prev, price}));
 
   const setCart = cart => setState(prev => ({...prev, cart}));
 
   const setCheckout = checkout => setState(prev => ({...prev, checkout}));
+
 
   const addToCart = (product) => {
     setState({...state, cart: [...state.cart, product]});
@@ -84,7 +83,6 @@ const useApplicationData = () => {
   return {
     state,
     setFarm,
-    setBox,
     setCategory,
     setPrice,
     setProduct,
