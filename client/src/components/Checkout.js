@@ -3,11 +3,16 @@ import './Checkout.scss';
 import CheckoutItem from './CheckoutItem';
 
 
-function Checkout({setCheckout, cart, user, setUserlogin}) {
+function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
 
-  const onHandleLogIn = () => {
+  const handleLogIn = () => {
     setUserlogin(true);
     setCheckout(false);
+  };
+
+  const handleCheckout = () => {
+    setCheckout(false);
+    setCart([]);
   };
 
 
@@ -63,12 +68,12 @@ function Checkout({setCheckout, cart, user, setUserlogin}) {
           <div className="checkout__body">
 
             <div className="checkout__orderinfo__left">
-              <div classname="checkout__userinfo">
+              <div className="checkout__userinfo">
                 {!user ? (
                   <div className="checkout__guest">
                     <button>Checkout as guest</button>
                     <p>or</p>
-                    <button onClick={onHandleLogIn}>Log in</button>
+                    <button onClick={handleLogIn}>Log in</button>
                   </div>
                 )
                   :
@@ -106,7 +111,7 @@ function Checkout({setCheckout, cart, user, setUserlogin}) {
             </div>
           </div>
           <div className="checkout__footer">
-            <button className="checkout__continue">Place my order</button>
+            <button onClick={handleCheckout} className="checkout__continue">Place my order</button>
           </div>
         </div>
       </div>
