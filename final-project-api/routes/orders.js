@@ -1,5 +1,5 @@
 const express = require('express');
-const { getOrdersByUserId, createNewOrder, addItemsToOrder, getOrdersByFarmId } = require('../db/queries/orders');
+const { getOrdersByUserId, createNewOrder, addItemsToOrder, getOrdersByFarmId, getOrdersById } = require('../db/queries/orders');
 const router = express.Router();
 
 router.get('/users/:id', (req, res) => {
@@ -12,6 +12,17 @@ router.get('/users/:id', (req, res) => {
     res.send(e);
   })
 });
+
+router.get('/user/:id', (req, res) => {
+  const {id} = req.params
+  getOrdersById(id)
+  .then(orders => {
+    res.json(orders);
+  })
+  .catch(e => {
+    res.send(e);
+  })
+})
 
 router.get('/farms/:id', (req, res) => {
   const {id} = req.params;
