@@ -66,6 +66,7 @@ function App() {
                 removeFromCart={removeFromCart}
                 setCheckout={setCheckout}
                 setUserlogin={setUserlogin}
+                setCart={setCart}
               />
             </>
           } />
@@ -78,7 +79,7 @@ function App() {
                 showCart={state.cartDrawer}
                 setCartDrawer={setCartDrawer}
               />
-              
+
               <About />
             </>
           } />
@@ -121,7 +122,7 @@ function App() {
             path='/farmer-home'
             element={
               <>
-                <FarmerNav/>
+                <FarmerNav />
                 <FarmerHome
                   state={state}
                   setProduct={setProduct}
@@ -130,10 +131,10 @@ function App() {
               </>}
 
           />
-           <Route path='/farmer-orders' element={
+          <Route path='/farmer-orders' element={
             <>
               <FarmerOrders
-                
+
               />
             </>
           } />

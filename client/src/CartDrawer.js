@@ -62,18 +62,29 @@ const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart, setCheckout, c
         <div>
           <h2>My Box</h2>
         </div>
-        <div className="cart__products">
-          {cart.length && parsedCartList}
-        </div>
         <div>
-          <button onClick={() => setCheckout(true)}>
-            <p>Checkout: $ {total(cart) / 10}</p>
-          </button>
+          <div className="cart__products">
+            {cart.length && parsedCartList}
+          </div>
+          <div>
+            <button onClick={() => setCheckout(true)}>
+              <p>Checkout: $ {total(cart) / 10}</p>
+            </button>
+          </div>
         </div>
+
       </div>
 
     );
-  };
+  } else {
+    return (
+      <div className={cartClass}>
+        <div>
+          <h2>My Box</h2>
+          <p>Nothin to see here!</p>
+        </div></div>
+    );
+  }
 };
 
 export default CartDrawer;

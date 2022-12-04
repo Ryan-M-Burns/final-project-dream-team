@@ -17,7 +17,8 @@ const Home = ({
   addToCart,
   removeFromCart,
   setCheckout,
-  setUserlogin
+  setUserlogin,
+  setCart
 }) => {
 
   useEffect(() => {
@@ -35,7 +36,7 @@ const Home = ({
       <div>
         <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} addToCart={addToCart} removeFromCart={removeFromCart} setCheckout={setCheckout} checkout={state.checkout} />
       </div>
-      {state.checkout && <Checkout setCheckout={setCheckout} cart={state.cart} user={state.user} setUserlogin={setUserlogin} />}
+      {state.checkout && <Checkout setCheckout={setCheckout} cart={state.cart} user={state.user} setUserlogin={setUserlogin} setCart={setCart} />}
       <div className="home-categories">
         <CategoryList
           categories={showCategories}
