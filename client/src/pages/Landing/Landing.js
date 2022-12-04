@@ -15,8 +15,12 @@ const Landing = () => {
           <div className="title__andsub">
           </div>
           <div className="landing__buttons">
-            <button id="visit">Visit as customer</button>
-            <button id="visit">Visit as farmer</button>
+            <Link to='/home'>
+              <button id="visit">Enter Site</button>
+            </Link>
+            <Link to='/farmer-login'>
+              <button id="visit">Farmer Portal</button>
+            </Link>
           </div>
         </div>
 

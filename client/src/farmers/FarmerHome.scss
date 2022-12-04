@@ -1,0 +1,20 @@
+@import '../styles/variables.scss';
+@import '../styles/reset.scss';
+
+.farmer__home {
+  width: 100%;
+  ul {
+    width: 100%;
+    li {
+      display: flex;
+      min-width: 100%;
+      
+      justify-content: space-between;
+      align-content: space-between;
+      width: 100%;
+    }
+  }
+  thead th {
+    width:10%;
+  }
+}

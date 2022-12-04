@@ -1,0 +1,15 @@
+@import '../styles/variables.scss';
+@import '../styles/reset.scss';
+
+.nav__farmer {
+  height:100px;
+  color: $body-text;
+  font-family: $font-family-fancy;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  justify-content: center;
+  background-image: url("../../public/images/navbackground.jpg");
+  background-color: black;
+  background-size: cover;
+}
