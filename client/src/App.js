@@ -11,7 +11,9 @@ import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
 import FarmerHome from './farmers/FarmerHome';
+import FarmerOrders from './farmers/FarmerOrders/FarmerOrders';
 import FarmerNav from './farmers/FarmerNav';
+
 function App() {
 
   const {
@@ -119,6 +121,13 @@ function App() {
               </>}
 
           />
+           <Route path='/farmer-orders' element={
+            <>
+              <FarmerOrders
+                
+              />
+            </>
+          } />
         </Routes>
       </Router>
     </main>
