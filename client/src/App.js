@@ -12,6 +12,7 @@ import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
 import FarmerHome from './farmers/FarmerHome';
 import FarmerOrders from './farmers/FarmerOrders/FarmerOrders';
+import FarmerNav from './farmers/FarmerNav';
 
 function App() {
 
@@ -110,11 +111,15 @@ function App() {
           <Route
             path='/farmer-home'
             element={
-              <FarmerHome
-                state={state}
-                setProduct={setProduct}
-                addProduct={addProduct}
-              />}
+              <>
+                <FarmerNav/>
+                <FarmerHome
+                  state={state}
+                  setProduct={setProduct}
+                  addProduct={addProduct}
+                />
+              </>}
+
           />
            <Route path='/farmer-orders' element={
             <>

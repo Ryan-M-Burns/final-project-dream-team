@@ -1,8 +1,9 @@
 import React from 'react';
 import './FarmerProductList.scss';
 import FarmerProductListItem from './FarmerProductListItem';
+import './FarmerProductList.scss';
 
-const FarmerProductList = ({products, setProducts, state}) => {
+const FarmerProductList = ({ products, setProducts, state }) => {
   const parsedProductList = products.map(product => {
     return (
       <FarmerProductListItem
@@ -14,9 +15,21 @@ const FarmerProductList = ({products, setProducts, state}) => {
     );
   });
   return (
-    <>
-      {parsedProductList}
-    </>
+    <table className="farmer-products">
+      <thead>
+        <th>Product</th>
+        <th>Pack Size</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Available</th>
+        <th>Image</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </thead>
+      <tbody>
+        {parsedProductList}
+      </tbody>
+    </table>
   );
 };
 

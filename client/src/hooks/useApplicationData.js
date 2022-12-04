@@ -50,7 +50,7 @@ const useApplicationData = () => {
   const setPrice = price => setState(prev => ({ ...prev, price }));
 
   const setCart = cart => setState(prev => ({ ...prev, cart }));
-
+  
   const addToCart = (product) => {
     setState({ ...state, cart: [...state.cart, product] });
   };

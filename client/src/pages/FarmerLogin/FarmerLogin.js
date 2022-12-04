@@ -15,11 +15,12 @@ const FarmerLogin = ({ users, user, setUser, farms, setFarm }) => {
     event.preventDefault();
 
     const userInfo = users.find(user => user.email === emailRef.current.value);
-    const farmInfo = farms.find(farm => farm.user_id === userInfo.id);
+    const farm = farms.find(farm => farm.user_id === userInfo.id);
+    console.log(farm, "this is the farm")
     if (userInfo && userInfo.password === passwordRef.current.value) {
       setUser(userInfo.name);
-      setFarm(farmInfo);
-      navigate("/home");
+      setFarm(farm.name);
+      navigate("/farmer-home");
 
     }
   };
