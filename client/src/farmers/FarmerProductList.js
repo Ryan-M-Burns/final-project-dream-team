@@ -18,9 +18,9 @@ const FarmerProductList = ({ products, setProducts, state }) => {
     <table className="farmer-products">
       <thead>
         <th>Product</th>
+        <th>Price</th>
         <th>Pack Size</th>
         <th>Category</th>
-        <th>Price</th>
         <th>Available</th>
         <th>Image</th>
         <th>Edit</th>

@@ -27,7 +27,7 @@ const FarmerProductListItem = ({ product, setProducts, state }) => {
       <tr className="li__farmer-product-item">
         <td className="farmer-product-name">{product.title}</td>
 
-        <td className="farmer-product-price">{product.price}</td>
+        <td className="farmer-product-price">{(product.price / 100).toFixed(2)}</td>
         <td className="farmer-product-size">{product.size}</td>
         <td className="farmer-product-category">{product.category}</td>
         <td className="farmer-product-quantity">{product.quantity}</td>
