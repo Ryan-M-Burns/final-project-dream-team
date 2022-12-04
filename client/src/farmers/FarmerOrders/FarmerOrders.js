@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import FarmerOrderSummary from './FarmerOrderSummary';
-
+import './FarmerOrders.scss';
 
 const FarmerOrders = () => {
   const [orders, setOrders] = useState([])
@@ -13,11 +13,13 @@ const FarmerOrders = () => {
       .then(all => {
         const orders = all[0].data
         console.log('orders', orders)
-        setOrders([orders])
+        setOrders(orders)
       });
   },[])
-
-    const parsedOrders = orders.map((order, index) => (
+  
+    const parsedOrders = orders.map((order, index) => {
+      console.log('order', order)
+    return (
       <FarmerOrderSummary
         key={index}
         product={order.title}
@@ -25,7 +27,8 @@ const FarmerOrders = () => {
         count={order.count}
         remaining={order.quantity}
         image={order.image_url} />
-    ));
+    );
+  });
 
     return (
       <table className="farmer-orders">
