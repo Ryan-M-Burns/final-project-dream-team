@@ -5,6 +5,8 @@ import CheckoutItem from './CheckoutItem';
 
 function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
 
+  console.log('user', user);
+
   const handleLogIn = () => {
     setUserlogin(true);
     setCheckout(false);
@@ -79,8 +81,13 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
                   :
                   (
                     <div className="checkout__user">
+                      <h3>Customer name</h3>
+                      <p>{user.name}</p>
                       <h3>Email address</h3>
                       <p>{user.email}</p>
+                      <h3>Shipping Address</h3>
+                      <p>{user.street}</p>
+                      <p>{user.city}, {user.postal_code}</p>
                     </div>
                   )}
 

@@ -40,7 +40,8 @@ const Navbar = (
     const userInfo = users.find(user => user.name === username);
 
     if (userInfo && userInfo.password === password) {
-      setUser(userInfo.name);
+      setUser(userInfo);
+      console.log('userInfo', userInfo);
       setUserlogin(false);
 
     }
@@ -49,6 +50,7 @@ const Navbar = (
   const handleLogout = async (event) => {
     event.preventDefault();
     setUser(null);
+    setOpen(false);
   };
 
   return (
@@ -56,6 +58,7 @@ const Navbar = (
       <Link to='/home'>
         <button className="title">HARVEST</button>
       </Link>
+      {user && <button>Welcome back, {user.name}!</button>}
       <div className="nav_buttons">
         <div className="login__nav">
           <form className="login__nav">
