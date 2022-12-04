@@ -3,14 +3,13 @@ import { getFilteredProducts } from '../helpers/selectors';
 import FarmerProductList from './FarmerProductList';
 import MyFarm from './MyFarm';
 import ProductForm from './ProductForm';
-
+import './FarmerHome.scss'
 const FarmerHome = ({ state, setProduct, addProduct }) => {
   const [showProductForm, setShowProductForm] = useState(false);
-  console.log(state.farm);
   getFilteredProducts(state, null, state.farm.name);
 
   return (
-    <div>
+    <div className="farmer__home">
       <MyFarm farm={state.farm} />
       <div>
         <button type='button' onClick={() => { setShowProductForm(!showProductForm); }}> Add Product </button>
@@ -33,7 +32,6 @@ const FarmerHome = ({ state, setProduct, addProduct }) => {
           setProduct={setProduct}
         />
       </ul>
-
     </div>
   );
 };
