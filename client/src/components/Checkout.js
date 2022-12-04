@@ -1,22 +1,25 @@
 import React from 'react';
+import axios from 'axios';
 import './Checkout.scss';
 import CheckoutItem from './CheckoutItem';
 
 
 function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
 
-  console.log('user', user);
 
   const handleLogIn = () => {
     setUserlogin(true);
     setCheckout(false);
   };
 
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
+    axios.post('/orders', {userId: user.id, products: cart});
+
     setCheckout(false);
     setCart([]);
-  };
 
+
+  };
 
   const total = (currentCart) => {
     let price = 0;
@@ -103,11 +106,11 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
                 <table className="checkout__totals">
                   <tr>
                     <th>Subtotal:</th>
-                    <td>$ {total(cart) / 10}</td>
+                    <td>$ {total(cart) / 100}</td>
                   </tr>
                   <tr>
                     <th>GST:</th>
-                    <td>{total(cart) / 10 * 0.12}</td>
+                    <td>{total(cart) / 100 * 0.12}</td>
                   </tr>
                   <tr>
                     <th>Shipping:</th>
@@ -124,6 +127,6 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
       </div>
     );
   }
-}
+};
 
 export default Checkout;

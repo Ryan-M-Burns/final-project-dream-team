@@ -68,7 +68,7 @@ const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart, setCheckout, c
           </div>
           <div>
             <button onClick={() => setCheckout(true)}>
-              <p>Checkout: $ {total(cart) / 10}</p>
+              <p>Checkout: $ {total(cart) / 100}</p>
             </button>
           </div>
         </div>
