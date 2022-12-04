@@ -3,8 +3,8 @@ const { getOrdersByUserId, createNewOrder, addItemsToOrder, getOrdersByFarmId } 
 const router = express.Router();
 
 router.get('/users/:id', (req, res) => {
-  const userId = req.params
-  getOrdersByUserId(userId)
+  const {id} = req.params
+  getOrdersByUserId(id)
   .then(orders => {
     res.json(orders);
   })
@@ -14,8 +14,8 @@ router.get('/users/:id', (req, res) => {
 });
 
 router.get('/farms/:id', (req, res) => {
-  const farmId = req.params;
-  getOrdersByFarmId(farmId)
+  const {id} = req.params;
+  getOrdersByFarmId(id)
   .then(orders => {
     res.json(orders)
   })
