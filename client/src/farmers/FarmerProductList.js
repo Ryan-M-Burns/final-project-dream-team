@@ -24,7 +24,7 @@ const FarmerProductList = ({ products, setProducts, state }) => {
         <th>Available</th>
         <th>Image</th>
         <th>Edit</th>
-        <th>Delete</th>
+        <th>Active</th>
       </thead>
       <tbody>
         {parsedProductList}

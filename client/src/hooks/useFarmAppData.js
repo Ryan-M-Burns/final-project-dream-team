@@ -6,17 +6,8 @@ const useFarmAppData = () => {
 
   const [state, setState] = useState({
     farm: null,
-    farms: [],
-    product: [],
     products: [],
-    boxes: [],
-    cart: [],
-    category: null,
-    categories: [],
-    price: null,
-    users: [],
     user: null,
-    cartDrawer: false
   });
   // call data from scheduler-api database
   useEffect(() => {
@@ -25,25 +16,34 @@ const useFarmAppData = () => {
       axios.get(`/farms/${id}`)
     ])
       .then(all => {
-        const product = all[0].data;
         const products = all[0].data;
         const farm = all[1].data;
 
-        setState(prev => ({ ...prev, product, products, farm }));
+        setState(prev => ({ ...prev, farm, products }));
       });
   }, []);
 
   const setProduct = product => setState(prev => ({ ...prev, product }));
 
 
-  const addProduct = (product) => {
-    setState(prev => ({ ...prev, products: [...state.products, product] }));
+  const addProduct = product => {
+
+    return axios.put(`/products`, { product })
+      .then(() => setState(prev => ({ ...prev, products: [...state.products, product] })));
   };
-  // return current state, and functions for managing state
+
+  const deleteProduct = product => {
+    const productsCopy = state.products.filter(prodElement => prodElement.id !== product.id)
+    return axios.delete('/products', { product })
+    .then(() => setState(prev => ({ ...prev, products: productsCopy })));
+  }
 
   return {
-
+    state,
+    addProduct,
+    setProduct,
+    deleteProduct
   };
 };
 
-export default useApplicationData;
+export default useFarmAppData;

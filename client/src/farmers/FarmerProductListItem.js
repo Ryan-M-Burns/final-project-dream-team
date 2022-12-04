@@ -26,8 +26,7 @@ const FarmerProductListItem = ({ product, setProducts, state }) => {
     !edit ? (
       <tr className="li__farmer-product-item">
         <td className="farmer-product-name">{product.title}</td>
-
-        <td className="farmer-product-price">{(product.price / 100).toFixed(2)}</td>
+        <td className="farmer-product-price">${(product.price / 100).toFixed(2)}</td>
         <td className="farmer-product-size">{product.size}</td>
         <td className="farmer-product-category">{product.category}</td>
         <td className="farmer-product-quantity">{product.quantity}</td>
@@ -44,12 +43,7 @@ const FarmerProductListItem = ({ product, setProducts, state }) => {
           </button>
         </td>
         <td>
-          <button
-            onClick={() => (setEdit(!edit))}
-            type="button"
-            className="farmer-product-button">
-            <p>Delete</p>
-          </button>
+          <input type="checkbox" />
         </td>
       </tr>
     ) : (
