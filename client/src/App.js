@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, {useState} from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.scss';
 
 import useApplicationData from './hooks/useApplicationData';
@@ -11,6 +11,9 @@ import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
 import FarmerHome from './farmers/FarmerHome';
+
+import Checkout from './components/Checkout';
+
 import FarmerOrders from './farmers/FarmerOrders/FarmerOrders';
 import FarmerNav from './farmers/FarmerNav';
 
@@ -29,7 +32,9 @@ function App() {
     addToCart,
     removeFromCart,
     setUser,
-    setCartDrawer
+    setCartDrawer,
+    setCheckout,
+    setUserlogin
   } = useApplicationData();
 
   return (
@@ -47,6 +52,8 @@ function App() {
                 user={state.user}
                 showCart={state.cartDrawer}
                 setCartDrawer={setCartDrawer}
+                setUserlogin={setUserlogin}
+                userlogin={state.userlogin}
               />
               <img src="/images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
               <Home
@@ -57,6 +64,8 @@ function App() {
                 setFarm={setFarm}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
+                setCheckout={setCheckout}
+                setUserlogin={setUserlogin}
               />
             </>
           } />
