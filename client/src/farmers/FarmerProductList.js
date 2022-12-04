@@ -4,6 +4,7 @@ import FarmerProductListItem from './FarmerProductListItem';
 import './FarmerProductList.scss';
 
 const FarmerProductList = ({ products, setProducts, state }) => {
+  
   const parsedProductList = products.map(product => {
     return (
       <FarmerProductListItem
