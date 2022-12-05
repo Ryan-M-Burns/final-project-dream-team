@@ -1,10 +1,9 @@
 import axios from 'axios';
-import React, { useEffect, useState, useRef } from 'react';
+import  { React, useRef } from 'react';
 import { getFarms } from '../helpers/selectors';
 import './ProductForm.scss';
 
 const ProductForm = ({ state, product }) => {
-  const idRef = useRef()
   const priceRef = useRef();
   const titleRef = useRef();
   const sizeRef = useRef();
