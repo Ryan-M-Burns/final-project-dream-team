@@ -1,8 +1,8 @@
 @import '../styles/variables.scss';
 @import '../styles/reset.scss';
 
-.nav__farmer {
-  height:100px;
+.nav {
+  height: 100px;
   color: $body-text;
   font-family: $font-family-fancy;
   font-size: 40px;
@@ -12,4 +12,30 @@
   // background-image: url("../../public/images/navbackground.jpg");
   background-color: $dark-background;
   background-size: cover;
+}
+
+.account {
+  position: absolute;
+  width: 150px
+}
+
+.dropdown img {
+  max-height: 30px;
+}
+
+.account>li>button {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.account>li>button:hover {
+  color: #fcf2e9;
+  background-color: #007435;
 }

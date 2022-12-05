@@ -19,19 +19,25 @@ const {id} = req.params;
   })
 })
 
-router.get('/new', (req, res) => {
-  addNewProduct()
+router.post('/', jsonParser, (req, res) => {
+  console.log(req.body)
+  addNewProduct(req.body)
   .then(product => {
     res.json(product)
   })
+  .catch(err => {
+    return err.message;
+  });
 });
 
 
 router.put('/:id', jsonParser, (req, res) => {
-  console.log('req.body', req.body)
   updateProduct(req.body)
   .then(newProd => {
     res.json(newProd)
+  })
+  .catch(err => {
+    console.log(err)
   })
 });
 
