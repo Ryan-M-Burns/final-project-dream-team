@@ -74,11 +74,10 @@ const useApplicationData = () => {
 
   const editProduct = (product) => {
     const newProducts = [...state.products];
-    console.log('newproducts', newProducts)
-    const index = product.id - 1
-    console.log('index', index)
+    const index = newProducts.findIndex((selectProduct) => {
+      return selectProduct.id === product.id
+    }) 
     newProducts[index] = product
-    console.log('newProducts index', newProducts)
     setState(({...state, products: newProducts}))
   }
 

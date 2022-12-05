@@ -16,13 +16,10 @@ const FarmerLogin = ({ users, user, state, setUser, farms, setFarm, setFarmProdu
     const userInfo = users.find(user => user.email === emailRef.current.value);
     const farm = farms.find(farm => farm.user_id === userInfo.id);
 
-    console.log(farm, userInfo, "this is the farm");
     if (userInfo && userInfo.password === passwordRef.current.value) {
       setUser(userInfo.name);
       await setFarm(farm.name);
       navigate("/farmer-home");
-      
-      
       
     }
   };

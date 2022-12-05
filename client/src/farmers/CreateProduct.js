@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import ProductForm from './ProductForm';
 import { getFarms } from '../helpers/selectors';
 
-const CreateProduct = ({ state, addProduct }) => {
+const CreateProduct = ({ state, addProduct, onSubmit }) => {
   const priceRef = useRef();
   const titleRef = useRef();
   const sizeRef = useRef();
@@ -28,6 +28,7 @@ const CreateProduct = ({ state, addProduct }) => {
     .then((newProduct) => {
       addProduct(newProduct.data)
     })
+    onSubmit()
   };
     
 
