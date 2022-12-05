@@ -55,6 +55,7 @@ function App() {
                 setCartDrawer={setCartDrawer}
                 setUserlogin={setUserlogin}
                 userlogin={state.userlogin}
+                cart={state.cart}
               />
               <img src="/images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
               <Home
