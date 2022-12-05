@@ -34,7 +34,8 @@ function App() {
     setUser,
     setCartDrawer,
     setCheckout,
-    setUserlogin
+    setUserlogin,
+    setCheckoutMsg
   } = useApplicationData();
 
   return (
@@ -65,6 +66,7 @@ function App() {
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
                 setCheckout={setCheckout}
+                setCheckoutMsg={setCheckoutMsg}
                 setUserlogin={setUserlogin}
                 setCart={setCart}
               />

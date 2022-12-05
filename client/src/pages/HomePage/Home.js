@@ -6,6 +6,7 @@ import ProductList from '../../components/ProductList';
 import CategoryList from './HomePageComponents/CategoryList';
 import CartDrawer from '../../CartDrawer';
 import Checkout from '../../components/Checkout';
+import CheckoutMsg from '../../components/CheckoutMsg';
 import './Home.scss';
 
 const Home = ({
@@ -17,6 +18,7 @@ const Home = ({
   addToCart,
   removeFromCart,
   setCheckout,
+  setCheckoutMsg,
   setUserlogin,
   setCart
 }) => {
@@ -34,9 +36,28 @@ const Home = ({
   return (
     <section className='section__home'>
       <div>
-        <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} addToCart={addToCart} removeFromCart={removeFromCart} setCheckout={setCheckout} checkout={state.checkout} />
+        <CartDrawer
+          cart={state.cart}
+          cartDrawer={state.cartDrawer}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+          setCheckout={setCheckout}
+          checkout={state.checkout} />
       </div>
-      {state.checkout && <Checkout setCheckout={setCheckout} cart={state.cart} user={state.user} setUserlogin={setUserlogin} setCart={setCart} />}
+      {state.checkout &&
+        <Checkout
+          setCheckout={setCheckout}
+          cart={state.cart}
+          user={state.user}
+          setUserlogin={setUserlogin}
+          setCart={setCart}
+          setCheckoutMsg={setCheckoutMsg} />}
+
+      {state.checkoutMsg &&
+        <CheckoutMsg
+          user={state.user}
+          setCheckoutMsg={setCheckoutMsg} />}
+
       <div className="home-categories">
         <CategoryList
           categories={showCategories}

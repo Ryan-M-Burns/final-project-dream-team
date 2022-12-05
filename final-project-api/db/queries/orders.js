@@ -1,82 +1,105 @@
 const db = require('../connection');
 
+const getAllOrders = () => {
+  return db
+    .query(`
+  SELECT * FROM orders`)
+    .then(orders => {
+      return orders.rows;
+    })
+    .catch(e => {
+      return e.message;
+    });
+};
+
+const getOrderItemsByOrderId = (orderId) => {
+  return db
+    .query(`
+  SELECT * FROM order_items WHERE order_id = $1`, [orderId])
+    .then(orders => {
+      return orders.rows;
+    })
+    .catch(e => {
+      return e.message;
+    });
+};
+
 
 const getOrdersByUserId = (userId) => {
   return db
-  .query(`
+    .query(`
   SELECT o.*, p.title, p.price FROM orders AS o
   INNER JOIN order_items AS oi ON o.id = oi.order_id
   INNER JOIN products AS p ON oi.product_id = p.id
   WHERE user_id = $1
   GROUP BY o.id, p.title, p.price
   `, [userId])
-  .then(orders => {
-    return orders.rows;
-  })
-  .catch(e => {
-    return e.message
-  })
-}
+    .then(orders => {
+      return orders.rows;
+    })
+    .catch(e => {
+      return e.message;
+    });
+};
 
 const getProductsForOrder = (orderId) => {
   return db
-  .query(`
+    .query(`
   SELECT 
   `, [orderId])
-  .then(orderProds => {
-    return orderProds.rows;
-  })
-}
+    .then(orderProds => {
+      return orderProds.rows;
+    });
+};
 
 const getOrdersById = (userId) => {
   return db
-  .query(`
+    .query(`
   SELECT id FROM orders
   WHERE user_id = $1
   `, [userId])
-  .then(orders => {
-    return orders.rows;
-  })
-}
+    .then(orders => {
+      return orders.rows;
+    });
+};
 
 const getOrdersByFarmId = (farmId) => {
   return db
-  .query(`
+    .query(`
   SELECT p.*, COUNT(DISTINCT p.id) FROM products AS p
   INNER JOIN order_items AS oi ON p.id = oi.product_id
   WHERE p.farm_id = $1
   GROUP BY p.id
-  `,[farmId])
-  .then(orders => {
-    return orders.rows;
-  })
-}
+  `, [farmId])
+    .then(orders => {
+      return orders.rows;
+    });
+};
 
 const createNewOrder = (userId) => {
   return db
-  .query(`
+    .query(`
   INSERT INTO orders (user_id)
   VALUES ($1)
   RETURNING id;
-  `,[userId])
-  .then(id => {
-    return id.rows[0]
-  })
-}
+  `, [userId])
+    .then(id => {
+      return id.rows[0];
+    });
+};
 
-const addItemsToOrder = (orderId, products) => {
-  for (let product of products) {
-    return db
+const addItemsToOrder = (orderId, product) => {
+  console.log('product', product);
+  return db
     .query(`
-    INSERT INTO order_items (product_id, quantity)
-    VALUES ($1, $2)
-    WHERE id = $3
+    INSERT INTO order_items (order_id, product_id, quantity)
+    VALUES ($3, $1, $2)
     `, [product.id, product.quantity, orderId])
     .then(order_items => {
       return order_items.rows;
-    })
-  }
+    });
 
-}
 
-module.exports = { getOrdersByUserId, getOrdersByFarmId, createNewOrder, addItemsToOrder, getOrdersById, getProductsForOrder}
+};
+
+module.exports = {getOrdersByUserId, getOrdersByFarmId, createNewOrder, addItemsToOrder, getOrdersById, getProductsForOrder, getAllOrders, getOrderItemsByOrderId};

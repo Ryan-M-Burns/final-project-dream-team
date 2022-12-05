@@ -4,7 +4,7 @@ import './Checkout.scss';
 import CheckoutItem from './CheckoutItem';
 
 
-function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
+function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMsg}) {
 
 
   const handleLogIn = () => {
@@ -16,8 +16,8 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
     axios.post('/orders', {userId: user.id, products: cart});
 
     setCheckout(false);
+    setCheckoutMsg(true);
     setCart([]);
-
 
   };
 
@@ -110,7 +110,7 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
                   </tr>
                   <tr>
                     <th>GST:</th>
-                    <td>{total(cart) / 100 * 0.12}</td>
+                    <td>{(total(cart) / 100 * 0.12).toFixed(2)}</td>
                   </tr>
                   <tr>
                     <th>Shipping:</th>
