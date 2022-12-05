@@ -45,7 +45,6 @@ const useApplicationData = () => {
 
   const setCategory = category => setState(prev => ({...prev, category}));
 
-
   const setPrice = price => setState(prev => ({...prev, price}));
 
   const setCart = cart => setState(prev => ({...prev, cart}));
@@ -73,13 +72,18 @@ const useApplicationData = () => {
 
   const setUserlogin = userlogin => setState(prev => ({...prev, userlogin}));
 
+  const editProduct = (id, product) => {
+    setState(({...state, products: [...state.products, product]}))
+  }
+
   const addProduct = (product) => {
-    setState(prev => ({...prev, products: [...state.products, product]}));
+    setState(({...state, products: [...state.products, product]}));
   };
   // return current state, and functions for managing state
 
   return {
     state,
+    editProduct,
     setFarm,
     setCategory,
     setPrice,
