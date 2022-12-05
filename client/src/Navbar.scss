@@ -3,33 +3,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Fjalla+One&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
 
 nav {
+  position: fixed;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 200px;
+  height: 100px;
   width: 100%;
-  background-image: url('../public/images/planksbackground.jpg');
+  top: 0;
+  background-color: $dark-background;
   padding: 0 20px;
   // background-color: black;
 }
 
 
 .title {
-  font-size: 150px;
+  font-size: 80px;
   font-family: 'Fjalla One', sans-serif;
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: url('../public/images/colourfulveg.jpg');
+  align-self: center;
+  justify-self: center;
   background-position: bottom 50% right 50%;
   color: transparent;
   margin-left: 20px;
   border-radius: 20px;
   border: none;
-}
-
-.title:hover {
-  border: 5px solid;
-  background-clip: padding-box;
 }
 
 .nav_buttons {
@@ -122,12 +121,6 @@ nav {
   background-color: #007435;
 }
 
-.sub_nav {
-  width: 100%;
-  height: 30px;
-  object-fit: cover;
-}
-
 .nav__buttons {
   padding: 20px;
   border-radius: 20px;
@@ -135,7 +128,6 @@ nav {
 }
 
 .nav_buttons:hover {
-  background-image: url('../public/images/navbackground.jpg');
   border-radius: 20px;
   padding: 20px 0px 20px 20px
 }
