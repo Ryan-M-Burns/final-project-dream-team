@@ -1,10 +1,10 @@
 import React from 'react'
 
-const MyFarm = ({farm}) => {
+const MyFarm = ({props}) => {
   return (
-    <div>
-      <h4>{farm.name}</h4>
-      <p>{farm.description}</p>
+    <div> Hello
+      {/* <h4>{props.name}</h4>
+      <p>{props.description}</p> */}
     </div>
   )
 }

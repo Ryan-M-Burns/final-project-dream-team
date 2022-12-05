@@ -47,8 +47,10 @@ const addNewProduct = (productDetails) => {
   });
 };
 
-const updateProduct = (productId, productDetails) => {
+const updateProduct = (productDetails) => {
   const {
+    id,
+    farm_id,
     title,
     category,
     size,
@@ -58,7 +60,8 @@ const updateProduct = (productId, productDetails) => {
   } = productDetails;
 
   const queryParams = [
-    productId,
+    id,
+    farm_id,
     title,
     category,
     size,
@@ -71,12 +74,13 @@ const updateProduct = (productId, productDetails) => {
   .query(`
   UPDATE products
   SET
-  title = $2,
-  category = $3,
-  size = $4,
-  image_url = $5,
-  price = $6,
-  quantity = $7,
+  farm_id = $2
+  title = $3,
+  category = $4,
+  size = $5,
+  image_url = $6,
+  price = $7,
+  quantity = $8,
   WHERE id = $1 RETURNING *;`,
   [queryParams])
   .then(newProd => {

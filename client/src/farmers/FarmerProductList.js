@@ -16,23 +16,19 @@ const FarmerProductList = ({ products, setProducts, state }) => {
     );
   });
   return (
-    <table className="farmer-products">
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Pack Size</th>
-          <th>Category</th>
-          <th>Available</th>
-          <th>Image</th>
-          <th>Edit</th>
-          <th>Active</th>
-        </tr>
-      </thead>
-      <tbody>
-        {parsedProductList}
-      </tbody>
-    </table>
+    <div className="farmer-products">
+      <div>
+        <p>Product</p>
+        <p>Price</p>
+        <p>Pack Size</p>
+        <p>Category</p>
+        <p>Available</p>
+        <p>Image</p>
+        <p>Edit</p>
+        <p>Active</p>
+      </div>
+    {parsedProductList}
+  </div>
   );
 };
 

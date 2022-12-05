@@ -1,8 +1,8 @@
 const express = require('express');
 const {getOrdersByUserId, createNewOrder, addItemsToOrder, getOrdersByFarmId, getOrdersById, getAllOrders, getOrderItemsByOrderId} = require('../db/queries/orders');
 const router = express.Router();
-var bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json()
 
 router.get('/orderitems/:id', (req, res) => {
   const {id} = req.params;
@@ -14,6 +14,7 @@ router.get('/orderitems/:id', (req, res) => {
       res.send(e);
     });
 });
+
 
 router.get('/users/:id', (req, res) => {
   const {id} = req.params;
@@ -59,6 +60,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', jsonParser, function(req, res) {
+
   const {
     userId,
     products
