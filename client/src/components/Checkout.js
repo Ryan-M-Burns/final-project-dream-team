@@ -4,7 +4,7 @@ import './Checkout.scss';
 import CheckoutItem from './CheckoutItem';
 
 
-function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMsg}) {
+function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMsg, setCartDrawer}) {
 
 
   const handleLogIn = () => {
@@ -18,6 +18,7 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMs
     setCheckout(false);
     setCheckoutMsg(true);
     setCart([]);
+    setCartDrawer(false);
 
   };
 
