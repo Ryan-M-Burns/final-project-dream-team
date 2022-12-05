@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 import ProductForm from './ProductForm';
 import './FarmerProductListItem.scss';
 
-const FarmerProductListItem = ({ product, setProducts, state }) => {
+const FarmerProductListItem = ({ product, setProducts, state, editProduct }) => {
   const [edit, setEdit] = useState(false);
-
+  
+  
   const handleChange = (event, value) => {
     const newProducts = [...state.products];
+    console.log('newproducts', newProducts)
     newProducts[product.id - 1] = {
       ...product,
       [value]: event.target.value
@@ -46,7 +48,7 @@ const FarmerProductListItem = ({ product, setProducts, state }) => {
     ) : (
 
     
-    <ProductForm state={state} product={product} onSubmit={handleSave} setProducts={setProducts}/>
+    <ProductForm state={state} product={product} onSubmit={handleSave} setProducts={setProducts} editProduct={editProduct}/>
       
     )
   );

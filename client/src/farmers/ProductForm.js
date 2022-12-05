@@ -5,7 +5,7 @@ import { getFarms } from '../helpers/selectors';
 import './ProductForm.scss';
 
 
-const ProductForm = ({ state, product, onSubmit}) => {
+const ProductForm = ({ state, product, onSubmit, editProduct}) => {
 
   const priceRef = useRef();
   const titleRef = useRef();
@@ -34,8 +34,9 @@ const ProductForm = ({ state, product, onSubmit}) => {
       price: priceRef.current.value,
       quantity: quantityRef.current.value
     };
-   
+    
     axios.put(`/products/${id}`, product)
+    editProduct(product)
     onSubmit()
   };
 

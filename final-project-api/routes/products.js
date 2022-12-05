@@ -36,6 +36,9 @@ router.put('/:id', jsonParser, (req, res) => {
   .then(newProd => {
     res.json(newProd)
   })
+  .catch(err => {
+    console.log(err)
+  })
 });
 
 // router.put('/:id', (req, res) => {

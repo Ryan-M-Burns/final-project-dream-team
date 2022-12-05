@@ -1,6 +1,6 @@
 const getFilteredProducts = (state, category, farm) => {
   let result = state.products;
-  console.log(farm)
+  
   if (category) {
     result = result.filter(obj => obj.category === category);
   }

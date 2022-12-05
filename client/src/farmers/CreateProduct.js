@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import ProductForm from './ProductForm';
 import { getFarms } from '../helpers/selectors';
 
-const CreateProduct = ({ state }) => {
+const CreateProduct = ({ state, addProduct, onSubmit }) => {
   const priceRef = useRef();
   const titleRef = useRef();
   const sizeRef = useRef();
@@ -25,6 +25,10 @@ const CreateProduct = ({ state }) => {
       quantity: quantityRef.current.value
     };
     axios.post('/products', product)
+    .then((newProduct) => {
+      addProduct(newProduct.data)
+    })
+    onSubmit()
   };
     
 

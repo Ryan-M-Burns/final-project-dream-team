@@ -1,10 +1,11 @@
 import { useRef, React } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { getFilteredProducts } from '../../helpers/selectors';
 import './FarmerLogin.scss';
 
 
 
-const FarmerLogin = ({ users, user, setUser, farms, setFarm }) => {
+const FarmerLogin = ({ users, user, state, setUser, farms, setFarm, setFarmProducts }) => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
@@ -15,11 +16,11 @@ const FarmerLogin = ({ users, user, setUser, farms, setFarm }) => {
     const userInfo = users.find(user => user.email === emailRef.current.value);
     const farm = farms.find(farm => farm.user_id === userInfo.id);
 
-    console.log(farm, userInfo, "this is the farm");
     if (userInfo && userInfo.password === passwordRef.current.value) {
       setUser(userInfo.name);
       await setFarm(farm.name);
       navigate("/farmer-home");
+      
     }
   };
 
