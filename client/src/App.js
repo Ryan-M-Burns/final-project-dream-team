@@ -119,7 +119,9 @@ function App() {
             path='/farmer-home'
             element={
               <>
-                <FarmerNav />
+                <FarmerNav
+                  user={state.user}
+                  setUser={setUser} />
                 <FarmerHome
                   state={state}
                   setProduct={setProduct}
