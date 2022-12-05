@@ -16,11 +16,9 @@ const FarmerProductListItem = ({ product, setProducts, state }) => {
     setProducts(newProducts);
   };
 
-  const handleSave = (product) => {
-    axios.put('/products:id', product);
-    setEdit(!edit);
-  };
-
+  const handleSave = () => {
+    setEdit(false)
+  }
 
   return (
     !edit ? (
@@ -49,7 +47,7 @@ const FarmerProductListItem = ({ product, setProducts, state }) => {
     ) : (
 
     
-    <ProductForm state={state} onSubmit={handleSave} product={product} />
+    <ProductForm state={state} product={product} onSubmit={handleSave} setProducts={setProducts}/>
       
     )
   );
