@@ -1,7 +1,7 @@
-import {React, useState} from 'react';
+import { React, useState } from 'react';
 import classNames from 'classnames';
 import './Navbar.scss';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Drop down menu for account
 const Navbar = (
@@ -54,12 +54,14 @@ const Navbar = (
   };
 
   return (
-    <nav>
-      <Link to='/home'>
-        <button className="title">HARVEST</button>
-      </Link>
+    <nav className="nav__main-site">
+      <div className="nav__logo">
+        <Link to='/home'>
+          <button className="title">HARVEST</button>
+        </Link>
+      </div>
       {user && <button>Welcome back, {user.name}!</button>}
-      <div className="nav_buttons">
+      <div className="nav__buttons">
         <div className="login__nav">
           <form className="login__nav">
             <div className={loginClass}>
@@ -95,7 +97,9 @@ const Navbar = (
           </Link>
         </div>
         <div>
-          <button className="nav__cart" onClick={() => setCartDrawer(!showCart)}><img src="../images/cart.png" alt="cart"></img></button>
+          <button className="nav__cart" onClick={() => setCartDrawer(!showCart)}>
+            <img src="../images/cart.png" alt="cart" />
+            </button>
         </div>
       </div>
     </nav>

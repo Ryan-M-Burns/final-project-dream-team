@@ -2,9 +2,8 @@
 @import './styles/reset.scss';
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Fjalla+One&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
 
-nav {
+.nav__main-site {
   position: fixed;
-  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,121 +12,123 @@ nav {
   top: 0;
   background-color: $dark-background;
   padding: 0 20px;
+  transition: 0.6s;
   // background-color: black;
-}
 
 
-.title {
-  font-size: 80px;
-  font-family: 'Fjalla One', sans-serif;
-  -webkit-background-clip: text;
-  background-clip: text;
-  align-self: center;
-  justify-self: center;
-  background-position: bottom 50% right 50%;
-  color: transparent;
-  margin-left: 20px;
-  border-radius: 20px;
-  border: none;
-}
-
-.nav_buttons {
-  display: flex;
-  align-items: flex-end;
-  font-family: 'Fjalla One';
-}
-
-.nav_buttons button {
-  font-size: 30px;
-  font-weight: bold;
-  color: black;
-  background-color: #fcf2e9;
-  border-radius: 2em;
-  padding: 10px 20px;
-  margin: 10px;
-  max-height: 80px;
-}
-
-.nav__cart img {
-  max-height: 45px;
-}
-
-.login__nav {
-  display: flex;
-  align-items: center;
-  font-size: 20px
-}
-
-.login__component {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: lime;
-  margin: 0 25px;
-  padding: 10px;
-  border-radius: 30px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  z-index: 200;
-  // top: 0;
-  transition: transform 0.3s ease-in;
-
-  &--open {
-    transform: translateY(0%);
+  .nav__logo {
+    .title {
+      font-size: 80px;
+      font-family: 'Fjalla One', sans-serif;
+      -webkit-background-clip: text;
+      background-clip: text;
+      align-self: center;
+      justify-self: center;
+      background-position: bottom 50% right 50%;
+      color: transparent;
+      margin-left: 20px;
+      border-radius: 20px;
+      border: none;
+    }
   }
 
-  &--close {
-    transform: translateY(-180%);
+  
+
+  .nav__cart img {
+    max-height: 45px;
   }
-}
+
+  .login__nav {
+    display: flex;
+    align-items: center;
+    font-size: 20px
+  }
+
+  .login__component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lime;
+    margin: 0 25px;
+    padding: 10px;
+    border-radius: 30px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 200;
+    // top: 0;
+    transition: transform 0.3s ease-in;
+
+    &--open {
+      transform: translateY(0%);
+    }
+
+    &--close {
+      transform: translateY(-180%);
+    }
+  }
 
 
-.login__input {
-  border-radius: 20px;
-}
+  .login__input {
+    border-radius: 20px;
+  }
+  .nav__buttons {
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Fjalla One';
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-right: 10px
+  }
 
-.nav_buttons button:hover {
-  color: #fcf2e9;
-  background-color: #007435;
-}
+  .nav__buttons button {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    background-color: #fcf2e9;
+    border-radius: 2em;
+    padding: 10px 20px;
+    margin: 10px;
+    max-height: 80px;
+  }
+  .nav__buttons button:hover {
+    color: #fcf2e9;
+    background-color: #007435;
+    padding: 10px 20px;
+  }
 
-.dropdown {
-  position: relative;
-}
+  .nav__buttons:hover {
+    border-radius: 20px;
+    padding: 10px 20px;
+  }
 
-.dropdown img {
-  max-height: 30px;
-}
+  .dropdown {
+    position: relative;
+  }
 
-.account {
-  position: absolute;
-  width: 150px
-}
+  .dropdown img {
+    max-height: 30px;
+  }
 
-.account>li>button {
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  color: inherit;
-  border: none;
-  padding: 5px;
-  margin: 0;
-  font: inherit;
-  cursor: pointer;
-}
+  .account {
+    position: absolute;
+    width: 150px
+  }
 
-.account>li>button:hover {
-  color: #fcf2e9;
-  background-color: #007435;
-}
+  .account>li>button {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    color: inherit;
+    border: none;
+    padding: 5px;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+  }
 
-.nav__buttons {
-  padding: 20px;
-  border-radius: 20px;
-  margin-right: 10px
-}
+  .account>li>button:hover {
+    color: #fcf2e9;
+    background-color: #007435;
+  }
 
-.nav_buttons:hover {
-  border-radius: 20px;
-  padding: 20px 0px 20px 20px
 }
