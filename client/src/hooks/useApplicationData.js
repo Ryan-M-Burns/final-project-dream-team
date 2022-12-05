@@ -60,12 +60,10 @@ const useApplicationData = () => {
 
 
   const removeFromCart = (toberemoved) => {
-    console.log('before', state.cart);
     const filterIndex = state.cart.findIndex((product) => product.id === toberemoved.id);
 
     const newCart = state.cart.splice(filterIndex, 1);
     setState({...state, cart: state.cart});
-    console.log('after', state.cart);
 
   };
 

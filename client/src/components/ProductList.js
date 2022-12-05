@@ -2,7 +2,7 @@ import React from 'react';
 import ProductListItem from './ProductListItem';
 import './ProductList.scss';
 
-const ProductList = ({products, addToCart, farms}) => {
+const ProductList = ({products, addToCart, farms, setCartDrawer}) => {
   const parsedProductList = products.map(product => {
 
     const farm = farms.find(farm => farm.id === product.farm_id);
@@ -13,6 +13,7 @@ const ProductList = ({products, addToCart, farms}) => {
         product={product}
         addToCart={addToCart}
         farm={farm.logo_url}
+        setCartDrawer={setCartDrawer}
       />
     );
   });

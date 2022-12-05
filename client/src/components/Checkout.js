@@ -121,7 +121,7 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMs
             </div>
           </div>
           <div className="checkout__footer">
-            <button onClick={handleCheckout} className="checkout__continue">Place my order</button>
+            {user && <button onClick={handleCheckout} className="checkout__continue">Place my order</button>}
           </div>
         </div>
       </div>

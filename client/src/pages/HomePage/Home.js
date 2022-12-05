@@ -28,22 +28,24 @@ const Home = ({
   }, [state.farm, state.category]);
 
 
-  console.log('state', state);
+  console.log('state8', state.cartDrawer);
 
   const showFarms = getFarms(state, state.farm);
   const showCategories = getCategories(state, state.category);
 
   return (
     <section className='section__home'>
-      <div>
-        <CartDrawer
-          cart={state.cart}
-          cartDrawer={state.cartDrawer}
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-          setCheckout={setCheckout}
-          checkout={state.checkout} />
-      </div>
+
+
+      <CartDrawer
+        cart={state.cart}
+        cartDrawer={state.cartDrawer}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+        setCheckout={setCheckout}
+        checkout={state.checkout} />
+
+
       {state.checkout &&
         <Checkout
           setCheckout={setCheckout}
@@ -77,6 +79,7 @@ const Home = ({
           addToCart={addToCart}
           products={state.product}
           farms={state.farms}
+          setCartDrawer={setCartDrawer}
         />
       </div>
     </section>
