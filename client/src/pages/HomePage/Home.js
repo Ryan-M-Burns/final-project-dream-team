@@ -32,7 +32,7 @@ const Home = ({
   const showCategories = getCategories(state, state.category);
 
   return (
-    <section className='section__home'>
+    <div className='section__home'>
       <div>
         <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} addToCart={addToCart} removeFromCart={removeFromCart} setCheckout={setCheckout} checkout={state.checkout} />
       </div>
@@ -58,7 +58,7 @@ const Home = ({
           farms={state.farms}
         />
       </div>
-    </section>
+    </div>
 
   );
 };
