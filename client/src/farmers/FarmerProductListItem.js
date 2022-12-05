@@ -24,33 +24,33 @@ const FarmerProductListItem = ({ product, setProducts, state }) => {
 
   return (
     !edit ? (
-      <tr className="li__farmer-product-item">
-        <td className="farmer-product-name">{product.title}</td>
-        <td className="farmer-product-price">${(product.price / 100).toFixed(2)}</td>
-        <td className="farmer-product-size">{product.size}</td>
-        <td className="farmer-product-category">{product.category}</td>
-        <td className="farmer-product-quantity">{product.quantity}</td>
-        <td><img
+      <div className="li__farmer-product-item">
+        <p className="farmer-product-name">{product.title}</p>
+        <p className="farmer-product-price">${(product.price / 100).toFixed(2)}</p>
+        <p className="farmer-product-size">{product.size}</p>
+        <p className="farmer-product-category">{product.category}</p>
+        <p className="farmer-product-quantity">{product.quantity}</p>
+        <p><img
           src={product.image_url} alt="food"
           className="farmer-product-image"
-        /></td>
-        <td>
+        /></p>
+        <p>
           <button
             onClick={() => (setEdit(!edit))}
             type="button"
             className="farmer-product-button">
             <p>Edit {product.farm_id}</p>
           </button>
-        </td>
-        <td>
+        </p>
+        <p>
           <input type="checkbox" />
-        </td>
-      </tr>
+        </p>
+      </div>
     ) : (
 
-      <li>
-        <ProductForm onSubmit={handleSave} defaultValues={product} />
-      </li>
+    
+    <ProductForm state={state} onSubmit={handleSave} defaultValues={product} />
+      
     )
   );
 

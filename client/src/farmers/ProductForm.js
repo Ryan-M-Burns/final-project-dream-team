@@ -9,11 +9,11 @@ const ProductForm = ({state, setProduct, addProduct}) => {
   const quantityRef = useRef();
   const image_urlRef = useRef();
   
-  useEffect(() => {
-    if (state.product) {
-      setProduct(state.product.title)
-    }
-  }, [state.product])
+  // useEffect(() => {
+  //   if (state.product) {
+  //     setProduct(state.product.title)
+  //   }
+  // }, [state.product])
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -22,33 +22,16 @@ const ProductForm = ({state, setProduct, addProduct}) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <li className="li__product-item">
-        <h5 className="product-name">Name:</h5>
-        <input type='text' ref={titleRef} className="product-name"/>
-        <div>
-          <div className="div__product-info">
-            <div className="div__product-item">
-              <p>Price:</p>
-              <input type='text' ref={priceRef} className="product-price"/>
-            </div>
-            <div className="div__product-size">
-              <p>Size:</p>
-              <input type='text' value={sizeRef} className="div__product-size"/>
-            </div>
-            <div className="div__product-category">
-              <p>Category:</p>
-              <input type='text' value={categoryRef} className="product-category"/>
-            </div>
-            <div className="div__product-quantity">
-              <p>Quantity:</p>
-              <input type='text' value={quantityRef} className="product-quantity"/>
-            </div>
-          </div>
-          <input type='text' value={image_urlRef} className="div__product-image"/>
-        </div>
-        <button type='submit'> Save </button>
-      </li>
+        <p className="farmer-product-name"><input type='text' ref={titleRef}/></p>
+        <p className="farmer-product-price"><input type='text' ref={priceRef}/></p>
+        <p className="farmer-product-size"><input type='text' ref={sizeRef}/></p>
+        <p className="farmer-product-category"><input type='text' ref={categoryRef}/></p>
+        <p className="farmer-product-quantity"><input type='text' ref={quantityRef}/></p>
+        <p><input type='text' ref={image_urlRef}/>
+        </p>
+        <p><button type='submit'> Save</button></p>
     </form>
+   
   )
 }
 
