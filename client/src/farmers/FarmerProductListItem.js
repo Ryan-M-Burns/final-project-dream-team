@@ -49,7 +49,7 @@ const FarmerProductListItem = ({ product, setProducts, state }) => {
     ) : (
 
     
-    <ProductForm state={state} onSubmit={handleSave} defaultValues={product} />
+    <ProductForm state={state} onSubmit={handleSave} product={product} />
       
     )
   );

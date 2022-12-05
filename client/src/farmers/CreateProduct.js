@@ -1,14 +1,17 @@
+import axios from 'axios';
 import React from 'react';
 import ProductForm from './ProductForm';
+import { getFarms } from '../helpers/selectors';
 
-const CreateProduct = () => {
-  function handleSubmit(formData) {
+const CreateProduct = ({ state, product }) => {
+  const farm = getFarms(state, state.farm);
+
+  function createNewProduct(formData) {
     axios.post('/products', formData).then(() => alert('you did it!'));
   }
   return (
-    <div>
-      <h1>Hi! Let's make a product</h1>
-      <ProductForm onSubmit={handleSubmit} />
+    <div className="li__farmer-product-item">
+      <ProductForm state={state} onSubmit={createNewProduct} />
     </div>
   );
 };

@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const { getProducts, getProductById, addNewProduct, deleteProduct, updateProduct } = require('../db/queries/products.js');
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json()
 
 router.get('/', (req, res) => {
   getProducts()
@@ -25,20 +27,21 @@ router.get('/new', (req, res) => {
 });
 
 
-router.put('/:id', (req, res) => {
-  updateProduct()
+router.put('/:id', jsonParser, (req, res) => {
+  console.log('req.body', req.body)
+  updateProduct(req.body)
   .then(newProd => {
     res.json(newProd)
   })
 });
 
-router.put('/:id', (req, res) => {
-  const {id} = req.params;
-  deactivateProduct(id)
-    then(data => {
-      res.json(data)
-    })
-});
+// router.put('/:id', (req, res) => {
+//   const {id} = req.params;
+//   deactivateProduct(id)
+//     then(data => {
+//       res.json(data)
+//     })
+// });
 
 
 
