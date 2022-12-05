@@ -1,5 +1,5 @@
-import {React, useEffect} from 'react';
-import {getFilteredProducts, getFarms, getCategories} from '../../helpers/selectors';
+import { React, useEffect } from 'react';
+import { getFilteredProducts, getFarms, getCategories } from '../../helpers/selectors';
 
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
@@ -34,9 +34,22 @@ const Home = ({
   return (
     <div className='section__home'>
       <div>
-        <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} addToCart={addToCart} removeFromCart={removeFromCart} setCheckout={setCheckout} checkout={state.checkout} />
+        <CartDrawer
+          cart={state.cart}
+          cartDrawer={state.cartDrawer}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+          setCheckout={setCheckout}
+          checkout={state.checkout}
+        />
       </div>
-      {state.checkout && <Checkout setCheckout={setCheckout} cart={state.cart} user={state.user} setUserlogin={setUserlogin} setCart={setCart} />}
+      {state.checkout && <Checkout
+        setCheckout={setCheckout}
+        cart={state.cart}
+        user={state.user}
+        setUserlogin={setUserlogin}
+        setCart={setCart}
+      />}
       <div className="home-categories">
         <CategoryList
           categories={showCategories}
