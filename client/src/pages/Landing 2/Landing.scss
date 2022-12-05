@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+@import '../../styles/reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Fjalla+One&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
+
+.column {
+  overflow: y;
+}
+
+.landing__page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  top: 0;
+  position: absolute;
+  background-image: url('../../../public/images/bgtest/closeupveggies.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+
+  #main {
+    width:50%;
+    border-radius: 15px;
+  }
+
+  #landing-icon {
+    width: 5%;
+    height: auto;
+  }
+
+
+  .landing__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15%;
+
+    button {
+      font-size: 30px;
+      background: rgba(255, 255, 255, 0.297);
+      color: $medium-brown;
+      border-color: $medium-brown;
+      border-radius: 5px;
+      margin: 20px;
+    }
+
+    .landing__buttons button:hover {
+      color: #fcf2e9;
+      background-color: #50350e;
+
+    }
+  }
+}
