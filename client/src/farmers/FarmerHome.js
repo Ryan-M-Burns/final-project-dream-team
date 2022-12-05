@@ -4,9 +4,10 @@ import FarmerProductList from './FarmerProductList';
 import MyFarm from './MyFarm';
 import ProductForm from './ProductForm';
 import './FarmerHome.scss'
+import CreateProduct from './CreateProduct';
 const FarmerHome = ({ state, setProduct, addProduct }) => {
+
   const [showProductForm, setShowProductForm] = useState(false);
-  console.log("state", state);
   const showProducts = getFilteredProducts(state, null, state.farm);
 
   return (
@@ -20,7 +21,7 @@ const FarmerHome = ({ state, setProduct, addProduct }) => {
           showProductForm
           &&
           <li>
-            <ProductForm
+            <CreateProduct
               state={state}
               product={state.product}
               addProduct={addProduct}

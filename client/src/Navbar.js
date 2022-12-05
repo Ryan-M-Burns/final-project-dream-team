@@ -12,8 +12,10 @@ const Navbar = (
     showCart,
     setCartDrawer,
     setUserlogin,
-    userlogin
+    userlogin, cart
   }) => {
+
+  console.log('showCart', showCart);
 
   //About dropdown
   const [open, setOpen] = useState(false);
@@ -114,12 +116,16 @@ const Navbar = (
           </Link>
         </div>
         <div>
+<<<<<<< HEAD
           <button
             className="nav__cart"
             onClick={() => setCartDrawer(!showCart)}
           >
             <img src="../images/cart.png" alt="cart" />
           </button>
+=======
+          <button className="nav__cart" onClick={() => setCartDrawer(!showCart)}><img src="../images/cart.png" alt="cart"></img>({cart.length})</button>
+>>>>>>> main
         </div>
       </div>
     </nav>

@@ -34,7 +34,8 @@ function App() {
     setUser,
     setCartDrawer,
     setCheckout,
-    setUserlogin
+    setUserlogin,
+    setCheckoutMsg
   } = useApplicationData();
 
   return (
@@ -46,6 +47,7 @@ function App() {
           {/* Main Page Routes */}
           <Route path='/home' element={
             <>
+<<<<<<< HEAD
               <section className="nav-block">
                 <Navbar
                   setUser={setUser}
@@ -71,6 +73,32 @@ function App() {
                   setCart={setCart}
                 />
               </section>
+=======
+              <Navbar
+                setUser={setUser}
+                users={state.users}
+                user={state.user}
+                showCart={state.cartDrawer}
+                setCartDrawer={setCartDrawer}
+                setUserlogin={setUserlogin}
+                userlogin={state.userlogin}
+                cart={state.cart}
+              />
+              <img src="/images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
+              <Home
+                state={state}
+                setCartDrawer={setCartDrawer}
+                setProduct={setProduct}
+                setCategory={setCategory}
+                setFarm={setFarm}
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+                setCheckout={setCheckout}
+                setCheckoutMsg={setCheckoutMsg}
+                setUserlogin={setUserlogin}
+                setCart={setCart}
+              />
+>>>>>>> main
             </>
           } />
           <Route path='/about' element={

@@ -9,4 +9,11 @@
   margin: auto;
   width: 60%;
   text-align: center;
+  display: table;
+}
+.farmer-products>* {
+  display: table-row;
+}
+.farmer-products>*>* {
+  display: table-cell;
 }

@@ -2,7 +2,12 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import './ProductListItem.scss';
 
-const ProductListItem = ({product, farm, addToCart}) => {
+const ProductListItem = ({product, farm, addToCart, setCartDrawer}) => {
+
+  const handleClick = () => {
+    addToCart(product);
+    setCartDrawer(true);
+  };
 
 
   return (
@@ -24,7 +29,7 @@ const ProductListItem = ({product, farm, addToCart}) => {
         </div>
         <img src={product.image_url} alt="food" className="product__img" />
         <div>
-          <button onClick={() => addToCart(product)}>Add To Cart</button>
+          <button onClick={handleClick}>Add To Cart</button>
         </div>
       </div>
     </li>

@@ -10,7 +10,7 @@ const CheckoutItem = ({item}) => {
       <div className="checkout__item__right">
         <p>{item.title}</p>
         <p>Qty: {item.quantity}</p>
-        <p>total: $ {item.price * item.quantity}</p>
+        <p>total: $ {item.price * item.quantity / 100}</p>
       </div >
     </li>
   );
