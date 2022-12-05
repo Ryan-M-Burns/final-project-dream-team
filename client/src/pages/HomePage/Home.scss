@@ -4,16 +4,19 @@
 .section__home {
   font-size: 25px;
   width: 100%;
-  display:flex;
+  overflow: hidden;
+  display: flex;
   flex-direction: column;
+
   .ul__home {
     width: 100%;
     display: flex;
     flex-direction: column;
+
     .li__home {
       display: flex;
       min-width: 100%;
-      
+
       justify-content: space-between;
       align-content: space-between;
       width: 100%;

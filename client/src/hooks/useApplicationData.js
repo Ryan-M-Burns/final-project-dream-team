@@ -15,7 +15,7 @@ const useApplicationData = () => {
     price: null,
     users: [],
     user: null,
-    cartDrawer: false,
+    cartDrawer: true,
     checkout: false,
     checkoutMsg: false,
     userlogin: false

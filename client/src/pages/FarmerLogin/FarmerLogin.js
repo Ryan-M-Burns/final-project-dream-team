@@ -1,5 +1,3 @@
-import { unstable_isMuiElement } from '@mui/utils';
-import axios from 'axios';
 import { useRef, React } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './FarmerLogin.scss';

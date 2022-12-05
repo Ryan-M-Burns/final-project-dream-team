@@ -1,5 +1,5 @@
-import {React, useEffect} from 'react';
-import {getFilteredProducts, getFarms, getCategories} from '../../helpers/selectors';
+import { React, useEffect } from 'react';
+import { getFilteredProducts, getFarms, getCategories } from '../../helpers/selectors';
 
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
@@ -34,17 +34,17 @@ const Home = ({
   const showCategories = getCategories(state, state.category);
 
   return (
-    <section className='section__home'>
-
-
-      <CartDrawer
-        cart={state.cart}
-        cartDrawer={state.cartDrawer}
-        addToCart={addToCart}
-        removeFromCart={removeFromCart}
-        setCheckout={setCheckout}
-        checkout={state.checkout} />
-
+    <div className='section__home'>
+      <div>
+        <CartDrawer
+          cart={state.cart}
+          cartDrawer={state.cartDrawer}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+          setCheckout={setCheckout}
+          checkout={state.checkout}
+        />
+      </div>
 
       {state.checkout &&
         <Checkout
@@ -53,12 +53,16 @@ const Home = ({
           user={state.user}
           setUserlogin={setUserlogin}
           setCart={setCart}
-          setCheckoutMsg={setCheckoutMsg} />}
+          setCheckoutMsg={setCheckoutMsg}
+        />
+      }
 
       {state.checkoutMsg &&
         <CheckoutMsg
           user={state.user}
-          setCheckoutMsg={setCheckoutMsg} />}
+          setCheckoutMsg={setCheckoutMsg}
+        />
+      }
 
       <div className="home-categories">
         <CategoryList
@@ -82,7 +86,7 @@ const Home = ({
           setCartDrawer={setCartDrawer}
         />
       </div>
-    </section>
+    </div>
 
   );
 };
