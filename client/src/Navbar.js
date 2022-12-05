@@ -15,8 +15,6 @@ const Navbar = (
     userlogin, cart
   }) => {
 
-  console.log('showCart', showCart);
-
   //About dropdown
   const [open, setOpen] = useState(false);
 
