@@ -12,7 +12,7 @@ const Navbar = (
     showCart,
     setCartDrawer,
     setUserlogin,
-    userlogin
+    userlogin, cart
   }) => {
 
   console.log('showCart', showCart);
@@ -97,7 +97,7 @@ const Navbar = (
           </Link>
         </div>
         <div>
-          <button className="nav__cart" onClick={() => setCartDrawer(!showCart)}><img src="../images/cart.png" alt="cart"></img></button>
+          <button className="nav__cart" onClick={() => setCartDrawer(!showCart)}><img src="../images/cart.png" alt="cart"></img>({cart.length})</button>
         </div>
       </div>
     </nav>
