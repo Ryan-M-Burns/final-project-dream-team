@@ -4,7 +4,7 @@ import './Checkout.scss';
 import CheckoutItem from './CheckoutItem';
 
 
-function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
+function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMsg}) {
 
 
   const handleLogIn = () => {
@@ -16,8 +16,8 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart}) {
     axios.post('/orders', {userId: user.id, products: cart});
 
     setCheckout(false);
+    setCheckoutMsg(true);
     setCart([]);
-
 
   };
 
