@@ -8,6 +8,7 @@ import CreateProduct from './CreateProduct';
 const FarmerHome = ({ state, setProduct, addProduct }) => {
 
   const [showProductForm, setShowProductForm] = useState(false);
+  
   const showProducts = getFilteredProducts(state, null, state.farm);
 
   return (
