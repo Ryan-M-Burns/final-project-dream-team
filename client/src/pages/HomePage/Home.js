@@ -1,5 +1,5 @@
-import { React, useEffect } from 'react';
-import { getFilteredProducts, getFarms, getCategories } from '../../helpers/selectors';
+import {React, useEffect} from 'react';
+import {getFilteredProducts, getFarms, getCategories} from '../../helpers/selectors';
 
 import FarmList from '../../components/FarmList';
 import ProductList from '../../components/ProductList';
@@ -29,6 +29,7 @@ const Home = ({
 
 
   console.log('state8', state.cartDrawer);
+  console.log('state.checkoutMsg', state.checkoutMsg);
 
   const showFarms = getFarms(state, state.farm);
   const showCategories = getCategories(state, state.category);
@@ -54,6 +55,7 @@ const Home = ({
           setUserlogin={setUserlogin}
           setCart={setCart}
           setCheckoutMsg={setCheckoutMsg}
+          setCartDrawer={setCartDrawer}
         />
       }
 

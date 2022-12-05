@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.scss';
 
 import useApplicationData from './hooks/useApplicationData';
@@ -28,6 +28,7 @@ function App() {
     setUser,
     setCartDrawer,
     setCheckout,
+    setCheckoutMsg,
     setUserlogin
   } = useApplicationData();
 
@@ -61,6 +62,7 @@ function App() {
                   addToCart={addToCart}
                   removeFromCart={removeFromCart}
                   setCheckout={setCheckout}
+                  setCheckoutMsg={setCheckoutMsg}
                   setUserlogin={setUserlogin}
                   setCart={setCart}
                 />
