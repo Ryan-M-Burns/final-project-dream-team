@@ -49,7 +49,7 @@ const Navbar = (
 
   const handleLogout = async (event) => {
     event.preventDefault();
-    setUser(null);
+    await setUser(null);
     setOpen(false);
   };
 
