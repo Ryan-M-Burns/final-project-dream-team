@@ -17,6 +17,7 @@ const useApplicationData = () => {
     user: null,
     cartDrawer: false,
     checkout: false,
+    checkoutMsg: false,
     userlogin: false
   });
   // call data from scheduler-api database
@@ -34,7 +35,7 @@ const useApplicationData = () => {
         const categories = all[2].data;
         const users = all[3].data;
 
-        setState(prev => ({ ...prev, product, products, farms, categories, users }));
+        setState(prev => ({...prev, product, products, farms, categories, users}));
       });
   }, []);
 
@@ -42,7 +43,7 @@ const useApplicationData = () => {
 
   const setFarm = farm => setState(prev => ({...prev, farm}));
 
-  const setCategory = category => setState(prev => ({ ...prev, category }));
+  const setCategory = category => setState(prev => ({...prev, category}));
 
 
   const setPrice = price => setState(prev => ({...prev, price}));
@@ -51,6 +52,7 @@ const useApplicationData = () => {
 
   const setCheckout = checkout => setState(prev => ({...prev, checkout}));
 
+  const setCheckoutMsg = checkoutMsg => setState(prev => ({...prev, checkoutMsg}));
 
   const addToCart = (product) => {
     setState({...state, cart: [...state.cart, product]});
@@ -58,12 +60,10 @@ const useApplicationData = () => {
 
 
   const removeFromCart = (toberemoved) => {
-    console.log('before', state.cart);
     const filterIndex = state.cart.findIndex((product) => product.id === toberemoved.id);
 
     const newCart = state.cart.splice(filterIndex, 1);
     setState({...state, cart: state.cart});
-    console.log('after', state.cart);
 
   };
 
@@ -91,7 +91,8 @@ const useApplicationData = () => {
     setUser,
     setCartDrawer,
     setCheckout,
-    setUserlogin,
+    setCheckoutMsg,
+    setUserlogin
   };
 };
 

@@ -6,6 +6,7 @@ import ProductList from '../../components/ProductList';
 import CategoryList from './HomePageComponents/CategoryList';
 import CartDrawer from '../../CartDrawer';
 import Checkout from '../../components/Checkout';
+import CheckoutMsg from '../../components/CheckoutMsg';
 import './Home.scss';
 
 const Home = ({
@@ -17,6 +18,7 @@ const Home = ({
   addToCart,
   removeFromCart,
   setCheckout,
+  setCheckoutMsg,
   setUserlogin,
   setCart
 }) => {
@@ -26,17 +28,38 @@ const Home = ({
   }, [state.farm, state.category]);
 
 
-  console.log('state', state);
+  console.log('state8', state.cartDrawer);
 
   const showFarms = getFarms(state, state.farm);
   const showCategories = getCategories(state, state.category);
 
   return (
     <section className='section__home'>
-      <div>
-        <CartDrawer cart={state.cart} cartDrawer={state.cartDrawer} addToCart={addToCart} removeFromCart={removeFromCart} setCheckout={setCheckout} checkout={state.checkout} />
-      </div>
-      {state.checkout && <Checkout setCheckout={setCheckout} cart={state.cart} user={state.user} setUserlogin={setUserlogin} setCart={setCart} />}
+
+
+      <CartDrawer
+        cart={state.cart}
+        cartDrawer={state.cartDrawer}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+        setCheckout={setCheckout}
+        checkout={state.checkout} />
+
+
+      {state.checkout &&
+        <Checkout
+          setCheckout={setCheckout}
+          cart={state.cart}
+          user={state.user}
+          setUserlogin={setUserlogin}
+          setCart={setCart}
+          setCheckoutMsg={setCheckoutMsg} />}
+
+      {state.checkoutMsg &&
+        <CheckoutMsg
+          user={state.user}
+          setCheckoutMsg={setCheckoutMsg} />}
+
       <div className="home-categories">
         <CategoryList
           categories={showCategories}
@@ -56,6 +79,7 @@ const Home = ({
           addToCart={addToCart}
           products={state.product}
           farms={state.farms}
+          setCartDrawer={setCartDrawer}
         />
       </div>
     </section>

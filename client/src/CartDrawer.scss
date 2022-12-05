@@ -14,11 +14,11 @@
   transition: transform 0.3s ease-in;
 
   &--open {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 
   &--close {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
 
 }
