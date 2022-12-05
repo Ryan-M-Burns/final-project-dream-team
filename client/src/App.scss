@@ -29,7 +29,8 @@ body {
   }
 
   .site-body {
-    display: block;
+    display: relative;
+    overflow:hidden;
     top: 100px;
     height: 100%;
   }
