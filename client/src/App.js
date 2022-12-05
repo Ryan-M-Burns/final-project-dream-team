@@ -37,21 +37,7 @@ function App() {
         <Routes>
           {/* Landing Page Route */}
 
-          <Route path='/' element={
-            <>
-              <section className="nav-block">
-                <Navbar
-                  setUser={setUser}
-                  users={state.users}
-                  user={state.user}
-                  showCart={state.cartDrawer}
-                  setCartDrawer={setCartDrawer}
-                  setUserlogin={setUserlogin}
-                  userlogin={state.userlogin}
-                />
-              </section>
-              <Landing />
-            </>} />
+          <Route path='/' element={<Landing />} />
           {/* Main Page Routes */}
           <Route path='/home' element={
             <>

@@ -18,7 +18,6 @@ const Landing = () => {
             <Link to='/home'>
               <button id="visit"> Enter Site </button>
             </Link>
-            <img src="/images/favicon.png" alt="user" id="landing-icon" />
             <Link to='/farmer-login'>
               <button id="farmer-portal__button">Farmer Portal</button>
             </Link>
