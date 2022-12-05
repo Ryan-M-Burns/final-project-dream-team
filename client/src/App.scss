@@ -3,17 +3,31 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background-image: url('../public/images/planksbackground.jpg');
+  //background-image: url('../public/images/bgtest/closeupveggies.jpg');
+  
+  // background-image: url('../public/images/bgtest/farmer.jpg');
+   background-image: url('../public/images/bgtest/orchard1.jpg');
+  // background-image: url('../public/images/bgtest/orchard2.jpg');
+  // background-image: url('../public/images/bgtest/plant.jpg');
+  // background-image: url('../public/images/bgtest/weed.jpg');
+  // background-image: url('../public/images/bgtest/wheat1.jpg');
+  // background-image: url('../public/images/bgtest/wheat2.jpg');
+  // background-image: url('../public/images/bgtest/wheat3.jpg');
+  // background-image: url('../public/images/bgtest/wheat4.jpg');
+  // background-image: url('../public/images/bgtest/wheat5.jpg');
+  // background-image: url('../public/images/bgtest/wheat6.jpg');
+  
+
   // background-color: black;
+  background-attachment: fixed;
   background-size: 100%;
   height: 100%;
   color: $body-text;
 }
-
-nav {
-  height: 150px;
+.site-body {
+  margin-top: 100px;
+  overflow: hidden;
 }
-
 .section__app {
   padding: 1% 3%;
 }

@@ -55,7 +55,7 @@ function App() {
                 setUserlogin={setUserlogin}
                 userlogin={state.userlogin}
               />
-              <img src="/images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
+              <section className="site-body">
               <Home
                 state={state}
                 setCartDrawer={setCartDrawer}
@@ -68,6 +68,7 @@ function App() {
                 setUserlogin={setUserlogin}
                 setCart={setCart}
               />
+              </section>
             </>
           } />
           <Route path='/about' element={
