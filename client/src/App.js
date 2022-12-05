@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
 import useApplicationData from './hooks/useApplicationData';
@@ -46,28 +46,30 @@ function App() {
           {/* Main Page Routes */}
           <Route path='/home' element={
             <>
-              <Navbar
-                setUser={setUser}
-                users={state.users}
-                user={state.user}
-                showCart={state.cartDrawer}
-                setCartDrawer={setCartDrawer}
-                setUserlogin={setUserlogin}
-                userlogin={state.userlogin}
-              />
+              <section className="nav-block">
+                <Navbar
+                  setUser={setUser}
+                  users={state.users}
+                  user={state.user}
+                  showCart={state.cartDrawer}
+                  setCartDrawer={setCartDrawer}
+                  setUserlogin={setUserlogin}
+                  userlogin={state.userlogin}
+                />
+              </section>
               <section className="site-body">
-              <Home
-                state={state}
-                setCartDrawer={setCartDrawer}
-                setProduct={setProduct}
-                setCategory={setCategory}
-                setFarm={setFarm}
-                addToCart={addToCart}
-                removeFromCart={removeFromCart}
-                setCheckout={setCheckout}
-                setUserlogin={setUserlogin}
-                setCart={setCart}
-              />
+                <Home
+                  state={state}
+                  setCartDrawer={setCartDrawer}
+                  setProduct={setProduct}
+                  setCategory={setCategory}
+                  setFarm={setFarm}
+                  addToCart={addToCart}
+                  removeFromCart={removeFromCart}
+                  setCheckout={setCheckout}
+                  setUserlogin={setUserlogin}
+                  setCart={setCart}
+                />
               </section>
             </>
           } />

@@ -24,8 +24,14 @@ body {
   height: 100%;
   color: $body-text;
 }
+.nav-block {
+  overflow:hidden;
+  height: 100px;
+  display:block;
+}
 .site-body {
-  margin-top: 100px;
+  display:block;
+  top: 100px;
   overflow: hidden;
 }
 .section__app {
