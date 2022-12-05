@@ -66,11 +66,21 @@ const Navbar = (
           <form className="login__nav">
             <div className={loginClass}>
               <label className="login__label">username</label>
-              <input className="login__input" type="text" placeholder="username" onChange={e => setUserName(e.target.value)}></input>
+              <input
+                className="login__input"
+                type="text"
+                placeholder="username"
+                onChange={e => setUserName(e.target.value)}
+              />
             </div>
             <div className={loginClass}>
               <label className="login__label">password</label>
-              <input className="login__input" type="password" placeholder="password" onChange={e => setPassword(e.target.value)}></input>
+              <input
+                className="login__input"
+                type="password"
+                placeholder="password"
+                onChange={e => setPassword(e.target.value)}
+              />
             </div>
           </form>
         </div>
@@ -80,13 +90,20 @@ const Navbar = (
           {open ? (
             <ul className="account">
               <li className="account-item">
-                <button><img src="../images/user.png" alt="user"></img>View your profile</button>
+                <button>
+                  <p><img src="../images/user.png" alt="user" />
+                    View your profile</p>
+                </button>
               </li>
               <li className="account-item">
-                <button>My orders</button>
+                <button>
+                  <p>My orders</p>
+                </button>
               </li>
               <li className="account-item">
-                <button onClick={handleLogout}>Sign out</button>
+                <button onClick={handleLogout}>
+                  <p>Sign out</p>
+                </button>
               </li>
             </ul>
           ) : null}
@@ -97,9 +114,12 @@ const Navbar = (
           </Link>
         </div>
         <div>
-          <button className="nav__cart" onClick={() => setCartDrawer(!showCart)}>
+          <button
+            className="nav__cart"
+            onClick={() => setCartDrawer(!showCart)}
+          >
             <img src="../images/cart.png" alt="cart" />
-            </button>
+          </button>
         </div>
       </div>
     </nav>
