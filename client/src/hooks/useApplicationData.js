@@ -72,8 +72,14 @@ const useApplicationData = () => {
 
   const setUserlogin = userlogin => setState(prev => ({...prev, userlogin}));
 
-  const editProduct = (id, product) => {
-    setState(({...state, products: [...state.products, product]}))
+  const editProduct = (product) => {
+    const newProducts = [...state.products];
+    console.log('newproducts', newProducts)
+    const index = product.id - 1
+    console.log('index', index)
+    newProducts[index] = product
+    console.log('newProducts index', newProducts)
+    setState(({...state, products: newProducts}))
   }
 
   const addProduct = (product) => {

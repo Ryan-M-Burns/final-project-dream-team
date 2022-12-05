@@ -5,7 +5,7 @@ import MyFarm from './MyFarm';
 import ProductForm from './ProductForm';
 import './FarmerHome.scss'
 import CreateProduct from './CreateProduct';
-const FarmerHome = ({ state, setProduct, addProduct }) => {
+const FarmerHome = ({ state, setProduct, addProduct, editProduct }) => {
 
   const [showProductForm, setShowProductForm] = useState(false);
   
@@ -38,6 +38,7 @@ const FarmerHome = ({ state, setProduct, addProduct }) => {
           state={state}
           products={state.product}
           setProduct={setProduct}
+          editProduct={editProduct}
         />
       </ul>
     </div>

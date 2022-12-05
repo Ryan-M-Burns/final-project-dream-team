@@ -74,20 +74,20 @@ const updateProduct = (productDetails) => {
   .query(`
   UPDATE products
   SET
-  farm_id = $2
+  farm_id = $2,
   title = $3,
   category = $4,
   size = $5,
   image_url = $6,
   price = $7,
-  quantity = $8,
+  quantity = $8
   WHERE id = $1 RETURNING *;`,
-  [queryParams])
+  queryParams)
   .then(newProd => {
     return newProd.rows;
   })
   .catch(err => {
-    return err.message;
+    return err;
   });
 }
 

@@ -3,7 +3,7 @@ import './FarmerProductList.scss';
 import FarmerProductListItem from './FarmerProductListItem';
 import './FarmerProductList.scss';
 
-const FarmerProductList = ({ products, setProducts, state }) => {
+const FarmerProductList = ({ products, setProducts, state, editProduct }) => {
 
   const parsedProductList = products.map(product => {
     return (
@@ -12,6 +12,7 @@ const FarmerProductList = ({ products, setProducts, state }) => {
         product={product}
         setProducts={setProducts}
         state={state}
+        editProduct={editProduct}
       />
     );
   });
