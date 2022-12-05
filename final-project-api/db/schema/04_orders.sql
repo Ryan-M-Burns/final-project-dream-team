@@ -3,5 +3,5 @@ CREATE TABLE orders (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id),
   is_active BOOLEAN DEFAULT TRUE,
-  completed_on DATE
+  completed_on DATE DEFAULT CURRENT_DATE
 );
