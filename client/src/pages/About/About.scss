@@ -2,51 +2,62 @@
 @import '../../styles/reset.scss';
 
 .about_body {
-  background-image: url("../../../public/images/background.jpg");
+  background-image: url("../../../public/images/bgtest/farmer.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+  top: 0;
   display: flex;
-  align-content: flex-start;
-  flex-flow: column;
+  justify-content: space-between;
 
-  .about__article {
-    display: flex;
-    max-width: 50%;
-    flex-flow: column;
-    padding: 25px;
-    overflow-x: wrap;
-    border-radius: 25px;
-    background-color: darkgrey;
-    padding: 50px;
-    margin: 4vw;
-    color: $body-text;
+  .blur-area {
+    background: inherit;
+    filter: blur(8px);
+    box-shadow: inset 0 0 0 220px;
+    color: rgba(255, 255, 255, 0.3);
+    max-width: 30%;
+    margin: 150px 50px;
 
+    .about__article {
+
+      padding: 25px;
+      overflow-x: wrap;
+      border-radius: 25px;
+      padding: 50px;
+      margin: 4vw;
+    }
   }
 
   .user-photos {
     display: flex;
     justify-content: flex-start;
-  }
-
-  img {
-    border: 1px solid #ddd;
-    /* Gray border */
-    border-radius: 4px;
-    /* Rounded border */
-    padding: 5px;
-    /* Some padding */
     width: 150px;
-    /* Set a small width */
-    margin: 50px;
-    margin-top: 10px;
+    height: 150px;
   }
 
-  p {
-    font-size: 1.5vw
-  }
+  // img {
+  //   border: 1px solid #ddd;
+  //   /* Gray border */
+  //   border-radius: 4px;
+  //   /* Rounded border */
+  //   padding: 5px;
+  //   /* Some padding */
+  //   width: 150px;
+  //   /* Set a small width */
+  //   margin: 50px;
+  //   margin-top: 10px;
+  // }
 
-  h2 {
-    margin: 0;
-    font-size: 5.5vw;
-  }
+  // p {
+  //   font-size: 1.5vw
+  // }
+
+  // h2 {
+  //   margin: 0;
+  //   font-size: 5.5vw;
+  // }
 
 
 }

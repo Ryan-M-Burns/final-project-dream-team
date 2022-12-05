@@ -36,7 +36,22 @@ function App() {
       <Router>
         <Routes>
           {/* Landing Page Route */}
-          <Route path='/' element={<Landing />} />
+
+          <Route path='/' element={
+            <>
+              <section className="nav-block">
+                <Navbar
+                  setUser={setUser}
+                  users={state.users}
+                  user={state.user}
+                  showCart={state.cartDrawer}
+                  setCartDrawer={setCartDrawer}
+                  setUserlogin={setUserlogin}
+                  userlogin={state.userlogin}
+                />
+              </section>
+              <Landing />
+            </>} />
           {/* Main Page Routes */}
           <Route path='/home' element={
             <>
@@ -69,27 +84,34 @@ function App() {
           } />
           <Route path='/about' element={
             <>
-              <Navbar
-                setUser={setUser}
-                users={state.users}
-                user={state.user}
-                showCart={state.cartDrawer}
-                setCartDrawer={setCartDrawer}
-              />
-
-              <About />
+              <section className="nav-block">
+                <Navbar
+                  setUser={setUser}
+                  users={state.users}
+                  user={state.user}
+                  showCart={state.cartDrawer}
+                  setCartDrawer={setCartDrawer}
+                />
+              </section>
+              <section className="site-body">
+                <About />
+              </section>
             </>
           } />
           <Route path='/account' element={
             <>
-              <Navbar
-                setUser={setUser}
-                users={state.users}
-                user={state.user}
-                showCart={state.cartDrawer}
-                setCartDrawer={setCartDrawer}
-              />
-              <Account />
+              <section className="nav-block">
+                <Navbar
+                  setUser={setUser}
+                  users={state.users}
+                  user={state.user}
+                  showCart={state.cartDrawer}
+                  setCartDrawer={setCartDrawer}
+                />
+              </section>
+              <section className="site-body">
+                <Account />
+              </section>
             </>
           } />
           <Route path='/orders' element={
@@ -135,7 +157,7 @@ function App() {
           } />
         </Routes>
       </Router>
-    </main>
+    </main >
   );
 }
 

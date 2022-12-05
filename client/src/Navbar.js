@@ -57,7 +57,7 @@ const Navbar = (
     <nav className="nav__main-site">
       <div className="nav__logo">
         <Link to='/home'>
-          <button className="title">HARVEST</button>
+          <img src="/images/high-res-logo-transparent-bg.png" alt="user" />
         </Link>
       </div>
       {user && <button>Welcome back, {user.name}!</button>}
@@ -65,7 +65,7 @@ const Navbar = (
         <div className="login__nav">
           <form className="login__nav">
             <div className={loginClass}>
-              <label className="login__label">username</label>
+              {/* <label className="login__label">username</label> */}
               <input
                 className="login__input"
                 type="text"
@@ -74,7 +74,7 @@ const Navbar = (
               />
             </div>
             <div className={loginClass}>
-              <label className="login__label">password</label>
+              {/* <label className="login__label">password</label> */}
               <input
                 className="login__input"
                 type="password"
@@ -97,7 +97,7 @@ const Navbar = (
               </li>
               <li className="account-item">
                 <button>
-                  <p>My orders</p>
+                  My orders
                 </button>
               </li>
               <li className="account-item">

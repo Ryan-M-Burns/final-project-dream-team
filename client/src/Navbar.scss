@@ -3,36 +3,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Fjalla+One&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Titan+One&display=swap');
 
 .nav__main-site {
-  position: fixed;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 120px;
   width: 100%;
   top: 0;
-  background-color: $dark-background;
+  //background-color: $dark-background;
   padding: 0 20px;
   transition: 0.6s;
+  z-index: 1000;
   // background-color: black;
 
-
   .nav__logo {
-    .title {
-      font-size: 80px;
-      font-family: 'Fjalla One', sans-serif;
-      -webkit-background-clip: text;
-      background-clip: text;
-      align-self: center;
-      justify-self: center;
-      background-position: bottom 50% right 50%;
-      color: transparent;
-      margin-left: 20px;
-      border-radius: 20px;
-      border: none;
+    .title {}
+
+    img {
+      height: 80px;
+      margin-left: 40px;
     }
   }
 
-  
+
 
   .nav__cart img {
     max-height: 45px;
@@ -46,15 +39,14 @@
 
   .login__component {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    background-color: lime;
     margin: 0 25px;
     padding: 10px;
     border-radius: 30px;
-    overflow-y: auto;
+    overflow-y: visible;
     -webkit-overflow-scrolling: touch;
-    z-index: 200;
+    z-index: 1000;
     // top: 0;
     transition: transform 0.3s ease-in;
 
@@ -71,34 +63,24 @@
   .login__input {
     border-radius: 20px;
   }
+
   .nav__buttons {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     font-family: 'Fjalla One';
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-right: 10px
   }
 
   .nav__buttons button {
-    font-size: 30px;
-    font-weight: bold;
-    color: black;
-    background-color: #fcf2e9;
-    border-radius: 2em;
-    padding: 10px 20px;
+    font-size: 25px;
+    color: $dark-brown;
+    background: none;
+    border: none;
     margin: 10px;
     max-height: 80px;
   }
-  .nav__buttons button:hover {
-    color: #fcf2e9;
-    background-color: #007435;
-    padding: 10px 20px;
-  }
 
-  .nav__buttons:hover {
-    border-radius: 20px;
-    padding: 10px 20px;
+  .nav__buttons button:hover {
+    color: $medium-brown;
   }
 
   .dropdown {

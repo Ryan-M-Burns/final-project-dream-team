@@ -7,17 +7,20 @@ const Landing = () => {
   return (
     <div className="column">
       <div className="landing__page">
-        <div className="title__andbuttons">
-          <p id="main"> HARVEST </p>
-          <p id="sub">Where farmers and high-quality produce lovers meet</p>
+        <div className="split-screen">
+          {/* Intentionally Empty */}
+        </div>
+        <div className="split-screen">
+          <img src="/images/test.png" alt="user" id="main" />
           <div className="title__andsub">
           </div>
           <div className="landing__buttons">
             <Link to='/home'>
-              <button id="visit">Enter Site</button>
+              <button id="visit"> Enter Site </button>
             </Link>
+            <img src="/images/favicon.png" alt="user" id="landing-icon" />
             <Link to='/farmer-login'>
-              <button id="visit">Farmer Portal</button>
+              <button id="farmer-portal__button">Farmer Portal</button>
             </Link>
           </div>
         </div>

@@ -27,9 +27,6 @@ const Home = ({
     setProduct(getFilteredProducts(state, state.category, state.farm));
   }, [state.farm, state.category]);
 
-
-  console.log('state8', state.cartDrawer);
-
   const showFarms = getFarms(state, state.farm);
   const showCategories = getCategories(state, state.category);
 
