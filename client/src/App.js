@@ -134,6 +134,9 @@ function App() {
           />
           <Route path='/farmer-orders' element={
             <>
+              <FarmerNav
+                user={state.user}
+                setUser={setUser} />
               <FarmerOrders />
             </>
           } />

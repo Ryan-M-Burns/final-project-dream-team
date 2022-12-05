@@ -38,7 +38,9 @@ const FarmerNav = ({user, setUser}) => {
                 </Link>
               </li>
               <li className="account-item">
-                <button>My orders</button>
+                <Link to="/farmer-orders">
+                  <button>My orders</button>
+                </Link>
               </li>
               <li className="account-item">
                 <Link to="/">
