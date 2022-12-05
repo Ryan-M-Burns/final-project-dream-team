@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
 import useApplicationData from './hooks/useApplicationData';
@@ -11,9 +11,6 @@ import FarmerLogin from './pages/FarmerLogin/FarmerLogin';
 import Landing from './pages/Landing/Landing';
 import PastOrders from './pages/PastOrders/PastOrders';
 import FarmerHome from './farmers/FarmerHome';
-
-import Checkout from './components/Checkout';
-
 import FarmerOrders from './farmers/FarmerOrders/FarmerOrders';
 import FarmerNav from './farmers/FarmerNav';
 
@@ -22,20 +19,16 @@ function App() {
   const {
     state,
     setFarm,
-    setBoxes,
     setCategory,
-    setPrice,
     setCart,
     setProduct,
     addProduct,
-    setProducts,
     addToCart,
     removeFromCart,
     setUser,
     setCartDrawer,
     setCheckout,
-    setUserlogin,
-    setCheckoutMsg
+    setUserlogin
   } = useApplicationData();
 
   return (
@@ -47,30 +40,31 @@ function App() {
           {/* Main Page Routes */}
           <Route path='/home' element={
             <>
-              <Navbar
-                setUser={setUser}
-                users={state.users}
-                user={state.user}
-                showCart={state.cartDrawer}
-                setCartDrawer={setCartDrawer}
-                setUserlogin={setUserlogin}
-                userlogin={state.userlogin}
-                cart={state.cart}
-              />
-              <img src="/images/navbackground.jpg" className="sub_nav" alt="veggieline"></img>
-              <Home
-                state={state}
-                setCartDrawer={setCartDrawer}
-                setProduct={setProduct}
-                setCategory={setCategory}
-                setFarm={setFarm}
-                addToCart={addToCart}
-                removeFromCart={removeFromCart}
-                setCheckout={setCheckout}
-                setCheckoutMsg={setCheckoutMsg}
-                setUserlogin={setUserlogin}
-                setCart={setCart}
-              />
+              <section className="nav-block">
+                <Navbar
+                  setUser={setUser}
+                  users={state.users}
+                  user={state.user}
+                  showCart={state.cartDrawer}
+                  setCartDrawer={setCartDrawer}
+                  setUserlogin={setUserlogin}
+                  userlogin={state.userlogin}
+                />
+              </section>
+              <section className="site-body">
+                <Home
+                  state={state}
+                  setCartDrawer={setCartDrawer}
+                  setProduct={setProduct}
+                  setCategory={setCategory}
+                  setFarm={setFarm}
+                  addToCart={addToCart}
+                  removeFromCart={removeFromCart}
+                  setCheckout={setCheckout}
+                  setUserlogin={setUserlogin}
+                  setCart={setCart}
+                />
+              </section>
             </>
           } />
           <Route path='/about' element={
@@ -131,14 +125,12 @@ function App() {
                   setProduct={setProduct}
                   addProduct={addProduct}
                 />
-              </>}
-
+              </>
+            }
           />
           <Route path='/farmer-orders' element={
             <>
-              <FarmerOrders
-
-              />
+              <FarmerOrders />
             </>
           } />
         </Routes>

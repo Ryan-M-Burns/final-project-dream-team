@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import ProductForm from './ProductForm';
-import Button from '../components/Button';
 import './FarmerProductListItem.scss';
 
 const FarmerProductListItem = ({ product, setProducts, state }) => {

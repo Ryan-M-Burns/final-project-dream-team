@@ -1,7 +1,7 @@
-import {React, useState} from 'react';
+import { React, useState } from 'react';
 import classNames from 'classnames';
 import './Navbar.scss';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Drop down menu for account
 const Navbar = (
@@ -12,10 +12,8 @@ const Navbar = (
     showCart,
     setCartDrawer,
     setUserlogin,
-    userlogin, cart
+    userlogin,
   }) => {
-
-  console.log('showCart', showCart);
 
   //About dropdown
   const [open, setOpen] = useState(false);
@@ -51,26 +49,38 @@ const Navbar = (
 
   const handleLogout = async (event) => {
     event.preventDefault();
-    setUser(null);
+    await setUser(null);
     setOpen(false);
   };
 
   return (
-    <nav>
-      <Link to='/home'>
-        <button className="title">HARVEST</button>
-      </Link>
+    <nav className="nav__main-site">
+      <div className="nav__logo">
+        <Link to='/home'>
+          <button className="title">HARVEST</button>
+        </Link>
+      </div>
       {user && <button>Welcome back, {user.name}!</button>}
-      <div className="nav_buttons">
+      <div className="nav__buttons">
         <div className="login__nav">
           <form className="login__nav">
             <div className={loginClass}>
               <label className="login__label">username</label>
-              <input className="login__input" type="text" placeholder="username" onChange={e => setUserName(e.target.value)}></input>
+              <input
+                className="login__input"
+                type="text"
+                placeholder="username"
+                onChange={e => setUserName(e.target.value)}
+              />
             </div>
             <div className={loginClass}>
               <label className="login__label">password</label>
-              <input className="login__input" type="password" placeholder="password" onChange={e => setPassword(e.target.value)}></input>
+              <input
+                className="login__input"
+                type="password"
+                placeholder="password"
+                onChange={e => setPassword(e.target.value)}
+              />
             </div>
           </form>
         </div>
@@ -80,13 +90,20 @@ const Navbar = (
           {open ? (
             <ul className="account">
               <li className="account-item">
-                <button><img src="../images/user.png" alt="user"></img>View your profile</button>
+                <button>
+                  <p><img src="../images/user.png" alt="user" />
+                    View your profile</p>
+                </button>
               </li>
               <li className="account-item">
-                <button>My orders</button>
+                <button>
+                  <p>My orders</p>
+                </button>
               </li>
               <li className="account-item">
-                <button onClick={handleLogout}>Sign out</button>
+                <button onClick={handleLogout}>
+                  <p>Sign out</p>
+                </button>
               </li>
             </ul>
           ) : null}
@@ -97,7 +114,12 @@ const Navbar = (
           </Link>
         </div>
         <div>
-          <button className="nav__cart" onClick={() => setCartDrawer(!showCart)}><img src="../images/cart.png" alt="cart"></img>({cart.length})</button>
+          <button
+            className="nav__cart"
+            onClick={() => setCartDrawer(!showCart)}
+          >
+            <img src="../images/cart.png" alt="cart" />
+          </button>
         </div>
       </div>
     </nav>

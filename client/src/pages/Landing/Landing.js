@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Home from '../HomePage/Home';
 import './Landing.scss';
 
 
 const Landing = () => {
   return (
     <div className="column">
-      {/* page 1 */}
       <div className="landing__page">
         <div className="title__andbuttons">
           <p id="main"> HARVEST </p>
@@ -23,7 +21,6 @@ const Landing = () => {
             </Link>
           </div>
         </div>
-
       </div>
     </div>
   );
