@@ -15,14 +15,21 @@ const Navbar = (
     userlogin,
   }) => {
 
+
   //About dropdown
   const [open, setOpen] = useState(false);
-  console.log('user1', user);
-  //useRef initiation
+
+  // document.onclick = function(event) {
+  //   console.log('open', open);
+  //   if (open && event.target !== ".account-item") {
+  //     setOpen(false);
+  //   }
+  // };
+
+  //login
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  //login logic
   const loginClass = classNames("login__component", {
     "login__component--open": userlogin,
     "login__component--close": !userlogin
@@ -30,24 +37,33 @@ const Navbar = (
 
   const handleLogin = async (event) => {
     event.preventDefault();
+    console.log('lhandleLogin');
 
     //opens login form
     setUserlogin(true);
+    console.log('passwordRef.current.value', passwordRef.current.value);
+    console.log('emailRef.current.value', emailRef.current.value);
+    console.log('emailRef', emailRef.current);
+    console.log('passwordRef.current', passwordRef.current);
 
     //login form toggles when either field is empty and 'login' is clicked
     if ((!emailRef.current.value || !passwordRef.current.value) && userlogin) {
       setUserlogin(false);
+      console.log('hide form');
     }
 
     const userInfo = users.find(user => user.email === emailRef.current.value);
 
+    console.log('userInfo', userInfo);
+
     if (userInfo && userInfo.password === passwordRef.current.value) {
+      console.log('loggedin');
       setUser(userInfo);
       setUserlogin(false);
     }
   };
 
-  //logout logic
+  //logout
   const handleLogout = async (event) => {
     event.preventDefault();
     await setUser(null);
