@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProductListItem.scss';
 
-const ProductListItem = ({product, farm, addToCart, setCartDrawer}) => {
+const ProductListItem = ({ product, farm, addToCart, setCartDrawer }) => {
 
   const handleClick = () => {
     addToCart(product);
