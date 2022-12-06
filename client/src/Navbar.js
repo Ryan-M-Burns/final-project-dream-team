@@ -94,7 +94,7 @@ const Navbar = (
                 className="login__input"
                 id="user_email"
                 type="text"
-                placeholder="username"
+                placeholder="email"
                 ref={emailRef}
               />
             </div>
