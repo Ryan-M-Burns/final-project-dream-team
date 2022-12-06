@@ -41,9 +41,6 @@ const FarmerProductListItem = ({ product, setProducts, state, editProduct }) => 
             <p>Edit {product.farm_id}</p>
           </button>
         </p>
-        <p>
-          <input type="checkbox" />
-        </p>
       </div>
     ) : (
 
