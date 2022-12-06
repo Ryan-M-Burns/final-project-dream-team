@@ -53,25 +53,26 @@ const useApplicationData = () => {
 
   const setCheckoutMsg = checkoutMsg => setState(prev => ({...prev, checkoutMsg}));
 
-  const addToCart = (product) => {
+  const addToCart = (product, up) => {
     const isFound = state.cart.some(element => {
       if (element.id === product.id) {
         return true;
-        // editCart(product, 1);
       } else {
         return false;
-        // setState({...state, cart: [...state.cart, {...product, CartQty: 1}]});
       }
     });
+
     if (!isFound) {
+      //if the product is new to the cart, we add that product + a cartQty key
       setState({...state, cart: [...state.cart, {...product, cartQty: 1}]});
     } else {
-      editCart(product, 1);
+      up ? editCart(product, 1, 0) : editCart(product, -1, 0);
+      if (product.cartQty === 0) {
+        removeFromCart(product);
+      }
     }
+
   };
-
-  console.log('state.cart', state.cart);
-
 
   const removeFromCart = (toberemoved) => {
     const filterIndex = state.cart.findIndex((product) => product.id === toberemoved.id);
@@ -81,19 +82,13 @@ const useApplicationData = () => {
 
   };
 
-  const editCart = (product, value) => {
-    console.log('product', product);
-    console.log('value', value);
-
+  const editCart = (product, valueOnAdd, userInput) => {
     const newCart = [...state.cart];
     const index = newCart.findIndex((selectProduct) => {
       return selectProduct.id === product.id;
     });
-    console.log('index', index);
-    console.log('newCart', newCart);
-    console.log('newCart[index]', newCart[index]);
-    newCart[index].cartQty = newCart[index].cartQty + value;
-    console.log('resultCart', newCart);
+
+    newCart[index].cartQty = newCart[index].cartQty + valueOnAdd + userInput;
     setState(({...state, cart: newCart}));
   };
 

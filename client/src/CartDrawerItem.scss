@@ -2,3 +2,17 @@
 @import './styles/reset.scss';
 
 .cart__image {}
+
+.cartitem__buttons {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.cartitem__buttons-left {
+  display: flex;
+}
+
+.cartitem__buttons-left p {
+  padding: 0px 10px
+}

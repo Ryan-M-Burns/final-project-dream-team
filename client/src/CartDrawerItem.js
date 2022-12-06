@@ -8,17 +8,22 @@ const CartDrawerItem = ({product, addToCart, removeFromCart}) => {
   return (
     <div>
       <div>
-        <p>{product.title}</p>
+        <p>{product.title}: {product.size}</p>
       </div>
       <div className="cart__image">
         <img src={product.image_url} alt="food" />
       </div>
-      <div>
-        <p>quantity: {product.quantity}</p>
-      </div>
       <div className="cartitem__buttons">
-        <button onClick={() => addToCart(product)}>Add</button>
-        <button onClick={() => removeFromCart(product)}>Remove</button>
+        <div className="cartitem__buttons-left">
+          <button className="plus" onClick={() => addToCart(product, true)}>+</button>
+          <div>
+            <p>{product.cartQty}</p>
+          </div>
+          <button className="minus" onClick={() => addToCart(product, false)}>-</button>
+        </div>
+        <div className="cartitem__buttons-right">
+          <button className="minus-all" onClick={() => removeFromCart(product)}>Remove all</button>
+        </div>
       </div>
     </div>
   );
