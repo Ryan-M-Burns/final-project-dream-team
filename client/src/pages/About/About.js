@@ -1,5 +1,7 @@
 import React from 'react';
 import './About.scss';
+import {Link} from 'react-router-dom';
+
 
 const About = () => {
   return (
@@ -18,6 +20,11 @@ const About = () => {
           <br />
           <p>Sincerely,</p>
           <p>The Havest Team</p>
+          <h2 className='home-link'>
+          <Link to='/home'>
+            Back to Home
+          </Link>
+          </h2>
         </div>
       </article>
       <div className='user-photos'>

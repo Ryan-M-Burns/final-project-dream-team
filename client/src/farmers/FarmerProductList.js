@@ -26,7 +26,6 @@ const FarmerProductList = ({ products, setProducts, state, editProduct }) => {
         <p>Available</p>
         <p>Image</p>
         <p>Edit</p>
-        <p>Active</p>
       </div>
     {parsedProductList}
   </div>

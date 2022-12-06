@@ -1,11 +1,13 @@
+
 .li__farmer-order-item {
   border: 2px solid;
   padding: 10px;
   text-align: center;
   font-size: 20px;
-  color: white;
+  color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background: black;
+  background-color:#AFEEEE;
+  opacity: 0.8;
 
   .farmer-order-name {
     width: 100px;

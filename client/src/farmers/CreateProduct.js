@@ -21,12 +21,13 @@ const CreateProduct = ({ state, addProduct, onSubmit }) => {
       category: categoryRef.current.value,
       size: sizeRef.current.value,
       image_url: image_urlRef.current.value,
-      price: priceRef.current.value,
+      price: priceRef.current.value * 100,
       quantity: quantityRef.current.value
     };
     axios.post('/products', product)
     .then((newProduct) => {
       addProduct(newProduct.data)
+      console.log('newProd', newProduct.data)
     })
     onSubmit()
   };
