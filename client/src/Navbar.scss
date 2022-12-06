@@ -84,6 +84,7 @@
 
   .dropdown {
     position: relative;
+    
   }
 
   .dropdown img {
@@ -102,6 +103,7 @@
     color: $dark-brown;
     border: none;
     padding: 5px;
+    background-color: $light-brown;
     margin: 0;
     font: inherit;
     cursor: pointer;
