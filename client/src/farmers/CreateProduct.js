@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useRef } from 'react';
-import ProductForm from './ProductForm';
 import { getFarms } from '../helpers/selectors';
+import './CreateProduct.scss'
 
 const CreateProduct = ({ state, addProduct, onSubmit }) => {
   const priceRef = useRef();
@@ -33,16 +33,19 @@ const CreateProduct = ({ state, addProduct, onSubmit }) => {
     
 
     return (
-    <form onSubmit={handleSubmit} className="farmer-product-item">
-      <p className="farmer-product-name"><input type='text' ref={titleRef} placeholder="Product Title" /></p>
-      <p className="farmer-product-price"><input type='text' ref={priceRef} placeholder="Product Price" /></p>
-      <p className="farmer-product-size"><input type='text' ref={sizeRef} placeholder='Product Size' /></p>
-      <p className="farmer-product-category"><input type='text' ref={categoryRef} placeholder='Product Category' /></p>
-      <p className="farmer-product-quantity"><input type='text' ref={quantityRef} placeholder="Product Quantity" /></p>
-      <p><input type='text' ref={image_urlRef} placeholder="Image URL" />
-      </p>
-      <p><button type='submit'>Save</button></p>
-    </form>
+    <div className="farmer-product-item">
+     <h1>Enter New Product Details</h1>
+      <form onSubmit={handleSubmit} >
+        <p className="farmer-product-name"><input type='text' ref={titleRef} placeholder="Product Title" /></p>
+        <p className="farmer-product-price"><input type='text' ref={priceRef} placeholder="Product Price" /></p>
+        <p className="farmer-product-size"><input type='text' ref={sizeRef} placeholder='Product Size' /></p>
+        <p className="farmer-product-category"><input type='text' ref={categoryRef} placeholder='Product Category' /></p>
+        <p className="farmer-product-quantity"><input type='text' ref={quantityRef} placeholder="Product Quantity" /></p>
+        <p><input type='text' ref={image_urlRef} placeholder="Image URL" />
+        </p>
+        <p><button type='submit'>Save</button></p>
+      </form>
+    </div>
   );
 };
 

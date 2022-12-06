@@ -1,7 +1,7 @@
-import { React, useState } from 'react';
+import {React, useState, useRef} from 'react';
 import classNames from 'classnames';
 import './Navbar.scss';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 // Drop down menu for account
 const Navbar = (
@@ -15,18 +15,21 @@ const Navbar = (
     userlogin,
   }) => {
 
+
   //About dropdown
   const [open, setOpen] = useState(false);
 
-  const handleDropdown = () => {
-    setOpen(!open);
-  };
+  // document.onclick = function(event) {
+  //   console.log('open', open);
+  //   if (open && event.target !== ".account-item") {
+  //     setOpen(false);
+  //   }
+  // };
 
-  const [username, setUserName] = useState();
-  const [password, setPassword] = useState();
+  //login
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
-
-  //login logic
   const loginClass = classNames("login__component", {
     "login__component--open": userlogin,
     "login__component--close": !userlogin
@@ -34,23 +37,44 @@ const Navbar = (
 
   const handleLogin = async (event) => {
     event.preventDefault();
+    console.log('lhandleLogin');
 
+    //opens login form
     setUserlogin(true);
+    console.log('passwordRef.current.value', passwordRef.current.value);
+    console.log('emailRef.current.value', emailRef.current.value);
+    console.log('emailRef', emailRef.current);
+    console.log('passwordRef.current', passwordRef.current);
 
-    const userInfo = users.find(user => user.name === username);
-
-    if (userInfo && userInfo.password === password) {
-      setUser(userInfo);
-      console.log('userInfo', userInfo);
+    //login form toggles when either field is empty and 'login' is clicked
+    if ((!emailRef.current.value || !passwordRef.current.value) && userlogin) {
       setUserlogin(false);
+      console.log('hide form');
+    }
 
+    const userInfo = users.find(user => user.email === emailRef.current.value);
+
+    console.log('userInfo', userInfo);
+
+    if (userInfo && userInfo.password === passwordRef.current.value) {
+      console.log('loggedin');
+      setUser(userInfo);
+      setUserlogin(false);
     }
   };
 
+  //logout
   const handleLogout = async (event) => {
     event.preventDefault();
     await setUser(null);
     setOpen(false);
+    passwordRef.current.value = null;
+
+  };
+
+  //Account dropdown
+  const handleDropdown = () => {
+    setOpen(!open);
   };
 
   return (
@@ -65,21 +89,23 @@ const Navbar = (
         <div className="login__nav">
           <form className="login__nav">
             <div className={loginClass}>
-              {/* <label className="login__label">username</label> */}
+              {/* <label className="login__label" htmlFor="email">email</label> */}
               <input
                 className="login__input"
+                id="user_email"
                 type="text"
                 placeholder="username"
-                onChange={e => setUserName(e.target.value)}
+                ref={emailRef}
               />
             </div>
             <div className={loginClass}>
-              {/* <label className="login__label">password</label> */}
+              {/* <label className="login__label" htmlFor="password">password</label> */}
               <input
                 className="login__input"
+                id="user_pass"
                 type="password"
                 placeholder="password"
-                onChange={e => setPassword(e.target.value)}
+                ref={passwordRef}
               />
             </div>
           </form>

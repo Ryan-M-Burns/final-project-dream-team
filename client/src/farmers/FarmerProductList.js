@@ -18,7 +18,7 @@ const FarmerProductList = ({ products, setProducts, state, editProduct }) => {
   });
   return (
     <div className="farmer-products">
-      <div>
+      <div className='table-headers'>
         <p>Product</p>
         <p>Price</p>
         <p>Pack Size</p>
