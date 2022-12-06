@@ -1,11 +1,15 @@
+
 import { useRef, React } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getFilteredProducts } from '../../helpers/selectors';
+
 import './FarmerLogin.scss';
 
 
 
+
 const FarmerLogin = ({ users, user, state, setUser, farms, setFarm, setFarmProducts }) => {
+
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();

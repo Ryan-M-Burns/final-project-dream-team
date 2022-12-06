@@ -1,8 +1,12 @@
 import {React, useState} from 'react';
 import './FarmerNav.scss';
+import {useNavigate} from 'react-router-dom';
 import {Link} from 'react-router-dom';
+
 const FarmerNav = ({user, setUser}) => {
   const [open, setOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleDropdown = () => {
     setOpen(!open);
@@ -12,6 +16,7 @@ const FarmerNav = ({user, setUser}) => {
     event.preventDefault();
     setUser(null);
     setOpen(false);
+    navigate("/");
   };
 
 
@@ -33,10 +38,14 @@ const FarmerNav = ({user, setUser}) => {
                 </Link>
               </li>
               <li className="account-item">
-                <button>My orders</button>
+                <Link to="/farmer-orders">
+                  <button>My orders</button>
+                </Link>
               </li>
               <li className="account-item">
-                <button onClick={handleLogout}>Sign out</button>
+                <Link to="/">
+                  <button onClick={handleLogout}>Sign out</button>
+                </Link>
               </li>
             </ul>
           ) : null}
