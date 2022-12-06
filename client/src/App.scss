@@ -4,36 +4,55 @@
 
 body {
   //background-image: url('../public/images/bgtest/closeupveggies.jpg');
-  
   // background-image: url('../public/images/bgtest/farmer.jpg');
-   background-image: url('../public/images/bgtest/orchard1.jpg');
+  //background-image: url('../public/images/bgtest/orchard1.jpg');
   // background-image: url('../public/images/bgtest/orchard2.jpg');
   // background-image: url('../public/images/bgtest/plant.jpg');
   // background-image: url('../public/images/bgtest/weed.jpg');
-  // background-image: url('../public/images/bgtest/wheat1.jpg');
-  // background-image: url('../public/images/bgtest/wheat2.jpg');
+  background-image: url('../public/images/bgtest/wheat1.jpg');
+  //background-image: url('../public/images/bgtest/wheat2.jpg');
   // background-image: url('../public/images/bgtest/wheat3.jpg');
   // background-image: url('../public/images/bgtest/wheat4.jpg');
   // background-image: url('../public/images/bgtest/wheat5.jpg');
-  // background-image: url('../public/images/bgtest/wheat6.jpg');
-  
-
+  //background-image: url('../public/images/bgtest/wheat6.jpg');
   // background-color: black;
   background-attachment: fixed;
   background-size: 100%;
-  height: 100%;
+  min-height: 100%;
   color: $body-text;
-}
-.nav-block {
-  overflow:hidden;
-  height: 100px;
-  display:block;
-}
-.site-body {
-  display:block;
-  top: 100px;
-  overflow: hidden;
-}
-.section__app {
-  padding: 1% 3%;
+
+  .nav-block {
+    height: 100px;
+    width: 100%;
+    display: block;
+    position: static;
+    background: inherit;
+    background-image: url('../public/images/bgtest/wheat1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .nav-about {
+    height: 100px;
+    width: 100%;
+    display: block;
+    position: static;
+    background: inherit;
+    background-image: url('../public/images/bgtest/closeupveggies.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .site-body {
+    display: fixed;
+    position: static;
+    top: 100px;
+    height: 100%;
+    background: inherit;
+  }
+
+  .section__app {
+    padding: 1% 3%;
+    background: inherit;
+  }
 }

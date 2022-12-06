@@ -1,10 +1,14 @@
 @import '../../styles/variables.scss';
 @import '../../styles/reset.scss';
 
+.container__home {
+  display: flexbox;
+}
+
 .section__home {
+  top: 100px;
   font-size: 25px;
   width: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 

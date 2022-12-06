@@ -7,6 +7,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  background-image: url('../../../public/images/bgtest/wheat4.jpg');            
+  background-size: cover;
+  // background-color: $dark-brown-bg
 }
 
 .images {
@@ -35,8 +39,10 @@
   width: 100%;
   height: 40px;
   margin: 8px 0;
-  background-color: #fcf2e9;
+  background-color: #cd9d34b3;
   border-radius: 10px;
+  color: $dark-brown;
+  border-color: $dark-brown;
 }
 
 .login p {
@@ -49,23 +55,25 @@
 .login {
   height: 700px;
   min-width: 500px;
-  background-color: #fcf2e9;
+  background-color: #d6b26389;
   margin: 20px;
   padding: 20px;
-  border-radius: 25px
+  border-radius: 25px;
+  color: $dark-brown;
+  border: 2px solid $dark-brown;
 }
 
 .submit__button {
-  display: flex;
-  justify-content: center;
   width: 500px;
   height: 50px;
   font-size: 30px;
   font-weight: bold;
   color: #50350e;
-  background-color: #fcf2e9;
+  background-color: #d6b263ee;
   border-radius: 15px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .submit__button:hover {

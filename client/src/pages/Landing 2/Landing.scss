@@ -8,29 +8,20 @@
 
 .landing__page {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
   top: 0;
   position: absolute;
-  background-image: url('../../../public/images/landing.jpg');
+  background-image: url('../../../public/images/bgtest/closeupveggies.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
 
-  .split-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 50%;
-  }
-
   #main {
-    width: 85%;
-    border-radius: 5px;
-
+    width:50%;
+    border-radius: 15px;
   }
 
   #landing-icon {
