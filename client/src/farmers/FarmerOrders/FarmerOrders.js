@@ -8,17 +8,15 @@ const FarmerOrders = () => {
   const id = 4;
   useEffect(() => {
   Promise.all([
-      axios.get(`/orders/farms/${id}`),
+     axios.get(`/orders/farms/${id}`), 
     ])
       .then(all => {
         const orders = all[0].data
-        console.log('orders', orders)
         setOrders(orders)
       });
   },[])
   
     const parsedOrders = orders.map((order, index) => {
-      console.log('order', order)
     return (
       <FarmerOrderSummary
         key={index}
