@@ -3,6 +3,7 @@ import React from 'react'
 
 
 const FarmerOrderSummary = (props) => {
+  
   const totalSales = Number(props.price / 100) * Number(props.count);
   
   return (
