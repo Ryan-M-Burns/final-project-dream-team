@@ -73,7 +73,7 @@ function App() {
           } />
           <Route path='/about' element={
             <>
-              <section className="nav-block">
+              <section className="nav-about">
                 <Navbar
                   setUser={setUser}
                   users={state.users}

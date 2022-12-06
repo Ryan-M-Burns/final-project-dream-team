@@ -5,12 +5,12 @@
 .nav__main-site {
   position: fixed;
   display: flex;
-  background: inherit;
   justify-content: space-between;
   align-items: center;
   height: 100px;
   width: 100%;
   top: 0;
+  background: inherit;
   //background-color: $dark-background;
   padding: 0 20px;
   transition: 0.6s;
@@ -115,6 +115,6 @@
 
 }
 
-.nav__main-site:hover {
-  background-color: $medium-brown-bg;
-}
+// .nav__main-site:hover {
+//   background-color: $medium-brown-bg;
+// }

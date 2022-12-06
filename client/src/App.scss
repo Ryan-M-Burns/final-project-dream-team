@@ -15,8 +15,6 @@ body {
   // background-image: url('../public/images/bgtest/wheat4.jpg');
   // background-image: url('../public/images/bgtest/wheat5.jpg');
   //background-image: url('../public/images/bgtest/wheat6.jpg');
-
-
   // background-color: black;
   background-attachment: fixed;
   background-size: 100%;
@@ -26,9 +24,23 @@ body {
   .nav-block {
     height: 100px;
     width: 100%;
-    display:block;
+    display: block;
     position: static;
     background: inherit;
+    background-image: url('../public/images/bgtest/wheat1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .nav-about {
+    height: 100px;
+    width: 100%;
+    display: block;
+    position: static;
+    background: inherit;
+    background-image: url('../public/images/bgtest/closeupveggies.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .site-body {

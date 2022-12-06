@@ -20,7 +20,7 @@ const FarmerLogin = ({ users, user, state, setUser, farms, setFarm, setFarmProdu
       setUser(userInfo.name);
       await setFarm(farm.name);
       navigate("/farmer-home");
-      
+
     }
   };
 
@@ -37,9 +37,7 @@ const FarmerLogin = ({ users, user, state, setUser, farms, setFarm, setFarmProdu
           <input ref={emailRef} className="farmer__input" type="email"></input>
           <label htmlFor="password" className="farmer__label">password</label>
           <input ref={passwordRef} className="farmer__input" type="password"></input>
-          <div>
-            <button className="submit__button" type="submit" value="Submit">Submit</button>
-          </div>
+          <button className="submit__button" type="submit" value="Submit">Submit</button>
         </form >
       </div>
     </div>
