@@ -2,12 +2,13 @@
 @import "../styles/variables.scss";
 
 .farms-list {
-  display:flex;
+
+  display: flex;
   justify-content: space-evenly;
-  color:white;
+  color: white;
   font-weight: 15px;
   width: 100%;
   padding: 10px 0;
   margin: 10px;
-  
+
 }

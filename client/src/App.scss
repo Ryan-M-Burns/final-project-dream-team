@@ -25,17 +25,22 @@ body {
 
   .nav-block {
     height: 100px;
-    display: block;
+    width: 100%;
+    display:block;
+    position: static;
+    background: inherit;
   }
 
   .site-body {
-    display: relative;
-    overflow:hidden;
+    display: fixed;
+    position: static;
     top: 100px;
     height: 100%;
+    background: inherit;
   }
 
   .section__app {
     padding: 1% 3%;
+    background: inherit;
   }
 }

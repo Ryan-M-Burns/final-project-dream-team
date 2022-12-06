@@ -2,6 +2,9 @@
 @import '../../styles/reset.scss';
 
 .section__home {
+  position:absolute;
+  top:100px;
+  overflow-y: scroll;
   font-size: 25px;
   width: 100%;
   display:flex;

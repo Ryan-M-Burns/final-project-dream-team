@@ -5,9 +5,10 @@
 .nav__main-site {
   position: fixed;
   display: flex;
+  background: inherit;
   justify-content: space-between;
   align-items: center;
-  height: 120px;
+  height: 100px;
   width: 100%;
   top: 0;
   //background-color: $dark-background;
@@ -17,7 +18,6 @@
   // background-color: black;
 
   .nav__logo {
-    .title {}
 
     img {
       height: 80px;
@@ -84,7 +84,7 @@
 
   .dropdown {
     position: relative;
-    
+
   }
 
   .dropdown img {
@@ -103,7 +103,7 @@
     color: $dark-brown;
     border: none;
     padding: 5px;
-    background-color: $light-brown;
+    background-color: $light-brown-bg;
     margin: 0;
     font: inherit;
     cursor: pointer;
@@ -114,6 +114,7 @@
   }
 
 }
+
 .nav__main-site:hover {
-  background-color: $light-brown;
+  background-color: $medium-brown-bg;
 }
