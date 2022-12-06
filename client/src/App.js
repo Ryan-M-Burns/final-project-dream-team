@@ -23,6 +23,7 @@ function App() {
     setCart,
     setProduct,
     addProduct,
+    editProduct,
     addToCart,
     removeFromCart,
     setUser,
@@ -112,6 +113,7 @@ function App() {
               <FarmerLogin
                 users={state.users}
                 user={state.user}
+                state={state}
                 setUser={setUser}
                 farms={state.farms}
                 setFarm={setFarm}
@@ -128,6 +130,7 @@ function App() {
                   state={state}
                   setProduct={setProduct}
                   addProduct={addProduct}
+                  editProduct={editProduct}
                 />
               </>
             }

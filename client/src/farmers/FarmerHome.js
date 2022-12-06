@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getFilteredProducts } from '../helpers/selectors';
 import FarmerProductList from './FarmerProductList';
 import MyFarm from './MyFarm';
 import ProductForm from './ProductForm';
 import './FarmerHome.scss'
 import CreateProduct from './CreateProduct';
-const FarmerHome = ({ state, setProduct, addProduct }) => {
+const FarmerHome = ({ state, setProduct, addProduct, editProduct }) => {
 
   const [showProductForm, setShowProductForm] = useState(false);
-  
-  const showProducts = getFilteredProducts(state, null, state.farm);
+
+  useEffect(() => {
+    setProduct(getFilteredProducts(state, null, state.farm));
+  }, [state.farm, state.products]);
+
+  const handleCreate = () => {
+    setShowProductForm(false)
+  }
 
   return (
     <div className="farmer__home">
-      <MyFarm farm={state.farm} />
       <div>
         <button type='button' onClick={() => { setShowProductForm(!showProductForm); }}> Add Product </button>
       </div>
@@ -24,15 +29,16 @@ const FarmerHome = ({ state, setProduct, addProduct }) => {
           <li>
             <CreateProduct
               state={state}
-              product={state.product}
+              onSubmit={handleCreate}
               addProduct={addProduct}
             />
           </li>
         }
         <FarmerProductList
           state={state}
-          products={showProducts}
+          products={state.product}
           setProduct={setProduct}
+          editProduct={editProduct}
         />
       </ul>
     </div>
