@@ -54,16 +54,47 @@ const useApplicationData = () => {
   const setCheckoutMsg = checkoutMsg => setState(prev => ({...prev, checkoutMsg}));
 
   const addToCart = (product) => {
-    setState({...state, cart: [...state.cart, product]});
+    const isFound = state.cart.some(element => {
+      if (element.id === product.id) {
+        return true;
+        // editCart(product, 1);
+      } else {
+        return false;
+        // setState({...state, cart: [...state.cart, {...product, CartQty: 1}]});
+      }
+    });
+    if (!isFound) {
+      setState({...state, cart: [...state.cart, {...product, cartQty: 1}]});
+    } else {
+      editCart(product, 1);
+    }
   };
+
+  console.log('state.cart', state.cart);
 
 
   const removeFromCart = (toberemoved) => {
     const filterIndex = state.cart.findIndex((product) => product.id === toberemoved.id);
 
-    const newCart = state.cart.splice(filterIndex, 1);
+    state.cart.splice(filterIndex, 1);
     setState({...state, cart: state.cart});
 
+  };
+
+  const editCart = (product, value) => {
+    console.log('product', product);
+    console.log('value', value);
+
+    const newCart = [...state.cart];
+    const index = newCart.findIndex((selectProduct) => {
+      return selectProduct.id === product.id;
+    });
+    console.log('index', index);
+    console.log('newCart', newCart);
+    console.log('newCart[index]', newCart[index]);
+    newCart[index].cartQty = newCart[index].cartQty + value;
+    console.log('resultCart', newCart);
+    setState(({...state, cart: newCart}));
   };
 
   const setUser = user => setState(prev => ({...prev, user}));
@@ -75,11 +106,11 @@ const useApplicationData = () => {
   const editProduct = (product) => {
     const newProducts = [...state.products];
     const index = newProducts.findIndex((selectProduct) => {
-      return selectProduct.id === product.id
-    }) 
-    newProducts[index] = product
-    setState(({...state, products: newProducts}))
-  }
+      return selectProduct.id === product.id;
+    });
+    newProducts[index] = product;
+    setState(({...state, products: newProducts}));
+  };
 
   const addProduct = (product) => {
     setState(({...state, products: [...state.products, product]}));
