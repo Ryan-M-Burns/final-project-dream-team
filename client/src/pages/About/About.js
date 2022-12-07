@@ -29,10 +29,10 @@ const About = () => {
 
           <div className='user-profile'>
             <img
-              src='/images/team_photos/anouk.jpg'
+              src='/images/team_photos/anouk.png'
               alt="admin-icon"
             />
-            <p>Anouk Van Boegart</p>
+            <p>Anouk Van Bogaert</p>
           </div>
 
           <div className='user-profile'>
