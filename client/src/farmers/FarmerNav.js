@@ -1,9 +1,9 @@
-import {React, useState} from 'react';
+import { React, useState } from 'react';
 import './FarmerNav.scss';
-import {useNavigate} from 'react-router-dom';
-import {Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const FarmerNav = ({user, setUser}) => {
+const FarmerNav = ({ user, setUser }) => {
   const [open, setOpen] = useState(false);
 
   const navigate = useNavigate();
@@ -38,17 +38,32 @@ const FarmerNav = ({user, setUser}) => {
             <ul className="farmer__account">
               <li className="farmer__account-item">
                 <Link to="/myfarm">
-                  <button><img src="../images/user.png" alt="user"></img>View your profile</button>
+                  <button>
+                    <p>
+                      <img src="../images/user.png" alt="user"></img>View your profile
+                    </p>
+                  </button>
+
                 </Link>
               </li>
               <li className="farmer__account-item">
                 <Link to="/farmer-orders">
-                  <button>My orders</button>
+                  <button>
+                    <p>
+                      <img src="../images/order.png" alt="order" />
+                      My orders
+                    </p>
+                  </button>
                 </Link>
               </li>
               <li className="farmer__account-item">
                 <Link to="/">
-                  <button onClick={handleLogout}>Sign out</button>
+                  <button onClick={handleLogout}>
+                    <p>
+                      <img src="../images/logout.png" alt="logout" />
+                      Sign out
+                    </p>
+                  </button>
                 </Link>
               </li>
             </ul>
