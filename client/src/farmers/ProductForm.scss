@@ -12,6 +12,10 @@
   font-family: $font-family-fancy;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+  input {
+    width: 100%;
+  }
+
   .farmer-product-form-name {
     width: 100px;
   }
@@ -24,6 +28,7 @@
     padding: 10px;
   }
 }
+
 .farmer-product-form-button {
   padding-top: 15px;
   display: fixed;
