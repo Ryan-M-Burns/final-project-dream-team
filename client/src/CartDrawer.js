@@ -3,7 +3,7 @@ import CartDrawerItem from './CartDrawerItem';
 import classNames from 'classnames';
 import './CartDrawer.scss';
 
-const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart, setCheckout, checkout}) => {
+const CartDrawer = ({ cart, cartDrawer, addToCart, removeFromCart, setCheckout, checkout }) => {
   let parsedCartList = [];
   const cartClass = classNames("cart__container", {
     "cart__container--open": cartDrawer,
@@ -35,7 +35,7 @@ const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart, setCheckout, c
 
   return (
     <div className={cartClass}>
-      <div>
+      <div className="cart__title">
         <h2>My Veggie Box</h2>
       </div>
       <div className="cart__body">
@@ -43,13 +43,16 @@ const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart, setCheckout, c
           {cart.length > 0 && parsedCartList}
           {!cart.length && <p>Nothing to see here!</p>}
         </div>
-        <div className="cart__checkout">
-          {cart.length > 0 && <button onClick={() => setCheckout(true)}>
-            <p>Checkout: $ {total(cart) / 100}</p>
-          </button>}
-        </div>
       </div>
-
+      <div className="cart__checkout">
+        {
+          cart.length > 0
+          &&
+          <button onClick={() => setCheckout(true)}>
+            <p>Checkout: $ {(total(cart) / 100).toFixed(2)}</p>
+          </button>
+        }
+      </div>
     </div>
   );
 };
