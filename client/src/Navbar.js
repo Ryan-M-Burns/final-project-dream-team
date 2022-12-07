@@ -19,13 +19,6 @@ const Navbar = (
   //About dropdown
   const [open, setOpen] = useState(false);
 
-  // document.onclick = function(event) {
-  //   console.log('open', open);
-  //   if (open && event.target !== ".account-item") {
-  //     setOpen(false);
-  //   }
-  // };
-
   //login
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -37,27 +30,18 @@ const Navbar = (
 
   const handleLogin = async (event) => {
     event.preventDefault();
-    console.log('lhandleLogin');
 
     //opens login form
     setUserlogin(true);
-    console.log('passwordRef.current.value', passwordRef.current.value);
-    console.log('emailRef.current.value', emailRef.current.value);
-    console.log('emailRef', emailRef.current);
-    console.log('passwordRef.current', passwordRef.current);
 
     //login form toggles when either field is empty and 'login' is clicked
     if ((!emailRef.current.value || !passwordRef.current.value) && userlogin) {
       setUserlogin(false);
-      console.log('hide form');
     }
 
     const userInfo = users.find(user => user.email === emailRef.current.value);
 
-    console.log('userInfo', userInfo);
-
     if (userInfo && userInfo.password === passwordRef.current.value) {
-      console.log('loggedin');
       setUser(userInfo);
       setUserlogin(false);
     }
@@ -84,12 +68,13 @@ const Navbar = (
           <img src="/images/high-res-logo-transparent-bg.png" alt="user" />
         </Link>
       </div>
-      {user && <button>Welcome back, {user.name}!</button>}
+      <div className="user__welcome button">
+        {user && <button>Welcome back, {user.name}!</button>}
+      </div>
       <div className="nav__buttons">
         <div className="login__nav">
           <form className="login__nav">
             <div className={loginClass}>
-              {/* <label className="login__label" htmlFor="email">email</label> */}
               <input
                 className="login__input"
                 id="user_email"
@@ -99,7 +84,6 @@ const Navbar = (
               />
             </div>
             <div className={loginClass}>
-              {/* <label className="login__label" htmlFor="password">password</label> */}
               <input
                 className="login__input"
                 id="user_pass"
@@ -122,12 +106,12 @@ const Navbar = (
                 </button>
               </li>
               <li className="account-item">
-                <button>
+                <button><img src="../images/order.png" alt="order" />
                   My orders
                 </button>
               </li>
               <li className="account-item">
-                <button onClick={handleLogout}>
+                <button onClick={handleLogout}><img src="../images/logout.png" alt="logout" />
                   <p>Sign out</p>
                 </button>
               </li>

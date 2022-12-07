@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { getFilteredProducts } from '../helpers/selectors';
+import React, {useEffect, useState} from 'react';
+import {getFilteredProducts} from '../helpers/selectors';
 import FarmerProductList from './FarmerProductList';
 import MyFarm from './MyFarm';
 import ProductForm from './ProductForm';
-import './FarmerHome.scss'
+import './FarmerHome.scss';
 import CreateProduct from './CreateProduct';
-const FarmerHome = ({ state, setProduct, addProduct, editProduct }) => {
+const FarmerHome = ({state, setProduct, addProduct, editProduct}) => {
 
   const [showProductForm, setShowProductForm] = useState(false);
 
@@ -14,33 +14,33 @@ const FarmerHome = ({ state, setProduct, addProduct, editProduct }) => {
   }, [state.farm, state.products]);
 
   const handleCreate = () => {
-    setShowProductForm(false)
-  }
+    setShowProductForm(false);
+  };
 
   return (
     <div className="farmer__home">
       <div>
-        <button type='button' onClick={() => { setShowProductForm(!showProductForm); }}> Add Product </button>
+        <button className="farmer__addproduct" type='button' onClick={() => setShowProductForm(!showProductForm)}> Add Product </button>
       </div>
-      <ul>
-        {
-          showProductForm
-          &&
-          <li>
-            <CreateProduct
-              state={state}
-              onSubmit={handleCreate}
-              addProduct={addProduct}
-            />
-          </li>
-        }
-        <FarmerProductList
-          state={state}
-          products={state.product}
-          setProduct={setProduct}
-          editProduct={editProduct}
-        />
-      </ul>
+      <div>
+        <ul>
+          {showProductForm &&
+            <li>
+              <CreateProduct
+                state={state}
+                onSubmit={handleCreate}
+                addProduct={addProduct}
+              />
+            </li>
+          }
+          <FarmerProductList
+            state={state}
+            products={state.product}
+            setProduct={setProduct}
+            editProduct={editProduct}
+          />
+        </ul>
+      </div>
     </div>
   );
 };

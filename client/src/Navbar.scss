@@ -11,7 +11,6 @@
   width: 100%;
   top: 0;
   background: inherit;
-  //background-color: $dark-background;
   padding: 0 20px;
   transition: 0.6s;
   z-index: 1000;
@@ -45,6 +44,13 @@
     &--close {
       transform: translateY(-180%);
     }
+  }
+
+  .user__welcome button {
+    font-size: 25px;
+    color: $dark-brown;
+    background: none;
+    border: none;
   }
 
 

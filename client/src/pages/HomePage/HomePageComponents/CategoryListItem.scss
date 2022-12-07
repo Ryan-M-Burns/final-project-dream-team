@@ -3,12 +3,16 @@
 @import "../../../styles/reset.scss";
 
 .category-list-item {
-  color: black;
+  display: flex;
+  color: $dark-brown;
   font-weight: 500;
   font-size: 1.5vw;
-  .category-icon {
-    width: 100px;
-    height: auto;
-    margin: 15px;
-  }
+  border-color: $body-text;
+  border-radius: 15px;
+  background-color: $light-brown;
+  font-family: $font-family-fancy;
+  justify-content: center;
+  margin: 10px;
+  width: 250px;
+  
 }
