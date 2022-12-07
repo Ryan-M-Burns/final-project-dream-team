@@ -20,15 +20,16 @@
     &--selected {
       .farm-list__img {
         @include fade;
+        align-self: flex-start;
         width: auto;
-        height: 250px;
+        height: 150px;
         aspect-ratio: 3/2;
         object-fit: contain;
       }
 
 
       &:hover {
-        background-color: $dark-background;
+
         cursor: pointer;
         color: $dark-background;
 
