@@ -104,12 +104,12 @@ const Navbar = (
                 </button>
               </li>
               <li className="account-item">
-                <button>
+                <button><img src="../images/order.png" alt="order" />
                   My orders
                 </button>
               </li>
               <li className="account-item">
-                <button onClick={handleLogout}>
+                <button onClick={handleLogout}><img src="../images/logout.png" alt="logout" />
                   <p>Sign out</p>
                 </button>
               </li>

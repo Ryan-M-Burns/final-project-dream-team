@@ -2,26 +2,44 @@
 @import '../styles/reset.scss';
 
 .farmer__home {
+  margin-top: 100px;
   width: 100%;
+
   ul {
     width: 100%;
+
     li {
       display: flex;
       min-width: 100%;
-      
+
       justify-content: space-between;
       align-content: space-between;
       width: 100%;
     }
   }
+
   thead th {
-    width:10%;
+    width: 10%;
   }
 }
 
-.add-product {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
+.farmer__addproduct {
+  position: absolute;
+  top: 15%;
+  left: 6.2%;
+  width: 150px;
+  background-color: $light-brown-bg;
+  color: $dark-brown;
+  font-size: 25px;
+  border-radius: 10px;
+  box-shadow: 2px 2px $dark-brown-bg;
+
+}
+
+.farmer__addproduct:active {
+  background-color: $dark-brown-bg;
+  color: $light-brown;
+  box-shadow: inset 2px 2px 2px 2px $dark-brown-bg;
+  transform: translateY(2px) translateX(3px) scale(.97);
+  border-color: $dark-brown;
 }
