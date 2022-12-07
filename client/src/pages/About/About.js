@@ -26,20 +26,7 @@ const About = () => {
       </div>
       <div className='split-in-2'>
         <div className="team-member">
-          <div className='user-profile'>
-            <img
-              src='/images/team_photos/taylor.jpeg'
-              alt="admin-icon"
-            />
-            <p>Taylor Smith</p>
-          </div>
-          <div className='user-profile'>
-            <img
-              src='/images/team_photos/ryan.png'
-              alt="admin-icon"
-            />
-            <p>Ryan Burns</p>
-          </div>
+
           <div className='user-profile'>
             <img
               src='/images/team_photos/anouk.jpg'
@@ -47,6 +34,23 @@ const About = () => {
             />
             <p>Anouk Van Boegart</p>
           </div>
+
+          <div className='user-profile'>
+            <img
+              src='/images/team_photos/ryan.png'
+              alt="admin-icon"
+            />
+            <p>Ryan Burns</p>
+          </div>
+
+          <div className='user-profile'>
+            <img
+              src='/images/team_photos/taylor.jpeg'
+              alt="admin-icon"
+            />
+            <p>Taylor Smith</p>
+          </div>
+
         </div>
       </div>
     </div>
