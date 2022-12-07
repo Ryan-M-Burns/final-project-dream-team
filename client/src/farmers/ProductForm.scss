@@ -1,44 +1,51 @@
 @import "../styles/variables.scss";
 @import "../styles/reset.scss";
 
-.farmer-product-item {
+.li__farmer-product-form-item {
   border: 2px solid;
-  border-color: $body-text;
-  background-color: $dark-background;
+  border-color: $dark-brown;
+  background-color: $light-brown-bg;
   padding: 10px;
   text-align: center;
   font-size: 20px;
-  color: rgb(33, 20, 4);
+  color: $dark-brown;
   font-family: $font-family-fancy;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-  .farmer-product-name {
+  .farmer-product-form-name {
     width: 100px;
   }
 
-  .farmer-product-image {
+  .farmer-product-form-image {
     object-fit: cover;
     height: 80px;
     width: 110px;
     border-radius: 50%;
     padding: 10px;
   }
+}
+.farmer-product-form-button {
+  padding-top: 15px;
+  display: fixed;
+  text-align: center;
+  color: $dark-brown;
+  position: relative;
+  min-height: 50px;
 
-  .farmer-product-button {
-    font-size: 10px;
-    color:$dark-background;
-    border-radius: 30px;
-    border: none;
-    padding: 5px 10px;
-    background-color: $body-text;
-    p {
-      font-size: 20px;
-    }
+  button {
+    border-radius: 10px;
+    border-color: $dark-brown;
+    box-shadow: 2px 2px $dark-brown-bg;
+    font-family: $font-family-fancy;
+    color: $dark-brown;
+    background-color: $light-brown-bg;
   }
-  .farmer-product-button:hover {
-    color: $body-text;
-    background-color: $dark-background;
-    border-color: $body-text;
-    border: 2px solid;
+
+  button:active {
+    background-color: $dark-brown-bg;
+    color: $light-brown;
+    box-shadow: inset 2px 2px 2px 2px $dark-brown-bg;
+    transform: translateY(2px) translateX(3px) scale(.97);
+    border-color: $dark-brown;
   }
 }
