@@ -11,8 +11,8 @@
   margin: 10px;
   max-width: 350px;
   min-width: 350px;
-  min-height: 450px;
-  max-height: 450px;
+  min-height: 400px;
+  max-height: 400px;
   align-items: center;
   align-content: space-between;
   justify-content: space-evenly;
@@ -65,5 +65,34 @@
 
   .product-category {
     font-size: 25px;
+  }
+}
+
+.add-to-cart-button {
+  padding-top: 10px;
+  width: 100%;
+  display: fixed;
+  text-align: center;
+  color: $dark-brown;
+  position: relative;
+  border-top: 2px solid;
+  border-color: $dark-brown;
+  min-height: 50px;
+
+  button {
+    border-radius: 10px;
+    border-color: $dark-brown;
+    box-shadow: 2px 2px $dark-brown-bg;
+    font-family: $font-family-fancy;
+    color: $dark-brown;
+    background-color: $light-brown-bg;
+  }
+
+  button:active {
+    background-color: $dark-brown-bg;
+    color: $light-brown;
+    box-shadow: inset 2px 2px 2px 2px $dark-brown-bg;
+    transform: translateY(2px) translateX(3px) scale(.97);
+    border-color: $dark-brown;
   }
 }
