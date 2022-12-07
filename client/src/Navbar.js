@@ -37,27 +37,18 @@ const Navbar = (
 
   const handleLogin = async (event) => {
     event.preventDefault();
-    console.log('lhandleLogin');
 
     //opens login form
     setUserlogin(true);
-    console.log('passwordRef.current.value', passwordRef.current.value);
-    console.log('emailRef.current.value', emailRef.current.value);
-    console.log('emailRef', emailRef.current);
-    console.log('passwordRef.current', passwordRef.current);
 
     //login form toggles when either field is empty and 'login' is clicked
     if ((!emailRef.current.value || !passwordRef.current.value) && userlogin) {
       setUserlogin(false);
-      console.log('hide form');
     }
 
     const userInfo = users.find(user => user.email === emailRef.current.value);
 
-    console.log('userInfo', userInfo);
-
     if (userInfo && userInfo.password === passwordRef.current.value) {
-      console.log('loggedin');
       setUser(userInfo);
       setUserlogin(false);
     }

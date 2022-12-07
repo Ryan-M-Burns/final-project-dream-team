@@ -19,7 +19,7 @@ const FarmerHome = ({ state, setProduct, addProduct, editProduct }) => {
 
   return (
     <div className="farmer__home">
-      <div>
+      <div className="add-product">
         <button type='button' onClick={() => { setShowProductForm(!showProductForm); }}> Add Product </button>
       </div>
       <ul>
