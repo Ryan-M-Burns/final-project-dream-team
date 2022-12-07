@@ -12,16 +12,15 @@ const ProductListItem = ({ product, farm, addToCart, setCartDrawer }) => {
   return (
     <li className="li__product-item">
       <div className="title__logo">
-        <h5 className="product-name">{product.title}</h5>
+        <p className="product-size">{product.size}</p><div className="div__product-item">
+          <h5 className="product-name">{product.title}</h5>
+        </div>
         <img src={farm} alt="farm-logo" className="product-farm-icon" />
       </div>
       <div>
         <div className="div__product-info">
 
-          <div className="div__product-item">
-            <p>Pack Size:</p>
-            <p className="product-size">{product.size}</p>
-          </div>
+
         </div>
         <img src={product.image_url} alt="food" className="product__img" />
         <div className="add-to-cart-button">

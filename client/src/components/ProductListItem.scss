@@ -5,25 +5,26 @@
   display: flex;
   flex-flow: column;
   border: 2px solid;
-  border-color: $body-text;
+  border-color: $medium-brown;
   border-radius: 25px;
-  background-color: $dark-background;
+  background-color: $light-brown-bg;
   margin: 10px;
-  max-width: 350px;
-  min-width: 350px;
-  min-height: 400px;
-  max-height: 400px;
+  max-width: 300px;
+  min-width: 300px;
+  min-height: 375px;
+  max-height: 375px;
   align-items: center;
   align-content: space-between;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 15px;
   font-size: 25px;
-  color: rgb(33, 20, 4);
+  color: $dark-brown;
   font-family: $font-family-fancy;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   .title__logo {
-    width: 90%;
+    width: 100%;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
 
     .product-farm-icon {
@@ -36,8 +37,10 @@
     object-fit: cover;
     padding: auto;
     height: 200px;
-    width: 300px;
+    width: 275px;
     border-radius: 50%;
+    border: 2px solid;
+    border-color: $dark-brown;
   }
 
   .div__product-info {
@@ -53,14 +56,14 @@
 
   .product-name {
     font-size: 30px;
-  }
-
-  .product-price {
-    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    padding: 0 5px;
   }
 
   .product-size {
-    font-size: 25px;
+    font-size: 20px;
+    word-wrap: none;
   }
 
   .product-category {
@@ -69,14 +72,12 @@
 }
 
 .add-to-cart-button {
-  padding-top: 10px;
+  padding-top: 15px;
   width: 100%;
   display: fixed;
   text-align: center;
   color: $dark-brown;
   position: relative;
-  border-top: 2px solid;
-  border-color: $dark-brown;
   min-height: 50px;
 
   button {
