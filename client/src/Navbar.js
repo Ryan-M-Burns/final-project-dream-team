@@ -19,13 +19,6 @@ const Navbar = (
   //About dropdown
   const [open, setOpen] = useState(false);
 
-  // document.onclick = function(event) {
-  //   console.log('open', open);
-  //   if (open && event.target !== ".account-item") {
-  //     setOpen(false);
-  //   }
-  // };
-
   //login
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -75,12 +68,13 @@ const Navbar = (
           <img src="/images/high-res-logo-transparent-bg.png" alt="user" />
         </Link>
       </div>
-      {user && <button>Welcome back, {user.name}!</button>}
+      <div className="user__welcome button">
+        {user && <button>Welcome back, {user.name}!</button>}
+      </div>
       <div className="nav__buttons">
         <div className="login__nav">
           <form className="login__nav">
             <div className={loginClass}>
-              {/* <label className="login__label" htmlFor="email">email</label> */}
               <input
                 className="login__input"
                 id="user_email"
@@ -90,7 +84,6 @@ const Navbar = (
               />
             </div>
             <div className={loginClass}>
-              {/* <label className="login__label" htmlFor="password">password</label> */}
               <input
                 className="login__input"
                 id="user_pass"
@@ -113,12 +106,12 @@ const Navbar = (
                 </button>
               </li>
               <li className="account-item">
-                <button>
+                <button><img src="../images/order.png" alt="order" />
                   My orders
                 </button>
               </li>
               <li className="account-item">
-                <button onClick={handleLogout}>
+                <button onClick={handleLogout}><img src="../images/logout.png" alt="logout" />
                   <p>Sign out</p>
                 </button>
               </li>

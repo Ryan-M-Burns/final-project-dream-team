@@ -20,26 +20,27 @@ const FarmerHome = ({state, setProduct, addProduct, editProduct}) => {
   return (
     <div className="farmer__home">
       <div>
-        <button type='button' onClick={() => setShowProductForm(!showProductForm)}> Add Product </button>
-
+        <button className="farmer__addproduct" type='button' onClick={() => setShowProductForm(!showProductForm)}> Add Product </button>
       </div>
-      <ul>
-        {showProductForm &&
-          <li>
-            <CreateProduct
-              state={state}
-              onSubmit={handleCreate}
-              addProduct={addProduct}
-            />
-          </li>
-        }
-        <FarmerProductList
-          state={state}
-          products={state.product}
-          setProduct={setProduct}
-          editProduct={editProduct}
-        />
-      </ul>
+      <div>
+        <ul>
+          {showProductForm &&
+            <li>
+              <CreateProduct
+                state={state}
+                onSubmit={handleCreate}
+                addProduct={addProduct}
+              />
+            </li>
+          }
+          <FarmerProductList
+            state={state}
+            products={state.product}
+            setProduct={setProduct}
+            editProduct={editProduct}
+          />
+        </ul>
+      </div>
     </div>
   );
 };
