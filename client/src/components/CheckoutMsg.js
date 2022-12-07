@@ -10,7 +10,7 @@ const CheckoutMsg = ({user, setCheckoutMsg}) => {
         </div>
         <div className='checkoutmsg__body'>
           <p className='checkoutmsg__title'>Thank you for your order!</p>
-          <p>A confirmation email has been sent to {user.email}</p>
+          <p>A confirmation email has been sent to <strong>{user.email} </strong> </p>
           <img src="../images/checkout.png" alt="checkout_image">
           </img>
         </div>
