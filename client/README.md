@@ -1,10 +1,59 @@
-# Getting Started with Create React App
+# HARVEST
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created by [Ryan Burns](https://github.com/Ryan-M-Burns), [Anouk Van Bogaert](https://github.com/anoukvanbogaert), and [Taylor Smith](https://github.com/t-smift).
+
+Harvest is an online marketplace app that connects local farms to the people in their community in one centralized place. Harvest makes it easy to find high quality produce from local farms and your community, and build your own custom box with only the produce you want. 
+
+Farms can sign up, list products and update stock of current products. Shoppers can browse products from all the member farms at once, or filter by Farm or by Category. They can add produce into their custom delivery box and place an order to be delivered the following week! 
+
+## Tech Stack
+
+Havest utilizes the PERN stack to cover front-end, back-end and database management. 
+
+- PostgresSQL
+- Express
+- React
+- Node
+
+## Screenshots
+
+## Setup
+- Clone the project from your terminal with the repo link `git@github.com:Ryan-M-Burns/final-project-dream-team.git`
+- In your code editor, open up the root project folder. 
+  - The env.example file shows which environment variables you will need to fill out to link your database to the project. 
+  - Copy that file, and remove the .example. Then fill in the variables with your local information.
+  - Run `npm i` in your terminal to install the relevant dependencies. 
+- For the back end, navigate to the API directory.
+  - Run `npm i` in your terminal here as well. 
+  - Run `npm run db:reset` to initialize your database and any seed data you want to be featued on the project. 
+  - To finish, run `npm start` to start up the API server.
+- On a separate terminal tab, run `npm start` from the main root directory to start up the website. 
+- On your browser, go to `http://localhost:3000` to view the app! 
+
+### Dependencies
+#### Front End
+- Axios
+- Bootstrap
+- Classnames
+- React-Bootstrap
+- React Modal
+- React-router-dom
+- React Scripts
+- Sass
+- Web Vitals
+- SCSS
+
+#### Back End
+- EJS
+- Express
+- Morgan
+- Sass
+- dotenv
+- Nodemon
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project main directory, you can run:
 
 ### `npm start`
 
@@ -19,52 +68,9 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In the API directory, you can run:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run db:rest`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To be run from the API directory. This is a script that will wipe any test data that has been enetered into the Database, re-build the tables from scratch and re-insert any seed data. For staging purposes only. 

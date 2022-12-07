@@ -11,6 +11,7 @@ const CategoryListItem = ({ category, onClick, selected }) => {
       alt="category-icon"
       className="category-icon"
       />
+      {category}
       
     </li>
   )
