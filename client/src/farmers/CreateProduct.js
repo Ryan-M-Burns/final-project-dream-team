@@ -44,7 +44,7 @@ const CreateProduct = ({ state, addProduct, onSubmit }) => {
         <p className="farmer-product-quantity"><input type='text' ref={quantityRef} placeholder="Product Quantity" /></p>
         <p><input type='text' ref={image_urlRef} placeholder="Image URL" />
         </p>
-        <p><button type='submit'>Save</button></p>
+        <p className="farmer-product-button"><button type='submit'>Save</button></p>
       </form>
     </div>
   );

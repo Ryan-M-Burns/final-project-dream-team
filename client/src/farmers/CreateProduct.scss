@@ -4,8 +4,8 @@
 .farmer-product-item {
   display: table;
   border: 2px solid;
-  border-color: $body-text;
-  background-color: $dark-background;
+  border-color: $dark-brown;
+  background-color: $light-brown-bg;
   padding: 10px;
   text-align: center;
   margin-left: auto;
@@ -14,10 +14,21 @@
   color: rgb(33, 20, 4);
   font-family: $font-family-fancy;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  h1 {
+    color: $dark-brown;
+  }
+
+  input {
+    color: $dark-brown;
+    background-color: $light-brown-bg;
+  }
 }
+
 .farmer-produc-item>* {
   display: table-row;
 }
+
 .farmer-product-item>*>* {
   display: table-cell;
 }
