@@ -17,14 +17,13 @@ const FarmerLogin = ({users, user, state, setUser, farms, setFarm, setFarmProduc
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const userInfo = users.find(user => user.email === emailRef.current.value);
+    const userInfo = farms.find(user => user.email === emailRef.current.value);
     const farm = farms.find(farm => farm.user_id === userInfo.id);
 
     if (userInfo && userInfo.password === passwordRef.current.value) {
       setUser(userInfo);
       setFarm(farm.name);
       navigate("/farmer-home");
-
     }
   };
 

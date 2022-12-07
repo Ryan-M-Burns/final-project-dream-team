@@ -1,7 +1,7 @@
-import {React, useState, useRef} from 'react';
+import { React, useState, useRef } from 'react';
 import classNames from 'classnames';
 import './Navbar.scss';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Drop down menu for account
 const Navbar = (
@@ -101,18 +101,26 @@ const Navbar = (
             <ul className="account">
               <li className="account-item">
                 <button>
-                  <p><img src="../images/user.png" alt="user" />
-                    View your profile</p>
+                  <p>
+                    <img src="../images/user.png" alt="user" />
+                    View your profile
+                  </p>
                 </button>
               </li>
               <li className="account-item">
-                <button><img src="../images/order.png" alt="order" />
-                  My orders
+                <button>
+                  <p>
+                    <img src="../images/order.png" alt="order" />
+                    My orders
+                  </p>
                 </button>
               </li>
               <li className="account-item">
-                <button onClick={handleLogout}><img src="../images/logout.png" alt="logout" />
-                  <p>Sign out</p>
+                <button onClick={handleLogout}>
+                  <p>
+                    <img src="../images/logout.png" alt="logout" />
+                    Sign out
+                  </p>
                 </button>
               </li>
             </ul>

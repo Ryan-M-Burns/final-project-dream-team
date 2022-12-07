@@ -1,3 +1,6 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
 .checkout__item__container {
   display: flex;
 
@@ -7,7 +10,8 @@
   width: auto;
   height: 90px;
   object-fit: contain;
-  padding-right: 0.5em
+  padding-right: 0.5em;
+  border: 1px solid $dark-brown;
 }
 
 .checkout__items {

@@ -33,12 +33,12 @@ const FarmerProductListItem = ({ product, setProducts, state, editProduct }) => 
           src={product.image_url} alt="food"
           className="farmer-product-image"
         /></p>
-        <p>
+        <p className="farmer-product-button">
           <button
             onClick={() => (setEdit(!edit))}
             type="button"
-            className="farmer-product-button">
-            <p>Edit {product.farm_id}</p>
+            >
+            <p>Edit</p>
           </button>
         </p>
       </div>

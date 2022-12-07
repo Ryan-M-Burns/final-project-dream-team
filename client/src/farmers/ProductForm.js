@@ -41,15 +41,15 @@ const ProductForm = ({ state, product, onSubmit, editProduct}) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="farmer-product-item">
-      <p className="farmer-product-name"><input type='text' ref={titleRef} defaultValue={product.title} /></p>
-      <p className="farmer-product-price"><input type='text' ref={priceRef} defaultValue={product.price} /></p>
-      <p className="farmer-product-size"><input type='text' ref={sizeRef} defaultValue={product.size} /></p>
-      <p className="farmer-product-category"><input type='text' ref={categoryRef} defaultValue={product.category} /></p>
-      <p className="farmer-product-quantity"><input type='text' ref={quantityRef} defaultValue={product.quantity} /></p>
+    <form onSubmit={handleSubmit} className="li__farmer-product-form-item">
+      <p className="farmer-product-form-name"><input type='text' ref={titleRef} defaultValue={product.title} /></p>
+      <p className="farmer-product-form-price"><input type='text' ref={priceRef} defaultValue={product.price} /></p>
+      <p className="farmer-product-form-size"><input type='text' ref={sizeRef} defaultValue={product.size} /></p>
+      <p className="farmer-product-form-category"><input type='text' ref={categoryRef} defaultValue={product.category} /></p>
+      <p className="farmer-product-form-quantity"><input type='text' ref={quantityRef} defaultValue={product.quantity} /></p>
       <p><input type='text' ref={image_urlRef} defaultValue={product.image_url} />
       </p>
-      <p><button type='submit'>Save</button></p>
+      <p className="farmer-product-form-button"><button type='submit'>Save</button></p>
     </form>
   );
 
