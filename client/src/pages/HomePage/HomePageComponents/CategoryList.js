@@ -2,8 +2,7 @@ import React from 'react';
 import CategoryListItem from './CategoryListItem';
 import './CategoryList.scss';
 
-const CategoryList = ({ categories, value, setCategory }) => {
-console.log(categories, "categories")
+const CategoryList = ({categories, value, setCategory}) => {
   const parsedCategoryList = categories.map((oneCategory, index) => {
     const name = oneCategory.category;
     return (

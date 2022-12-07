@@ -4,7 +4,7 @@ import './ProductListItem.scss';
 const ProductListItem = ({product, farm, addToCart, setCartDrawer}) => {
 
   const handleClick = () => {
-    addToCart(product);
+    addToCart(product, true);
     setCartDrawer(true);
   };
 

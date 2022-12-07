@@ -13,78 +13,46 @@ const CartDrawer = ({cart, cartDrawer, addToCart, removeFromCart, setCheckout, c
   const total = (currentCart) => {
     let price = 0;
     for (let item of currentCart) {
-      price += item.price;
+      price += item.price * item.cartQty;
     }
     return price;
   };
 
-  // cartResult will have format: [{id: 5, quantity:3}, ...]
-  if (cart.length > 0) {
+  if (cart.length) {
+    parsedCartList = cart.map(item => {
 
-    let cartResult = [];
-    let cartResultIds = [];
-
-    for (let i = 0; i < cart.length; i++) {
-
-      const id = cart[i].id;
-      let index = null;
-
-      if (!cartResultIds.includes(id)) {
-
-        cartResult.push({id: cart[i].id, quantity: 1, title: cart[i].title, category: cart[i].category, size: cart[i].size, image_url: cart[i].image_url, price: cart[i].price});
-
-        cartResultIds.push(cart[i].id);
-
-      } else {
-        index = cartResult.findIndex(object =>
-          object.id === cart[i].id);
-        cartResult[index].quantity++;
-      }
-    };
-
-    if (cart.length) {
-      parsedCartList = cartResult.map(item => {
-
-        return (
-          <CartDrawerItem
-            key={item.id}
-            product={item}
-            addToCart={addToCart}
-            removeFromCart={removeFromCart}
-          />
-        );
-      });
-    }
+      return (
+        <CartDrawerItem
+          key={item.id}
+          product={item}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+        />
+      );
+    });
+  }
 
 
-    return (
-      <div className={cartClass}>
-        <div>
-          <h2>My Box</h2>
+  return (
+    <div className={cartClass}>
+      <div>
+        <h2>My Veggie Box</h2>
+      </div>
+      <div className="cart__body">
+        <div className="cart__products">
+          {cart.length > 0 && parsedCartList}
+          {!cart.length && <p>Nothing to see here!</p>}
         </div>
-        <div>
-          <div className="cart__products">
-            {cart.length && parsedCartList}
-          </div>
-          <div>
-            <button onClick={() => setCheckout(true)}>
-              <p>Checkout: $ {total(cart) / 100}</p>
-            </button>
-          </div>
+        <div className="cart__checkout">
+          {cart.length > 0 && <button onClick={() => setCheckout(true)}>
+            <p>Checkout: $ {total(cart) / 100}</p>
+          </button>}
         </div>
-
       </div>
 
-    );
-  } else {
-    return (
-      <div className={cartClass}>
-        <div>
-          <h2>My Box</h2>
-          <p>Nothin to see here!</p>
-        </div></div>
-    );
-  }
+    </div>
+  );
 };
+
 
 export default CartDrawer;
