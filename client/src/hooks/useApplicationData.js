@@ -53,17 +53,43 @@ const useApplicationData = () => {
 
   const setCheckoutMsg = checkoutMsg => setState(prev => ({...prev, checkoutMsg}));
 
-  const addToCart = (product) => {
-    setState({...state, cart: [...state.cart, product]});
-  };
+  const addToCart = (product, up) => {
+    const isFound = state.cart.some(element => {
+      if (element.id === product.id) {
+        return true;
+      } else {
+        return false;
+      }
+    });
 
+    if (!isFound) {
+      //if the product is new to the cart, we add that product + a cartQty key
+      setState({...state, cart: [...state.cart, {...product, cartQty: 1}]});
+    } else {
+      up ? editCart(product, 1, 0) : editCart(product, -1, 0);
+      if (product.cartQty === 0) {
+        removeFromCart(product);
+      }
+    }
+
+  };
 
   const removeFromCart = (toberemoved) => {
     const filterIndex = state.cart.findIndex((product) => product.id === toberemoved.id);
 
-    const newCart = state.cart.splice(filterIndex, 1);
+    state.cart.splice(filterIndex, 1);
     setState({...state, cart: state.cart});
 
+  };
+
+  const editCart = (product, valueOnAdd, userInput) => {
+    const newCart = [...state.cart];
+    const index = newCart.findIndex((selectProduct) => {
+      return selectProduct.id === product.id;
+    });
+
+    newCart[index].cartQty = newCart[index].cartQty + valueOnAdd + userInput;
+    setState(({...state, cart: newCart}));
   };
 
   const setUser = user => setState(prev => ({...prev, user}));
@@ -75,11 +101,11 @@ const useApplicationData = () => {
   const editProduct = (product) => {
     const newProducts = [...state.products];
     const index = newProducts.findIndex((selectProduct) => {
-      return selectProduct.id === product.id
-    }) 
-    newProducts[index] = product
-    setState(({...state, products: newProducts}))
-  }
+      return selectProduct.id === product.id;
+    });
+    newProducts[index] = product;
+    setState(({...state, products: newProducts}));
+  };
 
   const addProduct = (product) => {
     setState(({...state, products: [...state.products, product]}));
