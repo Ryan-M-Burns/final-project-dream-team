@@ -28,6 +28,13 @@
   justify-content: flex-end;
 }
 
+.checkoutmsg__header button {
+  background-color: inherit;
+  border: none;
+  font-size: 50px;
+  margin-top: -25px
+}
+
 .checkoutmsg__body {
   display: flex;
   flex-direction: column;

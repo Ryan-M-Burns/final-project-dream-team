@@ -25,7 +25,7 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMs
   const total = (currentCart) => {
     let price = 0;
     for (let item of currentCart) {
-      price += item.price;
+      price += item.price * item.cartQty;
     }
     return price;
   };
@@ -45,8 +45,12 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMs
     <div className="checkout__background">
       <div className="checkout__container">
         <div className="checkout__header">
-          <p>CHECKOUT</p>
-          <button className="checkout__close" onClick={() => setCheckout(false)}>&times;</button>
+          <div className="checkout__close">
+            <button onClick={() => setCheckout(false)}>&times;</button>
+          </div>
+          <div className="checkout__title">
+            <p>CHECKOUT</p>
+          </div>
         </div>
         <div className="checkout__body">
 
@@ -77,7 +81,7 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMs
           </div>
           <div className="checkout__iteminfo__right">
             <div className="checkout__items">
-              <p>my items</p>
+              <p className='checkout__items__title'>my items</p>
               <ul>
                 {cartItems}
               </ul>
