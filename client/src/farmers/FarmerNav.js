@@ -21,6 +21,7 @@ const FarmerNav = ({user, setUser}) => {
 
 
   return (
+
     <nav className="nav__main-site">
       <div className="nav__logo">
         <Link to='/farmer-home'>
