@@ -1,13 +1,16 @@
+@import "../../styles/variables.scss";
+@import "../../styles/reset.scss";
 
 .li__farmer-order-item {
-  border: 2px solid;
+  border: 2px solid $dark-brown;
   padding: 10px;
   text-align: center;
   font-size: 20px;
-  color: black;
+  color: $dark-brown;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color:#AFEEEE;
+  background-color: $light-brown-bg;
   opacity: 0.8;
+  z-index: 10;
 
   .farmer-order-name {
     width: 100px;
