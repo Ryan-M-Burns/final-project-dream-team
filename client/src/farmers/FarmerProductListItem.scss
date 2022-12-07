@@ -18,12 +18,14 @@
 
   .farmer-product-image {
     object-fit: cover;
-    height: 80px;
-    width: 110px;
-    border-radius: 50%;
-    padding: 10px;
+    height: 60px;
+    width: 90px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid $dark-brown;
   }
 }
+
 .farmer-product-button {
   padding-top: 15px;
   display: fixed;
