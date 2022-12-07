@@ -22,29 +22,31 @@ const FarmerNav = ({user, setUser}) => {
 
   return (
 
-    <nav className="nav__main-site">
-      <div className="nav__logo">
+    <nav className="nav__farmer-site">
+      <div className="farmer__nav__logo">
         <Link to='/farmer-home'>
           <img src="/images/high-res-logo-transparent-bg.png" alt="user" />
         </Link>
       </div>
-        {user && <button>Welcome back, {user}!</button>}
-      <div className="nav_buttons">
-        <div className="dropdown">
+      <div className="farmer__welcome">
+        {user && <button>Welcome back, {user.name}!</button>}
+      </div>
+      <div className="farmer__nav__buttons">
+        <div className="farmer__dropdown">
           {user && <button onClick={handleDropdown}>Account</button>}
           {open ? (
-            <ul className="account">
-              <li className="account-item">
+            <ul className="farmer__account">
+              <li className="farmer__account-item">
                 <Link to="/myfarm">
                   <button><img src="../images/user.png" alt="user"></img>View your profile</button>
                 </Link>
               </li>
-              <li className="account-item">
+              <li className="farmer__account-item">
                 <Link to="/farmer-orders">
                   <button>My orders</button>
                 </Link>
               </li>
-              <li className="account-item">
+              <li className="farmer__account-item">
                 <Link to="/">
                   <button onClick={handleLogout}>Sign out</button>
                 </Link>
