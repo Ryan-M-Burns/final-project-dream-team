@@ -97,6 +97,10 @@ function Checkout({ setCheckout, cart, user, setUserlogin, setCart, setCheckoutM
                 <th>Shipping:</th>
                 <td>FREE</td>
               </tr>
+              <tr>
+                <th>Total:</th>
+                <td>${((total(cart) / 100 * 0.12) + (total(cart)/ 100)).toFixed(2)}</td>
+              </tr>
             </table>
           </div>
         </div>

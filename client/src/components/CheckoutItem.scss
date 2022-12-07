@@ -66,6 +66,12 @@
   }
 }
 
-.checkout__totals th {
-  padding-right: 20px;
+.checkout__totals {
+  width: 100%;
+  font-size: 18px;
+  border-top: 2px solid $dark-brown;
+
+  th {
+    padding-right: 20px;
+  }
 }
