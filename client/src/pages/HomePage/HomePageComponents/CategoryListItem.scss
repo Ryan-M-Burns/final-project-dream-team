@@ -7,12 +7,17 @@
   color: $dark-brown;
   font-weight: 500;
   font-size: 1.5vw;
-  border-color: $body-text;
+  border-color: $dark-brown;
   border-radius: 15px;
-  background-color: $light-brown;
+  background-color: $light-brown-bg;
   font-family: $font-family-fancy;
   justify-content: center;
   margin: 10px;
-  width: 250px;
-  
+  width: 200px;
+  border: 2px solid $dark-brown;
+
+}
+
+.category-list-item:hover {
+  cursor: pointer;
 }
