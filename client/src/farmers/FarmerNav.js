@@ -22,7 +22,7 @@ const FarmerNav = ({user, setUser}) => {
 
   return (
     <nav>
-      <Link to='/home'>
+      <Link to='/farmer-home'>
         <button className="title">HARVEST</button>
       </Link>
       <div className="nav_buttons">
