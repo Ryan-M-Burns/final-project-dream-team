@@ -4,7 +4,7 @@ import './Checkout.scss';
 import CheckoutItem from './CheckoutItem';
 
 
-function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMsg, setCartDrawer}) {
+function Checkout({ setCheckout, cart, user, setUserlogin, setCart, setCheckoutMsg, setCartDrawer }) {
 
 
   const handleLogIn = () => {
@@ -13,7 +13,7 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMs
   };
 
   const handleCheckout = async () => {
-    axios.post('/orders', {userId: user.id, products: cart});
+    axios.post('/orders', { userId: user.id, products: cart });
 
     setCheckout(false);
     setCheckoutMsg(true);
@@ -80,26 +80,28 @@ function Checkout({setCheckout, cart, user, setUserlogin, setCart, setCheckoutMs
 
           </div>
           <div className="checkout__iteminfo__right">
+            <p className='checkout__items__title'>My Cart</p>
             <div className="checkout__items">
-              <p className='checkout__items__title'>my items</p>
-              <ul>
-                {cartItems}
-              </ul>
-              <table className="checkout__totals">
-                <tr>
-                  <th>Subtotal:</th>
-                  <td>$ {total(cart) / 100}</td>
-                </tr>
-                <tr>
-                  <th>GST:</th>
-                  <td>{(total(cart) / 100 * 0.12).toFixed(2)}</td>
-                </tr>
-                <tr>
-                  <th>Shipping:</th>
-                  <td>FREE</td>
-                </tr>
-              </table>
+              {cartItems}
             </div>
+            <table className="checkout__totals">
+              <tr>
+                <th>Subtotal:</th>
+                <td>$ {total(cart) / 100}</td>
+              </tr>
+              <tr>
+                <th>GST:</th>
+                <td>{(total(cart) / 100 * 0.12).toFixed(2)}</td>
+              </tr>
+              <tr>
+                <th>Shipping:</th>
+                <td>FREE</td>
+              </tr>
+              <tr>
+                <th>Total:</th>
+                <td>${((total(cart) / 100 * 0.12) + (total(cart)/ 100)).toFixed(2)}</td>
+              </tr>
+            </table>
           </div>
         </div>
         <div className="checkout__footer">
