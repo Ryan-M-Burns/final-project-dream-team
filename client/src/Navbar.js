@@ -68,7 +68,9 @@ const Navbar = (
           <img src="/images/high-res-logo-transparent-bg.png" alt="user" />
         </Link>
       </div>
-      {user && <button>Welcome back, {user.name}!</button>}
+      <div className="user__welcome button">
+        {user && <button>Welcome back, {user.name}!</button>}
+      </div>
       <div className="nav__buttons">
         <div className="login__nav">
           <form className="login__nav">

@@ -46,6 +46,13 @@
     }
   }
 
+  .user__welcome button {
+    font-size: 25px;
+    color: $dark-brown;
+    background: none;
+    border: none;
+  }
+
 
   .login__input {
     border-radius: 20px;
