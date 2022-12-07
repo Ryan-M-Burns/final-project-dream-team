@@ -21,14 +21,16 @@ const FarmerNav = ({user, setUser}) => {
 
 
   return (
-    <nav>
-      <Link to='/home'>
-        <button className="title">HARVEST</button>
-      </Link>
-      <div className="nav_buttons">
-        {user && <button>Welcome back, {user.name}!</button>}
-        <div className="dropdown">
 
+    <nav className="nav__main-site">
+      <div className="nav__logo">
+        <Link to='/farmer-home'>
+          <img src="/images/high-res-logo-transparent-bg.png" alt="user" />
+        </Link>
+      </div>
+        {user && <button>Welcome back, {user}!</button>}
+      <div className="nav_buttons">
+        <div className="dropdown">
           {user && <button onClick={handleDropdown}>Account</button>}
           {open ? (
             <ul className="account">

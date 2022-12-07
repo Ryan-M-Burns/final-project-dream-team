@@ -6,6 +6,7 @@ import './FarmerOrders.scss';
 const FarmerOrders = ({user}) => {
   const [orders, setOrders] = useState([]);
   const id = user.id;
+
   useEffect(() => {
     Promise.all([
       axios.get(`/orders/farms/${id}`),

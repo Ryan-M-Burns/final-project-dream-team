@@ -1,26 +1,52 @@
 @import '../styles/variables.scss';
 @import '../styles/reset.scss';
 
-.nav {
+.nav__main-site {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 100px;
-  color: $body-text;
-  font-family: $font-family-fancy;
-  font-size: 40px;
-  font-weight: bolder;
-  text-align: center;
-  justify-content: center;
-  // background-image: url("../../public/images/navbackground.jpg");
-  background-color: $dark-background;
-  background-size: cover;
+  width: 100%;
+  top: 0;
+  background: inherit;
+  //background-color: $dark-background;
+  padding: 0 20px;
+  transition: 0.6s;
+  z-index: 1000;
+
+}
+.nav__buttons {
+  display: flex;
+  align-items: flex-start;
+  font-family: 'Fjalla One';
+}
+
+.nav__buttons button:hover {
+  color: $medium-brown;
+}
+
+.nav__buttons button {
+  font-size: 25px;
+  color: $dark-brown;
+  background: none;
+  border: none;
+  margin: 10px;
+  max-height: 80px;
+}
+
+.dropdown {
+  position: relative;
+
+}
+
+.dropdown img {
+  max-height: 30px;
 }
 
 .account {
   position: absolute;
   width: 150px
-}
-
-.dropdown img {
-  max-height: 30px;
 }
 
 .account>li>button {
@@ -38,4 +64,13 @@
 .account>li>button:hover {
   color: #fcf2e9;
   background-color: #007435;
+}
+
+
+.nav__logo {
+
+  img {
+    height: 80px;
+    margin-left: 40px;
+  }
 }
