@@ -26,7 +26,7 @@ const FarmerNav = ({user, setUser}) => {
         <button className="title">HARVEST</button>
       </Link>
       <div className="nav_buttons">
-        {user && <button>Welcome back, {user}!</button>}
+        {user && <button>Welcome back, {user.name}!</button>}
         <div className="dropdown">
 
           {user && <button onClick={handleDropdown}>Account</button>}

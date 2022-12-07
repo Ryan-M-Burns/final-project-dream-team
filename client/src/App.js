@@ -148,7 +148,8 @@ function App() {
               <FarmerNav
                 user={state.user}
                 setUser={setUser} />
-              <FarmerOrders />
+              <FarmerOrders
+                user={state.user} />
             </>
           } />
         </Routes>
