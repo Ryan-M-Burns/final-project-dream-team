@@ -45,7 +45,7 @@ const getOrdersByUserId = (userId) => {
 const getProductsForOrder = (orderId) => {
   return db
     .query(`
-  SELECT 
+  SELECT
   `, [orderId])
     .then(orderProds => {
       return orderProds.rows;
@@ -66,7 +66,7 @@ const getOrdersById = (userId) => {
 const getOrdersByFarmId = (farmId) => {
   return db
     .query(`
-  SELECT p.*, COUNT(DISTINCT p.id) FROM products AS p
+  SELECT p.*, COUNT(p.id) FROM products AS p
   INNER JOIN order_items AS oi ON p.id = oi.product_id
   WHERE p.farm_id = $1
   GROUP BY p.id
@@ -98,8 +98,17 @@ const addItemsToOrder = (orderId, product) => {
     .then(order_items => {
       return order_items.rows;
     });
-
-
 };
+
+
+const removeQuantity = (product) => {
+  return db
+  .query(`
+  UPDATE products
+  SET quantity = quantity - $1
+  WHERE id = $2
+  `, [product.cartQty, product.id])
+}
+
 
 module.exports = {getOrdersByUserId, getOrdersByFarmId, createNewOrder, addItemsToOrder, getOrdersById, getProductsForOrder, getAllOrders, getOrderItemsByOrderId};
