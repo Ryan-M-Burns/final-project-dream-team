@@ -45,7 +45,7 @@ const getOrdersByUserId = (userId) => {
 const getProductsForOrder = (orderId) => {
   return db
     .query(`
-  SELECT 
+  SELECT
   `, [orderId])
     .then(orderProds => {
       return orderProds.rows;
@@ -97,8 +97,19 @@ const addItemsToOrder = (orderId, product) => {
     .then(order_items => {
       return order_items.rows;
     });
+}
+
+const removeQuantity = (product) => {
+  return db
+  .query(`
+  UPDATE products
+  SET quantity = quantity - $1
+  WHERE id = $2
+  `, [product.cartQty, product.id])
+  .then(newProducts => {
+    return newProducts.rows
+  });
+}
 
 
-};
-
-module.exports = {getOrdersByUserId, getOrdersByFarmId, createNewOrder, addItemsToOrder, getOrdersById, getProductsForOrder, getAllOrders, getOrderItemsByOrderId};
+module.exports = {getOrdersByUserId, getOrdersByFarmId, createNewOrder, addItemsToOrder, getOrdersById, getProductsForOrder, getAllOrders, getOrderItemsByOrderId, removeQuantity};
