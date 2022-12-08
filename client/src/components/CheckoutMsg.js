@@ -6,7 +6,7 @@ const CheckoutMsg = ({user, setCheckoutMsg}) => {
     <div className="checkoutmsg__background">
       <div className='checkoutmsg__container'>
         <div className='checkoutmsg__header'>
-          <button className="checkout__close" onClick={() => setCheckoutMsg(false)}>&times;</button>
+          <button className="checkoutmsg__close" onClick={() => setCheckoutMsg(false)}>&times;</button>
         </div>
         <div className='checkoutmsg__body'>
           <p className='checkoutmsg__title'>Thank you for your order!</p>
