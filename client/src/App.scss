@@ -4,8 +4,6 @@
 
 body {
   background-image: url('../public/images/main_background.jpg');
-
-  // background-color: black;
   background-attachment: fixed;
   background-size: 100%;
   min-height: 100%;
@@ -36,12 +34,6 @@ body {
   }
 
   .site-body {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
     width: 100%;
-    background: inherit;
   }
 }
