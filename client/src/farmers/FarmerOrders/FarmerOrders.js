@@ -17,14 +17,15 @@ const FarmerOrders = ({user}) => {
       });
   }, []);
 
+
   const parsedOrders = orders.map((order, index) => {
     return (
       <FarmerOrderSummary
         key={index}
         product={order.title}
         price={order.price}
-        count={order.count}
-        remaining={order.quantity}
+        sum={order.sum}
+        stock={order.quantity}
         image={order.image_url} />
     );
   });
