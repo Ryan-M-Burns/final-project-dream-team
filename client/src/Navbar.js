@@ -72,6 +72,7 @@ const Navbar = (
         {user && <button>Welcome back, {user.name}!</button>}
       </div>
       <div className="nav__buttons">
+        {!user &&
         <div className="login__nav">
           <form className="login__nav">
             <div className={loginClass}>
@@ -93,7 +94,7 @@ const Navbar = (
               />
             </div>
           </form>
-        </div>
+        </div>}
         {!user && <button onClick={handleLogin}>Login</button>}
         <div className="dropdown">
           {user && <button onClick={handleDropdown}>Account</button>}

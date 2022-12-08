@@ -11,7 +11,7 @@ const Landing = () => {
           {/* Intentionally Empty */}
         </div>
         <div className="split-screen">
-          <img src="/images/test.png" alt="user" id="main" />
+          <img src="/images/logo_landing_page.png" alt="user" id="main" />
           <div className="title__andsub">
           </div>
           <div className="landing__buttons">

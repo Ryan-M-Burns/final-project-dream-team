@@ -6,8 +6,8 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
-  margin-top: 200px;
+  position: fixed;
+  margin-top: 150px;
   padding: 20px;
-  flex-wrap: wrap;
+  flex-wrap: none;
 }

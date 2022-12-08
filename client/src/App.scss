@@ -3,18 +3,8 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  //background-image: url('../public/images/bgtest/closeupveggies.jpg');
-  // background-image: url('../public/images/bgtest/farmer.jpg');
-  //background-image: url('../public/images/bgtest/orchard1.jpg');
-  // background-image: url('../public/images/bgtest/orchard2.jpg');
-  // background-image: url('../public/images/bgtest/plant.jpg');
-  // background-image: url('../public/images/bgtest/weed.jpg');
-  background-image: url('../public/images/bgtest/wheat1.jpg');
-  //background-image: url('../public/images/bgtest/wheat2.jpg');
-  // background-image: url('../public/images/bgtest/wheat3.jpg');
-  // background-image: url('../public/images/bgtest/wheat4.jpg');
-  // background-image: url('../public/images/bgtest/wheat5.jpg');
-  //background-image: url('../public/images/bgtest/wheat6.jpg');
+  background-image: url('../public/images/main_background.jpg');
+
   // background-color: black;
   background-attachment: fixed;
   background-size: 100%;
@@ -29,7 +19,7 @@ body {
     display: block;
     position: static;
     background: inherit;
-    background-image: url('../public/images/bgtest/wheat1.jpg');
+    background-image: url('../public/images/main_background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -40,7 +30,7 @@ body {
     display: block;
     position: static;
     background: inherit;
-    background-image: url('../public/images/bgtest/closeupveggies.jpg');
+    background-image: url('../public/images/about_page.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
