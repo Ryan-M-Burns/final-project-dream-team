@@ -18,7 +18,7 @@ Havest utilizes the PERN stack to cover front-end, back-end and database managem
 ## Screenshots
 
 ## Setup
-- Clone the project from your terminal with the repo link `git@github.com:Ryan-M-Burns/final-project-dream-team.git`
+- Clone the project from your terminal with the repo link `https://github.com/Ryan-M-Burns/harvest`
 - In your code editor, open up the root project folder. 
   - The env.example file shows which environment variables you will need to fill out to link your database to the project. 
   - Copy that file, and remove the .example. Then fill in the variables with your local information.
