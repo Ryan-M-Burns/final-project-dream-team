@@ -1,5 +1,5 @@
 const express = require('express');
-const {getOrdersByUserId, createNewOrder, addItemsToOrder, getOrdersByFarmId, getOrdersById, getAllOrders, getOrderItemsByOrderId} = require('../db/queries/orders');
+const {getOrdersByUserId, createNewOrder, addItemsToOrder, getOrdersByFarmId, getOrdersById, getAllOrders, getOrderItemsByOrderId, removeQuantity} = require('../db/queries/orders');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json()
@@ -70,6 +70,8 @@ router.post('/', jsonParser, function(req, res) {
     .then(orderId => {
       for (const product of products) {
         addItemsToOrder(orderId.id, product);
+        removeQuantity(product);
+
       }
     });
 });
