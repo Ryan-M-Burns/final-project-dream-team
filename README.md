@@ -17,6 +17,18 @@ Havest utilizes the PERN stack to cover front-end, back-end and database managem
 
 ## Screenshots
 
+!["Landing Page"](https://github.com/Ryan-M-Burns/harvest/blob/main/Screenshots/Landing_Page.png)
+
+!["Product Page"](https://github.com/Ryan-M-Burns/harvest/blob/main/Screenshots/Product_Page.png)
+
+!["Product Page with Filters"](https://github.com/Ryan-M-Burns/harvest/blob/main/Screenshots/Filters.png)
+
+!["About Page"](https://github.com/Ryan-M-Burns/harvest/blob/main/Screenshots/About_Us.png)
+
+!["Farmer Portal"](https://github.com/Ryan-M-Burns/harvest/blob/main/Screenshots/Farmer_Portal.png)
+
+!["Farmer Product Page"](https://github.com/Ryan-M-Burns/harvest/blob/main/Screenshots/Farmer_Products.png)
+
 ## Setup
 - Clone the project from your terminal with the repo link `https://github.com/Ryan-M-Burns/harvest`
 - In your code editor, open up the root project folder. 
